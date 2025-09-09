@@ -1,22 +1,26 @@
----
 layout: home
 title: "Home"
----
 
-<!-- MathJax for this page (remove if not needed) -->
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-Hi, I'm **Nolan McDermott** — a CS & Math grad who loves **sports analytics**, clean code, and teaching through posts.
+<div class="sidebar-socials">
+	<h2>Connect</h2>
+	<ul>
+		<li><a href="mailto:boltjets24@gmail.com">Email</a></li>
+		<li><a href="https://github.com/NolanMcD" target="_blank">GitHub</a></li>
+		<li><a href="https://www.linkedin.com/in/nolan-mcdermott-b9a20220b/" target="_blank">LinkedIn</a></li>
+		<li><a href="https://letterboxd.com/NolanMcD/" target="_blank">Letterboxd</a></li>
+		<li><a href="https://www.strava.com/athletes/57377386" target="_blank">Strava</a></li>
+		<li><a href="https://x.com/NolanMcDerm" target="_blank">X</a></li>
+		<li><a href="https://www.instagram.com/nolan_mcdermott/" target="_blank">Instagram</a></li>
+		<li><a href="https://www.youtube.com/@NolanMcD" target="_blank">YouTube</a></li>
+	</ul>
+</div>
+
+Hi, I'm **Nolan McDermott** — a CS & Math grad who loves **sports analytics**, baseball, movies, water, sports, and geography.
 
 **Featured projects**
-- 🧮 *Statcast Visualizer:* launch angle & exit velocity heatmaps
-- ✈️ *Flight Delay Dashboard:* Shiny/Plotly app for aviation delays
-- ⚾ *Lefty/Righty Splits Explorer:* MLB platoon performance tool
+- 🏝️ *Circumnavigate Every Key:* Attempting to paddle around every florida key
+- ⚾ *Visit All 30 MLB Ballparks:* Lifetime goal currently 9/30
+- 🎥 *Watch Every movie:* Almost there
 
-Latest posts appear below. Try some LaTeX: $E=mc^2$ and a display equation:
-
-$$
-\mathbb{{P}}(S_{{n}} - n\mu > t\sigma \sqrt{{n}}) \approx 1 - \Phi(t)
-$$
-
-*Tip:* edit this page at `index.md`.
+Latest posts appear below. 

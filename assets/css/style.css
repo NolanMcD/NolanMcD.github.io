@@ -3,3 +3,50 @@
 .site-title { font-weight: 700; }
 .site-header { border-bottom: 1px solid #eaeaea; }
 code, pre { font-size: 0.95em; }
+
+.site-title-big {
+	font-size: 3rem;
+	font-weight: 900;
+	letter-spacing: 0.1em;
+	text-align: center;
+	margin: 2rem 0 2.5rem 0;
+	color: #1a3a4a;
+	text-shadow: 1px 2px 8px #b3d1e6;
+}
+
+.sidebar-socials {
+	position: fixed;
+	top: 100px;
+	left: 0;
+	width: 210px;
+	background: #f7fafc;
+	border-right: 2px solid #e0e0e0;
+	padding: 1.5rem 1rem 1.5rem 1.5rem;
+	box-shadow: 2px 0 8px rgba(0,0,0,0.04);
+	border-radius: 0 16px 16px 0;
+	z-index: 100;
+}
+.sidebar-socials h2 {
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+	color: #1a3a4a;
+	letter-spacing: 0.05em;
+}
+.sidebar-socials ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.sidebar-socials li {
+	margin-bottom: 0.7em;
+}
+.sidebar-socials a {
+	color: #1976d2;
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.2s;
+}
+.sidebar-socials a:hover {
+	color: #0d47a1;
+	text-decoration: underline;
+}
