@@ -23,12 +23,13 @@ kramdown:
 minima:
   social_links:
     - { platform: github,  user_url: "https://github.com/NolanMcD" }
-    # add linkedin/twitter etc.
-  - { platform: linkedin, user_url: "https://www.linkedin.com/in/nolan-mcdermott-b9a20220b/" }
-  - { platform: letterboxd, user_url: "https://letterboxd.com/NolanMcD/" }
-  - { platform: strava, user_url: "https://www.strava.com/athletes/57377386" }
-  - { platform: x, user_url: "https://x.com/NolanMcDerm" }
-  - { platform: instagram, user_url: "https://www.instagram.com/nolan_mcdermott/" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/nolan-mcdermott-b9a20220b/" }
+    - { platform: letterboxd, user_url: "https://letterboxd.com/NolanMcD/" }
+    - { platform: strava, user_url: "https://www.strava.com/athletes/57377386" }
+    - { platform: x, user_url: "https://x.com/NolanMcDerm" }
+    - { platform: instagram, user_url: "https://www.instagram.com/nolan_mcdermott/" }
+    - { platform: youtube, user_url: "https://www.youtube.com/@NolanMcD" }
+    - { platform: youtube, user_url: "https://www.youtube.com/@NolanMcD" }
 show_excerpts: true
 
 # Navigation (custom)
