@@ -1,0 +1,5 @@
+/* You can customize the minima theme here */
+.post-title { letter-spacing: 0.2px; }
+.site-title { font-weight: 700; }
+.site-header { border-bottom: 1px solid #eaeaea; }
+code, pre { font-size: 0.95em; }

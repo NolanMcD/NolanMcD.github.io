@@ -1,0 +1,45 @@
+title: "Nolan McDermott"
+tagline: "Computer Science & Mathematics — Sports Analytics, Code, and Notes"
+email: 
+description: >-
+  Portfolio + blog for projects in CS, math, and sports analytics.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://NolanMcD.github.io" # change if you use a custom domain
+github_username: NolanMcD
+theme: minima
+
+# Optional plugins that GitHub Pages supports
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+
+# Minima theme options
+minima:
+  social_links:
+    - { platform: github,  user_url: "https://github.com/NolanMcD" }
+    # add linkedin/twitter etc.
+show_excerpts: true
+
+# Navigation (custom)
+header_pages:
+  - about.md
+  - projects.md
+
+# Defaults (adds title case and layout automatically)
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
