@@ -1,51 +1,56 @@
 title: "Nolan McDermott"
-tagline: "Computer Science & Mathematics — Sports Analytics, Code, and Notes"
-email: 
+tagline: "Computer science, sports analytics, and ambitious side quests"
+email: "boltjets24@gmail.com"
 description: >-
-  Portfolio + blog for projects in CS, math, and sports analytics.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://NolanMcD.github.io" # change if you use a custom domain
+  Nolan McDermott's portfolio and field notes on computer science,
+  mathematics, sports analytics, travel, and long-running adventures.
+baseurl: ""
+url: "https://nolanmcd.github.io"
+lang: en-US
+timezone: America/New_York
 github_username: NolanMcD
 theme: minima
 
-# Optional plugins that GitHub Pages supports
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
-# Build settings
 markdown: kramdown
 kramdown:
   input: GFM
   math_engine: mathjax
 
-# Minima theme options
 minima:
   social_links:
-    - { platform: github,  user_url: "https://github.com/NolanMcD" }
+    - { platform: github, user_url: "https://github.com/NolanMcD" }
     - { platform: linkedin, user_url: "https://www.linkedin.com/in/nolan-mcdermott-b9a20220b/" }
     - { platform: letterboxd, user_url: "https://letterboxd.com/NolanMcD/" }
     - { platform: strava, user_url: "https://www.strava.com/athletes/57377386" }
     - { platform: x, user_url: "https://x.com/NolanMcDerm" }
     - { platform: instagram, user_url: "https://www.instagram.com/nolan_mcdermott/" }
     - { platform: youtube, user_url: "https://www.youtube.com/@NolanMcD" }
-    - { platform: youtube, user_url: "https://www.youtube.com/@NolanMcD" }
+
 show_excerpts: true
 
-# Navigation (custom)
 header_pages:
   - about.md
   - projects.md
 
-# Defaults (adds title case and layout automatically)
 defaults:
   - scope:
       path: ""
-      type: "posts"
+      type: posts
     values:
       layout: post
   - scope:
       path: ""
-      type: "pages"
+      type: pages
     values:
       layout: page
+
+exclude:
+  - README.md
+  - CNAME.example
+  - Gemfile
+  - Gemfile.lock

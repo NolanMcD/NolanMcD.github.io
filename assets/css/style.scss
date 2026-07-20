@@ -1,0 +1,63 @@
+$ink: #17252f;
+$muted: #55636c;
+$navy: #123c4a;
+$teal: #087e8b;
+$cream: #f7f4ec;
+$line: #dbe2df;
+
+:root { color-scheme: light; }
+html { scroll-behavior: smooth; }
+body { color: $ink; background: #fdfdfb; }
+a { color: #086c78; text-underline-offset: 3px; }
+a:hover, a:focus { color: #064c55; }
+a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius: 2px; }
+.wrapper { max-width: 1080px; }
+.site-header { border-top: 4px solid $teal; border-bottom-color: $line; background: rgba(253,253,251,.96); }
+.site-title { color: $navy !important; font-weight: 800; letter-spacing: -.02em; }
+.site-nav .page-link { color: $ink; font-weight: 600; }
+.site-footer { border-top-color: $line; background: $cream; }
+.post-content h1, .post-content h2, .post-content h3 { color: $navy; letter-spacing: -.025em; }
+.post-title { letter-spacing: -.035em; }
+.page-lede { max-width: 760px; font-size: 1.35rem; line-height: 1.55; color: $navy; }
+.eyebrow { margin: 0 0 .6rem; color: $teal; font-size: .78rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.hero { margin: 1.75rem 0 4rem; padding: clamp(2rem, 6vw, 5rem); overflow: hidden; border-radius: 24px; background: linear-gradient(135deg, $cream 0%, #e6f2f0 100%); box-shadow: 0 18px 50px rgba(18,60,74,.09); }
+.hero h1 { max-width: 800px; margin: 0 0 1.25rem; color: $navy; font-size: clamp(2.2rem, 6vw, 4.6rem); line-height: 1.04; letter-spacing: -.055em; }
+.hero-copy { max-width: 680px; color: $muted; font-size: 1.2rem; line-height: 1.65; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.75rem; }
+.button { display: inline-block; padding: .8rem 1.15rem; border: 2px solid $navy; border-radius: 999px; font-weight: 700; text-decoration: none; }
+.button-primary { color: white; background: $navy; }
+.button-primary:hover { color: white; background: $teal; border-color: $teal; }
+.button-secondary { color: $navy; }
+.button-secondary:hover { color: $teal; border-color: $teal; }
+.section { margin: 4rem 0; }
+.section-heading { margin-bottom: 1.5rem; }
+.section-heading h2, .latest-heading h2, .connect-strip h2 { margin: 0; font-size: clamp(1.65rem, 4vw, 2.3rem); }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.card, .project-card { border: 1px solid $line; border-radius: 16px; background: white; box-shadow: 0 8px 24px rgba(18,60,74,.055); }
+.card { padding: 1.4rem; }
+.card h3 { margin-top: .6rem; font-size: 1.2rem; }
+.card p, .project-card p { color: $muted; }
+.card-icon { font-size: 1.75rem; }
+.text-link { font-weight: 700; text-decoration: none; }
+.progress { height: 7px; margin: 1.2rem 0 .4rem; overflow: hidden; border-radius: 999px; background: #e3e8e6; }
+.progress span { display: block; height: 100%; border-radius: inherit; background: $teal; }
+.connect-strip { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin: 4rem 0; padding: 2rem; border-radius: 16px; color: white; background: $navy; }
+.connect-strip .eyebrow { color: #80ddd7; }
+.connect-strip h2 { color: white; }
+.connect-links { display: flex; flex-wrap: wrap; gap: .65rem 1.1rem; }
+.connect-links a { color: white; font-weight: 700; }
+.latest-heading { margin: 4rem 0 1rem; }
+.post-list > li { padding: 1.2rem 0; border-bottom: 1px solid $line; }
+.post-link { color: $navy; font-weight: 700; }
+.project-list { display: grid; gap: 1rem; margin-top: 2rem; }
+.project-card { padding: 1.6rem; }
+.project-card h2 { margin: .5rem 0; }
+.project-meta { display: flex; gap: .5rem; }
+.project-meta span { padding: .2rem .55rem; border-radius: 999px; color: #075c65; background: #e4f3f1; font-size: .75rem; font-weight: 700; text-transform: uppercase; }
+.callout { margin: 2.5rem 0; padding: 1.2rem 1.4rem; border-left: 4px solid $teal; background: $cream; }
+@media (max-width: 760px) {
+  .card-grid { grid-template-columns: 1fr; }
+  .connect-strip { align-items: flex-start; flex-direction: column; }
+  .hero { margin-top: 1rem; padding: 2rem 1.3rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

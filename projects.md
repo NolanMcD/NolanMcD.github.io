@@ -1,21 +1,28 @@
 ---
 title: Projects
 permalink: /projects/
+description: Projects and ongoing challenges by Nolan McDermott.
 ---
 
-Here are a few highlights. Replace with your own repos, write-ups, or notebooks.
+<p class="page-lede">A growing collection of software experiments, data stories, and real-world challenges.</p>
 
-### Statcast Heatmap Explorer
-Interactive plots of launch angle vs. exit velocity with filters for handedness.
-- Code: link to repo
-- Post: link to blog write-up
+<div class="project-list">
+  <article class="project-card">
+    <div class="project-meta"><span>Adventure</span><span>In progress</span></div>
+    <h2>Circumnavigating the Florida Keys</h2>
+    <p>A long-term effort to paddle around every Florida Key. The project blends route research, mapping, trip documentation, and the logistics of safely exploring a remarkable coastline.</p>
+  </article>
+  <article class="project-card">
+    <div class="project-meta"><span>Baseball</span><span>9 / 30</span></div>
+    <h2>The MLB ballpark project</h2>
+    <p>A personal quest to visit every Major League Baseball stadium, with 21 parks left. Future updates will collect rankings, photos, travel notes, and game-day data in one place.</p>
+  </article>
+  <article class="project-card">
+    <div class="project-meta"><span>Software</span><span>Open source</span></div>
+    <h2>Code and experiments</h2>
+    <p>Small utilities, analyses, and works in progress live on GitHub. Detailed case studies will appear here as they are ready.</p>
+    <a class="text-link" href="https://github.com/NolanMcD">Browse my GitHub profile <span aria-hidden="true">→</span></a>
+  </article>
+</div>
 
-### Flight Delay Dashboard
-Shiny/Plotly dashboard analyzing delays and cancellations by carrier & route.
-- Code: link to repo
-- Demo: link/screenshot
-
-### Platoon Splits Analyzer
-R/Python notebook exploring vs LHP/RHP performance with MLB data.
-- Code: link to repo
-- Post: link to blog write-up
+<p class="callout">This page is intentionally a living archive. Check back as projects move from experiments to full write-ups.</p>
