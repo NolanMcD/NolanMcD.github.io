@@ -16,7 +16,7 @@ description: All movie reviews published on Noland.
       <h2><a href="{{ review.url | relative_url }}">{{ review.title }}</a></h2>
       <p>{{ review.excerpt | strip_html | truncatewords: 32 }}</p>
     </div>
-    {% if review.rating %}<p class="rating" aria-label="Rated {{ review.rating }} out of 5">{{ review.rating }} / 5 <span aria-hidden="true">★</span></p>{% endif %}
+    {% if review.rating %}<p class="rating">{% include star-rating.html rating=review.rating %}</p>{% endif %}
   </article>
 {% endfor %}
 </div>

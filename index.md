@@ -37,7 +37,7 @@ description: Movie reviews, watchlists, and notes on cinema from Nolan McDermott
       <div class="review-body">
         <p class="review-kicker">{% if review.film_year %}{{ review.film_year }} · {% endif %}{{ review.date | date: "%b %-d, %Y" }}</p>
         <h3><a href="{{ review.url | relative_url }}">{{ review.title }}</a></h3>
-        {% if review.rating %}<p class="rating" aria-label="Rated {{ review.rating }} out of 5">{{ review.rating }} / 5 <span aria-hidden="true">★</span></p>{% endif %}
+        {% if review.rating %}<p class="rating">{% include star-rating.html rating=review.rating %}</p>{% endif %}
         <p>{{ review.excerpt | strip_html | truncatewords: 24 }}</p>
       </div>
     </article>

@@ -81,7 +81,13 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
 .review-body h3 { margin: .2rem 0 .4rem; font-family: Georgia, "Times New Roman", serif; font-size: 1.45rem; }
 .review-body h3 a { color: $ink; text-decoration: none; }
 .review-kicker { margin: 0; color: $muted; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-.rating { color: $teal; font-weight: 800; white-space: nowrap; }
+.rating { font-weight: 800; white-space: nowrap; }
+.star-rating { display: inline-flex; align-items: center; gap: .08em; }
+.star-earned, .category-star { color: #d49a18; text-shadow: 0 1px 0 #8b5d00; }
+.star-unearned, .category-star.not-earned { color: #a9a29a; text-shadow: none; }
+.rating-number { margin-left: .45rem; color: $muted; font-size: .8em; }
+.review-category { display: flex; align-items: center; gap: .55rem; margin-top: 2.4rem; padding-bottom: .45rem; border-bottom: 1px solid $line; }
+.category-star { display: inline-block; font-size: .9em; line-height: 1; }
 .empty-reel { display: flex; align-items: center; gap: 1.5rem; padding: 2rem; border: 1px dashed #b9aa98; background: $cream; }
 .empty-reel > span { color: $teal; font-size: 4rem; line-height: 1; }
 .empty-reel h2, .empty-reel h3, .empty-reel p { margin: .2rem 0; }

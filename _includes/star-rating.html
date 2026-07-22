@@ -1,0 +1,4 @@
+<span class="star-rating" aria-label="{{ include.rating }} out of 5 stars">
+  {% for star in (1..5) %}<span class="{% if star <= include.rating %}star-earned{% else %}star-unearned{% endif %}" aria-hidden="true">{% if star <= include.rating %}★{% else %}☆{% endif %}</span>{% endfor %}
+  <span class="rating-number">{{ include.rating }}/5</span>
+</span>

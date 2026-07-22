@@ -13,7 +13,9 @@ Posts live in `_posts` and use the `YYYY-MM-DD-title.md` filename format. Site-w
 
 ## Publish a movie review
 
-Copy `_drafts/movie-review-template.md` into `_posts`, rename it using `YYYY-MM-DD-movie-title.md`, fill in the front matter, and write the review. Keep `categories: [movies]` so it appears automatically on the homepage and review archive. `rating` uses a five-point scale; `poster` is optional.
+Copy `_drafts/movie-review-template.md` into `_posts`, rename it using `YYYY-MM-DD-movie-title.md`, fill in the front matter, and write the review. Keep `categories: [movies]` so it appears automatically on the homepage and review archive.
+
+Ratings use five whole-star categories: **Story, Directing, Theme, Cast, and Characters**. Award one gold star for each category that worked, then set `rating` to the total. There are no half stars. The template explains how to turn an unearned gold star into a hollow star. `poster` is optional.
 
 ## Custom domain
 
