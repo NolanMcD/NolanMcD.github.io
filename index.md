@@ -5,9 +5,9 @@ description: Movie reviews, watchlists, and notes on cinema from Nolan McDermott
 ---
 
 <section class="movie-hero" aria-labelledby="movie-heading">
-  <p class="eyebrow">Noland at the movies</p>
-  <h1 id="movie-heading">Good movies. Bad movies.<br>Strong opinions.</h1>
-  <p class="hero-copy">Reviews, recommendations, and notes from a lifelong movie watcher—written after the credits roll.</p>
+  <p class="eyebrow">Nolan's land</p>
+  <h1 id="movie-heading">Movie reviews, screenplays.<br>and personal projects.</h1>
+  <p class="hero-copy">Reviews, recommendations, and screenplays from a lifelong movie watcher—written after the credits roll.</p>
   <div class="hero-actions">
     <a class="button button-primary" href="#latest-reviews">Read the reviews</a>
     <a class="button button-secondary" href="https://letterboxd.com/NolanMcD/">Follow on Letterboxd</a>
@@ -54,7 +54,13 @@ description: Movie reviews, watchlists, and notes on cinema from Nolan McDermott
 <section class="cinema-manifesto" aria-labelledby="why-heading">
   <p class="eyebrow">Why Noland?</p>
   <h2 id="why-heading">A place to think about what makes movies stick.</h2>
-  <p>I watch broadly and write personally: what worked, what didn't, and what followed me home. No consensus scores, no content mill—just one movie lover making sense of the screen.</p>
+  <p>I'm just a guy who likes movies and baseball.
+My Scale, no half stars
+5 - My favorite movies, must sees
+4 - Amazing/great movies, highly recommend
+3 - Good/average movies, worth a watch
+2 - Below average/bad movies, not worth your time
+1 - Terrible/awful movies, offensively bad.</p>
 </section>
 
 <section class="connect-strip" aria-labelledby="elsewhere-heading">

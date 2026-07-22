@@ -4,11 +4,11 @@ permalink: /about/
 description: Learn more about Nolan McDermott, a computer science and mathematics graduate interested in sports analytics and creative technology.
 ---
 
-<p class="page-lede">I'm Nolan McDermott, a computer science and mathematics graduate who likes finding the story hidden inside data—and finding reasons to get outside.</p>
+<p class="page-lede">I'm Nolan McDermott, a computer science and mathematics graduate who likes movies and baseball.</p>
 
-My interests sit at the intersection of **code, probability, sports, and exploration**. I enjoy building tools that make complex information easier to understand, especially in baseball and sports analytics. Away from a screen, I am usually watching a movie, planning a trip, cycling, or spending time on the water.
+My interests sit at the intersection of **coding, movies, sports, and exploration**. I enjoy building tools that make complex information easier to understand, especially in baseball and sports analytics. Away from a screen, I am usually watching a movie, planning a trip, running, or spending time on the water.
 
-This site—**Noland**—is primarily my home for movie reviews: a record of what I watch, what I notice, and what stays with me. It also holds project notes, experiments, and progress on a few ambitious long-term goals. Expect film writing alongside reproducible code, maps, charts, and occasional dispatches from the road or water.
+This site—**Noland**—is primarily my home for movie reviews: a record of what I watch, what I notice, and what stays with me. It also holds project notes, screenplays, and progress on a few ambitious long-term goals. Expect film writing alongside reproducible code, maps, charts, and occasional dispatches from the road or water.
 
 ## Elsewhere
 
