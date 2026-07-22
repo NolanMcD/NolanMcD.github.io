@@ -12,6 +12,7 @@ layout: default
     </div>
     <p class="post-meta">Reviewed by Nolan McDermott on <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time></p>
   </header>
+  {% if page.poster %}<img class="review-hero-poster" src="{{ page.poster | relative_url }}" alt="{{ page.title }} poster">{% endif %}
   <div class="post-content e-content" itemprop="reviewBody">{{ content }}</div>
   <p class="review-back"><a href="{{ '/reviews/' | relative_url }}">← All movie reviews</a></p>
 </article>

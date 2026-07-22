@@ -6,11 +6,12 @@ description: All movie reviews published on Noland.
 
 <p class="page-lede">Every movie review, from new releases to old favorites.</p>
 
-{% assign movie_reviews = site.categories.movies %}
-{% if movie_reviews.size > 0 %}
+{% assign movie_reviews = site.posts | where: "layout", "review" %}
+{% if movie_reviews != empty %}
 <div class="review-index">
 {% for review in movie_reviews %}
   <article>
+    {% if review.poster %}<a class="review-index-poster" href="{{ review.url | relative_url }}"><img src="{{ review.poster | relative_url }}" alt="{{ review.title }} poster" loading="lazy"></a>{% endif %}
     <div>
       <p class="review-kicker">{% if review.film_year %}{{ review.film_year }} · {% endif %}{{ review.date | date: "%B %-d, %Y" }}</p>
       <h2><a href="{{ review.url | relative_url }}">{{ review.title }}</a></h2>

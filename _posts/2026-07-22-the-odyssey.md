@@ -6,7 +6,7 @@ categories: [movies]
 film_year: 2026
 director: "Christopher Nolan"
 rating: 5
-poster: ""
+poster: "/assets/images/movies/the-odyssey.jpg"
 excerpt: "I loved it. Everyone should see it. Nolan truly is a master of his craft."
 ---
 

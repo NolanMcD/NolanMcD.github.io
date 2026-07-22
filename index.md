@@ -24,13 +24,13 @@ description: Movie reviews, watchlists, and notes on cinema from Nolan McDermott
     <a class="text-link" href="{{ '/reviews/' | relative_url }}">All reviews <span aria-hidden="true">→</span></a>
   </div>
 
-  {% assign movie_reviews = site.categories.movies %}
-  {% if movie_reviews.size > 0 %}
+  {% assign movie_reviews = site.posts | where: "layout", "review" %}
+  {% if movie_reviews != empty %}
   <div class="review-grid">
     {% for review in movie_reviews limit: 6 %}
     <article class="review-card">
       {% if review.poster %}
-      <a class="poster" href="{{ review.url | relative_url }}"><img src="{{ review.poster }}" alt="{{ review.title }} poster" loading="lazy"></a>
+      <a class="poster" href="{{ review.url | relative_url }}"><img src="{{ review.poster | relative_url }}" alt="{{ review.title }} poster" loading="lazy"></a>
       {% else %}
       <a class="poster poster-placeholder" href="{{ review.url | relative_url }}" aria-label="Read {{ review.title }}"><span aria-hidden="true">N</span></a>
       {% endif %}

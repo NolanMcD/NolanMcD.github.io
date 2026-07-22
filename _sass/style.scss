@@ -96,9 +96,12 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
 .cinema-manifesto > p:last-child { max-width: 680px; margin: 0 auto; color: $muted; font-size: 1.1rem; line-height: 1.7; }
 .review-index { margin-top: 2rem; border-top: 1px solid $line; }
 .review-index article { display: flex; align-items: start; justify-content: space-between; gap: 2rem; padding: 1.5rem 0; border-bottom: 1px solid $line; }
+.review-index-poster { flex: 0 0 95px; overflow: hidden; border-radius: 3px; box-shadow: 0 5px 14px rgba(42,31,25,.15); }
+.review-index-poster img { display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: cover; }
 .review-index h2 { margin: .25rem 0; font-family: Georgia, "Times New Roman", serif; }
 .review-index h2 a { color: $ink; text-decoration: none; }
 .review-header { padding-bottom: 1.5rem; border-bottom: 1px solid $line; }
+.review-hero-poster { display: block; width: min(100%, 440px); max-height: 660px; margin: 2rem auto 2.5rem; border-radius: 4px; object-fit: cover; box-shadow: 0 18px 40px rgba(42,31,25,.18); }
 .review-header .post-title { max-width: 850px; margin-bottom: .75rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.5rem, 7vw, 4.8rem); line-height: 1; }
 .review-byline { display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: $muted; font-size: 1.05rem; }
 .review-back { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid $line; font-weight: 700; }
