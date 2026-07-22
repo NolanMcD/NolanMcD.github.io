@@ -11,6 +11,7 @@ description: Projects and ongoing challenges by Nolan McDermott.
     <div class="project-meta"><span>Adventure</span><span>In progress</span></div>
     <h2>Circumnavigating the Florida Keys</h2>
     <p>A long-term effort to paddle around every Florida Key. The project blends route research, mapping, trip documentation, and the logistics of safely exploring a remarkable coastline.</p>
+    <a class="text-link" href="{{ '/projects/florida-keys/' | relative_url }}">Explore the expedition log <span aria-hidden="true">→</span></a>
   </article>
   <article class="project-card">
     <div class="project-meta"><span>Cinema</span><span>Ongoing</span></div>
