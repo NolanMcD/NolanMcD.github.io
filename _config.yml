@@ -1,9 +1,9 @@
-title: "Nolan McDermott"
-tagline: "Computer science, sports analytics, and ambitious side quests"
+title: "Noland"
+tagline: "Movies, reviews, and the occasional side quest"
 email: "boltjets24@gmail.com"
 description: >-
-  Nolan McDermott's portfolio and field notes on computer science,
-  mathematics, sports analytics, travel, and long-running adventures.
+  Nolan McDermott reviews movies and writes about cinema, personal projects,
+  sports, travel, and ambitious side quests.
 baseurl: ""
 url: "https://nolanmcd.github.io"
 lang: en-US
@@ -34,6 +34,7 @@ minima:
 show_excerpts: true
 
 header_pages:
+  - reviews.md
   - about.md
   - projects.md
 

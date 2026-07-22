@@ -4,13 +4,19 @@ permalink: /projects/
 description: Projects and ongoing challenges by Nolan McDermott.
 ---
 
-<p class="page-lede">A growing collection of software experiments, data stories, and real-world challenges.</p>
+<p class="page-lede">The code, analysis, adventures, and long-running goals happening beyond my movie reviews.</p>
 
 <div class="project-list">
   <article class="project-card">
     <div class="project-meta"><span>Adventure</span><span>In progress</span></div>
     <h2>Circumnavigating the Florida Keys</h2>
     <p>A long-term effort to paddle around every Florida Key. The project blends route research, mapping, trip documentation, and the logistics of safely exploring a remarkable coastline.</p>
+  </article>
+  <article class="project-card">
+    <div class="project-meta"><span>Cinema</span><span>Ongoing</span></div>
+    <h2>Exploring cinema</h2>
+    <p>Watching widely, logging the journey, and building Noland into a home for thoughtful movie reviews and recommendations.</p>
+    <a class="text-link" href="{{ '/reviews/' | relative_url }}">Read the movie reviews <span aria-hidden="true">→</span></a>
   </article>
   <article class="project-card">
     <div class="project-meta"><span>Baseball</span><span>9 / 30</span></div>

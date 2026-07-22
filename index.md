@@ -1,60 +1,63 @@
 ---
-layout: home
+layout: landing
 title: Home
+description: Movie reviews, watchlists, and notes on cinema from Nolan McDermott.
 ---
 
-<section class="hero" aria-labelledby="intro-heading">
-  <p class="eyebrow">Hello, I'm Nolan.</p>
-  <h1 id="intro-heading">I turn curiosity into code, analysis, and adventures.</h1>
-  <p class="hero-copy">I'm a computer science and mathematics graduate interested in sports analytics, data visualization, and projects that get me out into the world.</p>
+<section class="movie-hero" aria-labelledby="movie-heading">
+  <p class="eyebrow">Noland at the movies</p>
+  <h1 id="movie-heading">Good movies. Bad movies.<br>Strong opinions.</h1>
+  <p class="hero-copy">Reviews, recommendations, and notes from a lifelong movie watcher—written after the credits roll.</p>
   <div class="hero-actions">
-    <a class="button button-primary" href="{{ '/projects/' | relative_url }}">Explore my projects</a>
-    <a class="button button-secondary" href="{{ '/about/' | relative_url }}">More about me</a>
+    <a class="button button-primary" href="#latest-reviews">Read the reviews</a>
+    <a class="button button-secondary" href="https://letterboxd.com/NolanMcD/">Follow on Letterboxd</a>
   </div>
+  <div class="film-strip" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 </section>
 
-<section class="section" aria-labelledby="now-heading">
-  <div class="section-heading">
-    <p class="eyebrow">What I'm working toward</p>
-    <h2 id="now-heading">Big goals, tracked in public</h2>
+<section class="section review-section" id="latest-reviews" aria-labelledby="reviews-heading">
+  <div class="section-heading split-heading">
+    <div>
+      <p class="eyebrow">Fresh from the theater</p>
+      <h2 id="reviews-heading">Latest reviews</h2>
+    </div>
+    <a class="text-link" href="{{ '/reviews/' | relative_url }}">All reviews <span aria-hidden="true">→</span></a>
   </div>
-  <div class="card-grid">
-    <article class="card">
-      <span class="card-icon" aria-hidden="true">🛶</span>
-      <h3>Circumnavigate every Florida Key</h3>
-      <p>An ongoing paddling challenge combining planning, endurance, geography, and plenty of time on the water.</p>
+
+  {% assign movie_reviews = site.categories.movies %}
+  {% if movie_reviews.size > 0 %}
+  <div class="review-grid">
+    {% for review in movie_reviews limit: 6 %}
+    <article class="review-card">
+      {% if review.poster %}
+      <a class="poster" href="{{ review.url | relative_url }}"><img src="{{ review.poster }}" alt="{{ review.title }} poster" loading="lazy"></a>
+      {% else %}
+      <a class="poster poster-placeholder" href="{{ review.url | relative_url }}" aria-label="Read {{ review.title }}"><span aria-hidden="true">N</span></a>
+      {% endif %}
+      <div class="review-body">
+        <p class="review-kicker">{% if review.film_year %}{{ review.film_year }} · {% endif %}{{ review.date | date: "%b %-d, %Y" }}</p>
+        <h3><a href="{{ review.url | relative_url }}">{{ review.title }}</a></h3>
+        {% if review.rating %}<p class="rating" aria-label="Rated {{ review.rating }} out of 5">{{ review.rating }} / 5 <span aria-hidden="true">★</span></p>{% endif %}
+        <p>{{ review.excerpt | strip_html | truncatewords: 24 }}</p>
+      </div>
     </article>
-    <article class="card">
-      <span class="card-icon" aria-hidden="true">⚾</span>
-      <h3>Visit all 30 MLB ballparks</h3>
-      <p>A lifelong baseball tour. Nine parks visited, 21 still waiting.</p>
-      <div class="progress" role="progressbar" aria-label="MLB ballparks visited" aria-valuemin="0" aria-valuemax="30" aria-valuenow="9"><span style="width: 30%"></span></div>
-      <small>9 of 30 ballparks</small>
-    </article>
-    <article class="card">
-      <span class="card-icon" aria-hidden="true">🎬</span>
-      <h3>Keep exploring cinema</h3>
-      <p>Watching widely, logging the journey, and always looking for the next great film.</p>
-      <a class="text-link" href="https://letterboxd.com/NolanMcD/">Follow along on Letterboxd <span aria-hidden="true">→</span></a>
-    </article>
+    {% endfor %}
   </div>
+  {% else %}
+  <div class="empty-reel">
+    <span aria-hidden="true">◎</span>
+    <div><h3>The projector is warming up.</h3><p>My first full review is coming soon. Until then, browse everything I've logged on <a href="https://letterboxd.com/NolanMcD/">Letterboxd</a>.</p></div>
+  </div>
+  {% endif %}
 </section>
 
-<section class="connect-strip" aria-labelledby="connect-heading">
-  <div>
-    <p class="eyebrow">Let's connect</p>
-    <h2 id="connect-heading">Find me around the web</h2>
-  </div>
-  <div class="connect-links">
-    <a href="mailto:boltjets24@gmail.com">Email</a>
-    <a href="https://github.com/NolanMcD">GitHub</a>
-    <a href="https://www.linkedin.com/in/nolan-mcdermott-b9a20220b/">LinkedIn</a>
-    <a href="https://www.strava.com/athletes/57377386">Strava</a>
-    <a href="https://www.youtube.com/@NolanMcD">YouTube</a>
-  </div>
+<section class="cinema-manifesto" aria-labelledby="why-heading">
+  <p class="eyebrow">Why Noland?</p>
+  <h2 id="why-heading">A place to think about what makes movies stick.</h2>
+  <p>I watch broadly and write personally: what worked, what didn't, and what followed me home. No consensus scores, no content mill—just one movie lover making sense of the screen.</p>
 </section>
 
-<div class="latest-heading">
-  <p class="eyebrow">Field notes</p>
-  <h2>Latest writing</h2>
-</div>
+<section class="connect-strip" aria-labelledby="elsewhere-heading">
+  <div><p class="eyebrow">Beyond the credits</p><h2 id="elsewhere-heading">There's more to explore.</h2></div>
+  <div class="connect-links"><a href="{{ '/projects/' | relative_url }}">Projects</a><a href="{{ '/about/' | relative_url }}">About Nolan</a><a href="mailto:boltjets24@gmail.com">Email</a></div>
+</section>

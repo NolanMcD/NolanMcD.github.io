@@ -8,7 +8,7 @@ description: Learn more about Nolan McDermott, a computer science and mathematic
 
 My interests sit at the intersection of **code, probability, sports, and exploration**. I enjoy building tools that make complex information easier to understand, especially in baseball and sports analytics. Away from a screen, I am usually watching a movie, planning a trip, cycling, or spending time on the water.
 
-This site is my home for project notes, experiments, and progress on a few ambitious long-term goals. Expect practical write-ups, reproducible code, maps, charts, and occasional dispatches from the road or water.
+This site—**Noland**—is primarily my home for movie reviews: a record of what I watch, what I notice, and what stays with me. It also holds project notes, experiments, and progress on a few ambitious long-term goals. Expect film writing alongside reproducible code, maps, charts, and occasional dispatches from the road or water.
 
 ## Elsewhere
 

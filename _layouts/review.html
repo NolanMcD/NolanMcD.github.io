@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<article class="post h-entry movie-review" itemscope itemtype="http://schema.org/Review">
+  <header class="post-header review-header">
+    <p class="eyebrow">Movie review</p>
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <div class="review-byline">
+      <span>{% if page.film_year %}{{ page.film_year }}{% endif %}{% if page.director %} · Directed by {{ page.director }}{% endif %}</span>
+      {% if page.rating %}<strong class="rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating"><span itemprop="ratingValue">{{ page.rating }}</span> / <span itemprop="bestRating">5</span> <span aria-hidden="true">★</span></strong>{% endif %}
+    </div>
+    <p class="post-meta">Reviewed by Nolan McDermott on <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time></p>
+  </header>
+  <div class="post-content e-content" itemprop="reviewBody">{{ content }}</div>
+  <p class="review-back"><a href="{{ '/reviews/' | relative_url }}">← All movie reviews</a></p>
+</article>
