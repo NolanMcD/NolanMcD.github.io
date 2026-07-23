@@ -1,6 +1,6 @@
 # Noland — movies, projects, and side quests
 
-Nolan McDermott's movie-review site and personal portfolio, built with Jekyll and hosted by GitHub Pages at [nolanmcd.github.io](https://nolanmcd.github.io).
+Nolan McDermott's movie-review site and personal portfolio, built with Jekyll and hosted by GitHub Pages at [noland.blog](https://noland.blog).
 
 ## Run locally
 
@@ -19,4 +19,6 @@ Ratings use five whole-star categories: **Story, Directing, Theme, Cast, and Cha
 
 ## Custom domain
 
-When you own a domain, add a file named `CNAME` containing only that domain, update `url` in `_config.yml`, and point the domain's DNS records to GitHub Pages. Do not rename `CNAME.example` until the domain and DNS are ready.
+The canonical domain is `noland.blog`. The root `CNAME` file and `url` in
+`_config.yml` must remain aligned with that domain. DNS points the apex domain
+and `www` subdomain to GitHub Pages.

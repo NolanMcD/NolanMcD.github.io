@@ -5,7 +5,7 @@ description: >-
   Nolan McDermott reviews movies and writes about cinema, personal projects,
   sports, travel, and ambitious side quests.
 baseurl: ""
-url: "https://nolanmcd.github.io"
+url: "https://noland.blog"
 lang: en-US
 timezone: America/New_York
 github_username: NolanMcD
@@ -52,6 +52,5 @@ defaults:
 
 exclude:
   - README.md
-  - CNAME.example
   - Gemfile
   - Gemfile.lock
