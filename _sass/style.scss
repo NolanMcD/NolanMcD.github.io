@@ -133,6 +133,7 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
 .review-byline { display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: $muted; font-size: 1.05rem; }
 .review-back { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid $line; font-weight: 700; }
 .screenplay-entry { margin-top: 2rem; }
+.screenplay-entry + .screenplay-entry { margin-top: 4rem; }
 .screenplay-entry h2 { max-width: 850px; margin-bottom: .75rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.25rem, 6vw, 4rem); line-height: 1; }
 .screenplay-meta { margin-bottom: 0; color: $muted; }
 .screenplay-poster { display: block; width: min(100%, 440px); margin: 2rem auto 1rem; border-radius: 4px; }

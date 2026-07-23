@@ -19,3 +19,17 @@ description: Screenplay transcriptions by Nolan McDermott.
 
   <p class="screenplay-prompt">Click the poster to open the screenplay PDF.</p>
 </article>
+
+<article class="screenplay-entry">
+  <header class="review-header">
+    <p class="eyebrow">Screenplay transcription</p>
+    <h2>Gambit</h2>
+    <p class="screenplay-meta">Screenplay by Jack Davies and Alvin Sargent · Directed by Ronald Neame · Transcribed by Nolan McDermott</p>
+  </header>
+
+  <a class="screenplay-poster" href="{{ '/assets/screenplays/gambit.pdf' | relative_url }}" target="_blank" rel="noopener" aria-label="Open Gambit screenplay PDF">
+    <img class="review-hero-poster" src="{{ '/assets/images/movies/gambit-poster.jpg' | relative_url }}" alt="Gambit poster">
+  </a>
+
+  <p class="screenplay-prompt">Click the poster to open the screenplay PDF.</p>
+</article>
