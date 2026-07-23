@@ -12,7 +12,7 @@ a { color: #086c78; text-underline-offset: 3px; }
 a:hover, a:focus { color: #064c55; }
 a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius: 2px; }
 .wrapper { max-width: 1080px; }
-.site-header { border-top: 4px solid $teal; border-bottom-color: $line; background: rgba(253,253,251,.96); }
+.site-header { z-index: 100; border-top: 4px solid $teal; border-bottom-color: $line; background: rgba(253,253,251,.96); }
 .site-title { color: $navy !important; font-weight: 800; letter-spacing: -.02em; }
 .site-nav .page-link { color: $ink; font-weight: 600; }
 .site-footer { border-top-color: $line; background: $cream; }
