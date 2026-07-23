@@ -35,6 +35,7 @@ show_excerpts: true
 
 header_pages:
   - reviews.md
+  - screenplays.md
   - about.md
   - projects.md
 

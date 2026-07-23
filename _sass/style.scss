@@ -132,6 +132,15 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
 .review-header .post-title { max-width: 850px; margin-bottom: .75rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.5rem, 7vw, 4.8rem); line-height: 1; }
 .review-byline { display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: $muted; font-size: 1.05rem; }
 .review-back { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid $line; font-weight: 700; }
+.screenplay-entry { margin-top: 2rem; }
+.screenplay-entry h2 { max-width: 850px; margin-bottom: .75rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.25rem, 6vw, 4rem); line-height: 1; }
+.screenplay-meta { margin-bottom: 0; color: $muted; }
+.screenplay-poster { display: block; width: min(100%, 440px); margin: 2rem auto 1rem; border-radius: 4px; }
+.screenplay-poster .review-hero-poster { width: 100%; margin: 0; transition: transform .2s ease, box-shadow .2s ease; }
+.screenplay-poster:hover .review-hero-poster,
+.screenplay-poster:focus-visible .review-hero-poster { transform: translateY(-3px); box-shadow: 0 22px 46px rgba(42,31,25,.24); }
+.screenplay-poster:focus-visible { outline: 3px solid $teal; outline-offset: 5px; }
+.screenplay-prompt { color: $muted; text-align: center; }
 @media (max-width: 760px) {
   .card-grid { grid-template-columns: 1fr; }
   .review-grid { grid-template-columns: 1fr; }
