@@ -51,6 +51,22 @@ description: Movie reviews, watchlists, and notes on cinema from Nolan McDermott
   {% endif %}
 </section>
 
+<section class="section writing-section" aria-labelledby="writing-heading">
+  <div class="section-heading">
+    <p class="eyebrow">Beyond the review</p>
+    <h2 id="writing-heading">Latest writing</h2>
+  </div>
+  {% assign latest_writing = site.posts | where_exp: "post", "post.layout != 'review'" %}
+  {% for post in latest_writing limit: 1 %}
+  <article class="writing-card">
+    <p class="review-kicker">{{ post.date | date: "%B %-d, %Y" }}</p>
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p>{{ post.excerpt | strip_html }}</p>
+    <a class="text-link" href="{{ post.url | relative_url }}">Read the post <span aria-hidden="true">→</span></a>
+  </article>
+  {% endfor %}
+</section>
+
 <section class="cinema-manifesto" aria-labelledby="why-heading">
   <p class="eyebrow">Why Noland?</p>
   <h2 id="why-heading">A place to think about what makes movies stick.</h2>
