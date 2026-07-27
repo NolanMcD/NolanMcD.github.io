@@ -205,7 +205,8 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
   .route-entry { grid-template-columns: 42px minmax(0, 1fr); gap: .75rem; }
   .route-marker { width: 40px; height: 40px; border-width: 3px; font-size: .75rem; }
   .route-entry:not(:last-child)::before { top: 36px; left: 20px; }
-  .watch-overview-grid { grid-template-columns: 1fr; }
+  .watch-overview-grid { grid-template-columns: minmax(0, 1fr); }
+  .watch-legend, .watch-legend li > span { min-width: 0; }
   .watch-donut { width: min(82vw, 270px); }
   .watch-versus { gap: .5rem; }
   .watch-versus > div { padding-inline: .25rem; }
