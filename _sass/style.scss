@@ -278,7 +278,8 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
   .watch-donut { width: min(82vw, 270px); }
   .watch-versus { gap: .5rem; }
   .watch-versus > div { padding-inline: .25rem; }
-  .five-hit-stats { grid-template-columns: repeat(2, 1fr); }
+  .five-hit-stats { box-sizing: border-box; grid-template-columns: repeat(2, minmax(0, 1fr)); width: calc(100vw - 30px); max-width: 100%; }
+  .five-hit-stats span { overflow-wrap: anywhere; }
   .five-hit-overview-grid { grid-template-columns: minmax(0, 1fr); }
   .five-hit-overview, .tb-distribution, .double-staircase, .five-doubles-callout, .five-hit-grid, .never-grid { box-sizing: border-box; width: calc(100vw - 30px); max-width: 100%; }
   .five-hit-legend, .five-hit-legend li, .five-hit-legend li > span { min-width: 0; max-width: 100%; }
