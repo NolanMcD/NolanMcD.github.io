@@ -56,6 +56,34 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
 .project-meta span { padding: .2rem .55rem; border-radius: 999px; color: #075c65; background: #e4f3f1; font-size: .75rem; font-weight: 700; text-transform: uppercase; }
 .callout { margin: 2.5rem 0; padding: 1.2rem 1.4rem; border-left: 4px solid $teal; background: $cream; }
 
+/* Miami Storms */
+.storm-hero { position: relative; margin: 1.5rem 0 2rem; padding: clamp(2.2rem, 7vw, 5rem); overflow: hidden; border-radius: 18px; color: #e9f1f2; background: radial-gradient(circle at 82% 10%, #566b78, #263a46 42%, #111b23 85%); box-shadow: 0 22px 55px rgba(17,27,35,.25); }
+.storm-hero::after { position: absolute; top: -4rem; right: -5rem; width: 23rem; height: 14rem; border-radius: 50%; background: rgba(255,255,255,.055); filter: blur(12px); content: ""; }
+.storm-hero .eyebrow { color: #a9d5dd; }
+.storm-hero h1 { position: relative; z-index: 1; max-width: 760px; margin: .2rem 0 1rem; color: white; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.7rem, 8vw, 5.5rem); line-height: .98; letter-spacing: -.055em; }
+.storm-hero > p:last-child { position: relative; z-index: 1; max-width: 650px; color: #cfdbdf; font-size: 1.12rem; line-height: 1.65; }
+.storm-player { margin-bottom: 4rem; padding: clamp(1.3rem, 5vw, 2.5rem); border: 1px solid #bdc9cd; border-radius: 14px; background: #edf2f2; box-shadow: 0 12px 30px rgba(17,27,35,.08); }
+.storm-player-copy h2 { margin: .15rem 0; color: #182a34; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.7rem, 5vw, 2.5rem); }
+.storm-player-label { margin: 0; color: #43616d; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+#storm-now-detail, .storm-note { color: #5b6c72; }
+.storm-player audio { width: 100%; margin: 1rem 0; accent-color: #304f5c; }
+.storm-controls { display: flex; flex-wrap: wrap; gap: .6rem; }
+.storm-controls button, .storm-track { border: 1px solid #9dafb6; color: #203742; background: white; font: inherit; cursor: pointer; }
+.storm-controls button { padding: .6rem .9rem; border-radius: 999px; font-weight: 700; }
+.storm-controls button:hover, .storm-controls button:focus-visible, .storm-track:hover, .storm-track:focus-visible { border-color: #304f5c; background: #e1ebed; }
+.storm-note { margin: 1rem 0 0; font-size: .82rem; }
+.storm-player.is-empty audio, .storm-player.is-empty .storm-controls { opacity: .45; pointer-events: none; }
+.storm-library-heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid $line; }
+.storm-library-heading h2 { margin: .1rem 0 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.9rem, 5vw, 2.8rem); }
+#storm-count { color: $muted; font-size: .85rem; font-weight: 700; }
+.storm-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; margin: 1rem 0 4rem; }
+.storm-track { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: 1rem 1.1rem; border-radius: 8px; text-align: left; }
+.storm-track strong { color: #203742; }
+.storm-track span { color: #68787d; font-size: .76rem; }
+.storm-track.is-playing { color: white; border-color: #203742; background: #203742; }
+.storm-track.is-playing strong, .storm-track.is-playing span { color: white; }
+.storm-empty { grid-column: 1 / -1; padding: 2rem; border: 1px dashed #9dafb6; border-radius: 10px; color: #5b6c72; text-align: center; background: #f3f6f5; }
+
 /* Florida Keys expedition */
 .expedition-hero { position: relative; margin: 1.5rem 0 4rem; padding: clamp(2rem, 7vw, 5rem); overflow: hidden; border-radius: 18px; color: white; background: linear-gradient(135deg, #073b4c, #087e8b 58%, #50a89f); box-shadow: 0 22px 55px rgba(7,59,76,.2); }
 .expedition-hero::after { position: absolute; top: -35%; right: -10%; width: 26rem; height: 26rem; border: 1px solid rgba(255,255,255,.15); border-radius: 48% 52% 63% 37%; content: ""; transform: rotate(22deg); }
@@ -346,6 +374,10 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
 .closet-pair small { position: absolute; top: 2px; right: 4px; color: #39754a; font-weight: 900; }
 .closet-status { min-height: 1.5em; margin: .8rem 0 0; color: #39754a; font-weight: 700; text-align: center; }
 @media (max-width: 760px) {
+  .storm-hero { margin-top: 1rem; padding: 3rem 1.3rem; }
+  .storm-list { grid-template-columns: minmax(0, 1fr); }
+  .storm-library-heading { align-items: flex-start; flex-direction: column; }
+  .storm-track { align-items: flex-start; flex-direction: column; gap: .25rem; }
   .rating-scale li { grid-template-columns: 82px 1fr; gap: .65rem; padding-inline: .75rem; }
   .homepage-character, .homepage-dialogue { width: 82%; }
   .card-grid { grid-template-columns: 1fr; }

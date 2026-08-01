@@ -8,6 +8,12 @@ description: Projects and ongoing challenges by Nolan McDermott.
 
 <div class="project-list">
   <article class="project-card">
+    <div class="project-meta"><span>Field recordings</span><span>New</span></div>
+    <h2>Miami Storms</h2>
+    <p>Real thunderstorms recorded from my apartment in Miami, collected for sleep, focus, and continuous listening.</p>
+    <a class="text-link" href="{{ '/storms/' | relative_url }}">Listen to the storms <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="project-card">
     <div class="project-meta"><span>Adventure</span><span>In progress</span></div>
     <h2>Circumnavigating the Florida Keys</h2>
     <p>A long-term effort to paddle around every Florida Key. The project blends route research, mapping, trip documentation, and the logistics of safely exploring a remarkable coastline.</p>
