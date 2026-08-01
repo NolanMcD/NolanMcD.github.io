@@ -68,9 +68,14 @@ description: Movie reviews, watchlists, and notes on cinema from Nolan McDermott
 </section>
 
 <section class="cinema-manifesto" aria-labelledby="why-heading">
-  <p class="eyebrow">Why Noland?</p>
-  <h2 id="why-heading">A place to think about what makes movies stick.</h2>
-  <p class="manifesto-intro">I've been obsessed with movies since 2015. My rating system is simple: no half stars, no complicated math—just how strongly I'd recommend the movie.</p>
+  <div class="homepage-screenplay">
+    <p class="homepage-scene-heading">INT. MOVIE THEATER — NIGHT</p>
+    <p class="homepage-action">The credits roll. The lights come up. Nolan is already deciding how many stars the movie deserves.</p>
+    <p class="homepage-character">NOLAN (V.O.)</p>
+    <p class="homepage-dialogue">I've loved movies since 2015. I don't do half stars.</p>
+  </div>
+  <p class="eyebrow">The rating system</p>
+  <h2 id="why-heading">Five possible endings.</h2>
   <ol class="rating-scale" reversed aria-label="Nolan's five-star rating scale">
     <li><strong>5 stars</strong><span>A favorite. A must-see.</span></li>
     <li><strong>4 stars</strong><span>Great. I highly recommend it.</span></li>
@@ -78,6 +83,7 @@ description: Movie reviews, watchlists, and notes on cinema from Nolan McDermott
     <li><strong>2 stars</strong><span>Below average. Not worth your time.</span></li>
     <li><strong>1 star</strong><span>Terrible. Avoid it.</span></li>
   </ol>
+  <p class="homepage-transition">FADE OUT.</p>
 </section>
 
 <section class="connect-strip" aria-labelledby="elsewhere-heading">

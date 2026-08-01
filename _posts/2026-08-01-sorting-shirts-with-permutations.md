@@ -5,15 +5,9 @@ categories: [math, code]
 excerpt: "An interactive look at permutations, cycle decomposition, and the minimum number of swaps needed to match three shirts with their hangers."
 ---
 
-<div class="screenplay-scene">
-  <p class="scene-heading">INT. BEDROOM CLOSET — MORNING</p>
-  <p class="scene-action">Three shirts hang in a row: blue on the red hanger, red on the green hanger, and green on the blue hanger. Close—but completely wrong.</p>
-  <p class="scene-character">NOLAN (V.O.)</p>
-  <p class="scene-dialogue">How many swaps does it take to put every shirt where it belongs?</p>
-  <p class="scene-transition">CUT TO: THE MATH.</p>
-</div>
+Suppose there are three colored hangers—red, green, and blue—and three matching shirts. The shirts have been hung in the wrong places. What is the fewest number of swaps needed to put every shirt on its matching hanger?
 
-At first, this felt like the sort of tiny problem I should be able to solve just by staring into my closet. But the moment I asked for the *fewest possible* swaps, it became something more interesting: a problem about permutations, cycles, and how to prove a solution is actually optimal.
+It looks like a tiny sorting puzzle. Underneath, it is a clean demonstration of permutations, cycle decomposition, and optimal algorithms.
 
 <div class="shirt-sorter" id="shirt-sorter">
   <div class="shirt-sorter-heading">
@@ -48,9 +42,9 @@ At first, this felt like the sort of tiny problem I should be able to solve just
   <p class="sort-status" id="sort-status" aria-live="polite">Ready to solve.</p>
 </div>
 
-## Why you never need more than two swaps
+## Why the solution is optimal
 
-Every arrangement of the shirts is a **permutation**—just a rearrangement of the same three colors. To see what needs fixing, draw an arrow from each hanger color to the shirt color beneath it. The arrows naturally break into loops called cycles.
+Every arrangement of the shirts is a **permutation**. Draw an arrow from each hanger color to the color of the shirt currently beneath it. Those arrows split the permutation into cycles.
 
 For example, the arrangement `(Blue, Red, Green)` creates one cycle:
 
@@ -58,15 +52,15 @@ For example, the arrangement `(Blue, Red, Green)` creates one cycle:
   <span class="red">Red</span><b>→</b><span class="blue">Blue</span><b>→</b><span class="green">Green</span><b>→</b><span class="red">Red</span>
 </div>
 
-A cycle containing *k* shirts takes exactly *k* − 1 swaps to repair. One swap breaks part of the loop; keep going and each shirt falls into place. More generally, a swap can increase the number of cycles by at most one. Since the solved arrangement has *n* one-shirt cycles, an arrangement that begins with *c* cycles needs at least *n* − *c* swaps. The algorithm hits that lower bound exactly:
+A cycle containing *k* shirts takes exactly *k* − 1 swaps to repair. More generally, each swap can increase the number of cycles by at most one. The solved arrangement has *n* one-item cycles, so an arrangement starting with *c* cycles requires at least *n* − *c* swaps. The algorithm reaches that lower bound:
 
 <div class="swap-formula"><span>minimum swaps</span><strong>n − number of cycles</strong></div>
 
 With three shirts, the worst case is one three-item cycle, so the answer can never be more than two swaps.
 
-## The solution, on the page
+## The algorithm
 
-The code scans the hangers from left to right. When it finds the wrong shirt, it tracks down the right one and swaps it into place. Each move fixes a hanger without undoing the work that came before it.
+The algorithm scans the hangers from left to right. Whenever a hanger has the wrong shirt, it finds the correct shirt and swaps it into place. That fixes one position without disturbing any position already fixed.
 
 ```python
 import random
@@ -258,11 +252,9 @@ What looks like a simple sorting demo is really a compact graph-theory problem. 
 }());
 </script>
 
-<p class="scene-transition scene-break">DISSOLVE TO: A MUCH FULLER CLOSET.</p>
+## The real-closet version
 
-## Then real life gets involved
-
-Of course, nobody's closet contains exactly one red, one green, and one blue shirt. There are stacks of black tees, a few nearly identical grays, some white shirts, and then the one loud color you forgot you owned. Research on clothing preferences found that black, white, and gray account for about 60% of selections, while sales data for men's T-shirts also puts black and white first, followed by navy and dark gray. So I modeled the closet around a heavy neutral core with a long tail of other colors. ([Clothing-color study](https://www.jstage.jst.go.jp/article/senshoshi1960/49/12/49_12_881/_article), [men's T-shirt sales report](https://www.particl.com/assets/reports/mens-tees.pdf))
+Real closets do not have one shirt of each color. They contain repeated colors, and those colors are not evenly distributed. Research on clothing preferences found that black, white, and gray account for about 60% of selections, while sales data for men's T-shirts also puts black and white first, followed by navy and dark gray. That suggests a heavily neutral closet with a long tail of other colors. ([Clothing-color study](https://www.jstage.jst.go.jp/article/senshoshi1960/49/12/49_12_881/_article), [men's T-shirt sales report](https://www.particl.com/assets/reports/mens-tees.pdf))
 
 The simulator below uses this modeled distribution:
 
@@ -284,7 +276,7 @@ The simulator below uses this modeled distribution:
   <span style="--share:1%;--color:#a1988d">Other <b>1%</b></span>
 </div>
 
-There is one catch: a perfect match is possible only if there are just as many hangers of each color as there are shirts of that color. The generator handles that for us. It creates one matching hanger per shirt, then scrambles everything until **no shirt begins on its matching color**.
+There is one important constraint: a perfect match is possible only when the hanger colors and shirt colors have the same counts. The generator therefore creates one matching hanger for every shirt, then randomly rearranges the pairs so **no shirt starts on its matching color**.
 
 <div class="closet-lab" id="closet-lab">
   <div class="closet-lab-heading">
