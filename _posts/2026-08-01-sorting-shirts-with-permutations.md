@@ -251,3 +251,290 @@ What looks like a simple sorting demo is really a compact graph-theory problem. 
   render();
 }());
 </script>
+
+## The real-closet version
+
+Real closets do not have one shirt of each color. They contain repeated colors, and those colors are not evenly distributed. Research on clothing preferences found that black, white, and gray account for about 60% of selections, while sales data for men's T-shirts also puts black and white first, followed by navy and dark gray. That suggests a heavily neutral closet with a long tail of other colors. ([Clothing-color study](https://www.jstage.jst.go.jp/article/senshoshi1960/49/12/49_12_881/_article), [men's T-shirt sales report](https://www.particl.com/assets/reports/mens-tees.pdf))
+
+The simulator below uses this modeled distribution:
+
+<div class="closet-distribution" aria-label="Modeled shirt color distribution">
+  <span style="--share:25%;--color:#202124">Black <b>25%</b></span>
+  <span style="--share:19%;--color:#f5f2ea">White <b>19%</b></span>
+  <span style="--share:15%;--color:#8b8d91">Gray <b>15%</b></span>
+  <span style="--share:8%;--color:#263c67">Navy <b>8%</b></span>
+  <span style="--share:6%;--color:#397db5">Blue <b>6%</b></span>
+  <span style="--share:6%;--color:#8a6245">Brown/tan <b>6%</b></span>
+  <span style="--share:5%;--color:#b65c8a">Multicolor <b>5%</b></span>
+  <span style="--share:4%;--color:#bd3b34">Red <b>4%</b></span>
+  <span style="--share:3%;--color:#438054">Green <b>3%</b></span>
+  <span style="--share:2%;--color:#dd82a6">Pink <b>2%</b></span>
+  <span style="--share:2%;--color:#76549c">Purple <b>2%</b></span>
+  <span style="--share:2%;--color:#d9ac2f">Yellow <b>2%</b></span>
+  <span style="--share:1%;--color:#d77732">Orange <b>1%</b></span>
+  <span style="--share:1%;--color:#278f91">Teal <b>1%</b></span>
+  <span style="--share:1%;--color:#a1988d">Other <b>1%</b></span>
+</div>
+
+There is one important constraint: a perfect match is possible only when the hanger colors and shirt colors have the same counts. The generator therefore creates one matching hanger for every shirt, then randomly rearranges the pairs so **no shirt starts on its matching color**.
+
+<div class="closet-lab" id="closet-lab">
+  <div class="closet-lab-heading">
+    <div><p class="eyebrow">Duplicate-color assignment</p><h2>Build an arbitrarily large closet</h2></div>
+    <label for="closet-size">Items <input id="closet-size" type="number" min="6" max="500" step="1" value="60"></label>
+  </div>
+
+  <div class="closet-actions">
+    <button type="button" id="generate-closet">Generate mismatched closet</button>
+    <button type="button" class="match-button" id="match-closet">Match the closet</button>
+  </div>
+
+  <div class="closet-summary">
+    <div><span>Items</span><strong id="closet-total">60</strong></div>
+    <div><span>Matched</span><strong id="closet-matched">0</strong></div>
+    <div><span>Mismatched</span><strong id="closet-mismatched">60</strong></div>
+    <div><span>Swaps</span><strong id="closet-swaps">0</strong></div>
+  </div>
+
+  <div class="closet-key"><span><i class="key-hanger"></i>Hanger</span><span><i class="key-shirt"></i>Shirt</span><span><i class="key-match"></i>Matched pair</span></div>
+  <div class="closet-grid" id="closet-grid" aria-label="Randomly mismatched closet"></div>
+  <p class="closet-status" id="closet-status" aria-live="polite">Every shirt begins on a different-colored hanger.</p>
+</div>
+
+### Matching repeated colors
+
+With duplicate colors, individual black shirts are interchangeable; it does not matter which black shirt reaches a black hanger. The algorithm works from left to right:
+
+1. Leave every correctly matched position alone.
+2. At a mismatch, find a later shirt with the required color.
+3. Prefer a reciprocal swap that fixes both positions at once.
+4. Otherwise, make a swap that fixes the current position and continue.
+
+This always finishes with every shirt matched and never disturbs an earlier position that has already been fixed. For a closet of *n* items, this straightforward implementation uses linear space for its working copy and returned swap list, and at most *n* − 1 swaps. Its search is quadratic in the worst case, which remains comfortable for the hundreds of items a real closet might contain.
+
+```python
+def match_closet(hangers, shirts):
+    """Return swaps that match duplicate-colored shirts and hangers."""
+    if sorted(hangers) != sorted(shirts):
+        raise ValueError("Hangers and shirts must have matching color counts")
+
+    shirts = shirts.copy()
+    swaps = []
+
+    for i, required in enumerate(hangers):
+        if shirts[i] == required:
+            continue
+
+        # Prefer a swap that fixes both mismatched positions.
+        reciprocal = next((
+            j for j in range(i + 1, len(shirts))
+            if shirts[j] == required and hangers[j] == shirts[i]
+        ), None)
+
+        if reciprocal is not None:
+            j = reciprocal
+        else:
+            j = next(
+                j for j in range(i + 1, len(shirts))
+                if shirts[j] == required and shirts[j] != hangers[j]
+            )
+
+        shirts[i], shirts[j] = shirts[j], shirts[i]
+        swaps.append((i, j))
+
+    return swaps
+```
+
+The original three-shirt puzzle is a permutation of distinct objects. This version is a many-to-one color assignment: there may be dozens of equivalent correct answers because shirts of the same color can trade identities without changing the closet.
+
+<script>
+(function () {
+  const root = document.getElementById("closet-lab");
+  if (!root) return;
+
+  const palette = [
+    { name: "Black", weight: 25, hex: "#202124" },
+    { name: "White", weight: 19, hex: "#f5f2ea" },
+    { name: "Gray", weight: 15, hex: "#8b8d91" },
+    { name: "Navy", weight: 8, hex: "#263c67" },
+    { name: "Blue", weight: 6, hex: "#397db5" },
+    { name: "Brown/tan", weight: 6, hex: "#8a6245" },
+    { name: "Multicolor", weight: 5, hex: "#b65c8a" },
+    { name: "Red", weight: 4, hex: "#bd3b34" },
+    { name: "Green", weight: 3, hex: "#438054" },
+    { name: "Pink", weight: 2, hex: "#dd82a6" },
+    { name: "Purple", weight: 2, hex: "#76549c" },
+    { name: "Yellow", weight: 2, hex: "#d9ac2f" },
+    { name: "Orange", weight: 1, hex: "#d77732" },
+    { name: "Teal", weight: 1, hex: "#278f91" },
+    { name: "Other", weight: 1, hex: "#a1988d" }
+  ];
+
+  const sizeInput = document.getElementById("closet-size");
+  const generateButton = document.getElementById("generate-closet");
+  const matchButton = document.getElementById("match-closet");
+  const grid = document.getElementById("closet-grid");
+  const totalValue = document.getElementById("closet-total");
+  const matchedValue = document.getElementById("closet-matched");
+  const mismatchedValue = document.getElementById("closet-mismatched");
+  const swapsValue = document.getElementById("closet-swaps");
+  const status = document.getElementById("closet-status");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const colorLookup = Object.fromEntries(palette.map(color => [color.name, color.hex]));
+
+  let hangers = [];
+  let shirts = [];
+  let swapsPerformed = 0;
+  let matching = false;
+  let highlighted = [];
+
+  function clampSize() {
+    const parsed = Number.parseInt(sizeInput.value, 10);
+    const size = Number.isFinite(parsed) ? Math.min(500, Math.max(6, parsed)) : 60;
+    sizeInput.value = String(size);
+    return size;
+  }
+
+  function countsForSize(size) {
+    const allocations = palette.map((color, index) => {
+      const exact = size * color.weight / 100;
+      return { index, count: Math.floor(exact), remainder: exact - Math.floor(exact) };
+    });
+    let remaining = size - allocations.reduce((sum, item) => sum + item.count, 0);
+    allocations.sort((a, b) => b.remainder - a.remainder || a.index - b.index);
+    for (let index = 0; index < remaining; index += 1) allocations[index].count += 1;
+    allocations.sort((a, b) => a.index - b.index);
+    return allocations.map(item => item.count);
+  }
+
+  function shuffle(values) {
+    for (let index = values.length - 1; index > 0; index -= 1) {
+      const randomIndex = Math.floor(Math.random() * (index + 1));
+      [values[index], values[randomIndex]] = [values[randomIndex], values[index]];
+    }
+    return values;
+  }
+
+  function createDerangement(values) {
+    const counts = Object.entries(values.reduce((result, color) => {
+      result[color] = (result[color] || 0) + 1;
+      return result;
+    }, {})).sort((a, b) => b[1] - a[1]);
+    const grouped = counts.flatMap(([color, count]) => Array(count).fill(color));
+    const shift = counts[0][1];
+    const rotated = grouped.slice(shift).concat(grouped.slice(0, shift));
+    const pairs = grouped.map((hanger, index) => ({ hanger, shirt: rotated[index] }));
+    shuffle(pairs);
+    return {
+      hangerValues: pairs.map(pair => pair.hanger),
+      shirtValues: pairs.map(pair => pair.shirt)
+    };
+  }
+
+  function countMatches() {
+    return hangers.reduce((count, hanger, index) => count + (hanger === shirts[index] ? 1 : 0), 0);
+  }
+
+  function render() {
+    const matched = countMatches();
+    totalValue.textContent = String(hangers.length);
+    matchedValue.textContent = String(matched);
+    mismatchedValue.textContent = String(hangers.length - matched);
+    swapsValue.textContent = String(swapsPerformed);
+    grid.style.setProperty("--closet-columns", String(Math.max(3, Math.min(12, Math.ceil(Math.sqrt(hangers.length))))));
+    grid.innerHTML = hangers.map((hanger, index) => {
+      const shirt = shirts[index];
+      const correct = hanger === shirt;
+      const active = highlighted.includes(index);
+      return `<div class="closet-pair${correct ? " is-matched" : ""}${active ? " is-active" : ""}" title="Hanger: ${hanger}; shirt: ${shirt}">
+        <span class="mini-hanger" style="--pair-color:${colorLookup[hanger]}"></span>
+        <span class="mini-shirt" style="--pair-color:${colorLookup[shirt]}"></span>
+        <small>${correct ? "✓" : ""}</small>
+      </div>`;
+    }).join("");
+  }
+
+  function generate() {
+    if (matching) return;
+    const size = clampSize();
+    const counts = countsForSize(size);
+    const colors = counts.flatMap((count, index) => Array(count).fill(palette[index].name));
+    const deranged = createDerangement(colors);
+    hangers = deranged.hangerValues;
+    shirts = deranged.shirtValues;
+    swapsPerformed = 0;
+    highlighted = [];
+    status.textContent = `Generated ${size} items with zero starting matches.`;
+    render();
+  }
+
+  function buildPlan() {
+    const working = shirts.slice();
+    const swaps = [];
+    for (let index = 0; index < hangers.length; index += 1) {
+      if (working[index] === hangers[index]) continue;
+      let partner = -1;
+      for (let candidate = index + 1; candidate < working.length; candidate += 1) {
+        if (working[candidate] === hangers[index] && hangers[candidate] === working[index]) {
+          partner = candidate;
+          break;
+        }
+      }
+      if (partner === -1) {
+        for (let candidate = index + 1; candidate < working.length; candidate += 1) {
+          if (working[candidate] === hangers[index] && working[candidate] !== hangers[candidate]) {
+            partner = candidate;
+            break;
+          }
+        }
+      }
+      if (partner === -1) throw new Error("No valid matching shirt found");
+      [working[index], working[partner]] = [working[partner], working[index]];
+      swaps.push([index, partner]);
+    }
+    return swaps;
+  }
+
+  function pause(milliseconds) {
+    return new Promise(resolve => window.setTimeout(resolve, milliseconds));
+  }
+
+  async function matchCloset() {
+    if (matching) return;
+    const plan = buildPlan();
+    if (plan.length === 0) {
+      status.textContent = "Already matched.";
+      return;
+    }
+    matching = true;
+    generateButton.disabled = true;
+    matchButton.disabled = true;
+    swapsPerformed = 0;
+    const delay = reduceMotion ? 0 : hangers.length <= 40 ? 180 : hangers.length <= 100 ? 75 : 20;
+
+    for (let move = 0; move < plan.length; move += 1) {
+      const [first, second] = plan[move];
+      highlighted = [first, second];
+      status.textContent = `Swap ${move + 1} of ${plan.length}: positions ${first + 1} and ${second + 1}.`;
+      render();
+      if (delay) await pause(delay);
+      [shirts[first], shirts[second]] = [shirts[second], shirts[first]];
+      swapsPerformed += 1;
+      render();
+      if (delay) await pause(Math.max(15, delay / 2));
+    }
+
+    highlighted = [];
+    render();
+    status.textContent = `Every shirt matched in ${swapsPerformed} swap${swapsPerformed === 1 ? "" : "s"}.`;
+    matching = false;
+    generateButton.disabled = false;
+    matchButton.disabled = false;
+  }
+
+  generateButton.addEventListener("click", generate);
+  matchButton.addEventListener("click", matchCloset);
+  sizeInput.addEventListener("change", generate);
+  generate();
+}());
+</script>

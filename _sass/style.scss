@@ -300,6 +300,39 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
 .swap-formula { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin: 1.75rem 0; padding: clamp(1.15rem, 4vw, 2rem); border-left: 5px solid #39754a; color: white; background: $navy; }
 .swap-formula span { color: #d8cec2; font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .swap-formula strong { font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.4rem, 5vw, 2.4rem); text-align: right; }
+.closet-distribution { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; margin: 1.5rem 0 2rem; }
+.closet-distribution span { position: relative; display: flex; justify-content: space-between; gap: .5rem; padding: .55rem .65rem .55rem 1rem; overflow: hidden; border: 1px solid $line; border-radius: 6px; background: white; font-size: .75rem; }
+.closet-distribution span::before { position: absolute; top: 0; bottom: 0; left: 0; width: max(4px, var(--share)); max-width: 8px; background: var(--color); content: ""; }
+.closet-distribution b { font-variant-numeric: tabular-nums; }
+.closet-lab { margin: 2.5rem 0; padding: clamp(1.25rem, 4vw, 2.5rem); border: 1px solid #cfd9c9; border-radius: 16px; background: #f4f6f0; box-shadow: 0 14px 35px rgba(42,31,25,.08); }
+.closet-lab-heading { display: flex; align-items: end; justify-content: space-between; gap: 1.5rem; }
+.closet-lab-heading h2 { margin: .2rem 0 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.8rem, 5vw, 2.8rem); }
+.closet-lab-heading label { display: flex; align-items: center; gap: .5rem; font-size: .75rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.closet-lab-heading input { width: 5.5rem; padding: .5rem; border: 1px solid #9eaa98; border-radius: 5px; background: white; font: inherit; }
+.closet-actions { display: flex; flex-wrap: wrap; gap: .65rem; margin: 1.5rem 0; }
+.closet-actions button { padding: .7rem 1rem; border: 2px solid #204f2a; border-radius: 999px; color: #204f2a; background: white; font: inherit; font-weight: 800; cursor: pointer; }
+.closet-actions .match-button { color: white; background: #204f2a; }
+.closet-actions button:hover { color: white; background: #39754a; }
+.closet-actions button:disabled { cursor: wait; opacity: .55; }
+.closet-summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .6rem; }
+.closet-summary div { padding: .7rem; border: 1px solid #cfd9c9; border-radius: 7px; text-align: center; background: white; }
+.closet-summary span, .closet-summary strong { display: block; }
+.closet-summary span { color: $muted; font-size: .62rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.closet-summary strong { color: #204f2a; font-family: Georgia, "Times New Roman", serif; font-size: 1.6rem; }
+.closet-key { display: flex; flex-wrap: wrap; gap: .75rem 1.25rem; margin: 1.25rem 0 .65rem; color: $muted; font-size: .7rem; font-weight: 700; }
+.closet-key span { display: flex; align-items: center; gap: .35rem; }
+.closet-key i { display: inline-block; width: .8rem; height: .8rem; }
+.key-hanger { border: 2px solid #68615c; border-radius: 50%; }
+.key-shirt { background: #68615c; clip-path: polygon(20% 0, 38% 0, 42% 12%, 58% 12%, 62% 0, 80% 0, 100% 28%, 80% 43%, 74% 34%, 74% 100%, 26% 100%, 26% 34%, 20% 43%, 0 28%); }
+.key-match { border-radius: 3px; background: #b9dfb8; }
+.closet-grid { display: grid; grid-template-columns: repeat(var(--closet-columns), minmax(0, 1fr)); gap: 4px; max-height: 520px; padding: .5rem; overflow-y: auto; border: 1px solid #cfd9c9; border-radius: 8px; background: white; }
+.closet-pair { position: relative; display: grid; min-width: 0; aspect-ratio: .86; place-items: center; border: 1px solid #eee8df; border-radius: 4px; background: #faf9f6; transition: background .15s, transform .15s; }
+.closet-pair.is-matched { background: #e4f3df; box-shadow: inset 0 0 0 1px #83b37b; }
+.closet-pair.is-active { z-index: 1; transform: translateY(-3px); box-shadow: 0 5px 10px rgba(42,31,25,.2); }
+.mini-hanger { position: absolute; top: 14%; left: 20%; width: 60%; height: 28%; border-right: 3px solid var(--pair-color); border-bottom: 3px solid var(--pair-color); border-left: 3px solid var(--pair-color); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.mini-shirt { position: absolute; right: 23%; bottom: 12%; left: 23%; aspect-ratio: 1; background: var(--pair-color); clip-path: polygon(20% 0, 38% 0, 42% 12%, 58% 12%, 62% 0, 80% 0, 100% 28%, 80% 43%, 74% 34%, 74% 100%, 26% 100%, 26% 34%, 20% 43%, 0 28%); filter: drop-shadow(0 2px 2px rgba(42,31,25,.15)); }
+.closet-pair small { position: absolute; top: 2px; right: 4px; color: #39754a; font-weight: 900; }
+.closet-status { min-height: 1.5em; margin: .8rem 0 0; color: #39754a; font-weight: 700; text-align: center; }
 @media (max-width: 760px) {
   .card-grid { grid-template-columns: 1fr; }
   .review-grid { grid-template-columns: 1fr; }
@@ -348,5 +381,10 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
   .cycle-example span { padding-inline: .45rem; font-size: .78rem; }
   .swap-formula { align-items: flex-start; flex-direction: column; }
   .swap-formula strong { text-align: left; }
+  .closet-distribution { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .closet-lab { box-sizing: border-box; width: calc(100vw - 30px); max-width: 100%; }
+  .closet-lab-heading { align-items: flex-start; flex-direction: column; }
+  .closet-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .closet-grid { max-height: 420px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
