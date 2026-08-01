@@ -70,13 +70,14 @@ description: Movie reviews, watchlists, and notes on cinema from Nolan McDermott
 <section class="cinema-manifesto" aria-labelledby="why-heading">
   <p class="eyebrow">Why Noland?</p>
   <h2 id="why-heading">A place to think about what makes movies stick.</h2>
-  <p>I'm just a guy who likes movies and baseball.
-My Scale, no half stars
-5 - My favorite movies, must sees
-4 - Amazing/great movies, highly recommend
-3 - Good/average movies, worth a watch
-2 - Below average/bad movies, not worth your time
-1 - Terrible/awful movies, offensively bad.</p>
+  <p class="manifesto-intro">I've been obsessed with movies since 2015. My rating system is simple: no half stars, no complicated math—just how strongly I'd recommend the movie.</p>
+  <ol class="rating-scale" reversed aria-label="Nolan's five-star rating scale">
+    <li><strong>5 stars</strong><span>A favorite. A must-see.</span></li>
+    <li><strong>4 stars</strong><span>Great. I highly recommend it.</span></li>
+    <li><strong>3 stars</strong><span>Good, and worth watching.</span></li>
+    <li><strong>2 stars</strong><span>Below average. Not worth your time.</span></li>
+    <li><strong>1 star</strong><span>Terrible. Avoid it.</span></li>
+  </ol>
 </section>
 
 <section class="connect-strip" aria-labelledby="elsewhere-heading">
