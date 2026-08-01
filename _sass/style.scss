@@ -257,6 +257,49 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
 .never-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; margin: 2rem 0; }
 .never-grid span { padding: .8rem 1rem; border: 1px dashed #c88f88; border-radius: 6px; background: #fff7f4; font-size: .84rem; }
 .never-grid b { display: block; margin-bottom: .2rem; color: #a32620; font-size: .68rem; letter-spacing: .07em; text-transform: uppercase; }
+
+/* Interactive shirt-permutation post */
+.shirt-sorter { margin: 2.5rem 0; padding: clamp(1.25rem, 4vw, 2.5rem); overflow: hidden; border: 1px solid $line; border-radius: 16px; background: linear-gradient(145deg, #f7f1e7, #fff); box-shadow: 0 14px 35px rgba(42,31,25,.09); }
+.shirt-sorter-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; }
+.shirt-sorter-heading h2 { margin: .2rem 0 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.8rem, 5vw, 2.8rem); }
+.shirt-sorter-heading > p { max-width: 340px; margin: 0; color: $muted; }
+.hanger-stage { position: relative; margin: 2rem 0 1.5rem; padding: 1.25rem clamp(.25rem, 3vw, 2rem) 1.5rem; border-radius: 12px; background: linear-gradient(#e5ddd0 0 5px, #fffdf9 5px 100%); }
+.hanger-row, .shirt-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(.4rem, 3vw, 2rem); }
+.hanger { min-width: 0; color: var(--hanger-color); text-align: center; }
+.hanger-red { --hanger-color: #b52b25; }
+.hanger-green { --hanger-color: #39754a; }
+.hanger-blue { --hanger-color: #2d6394; }
+.hanger span { display: block; font-size: .72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.hanger svg { display: block; width: min(100%, 130px); height: 75px; margin: .3rem auto -2px; overflow: visible; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5; }
+.shirt-slot { position: relative; min-width: 0; min-height: 130px; border-top: 2px dashed #d8cec2; }
+.shirt-slot::before { position: absolute; top: 0; left: 50%; width: 1px; height: 20px; background: #b9aa98; content: ""; }
+.shirt-token { position: relative; z-index: 2; display: grid; min-height: 125px; place-items: start center; will-change: transform; }
+.shirt-shape { display: grid; width: min(90%, 110px); aspect-ratio: 1.08; margin-top: 17px; place-items: center; color: white; background: var(--shirt-color); clip-path: polygon(18% 0, 36% 0, 41% 10%, 59% 10%, 64% 0, 82% 0, 100% 24%, 83% 41%, 76% 32%, 76% 100%, 24% 100%, 24% 32%, 17% 41%, 0 24%); filter: drop-shadow(0 8px 8px rgba(42,31,25,.2)); }
+.shirt-shape span { padding-top: .5rem; font-size: .72rem; font-weight: 900; letter-spacing: .06em; text-shadow: 0 1px 2px rgba(0,0,0,.35); text-transform: uppercase; }
+.shirt-red { --shirt-color: #c43b32; }
+.shirt-green { --shirt-color: #46885a; }
+.shirt-blue { --shirt-color: #3576aa; }
+.sort-controls { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
+.sort-controls button { padding: .75rem 1.1rem; border: 2px solid $navy; border-radius: 999px; color: $navy; background: white; font: inherit; font-weight: 800; cursor: pointer; }
+.sort-controls .solve-button { color: white; background: $navy; }
+.sort-controls button:hover { color: white; border-color: $teal; background: $teal; }
+.sort-controls button:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; }
+.sort-controls button:disabled { cursor: wait; opacity: .55; }
+.permutation-readout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; margin-top: 1.5rem; }
+.permutation-readout div { min-width: 0; padding: .85rem 1rem; border: 1px solid $line; border-radius: 8px; background: white; }
+.permutation-readout span, .permutation-readout strong { display: block; }
+.permutation-readout span { color: $muted; font-size: .68rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+.permutation-readout strong { margin-top: .25rem; overflow-wrap: anywhere; color: $navy; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1rem, 3vw, 1.35rem); }
+.sort-status { min-height: 1.5em; margin: .85rem 0 0; color: #39754a; font-weight: 700; text-align: center; }
+.cycle-example { display: flex; align-items: center; justify-content: center; gap: clamp(.35rem, 2vw, .8rem); margin: 1.5rem 0; padding: 1.25rem .5rem; border-radius: 10px; background: $cream; }
+.cycle-example span { padding: .45rem .7rem; border-radius: 999px; color: white; font-weight: 800; }
+.cycle-example .red { background: #b52b25; }
+.cycle-example .green { background: #39754a; }
+.cycle-example .blue { background: #2d6394; }
+.cycle-example b { color: $muted; }
+.swap-formula { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin: 1.75rem 0; padding: clamp(1.15rem, 4vw, 2rem); border-left: 5px solid #39754a; color: white; background: $navy; }
+.swap-formula span { color: #d8cec2; font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.swap-formula strong { font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.4rem, 5vw, 2.4rem); text-align: right; }
 @media (max-width: 760px) {
   .card-grid { grid-template-columns: 1fr; }
   .review-grid { grid-template-columns: 1fr; }
@@ -291,5 +334,19 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
   .double-staircase { min-height: 310px; padding-inline: .35rem; }
   .double-staircase > div { grid-template-rows: auto 180px auto; }
   .double-staircase span { font-size: .67rem; }
+  .shirt-sorter { box-sizing: border-box; width: calc(100vw - 30px); max-width: 100%; }
+  .shirt-sorter-heading { align-items: flex-start; flex-direction: column; gap: .5rem; }
+  .hanger-stage { padding-inline: .25rem; }
+  .hanger-row, .shirt-row { gap: .15rem; }
+  .hanger span { font-size: .58rem; }
+  .shirt-slot { min-height: 105px; }
+  .shirt-token { min-height: 100px; }
+  .shirt-shape { width: min(94%, 88px); }
+  .shirt-shape span { font-size: .6rem; }
+  .permutation-readout { grid-template-columns: minmax(0, 1fr); }
+  .cycle-example { gap: .25rem; }
+  .cycle-example span { padding-inline: .45rem; font-size: .78rem; }
+  .swap-formula { align-items: flex-start; flex-direction: column; }
+  .swap-formula strong { text-align: left; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
