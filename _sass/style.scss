@@ -13,7 +13,8 @@ a:hover, a:focus { color: #064c55; }
 a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius: 2px; }
 .wrapper { max-width: 1080px; }
 .site-header { z-index: 100; border-top: 4px solid $teal; border-bottom-color: $line; background: rgba(253,253,251,.96); }
-.site-title { color: $navy !important; font-weight: 800; letter-spacing: -.02em; }
+.site-title { display: inline-flex; align-items: center; gap: .45rem; color: $navy !important; font-weight: 800; letter-spacing: -.02em; }
+.site-title::before { display: inline-block; flex: 0 0 auto; width: 2rem; height: 2rem; background: url("/assets/images/brand/ibis-logo-256.png") center / contain no-repeat; content: ""; image-rendering: pixelated; }
 .site-nav .page-link { color: $ink; font-weight: 600; }
 .site-footer { border-top-color: $line; background: $cream; }
 .post-content h1, .post-content h2, .post-content h3 { color: $navy; letter-spacing: -.025em; }
