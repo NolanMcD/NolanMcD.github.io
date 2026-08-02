@@ -147,20 +147,19 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
 .empty-reel > span { color: $teal; font-size: 4rem; line-height: 1; }
 .empty-reel h2, .empty-reel h3, .empty-reel p { margin: .2rem 0; }
 .cinema-manifesto { margin: 5rem 0; padding: 1rem clamp(0rem, 6vw, 5rem); text-align: center; }
-.cinema-manifesto h2 { max-width: 800px; margin: .3rem auto 1rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; }
-.cinema-manifesto > p:last-child { max-width: 680px; margin: 0 auto; color: $muted; font-size: 1.1rem; line-height: 1.7; }
-.homepage-screenplay { max-width: 680px; margin: 0 auto 3rem; padding: clamp(1.25rem, 4vw, 2.25rem); border-left: 4px solid $navy; background: #f7f1e7; font-family: "Courier New", Courier, monospace; text-align: left; }
+.homepage-screenplay { max-width: 680px; margin: 0 auto; padding: clamp(1.25rem, 4vw, 2.25rem); border-left: 4px solid $navy; background: #f7f1e7; font-family: "Courier New", Courier, monospace; text-align: left; }
 .homepage-screenplay p { margin-top: 0; }
 .homepage-scene-heading { font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
 .homepage-action { line-height: 1.65; }
-.homepage-character { width: 55%; margin: 1.5rem 0 .2rem auto; font-weight: 800; }
-.homepage-dialogue { width: 48%; margin: 0 auto; line-height: 1.55; }
-.homepage-transition { max-width: 620px; margin: 1rem auto 0; font-family: "Courier New", Courier, monospace; font-weight: 800; letter-spacing: .04em; text-align: right; }
+.homepage-character { width: 55%; margin: 1.5rem 0 .55rem auto; color: $ink; font-family: inherit; font-size: 1rem; font-weight: 800; letter-spacing: .04em; line-height: 1.2; text-transform: uppercase; }
+.homepage-dialogue { width: 76%; margin: 0 auto; line-height: 1.55; }
+.homepage-transition { margin: 1.25rem 0 0; font-weight: 800; letter-spacing: .04em; text-align: right; }
 .rating-scale { display: grid; max-width: 620px; margin: 0 auto; padding: 0; overflow: hidden; border: 1px solid $line; border-radius: 10px; background: white; box-shadow: 0 10px 25px rgba(42,31,25,.06); list-style: none; text-align: left; }
 .rating-scale li { display: grid; grid-template-columns: 110px 1fr; gap: 1rem; padding: .75rem 1rem; border-bottom: 1px solid $line; }
 .rating-scale li:last-child { border-bottom: 0; }
 .rating-scale strong { color: #a46b00; }
 .rating-scale span { color: $muted; }
+.homepage-screenplay .rating-scale { box-sizing: border-box; max-width: none; font-family: inherit; }
 .review-index { margin-top: 2rem; border-top: 1px solid $line; }
 .review-index article { display: flex; align-items: start; justify-content: space-between; gap: 2rem; padding: 1.5rem 0; border-bottom: 1px solid $line; }
 .review-index-poster { flex: 0 0 95px; overflow: hidden; border-radius: 3px; box-shadow: 0 5px 14px rgba(42,31,25,.15); }

@@ -1,5 +1,5 @@
 ---
-title: Miami Storms
+title: Storms
 permalink: /storms/
 description: Field recordings of thunderstorms in Miami, made for sleep, focus, and a little calm.
 ---
@@ -41,4 +41,3 @@ description: Field recordings of thunderstorms in Miami, made for sleep, focus, 
 <noscript><p class="callout">JavaScript is required for continuous playback. You can still download the recordings directly from the audio folder.</p></noscript>
 
 <script src="{{ '/assets/js/storm-player.js' | relative_url }}" defer></script>
-

@@ -71,19 +71,16 @@ description: Movie reviews, watchlists, and notes on cinema from Nolan McDermott
   <div class="homepage-screenplay">
     <p class="homepage-scene-heading">INT. MOVIE THEATER — NIGHT</p>
     <p class="homepage-action">The credits roll. The lights come up. Nolan is already deciding how many stars the movie deserves.</p>
-    <p class="homepage-character">NOLAN (V.O.)</p>
-    <p class="homepage-dialogue">I've loved movies since 2015. I don't do half stars.</p>
+    <h2 class="homepage-character" id="why-heading">Ratings (V.O.)</h2>
+    <ol class="rating-scale homepage-dialogue" reversed aria-label="Nolan's five-star rating scale">
+      <li><strong>5 stars</strong><span>A favorite. A must-see.</span></li>
+      <li><strong>4 stars</strong><span>Great. I highly recommend it.</span></li>
+      <li><strong>3 stars</strong><span>Good, and worth watching.</span></li>
+      <li><strong>2 stars</strong><span>Below average. Not worth your time.</span></li>
+      <li><strong>1 star</strong><span>Terrible. Avoid it.</span></li>
+    </ol>
+    <p class="homepage-transition">FADE OUT.</p>
   </div>
-  <p class="eyebrow">The rating system</p>
-  <h2 id="why-heading">Five possible endings.</h2>
-  <ol class="rating-scale" reversed aria-label="Nolan's five-star rating scale">
-    <li><strong>5 stars</strong><span>A favorite. A must-see.</span></li>
-    <li><strong>4 stars</strong><span>Great. I highly recommend it.</span></li>
-    <li><strong>3 stars</strong><span>Good, and worth watching.</span></li>
-    <li><strong>2 stars</strong><span>Below average. Not worth your time.</span></li>
-    <li><strong>1 star</strong><span>Terrible. Avoid it.</span></li>
-  </ol>
-  <p class="homepage-transition">FADE OUT.</p>
 </section>
 
 <section class="connect-strip" aria-labelledby="elsewhere-heading">
