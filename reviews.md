@@ -6,6 +6,11 @@ description: All movie reviews published on Noland.
 
 <p class="page-lede">Every movie review, from new releases to old favorites.</p>
 
+<aside class="diary-invite">
+  <div><p class="eyebrow">The complete archive</p><h2>1,500+ watches, one searchable diary.</h2><p>Browse every quick reaction, long review, rating, and rewatch synced from Letterboxd.</p></div>
+  <a class="button button-primary" href="{{ '/reviews/diary/' | relative_url }}">Open the Film Diary</a>
+</aside>
+
 {% assign movie_reviews = site.posts | where: "layout", "review" %}
 {% if movie_reviews != empty %}
 <div class="review-index">

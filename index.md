@@ -1,19 +1,39 @@
 ---
 layout: landing
 title: Home
-description: Movie reviews, watchlists, and notes on cinema from Nolan McDermott.
+description: Nolan McDermott's latest movie reviews, writing, adventures, and personal projects.
 ---
 
-<section class="movie-hero" aria-labelledby="movie-heading">
-  <p class="eyebrow">Nolan's land</p>
-  <h1 id="movie-heading">Movie reviews, screenplays.<br>and personal projects.</h1>
-  <p class="hero-copy">Reviews, recommendations, and screenplays from a lifelong movie watcher—written after the credits roll.</p>
-  <div class="hero-actions">
-    <a class="button button-primary" href="#latest-reviews">Read the reviews</a>
-    <a class="button button-secondary" href="https://letterboxd.com/NolanMcD/">Follow on Letterboxd</a>
+<section class="feed-hero" aria-labelledby="feed-heading">
+  <header class="feed-heading">
+    <div><p class="eyebrow">Movies, miles, and side quests</p><h1 id="feed-heading">My feed.</h1></div>
+    <p>The latest things I've watched, made, and done—collected from across Noland.</p>
+  </header>
+  <div class="feed-grid">
+    <article class="feed-lane feed-letterboxd">
+      <header><span class="feed-mark" aria-hidden="true">★</span><div><p class="feed-source">Letterboxd</p><h2>Recently watched</h2></div></header>
+      <div class="feed-items" id="home-letterboxd"><p class="feed-loading">Loading the latest reviews…</p></div>
+      <a class="feed-footer-link" href="{{ '/reviews/diary/' | relative_url }}">Open the Film Diary <span aria-hidden="true">→</span></a>
+    </article>
+    <article class="feed-lane feed-strava">
+      <header><span class="feed-mark" aria-hidden="true">↗</span><div><p class="feed-source">Strava</p><h2>Out there</h2></div></header>
+      <div class="feed-items" id="home-strava"><p class="feed-loading">Loading the latest activity…</p></div>
+      <a class="feed-footer-link" href="https://www.strava.com/athletes/57377386">Follow on Strava <span aria-hidden="true">→</span></a>
+    </article>
+    <article class="feed-lane feed-noland">
+      <header><span class="feed-mark" aria-hidden="true">N</span><div><p class="feed-source">Noland</p><h2>Latest dispatch</h2></div></header>
+      <div class="feed-items">
+        {% assign feed_writing = site.posts | where_exp: "post", "post.layout != 'review'" %}
+        {% for post in feed_writing limit: 1 %}
+        <div class="feed-item"><p class="feed-date">{{ post.date | date: "%b %-d, %Y" }}</p><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><p>{{ post.excerpt | strip_html | truncatewords: 22 }}</p></div>
+        {% endfor %}
+      </div>
+      <a class="feed-footer-link" href="{{ '/projects/' | relative_url }}">Explore the projects <span aria-hidden="true">→</span></a>
+    </article>
   </div>
-  <div class="film-strip" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 </section>
+
+<script src="{{ '/assets/js/home-feed.js' | relative_url }}" defer></script>
 
 <section class="section review-section" id="latest-reviews" aria-labelledby="reviews-heading">
   <div class="section-heading split-heading">
@@ -49,22 +69,6 @@ description: Movie reviews, watchlists, and notes on cinema from Nolan McDermott
     <div><h3>The projector is warming up.</h3><p>My first full review is coming soon. Until then, browse everything I've logged on <a href="https://letterboxd.com/NolanMcD/">Letterboxd</a>.</p></div>
   </div>
   {% endif %}
-</section>
-
-<section class="section writing-section" aria-labelledby="writing-heading">
-  <div class="section-heading">
-    <p class="eyebrow">Beyond the review</p>
-    <h2 id="writing-heading">Latest writing</h2>
-  </div>
-  {% assign latest_writing = site.posts | where_exp: "post", "post.layout != 'review'" %}
-  {% for post in latest_writing limit: 1 %}
-  <article class="writing-card">
-    <p class="review-kicker">{{ post.date | date: "%B %-d, %Y" }}</p>
-    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-    <p>{{ post.excerpt | strip_html }}</p>
-    <a class="text-link" href="{{ post.url | relative_url }}">Read the post <span aria-hidden="true">→</span></a>
-  </article>
-  {% endfor %}
 </section>
 
 <section class="cinema-manifesto" aria-labelledby="why-heading">

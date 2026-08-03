@@ -17,6 +17,22 @@ Copy `_drafts/movie-review-template.md` into `_posts`, rename it using `YYYY-MM-
 
 Ratings use five whole-star categories: **Story, Directing, Theme, Cast, and Characters**. Award one gold star for each category that worked, then set `rating` to the total. There are no half stars. The template explains how to turn an unearned gold star into a hollow star. `poster` is optional.
 
+## Film Diary and Letterboxd sync
+
+The complete Film Diary at `/reviews/diary/` is generated from a local `reviews.csv` and Nolan's official Letterboxd RSS feed. The raw CSV seeds the historical archive and supplies tags; RSS supplies new review text, ratings, watched dates, and rewatches between exports. The CSV is deliberately git-ignored and never published—only the normalized public JSON is committed.
+
+Run the synchronizer locally from the repository root:
+
+```powershell
+powershell -File tools/sync-letterboxd.ps1
+```
+
+The command rewrites `assets/data/film-diary.json` and the lightweight homepage feed at `assets/data/latest-letterboxd.json`. It is safe to run repeatedly: recent RSS items are matched by their Letterboxd ID or by film, year, and watched date. RSS-only entries are preserved until a newer CSV export incorporates them.
+
+The `Sync Letterboxd reviews` GitHub Action runs every day and can also be started manually from the Actions tab. On GitHub, where the private CSV is absent, the script uses the committed normalized diary as its baseline and merges RSS changes into it. It commits only when the generated diary changes. Letterboxd RSS does not expose tags, so periodically replace your local `reviews.csv` with a fresh Letterboxd export, run the script, and publish the regenerated JSON to reconcile viewing sources, star categories, older edits, and deletions.
+
+The homepage Strava lane reads `assets/data/strava-feed.json`. It is intentionally isolated from the page markup so it can later be replaced by an authenticated Strava API sync. Until OAuth token rotation is configured, update this small file when a new activity should be featured.
+
 ## Custom domain
 
 The canonical domain is `noland.blog`. The root `CNAME` file and `url` in

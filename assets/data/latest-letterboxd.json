@@ -1,0 +1,175 @@
+[
+    {
+        "id":  "rss:letterboxd-review-1430508412",
+        "syncId":  "letterboxd-review-1430508412",
+        "title":  "Talk to Me",
+        "year":  2022,
+        "rating":  4,
+        "review":  "Dang really freaking good",
+        "wordCount":  4,
+        "publishedDate":  "2026-08-03",
+        "watchedDate":  "2026-08-02",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/talk-to-me-2022/",
+        "tmdbId":  "1008042",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "csv:https://boxd.it/fz5GPF",
+        "syncId":  "letterboxd-review-1426052053",
+        "title":  "The Dink",
+        "year":  2026,
+        "rating":  2,
+        "review":  "You have to commit to either being a full on wacky comedy or drama comedy you can\u0027t have it both ways. Like John McEnroe appearing with larger and larger snacks is a great gag but it just doesn\u0027t jive with the serious backstory of the main character.",
+        "wordCount":  47,
+        "publishedDate":  "2026-08-01",
+        "watchedDate":  "2026-07-31",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-dink/",
+        "tmdbId":  "1361774",
+        "tags":  [
+                     "Comedy",
+                     "Premise"
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+                          "Comedy",
+                          "Premise"
+                      ],
+        "awardTagsReliable":  true,
+        "origin":  "csv"
+    },
+    {
+        "id":  "csv:https://boxd.it/fxmH6H",
+        "syncId":  "letterboxd-review-1423502049",
+        "title":  "Spider-Man: Brand New Day",
+        "year":  2026,
+        "rating":  4,
+        "review":  "I gets a lot right. I wont pretend to be some authority on Spider-Man, a lot of people love this character more than me. But there are several moments in the story that I see and I\u0027m just like \"yup that\u0027s spiderman.\" The wider scope MCU stuff is hit or miss, it makes for good dialogue, but it also makes the story incredibly predictable. That\u0027s the film\u0027s biggest detriment. A lot of plot beats are connected sloppily, and Peter spends most of the movie ignoring the obvious. I\u0027m looking past it though. The action is creative both in how its shot and the staging. After all he\u0027s still a funny Mets fan so I like him.",
+        "wordCount":  116,
+        "publishedDate":  "2026-07-31",
+        "watchedDate":  "2026-07-30",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/spider-man-brand-new-day/",
+        "tmdbId":  "969681",
+        "tags":  [
+                     "Action",
+                     "Dialogue",
+                     "Humor",
+                     "Mets",
+                     "In theatres"
+                 ],
+        "viewingSources":  [
+                               "In theatres"
+                           ],
+        "awardTags":  [
+                          "Action",
+                          "Dialogue",
+                          "Humor",
+                          "Mets"
+                      ],
+        "awardTagsReliable":  true,
+        "origin":  "csv"
+    },
+    {
+        "id":  "csv:https://boxd.it/fucW1Z",
+        "syncId":  "letterboxd-review-1418836557",
+        "title":  "The Testament of Dr. Mabuse",
+        "year":  1933,
+        "rating":  4,
+        "review":  "Frtiz Lang was moving like Babe Ruth in the early days, hitting more home runs than some entire teams",
+        "wordCount":  19,
+        "publishedDate":  "2026-07-28",
+        "watchedDate":  "2026-07-27",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-testament-of-dr-mabuse/",
+        "tmdbId":  "12206",
+        "tags":  [
+                     "Directing",
+                     "Story",
+                     "Detective",
+                     "Scene",
+                     "Criterion"
+                 ],
+        "viewingSources":  [
+                               "Criterion"
+                           ],
+        "awardTags":  [
+                          "Directing",
+                          "Story",
+                          "Detective",
+                          "Scene"
+                      ],
+        "awardTagsReliable":  true,
+        "origin":  "csv"
+    },
+    {
+        "id":  "rss:letterboxd-watch-1416557070",
+        "syncId":  "letterboxd-watch-1416557070",
+        "title":  "The Odyssey",
+        "year":  2026,
+        "rating":  5,
+        "review":  "Watched on Sunday July 26, 2026.",
+        "wordCount":  6,
+        "publishedDate":  "2026-07-27",
+        "watchedDate":  "2026-07-26",
+        "rewatch":  true,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-odyssey-2026/1/",
+        "tmdbId":  "1368337",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "csv:https://boxd.it/frGe1T",
+        "syncId":  "letterboxd-review-1415101726",
+        "title":  "For All Mankind",
+        "year":  1989,
+        "rating":  4,
+        "review":  "Hell yeah. Some of the best NASA footage I’ve ever seen even better than “Apollo 11”",
+        "wordCount":  16,
+        "publishedDate":  "2026-07-26",
+        "watchedDate":  "2026-07-26",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/for-all-mankind/",
+        "tmdbId":  "20423",
+        "tags":  [
+                     "Documentary",
+                     "Narration",
+                     "Score",
+                     "Cinematography",
+                     "Criterion"
+                 ],
+        "viewingSources":  [
+                               "Criterion"
+                           ],
+        "awardTags":  [
+                          "Documentary",
+                          "Narration",
+                          "Score",
+                          "Cinematography"
+                      ],
+        "awardTagsReliable":  true,
+        "origin":  "csv"
+    }
+]
