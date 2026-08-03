@@ -1,0 +1,57 @@
+---
+layout: default
+---
+{% assign resume = site.data.resumes[page.resume_lane] %}
+<div class="resume-page">
+  <nav class="resume-toolbar" aria-label="Resume actions">
+    <a href="{{ '/resumes/' | relative_url }}">← All three resumes</a>
+    <a class="resume-download" href="{{ page.pdf | relative_url }}" download>Download PDF</a>
+  </nav>
+
+  <article class="resume-sheet">
+    <header class="resume-header">
+      <div>
+        <p class="resume-kicker">{{ resume.label }}</p>
+        <h1>Nolan McDermott</h1>
+        <p class="resume-role">{{ resume.title }}</p>
+      </div>
+      <address>
+        Miami, Florida<br>
+        <a href="tel:+15165547741">(516) 554-7741</a><br>
+        <a href="mailto:boltjets24@gmail.com">boltjets24@gmail.com</a><br>
+        <a href="https://www.linkedin.com/in/nolan-mcdermott-b9a20220b/">LinkedIn</a> · <a href="https://github.com/NolanMcD">GitHub</a>
+      </address>
+    </header>
+
+    <section class="resume-summary"><h2>Profile</h2><p>{{ resume.summary }}</p></section>
+
+    <section><h2>Professional Experience</h2>
+      <div class="resume-entry">
+        <div class="resume-entry-heading"><div><h3>Software Engineer</h3><p>Millennium Management · Miami, FL</p></div><time>Aug 2022 – May 2025</time></div>
+        <ul>{% for bullet in resume.millennium %}<li>{{ bullet }}</li>{% endfor %}</ul>
+      </div>
+      <div class="resume-entry resume-entry-compact">
+        <div class="resume-entry-heading"><div><h3>Federation of Club Sports Council Member</h3><p>Herbert Wellness Center · University of Miami</p></div><time>Aug 2021 – May 2022</time></div>
+        <ul>
+          <li>Managed and allocated a $75,000+ annual budget across multiple club sport organizations.</li>
+          <li>Coordinated with club presidents to plan events, approve funding, resolve operational issues, and support online member services.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="resume-columns">
+      <section><h2>Education</h2>
+        <div class="resume-entry-heading"><div><h3>University of Miami</h3><p>B.S. Computer Science & Mathematics</p></div><time>Jun 2022</time></div>
+        <p class="resume-detail">GPA: 3.83 · Miami, FL</p>
+      </section>
+      <section><h2>Technical Skills</h2>
+        <dl class="resume-skills">{% for skill in resume.skills %}<div><dt>{{ skill.label }}</dt><dd>{{ skill.value }}</dd></div>{% endfor %}</dl>
+      </section>
+    </div>
+
+    <section class="resume-final"><h2>Leadership & Communication</h2>
+      <p><strong>President, University of Miami Club Running.</strong> Led team operations, practices, events, and member communication; represented club interests at the university council level.</p>
+      <p>Experienced translating technical work for non-technical stakeholders and helping coworkers learn computer science concepts, new systems, and remote development environments.</p>
+    </section>
+  </article>
+</div>

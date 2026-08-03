@@ -1,0 +1,56 @@
+{
+  "software": {
+    "label": "Software Engineering",
+    "title": "Software Engineer · Internal Tools · Platform Engineering",
+    "summary": "Software engineer with experience designing, building, and maintaining production dashboards, internal applications, ETL pipelines, and reliability-focused systems in a high-availability financial technology environment. Skilled in Python, SQL, Java, C, C++, and R, with a strong computer science and mathematics foundation.",
+    "skills": [
+      {"label": "Languages", "value": "Python, SQL, Java, C, C++, R"},
+      {"label": "Engineering", "value": "Internal applications, ETL workflows, data pipelines, dashboards, monitoring, alerting"},
+      {"label": "Systems", "value": "Linux, Windows, Visual Studio, production support, reliability engineering"}
+    ],
+    "millennium": [
+      "Designed, built, and maintained production dashboards, applications, and ETL pipelines supporting trading and business technology teams.",
+      "Monitored and maintained mission-critical applications, proactively identifying performance and reliability issues to reduce downtime and operational risk.",
+      "Improved system stability and scalability through stronger monitoring, alerting, and ongoing maintenance practices.",
+      "Collaborated with Information Reliability and Rapid AI Development teams to deliver data workflows and infrastructure used for AI training and model deployment.",
+      "Built and supported data ingestion and visualization pipelines for at-home health monitoring initiatives, ensuring accuracy, reliability, and operational usability.",
+      "Owned Webex analytics and reporting solutions, transforming raw collaboration data into actionable insights for senior leadership."
+    ]
+  },
+  "data": {
+    "label": "Data & Analytics Engineering",
+    "title": "Data Engineer · Analytics Engineer · BI Developer",
+    "summary": "Data-focused software engineer with experience building ETL pipelines, analytics dashboards, reporting workflows, and data visualization systems for business and technology teams. Skilled in Python, SQL, R, Excel, and data pipeline development, with hands-on experience transforming raw operational data into actionable insights for senior leadership.",
+    "skills": [
+      {"label": "Data", "value": "SQL, Python, R, Excel, ETL workflows, data ingestion, data quality"},
+      {"label": "Analytics", "value": "Production dashboards, reporting systems, data visualization, business insights"},
+      {"label": "Platforms", "value": "Linux, Windows, internal applications, monitoring, high-availability systems"}
+    ],
+    "millennium": [
+      "Owned Webex analytics and reporting solutions, transforming raw collaboration data into clear, actionable insights for senior leadership.",
+      "Designed, built, and maintained production dashboards, applications, and ETL pipelines supporting trading and business technology teams.",
+      "Built and supported data ingestion and visualization pipelines for at-home health monitoring initiatives, ensuring accuracy, reliability, and operational usability.",
+      "Collaborated with Information Reliability and Rapid AI Development teams to deliver data workflows and infrastructure used for AI training and model deployment.",
+      "Monitored mission-critical applications and proactively identified data, performance, and reliability issues to reduce downtime and operational risk.",
+      "Improved system stability and scalability through stronger monitoring, alerting, and ongoing maintenance practices."
+    ]
+  },
+  "ai": {
+    "label": "Applied AI & Automation",
+    "title": "Applied AI Engineer · Automation · Technical Solutions",
+    "summary": "Software engineer with hands-on experience supporting AI training workflows, data preparation, model deployment infrastructure, and internal automation systems in a production financial technology environment. Skilled in Python, SQL, ETL workflows, dashboards, and reliability-focused engineering, with a record of communicating clearly across technical and business teams.",
+    "skills": [
+      {"label": "AI & Automation", "value": "AI training workflows, data preparation, model deployment support, internal automation"},
+      {"label": "Engineering", "value": "Python, SQL, ETL workflows, data pipelines, dashboards, production applications"},
+      {"label": "Operations", "value": "Linux, monitoring, alerting, reliability, cross-functional technical communication"}
+    ],
+    "millennium": [
+      "Collaborated closely with Information Reliability and Rapid AI Development teams to deliver data workflows and infrastructure used for AI training and model deployment.",
+      "Designed, built, and maintained production dashboards, applications, and ETL pipelines supporting trading and business technology teams.",
+      "Built and supported data ingestion and visualization pipelines for at-home health monitoring initiatives, ensuring accuracy, reliability, and operational usability.",
+      "Owned Webex analytics and reporting solutions, transforming raw collaboration data into actionable insights for senior leadership.",
+      "Monitored and maintained mission-critical applications, proactively identifying performance and reliability issues to reduce downtime and operational risk.",
+      "Improved system stability and scalability through stronger monitoring, alerting, and ongoing maintenance practices."
+    ]
+  }
+}

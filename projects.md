@@ -8,6 +8,12 @@ description: Projects and ongoing challenges by Nolan McDermott.
 
 <div class="project-list">
   <article class="project-card">
+    <div class="project-meta"><span>Career</span><span>PDF</span></div>
+    <h2>Professional resumes</h2>
+    <p>Three targeted versions of my experience for software engineering, data and analytics, and applied AI roles.</p>
+    <a class="text-link" href="{{ '/resumes/' | relative_url }}">View and download resumes <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="project-card">
     <div class="project-meta"><span>Field recordings</span><span>New</span></div>
     <h2>Miami Storms</h2>
     <p>Real thunderstorms recorded from my apartment in Miami, collected for sleep, focus, and continuous listening.</p>

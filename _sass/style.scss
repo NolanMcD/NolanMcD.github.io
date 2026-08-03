@@ -57,6 +57,67 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
 .project-meta span { padding: .2rem .55rem; border-radius: 999px; color: #075c65; background: #e4f3f1; font-size: .75rem; font-weight: 700; text-transform: uppercase; }
 .callout { margin: 2.5rem 0; padding: 1.2rem 1.4rem; border-left: 4px solid $teal; background: $cream; }
 
+/* Professional resumes */
+.resume-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2.5rem 0 4rem; }
+.resume-card { display: flex; min-height: 260px; padding: 1.5rem; border: 1px solid $line; border-top: 5px solid $teal; border-radius: 12px; flex-direction: column; background: white; box-shadow: 0 10px 28px rgba(32,29,27,.07); }
+.resume-card h2 { margin: .15rem 0 .7rem; font-size: 1.45rem; }
+.resume-card > p:not(.eyebrow) { color: $muted; line-height: 1.55; }
+.resume-card > div { display: flex; align-items: center; gap: 1rem; margin-top: auto; }
+.resume-card .button { padding: .6rem .9rem; }
+.resume-page { max-width: 920px; margin: 1.5rem auto 4rem; }
+.resume-toolbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; font-weight: 700; }
+.resume-download { padding: .65rem 1rem; border-radius: 999px; color: white; background: $teal; text-decoration: none; }
+.resume-download:hover { color: white; background: $navy; }
+.resume-sheet { padding: clamp(1.5rem, 5vw, 3.4rem); border: 1px solid $line; background: white; box-shadow: 0 18px 55px rgba(32,29,27,.1); font-family: Arial, Helvetica, sans-serif; font-size: .92rem; line-height: 1.45; }
+.resume-sheet a { color: inherit; }
+.resume-header { display: flex; align-items: start; justify-content: space-between; gap: 2rem; padding-bottom: 1rem; border-bottom: 3px solid $navy; }
+.resume-header h1 { margin: 0; color: $navy; font-size: clamp(2.2rem, 6vw, 3.25rem); line-height: 1; letter-spacing: -.045em; text-transform: uppercase; }
+.resume-kicker { margin: 0 0 .45rem; color: $teal; font-size: .7rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.resume-role { margin: .5rem 0 0; color: $muted; font-weight: 700; }
+.resume-header address { flex: 0 0 190px; margin: 0; font-size: .8rem; font-style: normal; line-height: 1.55; text-align: right; }
+.resume-sheet section { margin-top: 1.2rem; }
+.resume-sheet section > h2 { margin: 0 0 .55rem; padding-bottom: .22rem; border-bottom: 1px solid #b9b3aa; color: $teal; font-size: .78rem; letter-spacing: .13em; text-transform: uppercase; }
+.resume-summary p { margin: 0; }
+.resume-entry + .resume-entry { margin-top: .9rem; }
+.resume-entry-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.resume-entry-heading h3 { margin: 0; color: $navy; font-size: 1rem; }
+.resume-entry-heading p, .resume-detail { margin: .08rem 0 0; color: $muted; font-size: .82rem; }
+.resume-entry-heading time { flex: 0 0 auto; color: $muted; font-size: .78rem; font-weight: 700; }
+.resume-entry ul { margin: .45rem 0 0; padding-left: 1.1rem; }
+.resume-entry li { margin: .22rem 0; padding-left: .15rem; }
+.resume-columns { display: grid; grid-template-columns: .8fr 1.35fr; gap: 1.4rem; }
+.resume-skills, .resume-skills div { margin: 0; }
+.resume-skills div { display: grid; grid-template-columns: 86px 1fr; gap: .4rem; margin-bottom: .25rem; }
+.resume-skills dt { font-weight: 800; }
+.resume-skills dd { margin: 0; }
+.resume-final p { margin: .3rem 0; }
+
+@media (max-width: 740px) {
+  .resume-card-grid { grid-template-columns: 1fr; }
+  .resume-card { min-height: 0; }
+  .resume-header { flex-direction: column; }
+  .resume-header address { flex-basis: auto; text-align: left; }
+  .resume-columns { grid-template-columns: 1fr; gap: 0; }
+  .resume-entry-heading { align-items: start; flex-direction: column; gap: .1rem; }
+}
+
+@media print {
+  @page { size: Letter; margin: .42in; }
+  .site-header, .site-footer, .resume-toolbar { display: none !important; }
+  body { background: white; }
+  .page-content { padding: 0; }
+  .wrapper { max-width: none; padding: 0; }
+  .resume-page { max-width: none; margin: 0; }
+  .resume-sheet { padding: 0; border: 0; box-shadow: none; font-size: 8.45pt; line-height: 1.25; }
+  .resume-header { padding-bottom: 6pt; }
+  .resume-header h1 { font-size: 25pt; }
+  .resume-sheet section { margin-top: 7pt; break-inside: avoid; }
+  .resume-entry + .resume-entry { margin-top: 5pt; }
+  .resume-entry ul { margin-top: 3pt; }
+  .resume-entry li { margin: 1.2pt 0; }
+  .resume-sheet a { text-decoration: none; }
+}
+
 /* Miami Storms */
 .storm-hero { position: relative; margin: 1.5rem 0 2rem; padding: clamp(2.2rem, 7vw, 5rem); overflow: hidden; border-radius: 18px; color: #e9f1f2; background: radial-gradient(circle at 82% 10%, #566b78, #263a46 42%, #111b23 85%); box-shadow: 0 22px 55px rgba(17,27,35,.25); }
 .storm-hero::after { position: absolute; top: -4rem; right: -5rem; width: 23rem; height: 14rem; border-radius: 50%; background: rgba(255,255,255,.055); filter: blur(12px); content: ""; }
