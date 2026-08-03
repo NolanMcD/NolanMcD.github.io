@@ -31,7 +31,9 @@ The command rewrites `assets/data/film-diary.json` and the lightweight homepage 
 
 The `Sync Letterboxd reviews` GitHub Action runs every day and can also be started manually from the Actions tab. On GitHub, where the private CSV is absent, the script uses the committed normalized diary as its baseline and merges RSS changes into it. It commits only when the generated diary changes. Letterboxd RSS does not expose tags, so periodically replace your local `reviews.csv` with a fresh Letterboxd export, run the script, and publish the regenerated JSON to reconcile viewing sources, star categories, older edits, and deletions.
 
-The homepage Strava lane reads `assets/data/strava-feed.json`. It is intentionally isolated from the page markup so it can later be replaced by an authenticated Strava API sync. Until OAuth token rotation is configured, update this small file when a new activity should be featured.
+## Strava sync
+
+The homepage Strava lane reads `assets/data/strava-feed.json`, generated daily by the `Sync public Strava activities` GitHub Action. It publishes only activities marked **Everyone**, and its OAuth refresh token is rotated back into GitHub Actions secrets before feed generation continues. Follow [the one-time secure OAuth setup](docs/strava-oauth-setup.md) to activate it.
 
 ## Custom domain
 

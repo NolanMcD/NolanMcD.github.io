@@ -1,0 +1,23 @@
+[
+  {
+    "id": 11111111111,
+    "name": "Morning Paddle",
+    "sport_type": "StandUpPaddling",
+    "visibility": "everyone",
+    "start_date_local": "2026-08-02T07:12:00Z",
+    "description": "Calm water before the afternoon storm.",
+    "distance": 8046.72,
+    "moving_time": 4380,
+    "total_elevation_gain": 3.2
+  },
+  {
+    "id": 22222222222,
+    "name": "Private Test",
+    "sport_type": "Run",
+    "visibility": "only_me",
+    "start_date_local": "2026-08-01T18:00:00Z",
+    "distance": 5000,
+    "moving_time": 1800,
+    "total_elevation_gain": 0
+  }
+]

@@ -1,0 +1,61 @@
+name: Sync public Strava activities
+
+on:
+  schedule:
+    - cron: "47 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: strava-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: windows-latest
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+
+      - name: Check Strava configuration
+        id: config
+        shell: powershell
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+          STRAVA_SECRET_ROTATOR_TOKEN: ${{ secrets.STRAVA_SECRET_ROTATOR_TOKEN }}
+        run: |
+          $configured = $env:STRAVA_CLIENT_ID -and $env:STRAVA_CLIENT_SECRET -and $env:STRAVA_REFRESH_TOKEN -and $env:STRAVA_SECRET_ROTATOR_TOKEN
+          "configured=$($configured.ToString().ToLowerInvariant())" >> $env:GITHUB_OUTPUT
+          if (-not $configured) {
+            Write-Output "::notice::Strava sync is dormant until all four repository secrets are configured."
+          }
+
+      - name: Refresh token and build public feed
+        if: steps.config.outputs.configured == 'true'
+        shell: powershell
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+          STRAVA_SECRET_ROTATOR_TOKEN: ${{ secrets.STRAVA_SECRET_ROTATOR_TOKEN }}
+          GH_TOKEN: ${{ secrets.STRAVA_SECRET_ROTATOR_TOKEN }}
+        run: .\tools\sync-strava.ps1
+
+      - name: Commit new activities
+        if: steps.config.outputs.configured == 'true'
+        shell: powershell
+        run: |
+          $changes = git status --porcelain -- assets/data/strava-feed.json
+          if (-not $changes) {
+            Write-Host "No new public Strava activity."
+            exit 0
+          }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/data/strava-feed.json
+          git commit -m "Sync public Strava activities"
+          git push
