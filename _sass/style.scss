@@ -566,3 +566,40 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
   .closet-grid { max-height: 420px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* LRU cache interview post */
+.lru-architecture { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; margin: 2rem 0; }
+.lru-architecture > div { padding: 1.25rem; border: 1px solid $line; border-radius: 12px; background: $cream; }
+.lru-architecture span, .lru-architecture small { display: block; }
+.lru-architecture span { color: $teal; font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.lru-architecture strong { display: block; margin: .15rem 0; color: $navy; font-size: 1.2rem; }
+.lru-architecture small { color: $muted; }
+.lru-architecture > b { color: $teal; font-size: 1.6rem; }
+.lru-demo { margin: 2rem 0 2.5rem; padding: clamp(1.15rem, 4vw, 2rem); border: 1px solid $line; border-radius: 16px; background: linear-gradient(145deg, #f7f1e7, #fff); box-shadow: 0 14px 35px rgba(42,31,25,.09); }
+.lru-controls { display: grid; grid-template-columns: .75fr 1fr 1fr auto auto auto; align-items: end; gap: .6rem; }
+.lru-controls label { color: $muted; font-size: .7rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.lru-controls input { box-sizing: border-box; width: 100%; margin-top: .25rem; padding: .6rem; border: 1px solid #bcb2a6; border-radius: 7px; color: $ink; background: white; font: inherit; }
+.lru-controls button { padding: .62rem .8rem; border: 1px solid $navy; border-radius: 7px; color: white; background: $navy; font: inherit; font-weight: 800; cursor: pointer; }
+.lru-controls button:hover, .lru-controls button:focus-visible { border-color: $teal; background: $teal; }
+.lru-controls #lru-reset { color: $navy; background: white; }
+.lru-order-label { display: flex; justify-content: space-between; margin: 1.5rem 0 .45rem; color: $muted; font-size: .67rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+.lru-list { display: flex; min-height: 82px; align-items: center; gap: .45rem; overflow-x: auto; padding: .7rem; border: 1px dashed #bcb2a6; border-radius: 10px; background: white; }
+.lru-node { display: grid; flex: 0 0 82px; min-height: 58px; border: 2px solid #605953; border-radius: 8px; background: #f5efe4; place-items: center; transition: border-color .2s, transform .2s; }
+.lru-node strong { font-size: 1rem; }
+.lru-node span { color: $muted; font-size: .72rem; }
+.lru-node.is-active { border-color: $teal; transform: translateY(-3px); }
+.lru-list > b { color: #968b80; }
+.lru-empty { width: 100%; color: $muted; text-align: center; }
+.lru-status { margin: .75rem 0 0; color: $muted; font-size: .82rem; }
+
+@media (max-width: 760px) {
+  .lru-architecture { grid-template-columns: 1fr; }
+  .lru-architecture > b { transform: rotate(90deg); text-align: center; }
+  .lru-controls { grid-template-columns: repeat(3, 1fr); }
+  .lru-controls label { grid-column: span 1; }
+}
+
+@media (max-width: 480px) {
+  .lru-controls { grid-template-columns: 1fr 1fr; }
+  .lru-controls label:first-child { grid-column: 1 / -1; }
+}
