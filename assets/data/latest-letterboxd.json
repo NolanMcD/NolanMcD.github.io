@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1432229000",
+        "syncId":  "letterboxd-review-1432229000",
+        "title":  "River",
+        "year":  2023,
+        "rating":  3,
+        "review":  "Go with the flow",
+        "wordCount":  4,
+        "publishedDate":  "2026-08-04",
+        "watchedDate":  "2026-08-03",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/river-2023-1/",
+        "tmdbId":  "1138476",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1430508412",
         "syncId":  "letterboxd-review-1430508412",
         "title":  "Talk to Me",
@@ -139,37 +164,5 @@
                       ],
         "awardTagsReliable":  false,
         "origin":  "rss"
-    },
-    {
-        "id":  "csv:https://boxd.it/frGe1T",
-        "syncId":  "letterboxd-review-1415101726",
-        "title":  "For All Mankind",
-        "year":  1989,
-        "rating":  4,
-        "review":  "Hell yeah. Some of the best NASA footage I’ve ever seen even better than “Apollo 11”",
-        "wordCount":  16,
-        "publishedDate":  "2026-07-26",
-        "watchedDate":  "2026-07-26",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/for-all-mankind/",
-        "tmdbId":  "20423",
-        "tags":  [
-                     "Documentary",
-                     "Narration",
-                     "Score",
-                     "Cinematography",
-                     "Criterion"
-                 ],
-        "viewingSources":  [
-                               "Criterion"
-                           ],
-        "awardTags":  [
-                          "Documentary",
-                          "Narration",
-                          "Score",
-                          "Cinematography"
-                      ],
-        "awardTagsReliable":  true,
-        "origin":  "csv"
     }
 ]
