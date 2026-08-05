@@ -1,5 +1,55 @@
 [
     {
+        "id":  "rss:letterboxd-review-1433903782",
+        "syncId":  "letterboxd-review-1433903782",
+        "title":  "Pépé le Moko",
+        "year":  1937,
+        "rating":  3,
+        "review":  "He should have just rocked the casbah",
+        "wordCount":  7,
+        "publishedDate":  "2026-08-05",
+        "watchedDate":  "2026-08-04",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/pepe-le-moko/",
+        "tmdbId":  "26252",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1433291130",
+        "syncId":  "letterboxd-review-1433291130",
+        "title":  "Project Hail Mary",
+        "year":  2026,
+        "rating":  4,
+        "review":  "Its not the best sci fi space adventure ever but it is a delight",
+        "wordCount":  14,
+        "publishedDate":  "2026-08-05",
+        "watchedDate":  "2026-08-04",
+        "rewatch":  true,
+        "url":  "https://letterboxd.com/nolanmcd/film/project-hail-mary/1/",
+        "tmdbId":  "687163",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1432229000",
         "syncId":  "letterboxd-review-1432229000",
         "title":  "River",
@@ -107,62 +157,5 @@
                       ],
         "awardTagsReliable":  true,
         "origin":  "csv"
-    },
-    {
-        "id":  "csv:https://boxd.it/fucW1Z",
-        "syncId":  "letterboxd-review-1418836557",
-        "title":  "The Testament of Dr. Mabuse",
-        "year":  1933,
-        "rating":  4,
-        "review":  "Frtiz Lang was moving like Babe Ruth in the early days, hitting more home runs than some entire teams",
-        "wordCount":  19,
-        "publishedDate":  "2026-07-28",
-        "watchedDate":  "2026-07-27",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/the-testament-of-dr-mabuse/",
-        "tmdbId":  "12206",
-        "tags":  [
-                     "Directing",
-                     "Story",
-                     "Detective",
-                     "Scene",
-                     "Criterion"
-                 ],
-        "viewingSources":  [
-                               "Criterion"
-                           ],
-        "awardTags":  [
-                          "Directing",
-                          "Story",
-                          "Detective",
-                          "Scene"
-                      ],
-        "awardTagsReliable":  true,
-        "origin":  "csv"
-    },
-    {
-        "id":  "rss:letterboxd-watch-1416557070",
-        "syncId":  "letterboxd-watch-1416557070",
-        "title":  "The Odyssey",
-        "year":  2026,
-        "rating":  5,
-        "review":  "Watched on Sunday July 26, 2026.",
-        "wordCount":  6,
-        "publishedDate":  "2026-07-27",
-        "watchedDate":  "2026-07-26",
-        "rewatch":  true,
-        "url":  "https://letterboxd.com/nolanmcd/film/the-odyssey-2026/1/",
-        "tmdbId":  "1368337",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
     }
 ]
