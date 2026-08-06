@@ -1,47 +1,107 @@
 ---
 title: Projects
 permalink: /projects/
-description: Projects and ongoing challenges by Nolan McDermott.
+description: A complete archive of Nolan McDermott's projects, essays, analysis, reviews, and experiments.
 ---
 
-<p class="page-lede">The code, analysis, adventures, and long-running goals happening beyond my movie reviews.</p>
-
-<div class="project-list">
-  <article class="project-card">
-    <div class="project-meta"><span>Career</span><span>PDF</span></div>
-    <h2>Professional resumes</h2>
-    <p>Three targeted versions of my experience for software engineering, data and analytics, and applied AI roles.</p>
-    <a class="text-link" href="{{ '/resumes/' | relative_url }}">View and download resumes <span aria-hidden="true">→</span></a>
-  </article>
-  <article class="project-card">
-    <div class="project-meta"><span>Field recordings</span><span>New</span></div>
-    <h2>Miami Storms</h2>
-    <p>Real thunderstorms recorded from my apartment in Miami, collected for sleep, focus, and continuous listening.</p>
-    <a class="text-link" href="{{ '/storms/' | relative_url }}">Listen to the storms <span aria-hidden="true">→</span></a>
-  </article>
-  <article class="project-card">
-    <div class="project-meta"><span>Adventure</span><span>In progress</span></div>
-    <h2>Circumnavigating the Florida Keys</h2>
-    <p>A long-term effort to paddle around every Florida Key. The project blends route research, mapping, trip documentation, and the logistics of safely exploring a remarkable coastline.</p>
-    <a class="text-link" href="{{ '/projects/florida-keys/' | relative_url }}">Explore the expedition log <span aria-hidden="true">→</span></a>
-  </article>
-  <article class="project-card">
-    <div class="project-meta"><span>Cinema</span><span>Ongoing</span></div>
-    <h2>Exploring cinema</h2>
-    <p>Watching widely, logging the journey, and building Noland into a home for thoughtful movie reviews and recommendations.</p>
-    <a class="text-link" href="{{ '/reviews/' | relative_url }}">Read the movie reviews <span aria-hidden="true">→</span></a>
-  </article>
-  <article class="project-card">
-    <div class="project-meta"><span>Baseball</span><span>9 / 30</span></div>
-    <h2>The MLB ballpark project</h2>
-    <p>A personal quest to visit every Major League Baseball stadium, with 21 parks left. Future updates will collect rankings, photos, travel notes, and game-day data in one place.</p>
-  </article>
-  <article class="project-card">
-    <div class="project-meta"><span>Software</span><span>Open source</span></div>
-    <h2>Code and experiments</h2>
-    <p>Small utilities, analyses, and works in progress live on GitHub. Detailed case studies will appear here as they are ready.</p>
-    <a class="text-link" href="https://github.com/NolanMcD">Browse my GitHub profile <span aria-hidden="true">→</span></a>
-  </article>
+<div class="archive-intro">
+  <p class="eyebrow">Everything I make</p>
+  <p class="page-lede">Ongoing projects, finished experiments, data stories, movie writing, and technical work—all in one place.</p>
 </div>
 
-<p class="callout">This page is intentionally a living archive. Check back as projects move from experiments to full write-ups.</p>
+<nav class="archive-filters" aria-label="Filter projects and posts">
+  <button type="button" class="is-active" data-archive-filter="all">All</button>
+  <button type="button" data-archive-filter="project">Projects</button>
+  <button type="button" data-archive-filter="code,data,math">Code & Data</button>
+  <button type="button" data-archive-filter="movies">Movies</button>
+  <button type="button" data-archive-filter="career,interviews">Career</button>
+</nav>
+
+<p class="archive-count" id="archive-count" aria-live="polite"></p>
+
+<div class="archive-stream" id="archive-stream">
+  <article class="archive-card archive-project" data-archive-tags="project career">
+    <div class="archive-card-top"><span>Project</span><time>Ongoing</time></div>
+    <h2><a href="{{ '/resumes/' | relative_url }}">Professional resumes</a></h2>
+    <p>Three targeted versions of my experience for software engineering, data and analytics, and applied AI roles.</p>
+    <div class="archive-tags"><span>Career</span><span>PDF</span></div>
+  </article>
+
+  <article class="archive-card archive-project" data-archive-tags="project audio">
+    <div class="archive-card-top"><span>Project</span><time>Ongoing</time></div>
+    <h2><a href="{{ '/storms/' | relative_url }}">Miami Storms</a></h2>
+    <p>Real thunderstorms recorded from my apartment in Miami, collected for sleep, focus, and continuous listening.</p>
+    <div class="archive-tags"><span>Field recordings</span><span>Audio</span></div>
+  </article>
+
+  <article class="archive-card archive-project" data-archive-tags="project adventure">
+    <div class="archive-card-top"><span>Project</span><time>In progress</time></div>
+    <h2><a href="{{ '/projects/florida-keys/' | relative_url }}">Circumnavigating the Florida Keys</a></h2>
+    <p>A long-term effort to paddle around every Florida Key, combining route research, trip documentation, and expedition logistics.</p>
+    <div class="archive-tags"><span>Adventure</span><span>8 routes</span></div>
+  </article>
+
+  <article class="archive-card archive-project" data-archive-tags="project movies">
+    <div class="archive-card-top"><span>Project</span><time>Ongoing</time></div>
+    <h2><a href="{{ '/reviews/' | relative_url }}">Exploring cinema</a></h2>
+    <p>Watching widely and building Noland into a home for thoughtful movie reviews, ratings, and recommendations.</p>
+    <div class="archive-tags"><span>Movies</span><span>Film diary</span></div>
+  </article>
+
+  <article class="archive-card archive-project" data-archive-tags="project baseball">
+    <div class="archive-card-top"><span>Project</span><time>9 / 30</time></div>
+    <h2>The MLB ballpark project</h2>
+    <p>A personal quest to visit every Major League Baseball stadium, with rankings, photos, travel notes, and game-day data to come.</p>
+    <div class="archive-tags"><span>Baseball</span><span>Travel</span></div>
+  </article>
+
+  <article class="archive-card archive-project" data-archive-tags="project code">
+    <div class="archive-card-top"><span>Project</span><time>Open source</time></div>
+    <h2><a href="https://github.com/NolanMcD">Code and experiments</a></h2>
+    <p>Small utilities, analyses, and works in progress that live on GitHub between full project write-ups.</p>
+    <div class="archive-tags"><span>Software</span><span>GitHub</span></div>
+  </article>
+
+  {% for post in site.posts %}
+  <article class="archive-card archive-post" data-archive-tags="post {{ post.categories | join: ' ' | escape }}">
+    <div class="archive-card-top"><span>Post</span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></div>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+    {% if post.excerpt %}<p>{{ post.excerpt | strip_html | strip_newlines | escape }}</p>{% endif %}
+    <div class="archive-tags">{% for category in post.categories %}<span>{{ category }}</span>{% endfor %}</div>
+  </article>
+  {% endfor %}
+</div>
+
+<p class="archive-empty" id="archive-empty" hidden>No entries match this filter.</p>
+
+<script>
+(() => {
+  const stream = document.getElementById("archive-stream");
+  if (!stream) return;
+
+  const cards = [...stream.querySelectorAll(".archive-card")];
+  const buttons = [...document.querySelectorAll("[data-archive-filter]")];
+  const count = document.getElementById("archive-count");
+  const empty = document.getElementById("archive-empty");
+
+  function applyFilter(value) {
+    const wanted = value.split(",");
+    let visible = 0;
+    cards.forEach(card => {
+      const tags = card.dataset.archiveTags.toLowerCase().split(/\s+/);
+      const show = value === "all" || wanted.some(tag => tags.includes(tag));
+      card.hidden = !show;
+      if (show) visible += 1;
+    });
+    count.textContent = `${visible} ${visible === 1 ? "entry" : "entries"}`;
+    empty.hidden = visible !== 0;
+  }
+
+  buttons.forEach(button => button.addEventListener("click", () => {
+    buttons.forEach(item => item.classList.toggle("is-active", item === button));
+    applyFilter(button.dataset.archiveFilter);
+  }));
+
+  applyFilter("all");
+})();
+</script>
