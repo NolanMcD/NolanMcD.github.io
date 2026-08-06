@@ -262,6 +262,24 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
 .rating-scale strong { color: #a46b00; }
 .rating-scale span { color: $muted; }
 .homepage-screenplay .rating-scale { box-sizing: border-box; max-width: none; font-family: inherit; }
+.home-rating-distribution { margin: 5rem auto; padding: clamp(1.35rem, 5vw, 3rem); border: 1px solid $line; border-radius: 16px; background: linear-gradient(145deg, #f7f1e7, #fff); box-shadow: 0 16px 40px rgba(42,31,25,.08); }
+.home-rating-distribution > header { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 1.5rem; }
+.home-rating-distribution > header h2 { margin: .15rem 0 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 5vw, 3rem); }
+.home-rating-distribution > header > p { max-width: 390px; margin: 0; color: $muted; line-height: 1.55; }
+.home-rating-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: .65rem; margin: 1.5rem 0 2rem; }
+.home-rating-summary div { padding: .85rem 1rem; border: 1px solid $line; border-radius: 8px; background: white; }
+.home-rating-summary strong, .home-rating-summary span { display: block; }
+.home-rating-summary strong { color: $navy; font-family: Georgia, "Times New Roman", serif; font-size: 1.55rem; line-height: 1; }
+.home-rating-summary span { margin-top: .3rem; color: $muted; font-size: .65rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+.home-rating-chart { display: grid; gap: .65rem; margin-bottom: 1.5rem; }
+.home-rating-row { display: grid; grid-template-columns: 3.2rem minmax(0, 1fr) 5.2rem; align-items: center; gap: .75rem; }
+.home-rating-label { color: #a46b00; font-size: .8rem; text-align: right; white-space: nowrap; }
+.home-rating-track { display: block; height: 1.15rem; overflow: hidden; border-radius: 3px; background: #e8e0d5; }
+.home-rating-bar { display: block; min-width: 3px; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #c68813, #8e5200); transform-origin: left; animation: rating-bar-in .6s ease both; }
+.home-rating-value { display: flex; align-items: baseline; justify-content: space-between; gap: .35rem; font-variant-numeric: tabular-nums; }
+.home-rating-value b { color: $navy; font-size: .78rem; }
+.home-rating-value small { color: $muted; font-size: .65rem; }
+@keyframes rating-bar-in { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 .review-index { margin-top: 2rem; border-top: 1px solid $line; }
 .review-index article { display: flex; align-items: start; justify-content: space-between; gap: 2rem; padding: 1.5rem 0; border-bottom: 1px solid $line; }
 .review-index-poster { flex: 0 0 95px; overflow: hidden; border-radius: 3px; box-shadow: 0 5px 14px rgba(42,31,25,.15); }
@@ -538,6 +556,9 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
   .storm-library-heading { align-items: flex-start; flex-direction: column; }
   .storm-track { align-items: flex-start; flex-direction: column; gap: .25rem; }
   .rating-scale li { grid-template-columns: 82px 1fr; gap: .65rem; padding-inline: .75rem; }
+  .home-rating-distribution > header { align-items: flex-start; flex-direction: column; gap: .5rem; }
+  .home-rating-summary { grid-template-columns: 1fr; }
+  .home-rating-row { grid-template-columns: 2.8rem minmax(0, 1fr) 4.7rem; gap: .45rem; }
   .homepage-character, .homepage-dialogue { width: 82%; }
   .card-grid { grid-template-columns: 1fr; }
   .review-grid { grid-template-columns: 1fr; }
@@ -591,7 +612,7 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
   .closet-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .closet-grid { max-height: 420px; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .home-rating-bar { animation: none; } }
 
 /* LRU cache interview post */
 .lru-architecture { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; margin: 2rem 0; }

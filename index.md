@@ -71,20 +71,20 @@ description: Nolan McDermott's latest movie reviews, writing, adventures, and pe
   {% endif %}
 </section>
 
-<section class="cinema-manifesto" aria-labelledby="why-heading">
-  <div class="homepage-screenplay">
-    <p class="homepage-scene-heading">INT. MOVIE THEATER — NIGHT</p>
-    <p class="homepage-action">The credits roll. The lights come up. Nolan is already deciding how many stars the movie deserves.</p>
-    <h2 class="homepage-character" id="why-heading">Ratings (V.O.)</h2>
-    <ol class="rating-scale homepage-dialogue" reversed aria-label="Nolan's five-star rating scale">
-      <li><strong>5 stars</strong><span>A favorite. A must-see.</span></li>
-      <li><strong>4 stars</strong><span>Great. I highly recommend it.</span></li>
-      <li><strong>3 stars</strong><span>Good, and worth watching.</span></li>
-      <li><strong>2 stars</strong><span>Below average. Not worth your time.</span></li>
-      <li><strong>1 star</strong><span>Terrible. Avoid it.</span></li>
-    </ol>
-    <p class="homepage-transition">FADE OUT.</p>
+<section class="home-rating-distribution" aria-labelledby="rating-distribution-heading">
+  <header>
+    <div><p class="eyebrow">The full Film Diary</p><h2 id="rating-distribution-heading">How I rate what I watch</h2></div>
+    <p>Every logged rating, from the rare disasters to the movies I cannot stop recommending.</p>
+  </header>
+  <div class="home-rating-summary" id="home-rating-summary" aria-live="polite">
+    <div><strong>—</strong><span>rated films</span></div>
+    <div><strong>—</strong><span>average rating</span></div>
+    <div><strong>—</strong><span>most common</span></div>
   </div>
+  <div class="home-rating-chart" id="home-rating-chart" aria-label="Loading rating distribution">
+    <p class="feed-loading">Loading the Film Diary distribution…</p>
+  </div>
+  <a class="text-link" href="{{ '/reviews/diary/' | relative_url }}">Explore every rating <span aria-hidden="true">→</span></a>
 </section>
 
 <section class="connect-strip" aria-labelledby="elsewhere-heading">

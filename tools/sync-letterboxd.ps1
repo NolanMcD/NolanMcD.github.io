@@ -2,6 +2,7 @@ param(
     [string]$CsvPath = "reviews.csv",
     [string]$OutputPath = "assets/data/film-diary.json",
     [string]$LatestOutputPath = "assets/data/latest-letterboxd.json",
+    [string]$DistributionOutputPath = "assets/data/rating-distribution.json",
     [string]$FeedUrl = "https://letterboxd.com/nolanmcd/rss/",
     [switch]$SkipFeed
 )
@@ -100,6 +101,7 @@ function New-NormalizedEntry {
 $resolvedCsv = Resolve-RepositoryPath $CsvPath
 $resolvedOutput = Resolve-RepositoryPath $OutputPath
 $resolvedLatestOutput = Resolve-RepositoryPath $LatestOutputPath
+$resolvedDistributionOutput = Resolve-RepositoryPath $DistributionOutputPath
 $entries = [Collections.Generic.List[object]]::new()
 $hasCsv = Test-Path -LiteralPath $resolvedCsv
 
@@ -181,4 +183,23 @@ $json = ConvertTo-Json -InputObject $sorted -Depth 6
 $latestJson = ConvertTo-Json -InputObject @($sorted | Select-Object -First 6) -Depth 6
 [IO.File]::WriteAllText($resolvedLatestOutput, $latestJson + "`n", [Text.UTF8Encoding]::new($false))
 
-Write-Host "Wrote $($sorted.Count) Film Diary entries and the latest-review feed."
+$ratingRows = @()
+$ratingTotal = 0
+$ratingWeightedTotal = 0
+for ($rating = 5; $rating -ge 1; $rating--) {
+    $count = @($sorted | Where-Object { [int]$_.rating -eq $rating }).Count
+    $ratingTotal += $count
+    $ratingWeightedTotal += $rating * $count
+    $ratingRows += [ordered]@{ rating = $rating; count = $count }
+}
+$mostCommonRating = ($ratingRows | Sort-Object count -Descending | Select-Object -First 1).rating
+$distribution = [ordered]@{
+    total = $ratingTotal
+    average = if ($ratingTotal) { [math]::Round($ratingWeightedTotal / $ratingTotal, 2) } else { 0 }
+    mostCommon = $mostCommonRating
+    ratings = $ratingRows
+}
+$distributionJson = ConvertTo-Json -InputObject $distribution -Depth 4
+[IO.File]::WriteAllText($resolvedDistributionOutput, $distributionJson + "`n", [Text.UTF8Encoding]::new($false))
+
+Write-Host "Wrote $($sorted.Count) Film Diary entries, the latest-review feed, and the rating distribution."
