@@ -1,12 +1,27 @@
 {
-  "total": 1506,
-  "average": 3.33,
-  "mostCommon": 4,
-  "ratings": [
-    { "rating": 5, "count": 100 },
-    { "rating": 4, "count": 600 },
-    { "rating": 3, "count": 539 },
-    { "rating": 2, "count": 237 },
-    { "rating": 1, "count": 30 }
-  ]
+    "total":  1507,
+    "average":  3.33,
+    "mostCommon":  2,
+    "ratings":  [
+                    {
+                        "rating":  5,
+                        "count":  100
+                    },
+                    {
+                        "rating":  4,
+                        "count":  601
+                    },
+                    {
+                        "rating":  3,
+                        "count":  539
+                    },
+                    {
+                        "rating":  2,
+                        "count":  237
+                    },
+                    {
+                        "rating":  1,
+                        "count":  30
+                    }
+                ]
 }

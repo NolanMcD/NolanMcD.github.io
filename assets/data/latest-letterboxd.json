@@ -1,8 +1,33 @@
 [
     {
+        "id":  "rss:letterboxd-review-1435997376",
+        "syncId":  "letterboxd-review-1435997376",
+        "title":  "The Verdict",
+        "year":  1982,
+        "rating":  4,
+        "review":  "Sidney Lumet behind the camera + David Mamet on the screenplay, of course this is fantastic.",
+        "wordCount":  16,
+        "publishedDate":  "2026-08-06",
+        "watchedDate":  "2026-08-05",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-verdict-1982/",
+        "tmdbId":  "24226",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1433903782",
         "syncId":  "letterboxd-review-1433903782",
-        "title":  "Pépé le Moko",
+        "title":  "PÃ©pÃ© le Moko",
         "year":  1937,
         "rating":  3,
         "review":  "He should have just rocked the casbah",
@@ -122,38 +147,6 @@
         "awardTags":  [
                           "Comedy",
                           "Premise"
-                      ],
-        "awardTagsReliable":  true,
-        "origin":  "csv"
-    },
-    {
-        "id":  "csv:https://boxd.it/fxmH6H",
-        "syncId":  "letterboxd-review-1423502049",
-        "title":  "Spider-Man: Brand New Day",
-        "year":  2026,
-        "rating":  4,
-        "review":  "I gets a lot right. I wont pretend to be some authority on Spider-Man, a lot of people love this character more than me. But there are several moments in the story that I see and I\u0027m just like \"yup that\u0027s spiderman.\" The wider scope MCU stuff is hit or miss, it makes for good dialogue, but it also makes the story incredibly predictable. That\u0027s the film\u0027s biggest detriment. A lot of plot beats are connected sloppily, and Peter spends most of the movie ignoring the obvious. I\u0027m looking past it though. The action is creative both in how its shot and the staging. After all he\u0027s still a funny Mets fan so I like him.",
-        "wordCount":  116,
-        "publishedDate":  "2026-07-31",
-        "watchedDate":  "2026-07-30",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/spider-man-brand-new-day/",
-        "tmdbId":  "969681",
-        "tags":  [
-                     "Action",
-                     "Dialogue",
-                     "Humor",
-                     "Mets",
-                     "In theatres"
-                 ],
-        "viewingSources":  [
-                               "In theatres"
-                           ],
-        "awardTags":  [
-                          "Action",
-                          "Dialogue",
-                          "Humor",
-                          "Mets"
                       ],
         "awardTagsReliable":  true,
         "origin":  "csv"
