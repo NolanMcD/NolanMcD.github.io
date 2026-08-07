@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1437429720",
+        "syncId":  "letterboxd-review-1437429720",
+        "title":  "I Want Your Sex",
+        "year":  2026,
+        "rating":  3,
+        "review":  "It’s okay, definitely feels like they ran out of money but the story is solid and it’s pretty funny",
+        "wordCount":  19,
+        "publishedDate":  "2026-08-07",
+        "watchedDate":  "2026-08-06",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/i-want-your-sex/",
+        "tmdbId":  "1288059",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1435997376",
         "syncId":  "letterboxd-review-1435997376",
         "title":  "The Verdict",
@@ -27,7 +52,7 @@
     {
         "id":  "rss:letterboxd-review-1433903782",
         "syncId":  "letterboxd-review-1433903782",
-        "title":  "PÃ©pÃ© le Moko",
+        "title":  "PÃƒÂ©pÃƒÂ© le Moko",
         "year":  1937,
         "rating":  3,
         "review":  "He should have just rocked the casbah",
@@ -123,32 +148,5 @@
                       ],
         "awardTagsReliable":  false,
         "origin":  "rss"
-    },
-    {
-        "id":  "csv:https://boxd.it/fz5GPF",
-        "syncId":  "letterboxd-review-1426052053",
-        "title":  "The Dink",
-        "year":  2026,
-        "rating":  2,
-        "review":  "You have to commit to either being a full on wacky comedy or drama comedy you can\u0027t have it both ways. Like John McEnroe appearing with larger and larger snacks is a great gag but it just doesn\u0027t jive with the serious backstory of the main character.",
-        "wordCount":  47,
-        "publishedDate":  "2026-08-01",
-        "watchedDate":  "2026-07-31",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/the-dink/",
-        "tmdbId":  "1361774",
-        "tags":  [
-                     "Comedy",
-                     "Premise"
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-                          "Comedy",
-                          "Premise"
-                      ],
-        "awardTagsReliable":  true,
-        "origin":  "csv"
     }
 ]
