@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1439538131",
+        "syncId":  "letterboxd-review-1439538131",
+        "title":  "The Odyssey",
+        "year":  2026,
+        "rating":  5,
+        "review":  "Midnight 70MM IMAX showing yay",
+        "wordCount":  5,
+        "publishedDate":  "2026-08-08",
+        "watchedDate":  "2026-08-08",
+        "rewatch":  true,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-odyssey-2026/2/",
+        "tmdbId":  "1368337",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1437429720",
         "syncId":  "letterboxd-review-1437429720",
         "title":  "I Want Your Sex",
@@ -52,7 +77,7 @@
     {
         "id":  "rss:letterboxd-review-1433903782",
         "syncId":  "letterboxd-review-1433903782",
-        "title":  "PÃƒÂ©pÃƒÂ© le Moko",
+        "title":  "PÃƒÆ’Ã‚Â©pÃƒÆ’Ã‚Â© le Moko",
         "year":  1937,
         "rating":  3,
         "review":  "He should have just rocked the casbah",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/river-2023-1/",
         "tmdbId":  "1138476",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1430508412",
-        "syncId":  "letterboxd-review-1430508412",
-        "title":  "Talk to Me",
-        "year":  2022,
-        "rating":  4,
-        "review":  "Dang really freaking good",
-        "wordCount":  4,
-        "publishedDate":  "2026-08-03",
-        "watchedDate":  "2026-08-02",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/talk-to-me-2022/",
-        "tmdbId":  "1008042",
         "tags":  [
 
                  ],
