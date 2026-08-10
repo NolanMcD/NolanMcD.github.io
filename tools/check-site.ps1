@@ -10,9 +10,12 @@ function Add-Failure([string]$Message) {
 }
 
 function Get-RelativePath([string]$Path) {
-    $rootUri = [Uri]((Resolve-Path $root).Path.TrimEnd('\') + '\')
-    $pathUri = [Uri](Resolve-Path -LiteralPath $Path).Path
-    return [Uri]::UnescapeDataString($rootUri.MakeRelativeUri($pathUri).ToString())
+    $resolvedRoot = (Resolve-Path -LiteralPath $root).Path.TrimEnd([IO.Path]::DirectorySeparatorChar, [IO.Path]::AltDirectorySeparatorChar)
+    $resolvedPath = (Resolve-Path -LiteralPath $Path).Path
+    if (-not $resolvedPath.StartsWith($resolvedRoot, [StringComparison]::OrdinalIgnoreCase)) {
+        throw "Path is outside the repository: $resolvedPath"
+    }
+    return $resolvedPath.Substring($resolvedRoot.Length).TrimStart('\', '/').Replace('\', '/')
 }
 
 Write-Host "Checking JSON..."
