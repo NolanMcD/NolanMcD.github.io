@@ -2,6 +2,6 @@ _site/
 .jekyll-cache/
 .sass-cache/
 vendor/
-reviews.csv
-nolan_job_application_tracker_analysis.xlsx
-nolan_job_application_tracker_with_outreach.xlsx
+
+# Private/local source data. Generated public artifacts belong in assets/data/.
+local-data/

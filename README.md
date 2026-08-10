@@ -19,7 +19,7 @@ Ratings use five whole-star categories: **Story, Directing, Theme, Cast, and Cha
 
 ## Film Diary and Letterboxd sync
 
-The complete Film Diary at `/reviews/diary/` is generated from a local `reviews.csv` and Nolan's official Letterboxd RSS feed. The raw CSV seeds the historical archive and supplies tags; RSS supplies new review text, ratings, watched dates, and rewatches between exports. The CSV is deliberately git-ignored and never published—only the normalized public JSON is committed.
+The complete Film Diary at `/reviews/diary/` is generated from a local `local-data/reviews.csv` and Nolan's official Letterboxd RSS feed. The raw CSV seeds the historical archive and supplies tags; RSS supplies new review text, ratings, watched dates, and rewatches between exports. Everything in `local-data/` is deliberately git-ignored and never published—only normalized public artifacts are committed.
 
 Run the synchronizer locally from the repository root:
 
@@ -29,7 +29,11 @@ powershell -File tools/sync-letterboxd.ps1
 
 The command rewrites `assets/data/film-diary.json` and the lightweight homepage feed at `assets/data/latest-letterboxd.json`. It is safe to run repeatedly: recent RSS items are matched by their Letterboxd ID or by film, year, and watched date. RSS-only entries are preserved until a newer CSV export incorporates them.
 
-The `Sync Letterboxd reviews` GitHub Action runs every day and can also be started manually from the Actions tab. On GitHub, where the private CSV is absent, the script uses the committed normalized diary as its baseline and merges RSS changes into it. It commits only when the generated diary changes. Letterboxd RSS does not expose tags, so periodically replace your local `reviews.csv` with a fresh Letterboxd export, run the script, and publish the regenerated JSON to reconcile viewing sources, star categories, older edits, and deletions.
+The `Sync Letterboxd reviews` GitHub Action runs every day and can also be started manually from the Actions tab. On GitHub, where the private CSV is absent, the script uses the committed normalized diary as its baseline and merges RSS changes into it. It commits only when the generated diary changes. Letterboxd RSS does not expose tags, so periodically replace `local-data/reviews.csv` with a fresh Letterboxd export, run the script, and publish the regenerated JSON to reconcile viewing sources, star categories, older edits, and deletions.
+
+## Repository checks
+
+Run `powershell -File tools/check-site.ps1` before publishing. It validates JSON files, post naming and front matter, local asset references, the storm audio catalog, and GitHub's per-file size limit. GitHub Actions runs the same checks on every push and pull request.
 
 ## Strava sync
 

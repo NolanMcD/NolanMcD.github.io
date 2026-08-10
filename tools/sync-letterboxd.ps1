@@ -1,5 +1,5 @@
 param(
-    [string]$CsvPath = "reviews.csv",
+    [string]$CsvPath = "local-data/reviews.csv",
     [string]$OutputPath = "assets/data/film-diary.json",
     [string]$LatestOutputPath = "assets/data/latest-letterboxd.json",
     [string]$DistributionOutputPath = "assets/data/rating-distribution.json",
