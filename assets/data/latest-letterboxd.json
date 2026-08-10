@@ -1,5 +1,105 @@
 [
     {
+        "id":  "rss:letterboxd-review-1441092872",
+        "syncId":  "letterboxd-review-1441092872",
+        "title":  "First Blood",
+        "year":  1982,
+        "rating":  3,
+        "review":  "All Rambo had to do was report these guys to the FAA for the crazy helicopter flying and all his problems would be solved",
+        "wordCount":  24,
+        "publishedDate":  "2026-08-09",
+        "watchedDate":  "2026-08-08",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/first-blood/",
+        "tmdbId":  "1368",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1440465854",
+        "syncId":  "letterboxd-review-1440465854",
+        "title":  "Primal Fear",
+        "year":  1996,
+        "rating":  3,
+        "review":  "Fire cast",
+        "wordCount":  2,
+        "publishedDate":  "2026-08-09",
+        "watchedDate":  "2026-08-08",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/primal-fear/",
+        "tmdbId":  "1592",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1439538131",
+        "syncId":  "letterboxd-review-1439538131",
+        "title":  "The Odyssey",
+        "year":  2026,
+        "rating":  5,
+        "review":  "Midnight 70MM IMAX showing yay",
+        "wordCount":  5,
+        "publishedDate":  "2026-08-08",
+        "watchedDate":  "2026-08-08",
+        "rewatch":  true,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-odyssey-2026/2/",
+        "tmdbId":  "1368337",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1437429720",
+        "syncId":  "letterboxd-review-1437429720",
+        "title":  "I Want Your Sex",
+        "year":  2026,
+        "rating":  3,
+        "review":  "It’s okay, definitely feels like they ran out of money but the story is solid and it’s pretty funny",
+        "wordCount":  19,
+        "publishedDate":  "2026-08-07",
+        "watchedDate":  "2026-08-06",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/i-want-your-sex/",
+        "tmdbId":  "1288059",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1435997376",
         "syncId":  "letterboxd-review-1435997376",
         "title":  "The Verdict",
@@ -27,7 +127,7 @@
     {
         "id":  "rss:letterboxd-review-1433903782",
         "syncId":  "letterboxd-review-1433903782",
-        "title":  "PÃ©pÃ© le Moko",
+        "title":  "PÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©pÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© le Moko",
         "year":  1937,
         "rating":  3,
         "review":  "He should have just rocked the casbah",
@@ -48,107 +148,5 @@
                       ],
         "awardTagsReliable":  false,
         "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1433291130",
-        "syncId":  "letterboxd-review-1433291130",
-        "title":  "Project Hail Mary",
-        "year":  2026,
-        "rating":  4,
-        "review":  "Its not the best sci fi space adventure ever but it is a delight",
-        "wordCount":  14,
-        "publishedDate":  "2026-08-05",
-        "watchedDate":  "2026-08-04",
-        "rewatch":  true,
-        "url":  "https://letterboxd.com/nolanmcd/film/project-hail-mary/1/",
-        "tmdbId":  "687163",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1432229000",
-        "syncId":  "letterboxd-review-1432229000",
-        "title":  "River",
-        "year":  2023,
-        "rating":  3,
-        "review":  "Go with the flow",
-        "wordCount":  4,
-        "publishedDate":  "2026-08-04",
-        "watchedDate":  "2026-08-03",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/river-2023-1/",
-        "tmdbId":  "1138476",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1430508412",
-        "syncId":  "letterboxd-review-1430508412",
-        "title":  "Talk to Me",
-        "year":  2022,
-        "rating":  4,
-        "review":  "Dang really freaking good",
-        "wordCount":  4,
-        "publishedDate":  "2026-08-03",
-        "watchedDate":  "2026-08-02",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/talk-to-me-2022/",
-        "tmdbId":  "1008042",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "csv:https://boxd.it/fz5GPF",
-        "syncId":  "letterboxd-review-1426052053",
-        "title":  "The Dink",
-        "year":  2026,
-        "rating":  2,
-        "review":  "You have to commit to either being a full on wacky comedy or drama comedy you can\u0027t have it both ways. Like John McEnroe appearing with larger and larger snacks is a great gag but it just doesn\u0027t jive with the serious backstory of the main character.",
-        "wordCount":  47,
-        "publishedDate":  "2026-08-01",
-        "watchedDate":  "2026-07-31",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/the-dink/",
-        "tmdbId":  "1361774",
-        "tags":  [
-                     "Comedy",
-                     "Premise"
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-                          "Comedy",
-                          "Premise"
-                      ],
-        "awardTagsReliable":  true,
-        "origin":  "csv"
     }
 ]
