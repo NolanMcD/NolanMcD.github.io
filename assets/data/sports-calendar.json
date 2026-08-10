@@ -1,0 +1,21 @@
+{
+  "leagues": [
+    { "id": "mlb", "label": "MLB", "icon": "⚾", "color": "#c0392b", "feed": "baseball/mlb" },
+    { "id": "nfl", "label": "NFL", "icon": "🏈", "color": "#835d2d", "feed": "football/nfl" },
+    { "id": "nba", "label": "NBA", "icon": "🏀", "color": "#d86b19", "feed": "basketball/nba" },
+    { "id": "nhl", "label": "NHL", "icon": "🏒", "color": "#506274", "feed": "hockey/nhl" },
+    { "id": "mls", "label": "MLS", "icon": "⚽", "color": "#167a61", "feed": "soccer/usa.1" },
+    { "id": "college-football", "label": "College Football", "shortLabel": "CFB", "icon": "🏈", "color": "#6b4f2e", "feed": "football/college-football" },
+    { "id": "college-basketball", "label": "College Basketball", "shortLabel": "CBB", "icon": "🏀", "color": "#a64b18", "feed": "basketball/mens-college-basketball" },
+    { "id": "college-baseball", "label": "College Baseball", "shortLabel": "CBase", "icon": "⚾", "color": "#8d3028", "feed": "baseball/college-baseball" },
+    { "id": "formula-one", "label": "Formula 1", "shortLabel": "F1", "icon": "🏎️", "color": "#d00000", "feed": "racing/f1" },
+    { "id": "premier-league", "label": "Premier League", "shortLabel": "EPL", "icon": "⚽", "color": "#3d195b", "feed": "soccer/eng.1" },
+    { "id": "la-liga", "label": "La Liga", "icon": "⚽", "color": "#e5432f", "feed": "soccer/esp.1" },
+    { "id": "bundesliga", "label": "Bundesliga", "shortLabel": "BUN", "icon": "⚽", "color": "#c80a2e", "feed": "soccer/ger.1" },
+    { "id": "serie-a", "label": "Serie A", "icon": "⚽", "color": "#1769aa", "feed": "soccer/ita.1" },
+    { "id": "ligue-1", "label": "Ligue 1", "icon": "⚽", "color": "#163860", "feed": "soccer/fra.1" },
+    { "id": "cs-majors", "label": "CS Majors", "shortLabel": "CS", "icon": "🎯", "color": "#8d5b24" },
+    { "id": "smash", "label": "Smash Bros", "shortLabel": "SSB", "icon": "🎮", "color": "#7446a8" }
+  ],
+  "events": []
+}
