@@ -1,6 +1,6 @@
 {
-    "total":  1511,
-    "average":  3.33,
+    "total":  1512,
+    "average":  3.34,
     "mostCommon":  2,
     "ratings":  [
                     {
@@ -9,7 +9,7 @@
                     },
                     {
                         "rating":  4,
-                        "count":  601
+                        "count":  602
                     },
                     {
                         "rating":  3,
