@@ -1,0 +1,6009 @@
+{
+  "source": {
+    "name": "Spanish Data frequency list and English Wiktionary glosses",
+    "url": "https://github.com/doozan/spanish_data",
+    "license": "CC BY 4.0"
+  },
+  "words": [
+    {
+      "rank": 1,
+      "spanish": "de",
+      "english": "of; 's; used after the thing owned and before the owner",
+      "partOfSpeech": "preposition"
+    },
+    {
+      "rank": 2,
+      "spanish": "ella",
+      "english": "she, her (used subjectively and after prepositions)",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 3,
+      "spanish": "que",
+      "english": "who; that",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 4,
+      "spanish": "el",
+      "english": "masculine singular definite article; the",
+      "partOfSpeech": "article"
+    },
+    {
+      "rank": 5,
+      "spanish": "ser",
+      "english": "to be (essentially or identified as)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 6,
+      "spanish": "y",
+      "english": "and",
+      "partOfSpeech": "conjunction"
+    },
+    {
+      "rank": 7,
+      "spanish": "en",
+      "english": "in, at, on",
+      "partOfSpeech": "preposition"
+    },
+    {
+      "rank": 8,
+      "spanish": "él",
+      "english": "he, him, masculine personal third person subject and disjunctive pronoun (used as a subject and after prepositions)",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 9,
+      "spanish": "estar",
+      "english": "to be (have a temporary or permanent location in space)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 10,
+      "spanish": "uno",
+      "english": "one",
+      "partOfSpeech": "number"
+    },
+    {
+      "rank": 11,
+      "spanish": "haber",
+      "english": "have; forms the perfect aspect",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 12,
+      "spanish": "yo",
+      "english": "first-person singular pronoun in the nominative case; I",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 13,
+      "spanish": "por",
+      "english": "by",
+      "partOfSpeech": "preposition"
+    },
+    {
+      "rank": 14,
+      "spanish": "tener",
+      "english": "to have; to possess",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 15,
+      "spanish": "se",
+      "english": "A reflexive or reciprocal pronoun: oneself, himself, herself, itself, yourself; themselves; yourselves; each other; one another",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 16,
+      "spanish": "tú",
+      "english": "you (second-person singular pronoun)",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 17,
+      "spanish": "ir",
+      "english": "to go (away from speaker and listener)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 18,
+      "spanish": "hacer",
+      "english": "to do, perform, execute, carry out",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 19,
+      "spanish": "con",
+      "english": "with",
+      "partOfSpeech": "preposition"
+    },
+    {
+      "rank": 20,
+      "spanish": "qué",
+      "english": "what",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 21,
+      "spanish": "suyo",
+      "english": "his, hers, its, to her",
+      "partOfSpeech": "determiner"
+    },
+    {
+      "rank": 22,
+      "spanish": "poder",
+      "english": "to be able to, can",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 23,
+      "spanish": "para",
+      "english": "for, to (expressing a recipient)",
+      "partOfSpeech": "preposition"
+    },
+    {
+      "rank": 24,
+      "spanish": "del",
+      "english": "of the, from the (+ a masculine noun in singular)",
+      "partOfSpeech": "contraction"
+    },
+    {
+      "rank": 25,
+      "spanish": "decir",
+      "english": "to say, to tell",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 26,
+      "spanish": "este",
+      "english": "this",
+      "partOfSpeech": "determiner"
+    },
+    {
+      "rank": 27,
+      "spanish": "todo",
+      "english": "all; every",
+      "partOfSpeech": "determiner"
+    },
+    {
+      "rank": 28,
+      "spanish": "mío",
+      "english": "mine, my; of mine",
+      "partOfSpeech": "determiner"
+    },
+    {
+      "rank": 29,
+      "spanish": "pero",
+      "english": "but",
+      "partOfSpeech": "conjunction"
+    },
+    {
+      "rank": 30,
+      "spanish": "si",
+      "english": "if, whether",
+      "partOfSpeech": "conjunction"
+    },
+    {
+      "rank": 31,
+      "spanish": "querer",
+      "english": "to desire, to want, to want to",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 32,
+      "spanish": "al",
+      "english": "contraction of \"el\"",
+      "partOfSpeech": "contraction"
+    },
+    {
+      "rank": 33,
+      "spanish": "sí",
+      "english": "prepositional form of se",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 34,
+      "spanish": "como",
+      "english": "as (introducing a basis of comparison or equality)",
+      "partOfSpeech": "conjunction"
+    },
+    {
+      "rank": 35,
+      "spanish": "ése",
+      "english": "that one",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 36,
+      "spanish": "bien",
+      "english": "well (adverbial form of bueno)",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 37,
+      "spanish": "más",
+      "english": "more; -er (used to make comparisons)",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 38,
+      "spanish": "ver",
+      "english": "to see, to spot",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 39,
+      "spanish": "tuyo",
+      "english": "yours, your",
+      "partOfSpeech": "determiner"
+    },
+    {
+      "rank": 40,
+      "spanish": "saber",
+      "english": "to know, to understand (a fact)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 41,
+      "spanish": "ese",
+      "english": "that",
+      "partOfSpeech": "determiner"
+    },
+    {
+      "rank": 42,
+      "spanish": "aquí",
+      "english": "here (in the speaker's location)",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 43,
+      "spanish": "éste",
+      "english": "this one",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 44,
+      "spanish": "nosotros",
+      "english": "we (masculine plural)",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 45,
+      "spanish": "creer",
+      "english": "to believe",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 46,
+      "spanish": "ya",
+      "english": "(in the present or imperative) now, right now, (in the negative) anymore, no longer",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 47,
+      "spanish": "o",
+      "english": "or",
+      "partOfSpeech": "conjunction"
+    },
+    {
+      "rank": 48,
+      "spanish": "dar",
+      "english": "to give, to give out",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 49,
+      "spanish": "deber",
+      "english": "to owe",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 50,
+      "spanish": "mucho",
+      "english": "much, a lot, far, way, many times",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 51,
+      "spanish": "otro",
+      "english": "other, another",
+      "partOfSpeech": "determiner"
+    },
+    {
+      "rank": 52,
+      "spanish": "así",
+      "english": "like this; like that; as such; thus; so; thereby; this way, that way",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 53,
+      "spanish": "ahora",
+      "english": "now (at the present time)",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 54,
+      "spanish": "vez",
+      "english": "time, instance",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 55,
+      "spanish": "cuando",
+      "english": "when",
+      "partOfSpeech": "conjunction"
+    },
+    {
+      "rank": 56,
+      "spanish": "algo",
+      "english": "something, anything",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 57,
+      "spanish": "dejar",
+      "english": "to leave (to place)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 58,
+      "spanish": "hablar",
+      "english": "to talk; to speak; to communicate using words",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 59,
+      "spanish": "bueno",
+      "english": "okay; fine",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "rank": 60,
+      "spanish": "pasar",
+      "english": "to pass, to hand, to slip",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 61,
+      "spanish": "nada",
+      "english": "nothing, zero, zilch, not...anything",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 62,
+      "spanish": "cómo",
+      "english": "how?",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 63,
+      "spanish": "solo",
+      "english": "only; solely; just",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 64,
+      "spanish": "sentir",
+      "english": "to feel",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 65,
+      "spanish": "pensar",
+      "english": "to think, ponder",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 66,
+      "spanish": "porque",
+      "english": "because",
+      "partOfSpeech": "conjunction"
+    },
+    {
+      "rank": 67,
+      "spanish": "esperar",
+      "english": "to hope",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 68,
+      "spanish": "usted",
+      "english": "second person formal; you (singular)",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 69,
+      "spanish": "día",
+      "english": "day (any period of 24 hours)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 70,
+      "spanish": "año",
+      "english": "year",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 71,
+      "spanish": "padre",
+      "english": "father, parent",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 72,
+      "spanish": "venir",
+      "english": "Senses relating to literal movement.",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 73,
+      "spanish": "nuestro",
+      "english": "our, ours, to us",
+      "partOfSpeech": "determiner"
+    },
+    {
+      "rank": 74,
+      "spanish": "gracias",
+      "english": "thanks",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 75,
+      "spanish": "cosa",
+      "english": "thing (object, concept)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 76,
+      "spanish": "dos",
+      "english": "two",
+      "partOfSpeech": "number"
+    },
+    {
+      "rank": 77,
+      "spanish": "sin",
+      "english": "without",
+      "partOfSpeech": "preposition"
+    },
+    {
+      "rank": 78,
+      "spanish": "sobre",
+      "english": "over, above, on, upon, atop",
+      "partOfSpeech": "preposition"
+    },
+    {
+      "rank": 79,
+      "spanish": "alguno",
+      "english": "some, any",
+      "partOfSpeech": "determiner"
+    },
+    {
+      "rank": 80,
+      "spanish": "señor",
+      "english": "mister, sir, lord (title conferred on a married or older male)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 81,
+      "spanish": "mirar",
+      "english": "to look at (to try to see, to pay attention to with one’s eyes)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 82,
+      "spanish": "hombre",
+      "english": "man, (adult male human)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 83,
+      "spanish": "tiempo",
+      "english": "time",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 84,
+      "spanish": "también",
+      "english": "also, too, as well",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 85,
+      "spanish": "mismo",
+      "english": "same; identical; one and the same; indicates that the two compared noun clauses both represent the one thing",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 86,
+      "spanish": "necesitar",
+      "english": "to need",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 87,
+      "spanish": "casa",
+      "english": "house",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 88,
+      "spanish": "llevar",
+      "english": "to take somewhere",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 89,
+      "spanish": "tan",
+      "english": "so, as",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 90,
+      "spanish": "entonces",
+      "english": "then, next, thereupon, at that time, at that point",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 91,
+      "spanish": "encontrar",
+      "english": "to meet",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 92,
+      "spanish": "volver",
+      "english": "to return, to revert, to get back",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 93,
+      "spanish": "llamar",
+      "english": "to summon, to call",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 94,
+      "spanish": "parecer",
+      "english": "to seem, to see fit",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 95,
+      "spanish": "nuevo",
+      "english": "new",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 96,
+      "spanish": "mejor",
+      "english": "better",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 97,
+      "spanish": "primero",
+      "english": "first, first up",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 98,
+      "spanish": "verdad",
+      "english": "truth",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 99,
+      "spanish": "hasta",
+      "english": "until",
+      "partOfSpeech": "preposition"
+    },
+    {
+      "rank": 100,
+      "spanish": "quién",
+      "english": "who?, whom?; (with “de”) whose?",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 101,
+      "spanish": "vida",
+      "english": "life",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 102,
+      "spanish": "nunca",
+      "english": "never",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 103,
+      "spanish": "tomar",
+      "english": "to take (put under one's physical or mental control, often in one's hands)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 104,
+      "spanish": "quedar",
+      "english": "to be (as a result of something), to end up",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 105,
+      "spanish": "grande",
+      "english": "big, large",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 106,
+      "spanish": "llegar",
+      "english": "to arrive, get (to)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 107,
+      "spanish": "hola",
+      "english": "hello, hi, hey",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "rank": 108,
+      "spanish": "chico",
+      "english": "boy; kid",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 109,
+      "spanish": "poner",
+      "english": "to put, to place (cause to assume a specified position)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 110,
+      "spanish": "oír",
+      "english": "to hear",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 111,
+      "spanish": "noche",
+      "english": "night (the period between sunset and sunrise)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 112,
+      "spanish": "mí",
+      "english": "me; (declined form of yo used as the object of a preposition)",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 113,
+      "spanish": "hijo",
+      "english": "son",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 114,
+      "spanish": "dónde",
+      "english": "where?; in what place?",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 115,
+      "spanish": "ni",
+      "english": "Used when negating two or more elements, and not, not A or B, not A nor B, neither A nor B",
+      "partOfSpeech": "conjunction"
+    },
+    {
+      "rank": 116,
+      "spanish": "salir",
+      "english": "to go out, to leave, to depart, to head out",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 117,
+      "spanish": "favor",
+      "english": "favor/favour",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 118,
+      "spanish": "gustar",
+      "english": "translated as \"to like\", analyzable in structure as \"to please\" (the thing being liked is the subject, while the \"liker\" is in the dative case (\"indirect object\")). See the usage notes for more. Compare similar structures in Italian \"piacere\", Romanian \"plăcea\", German \"gefallen\" and Russian \"нравиться\"",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 119,
+      "spanish": "seguir",
+      "english": "to follow",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 120,
+      "spanish": "amigo",
+      "english": "friend",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 121,
+      "spanish": "oh",
+      "english": "oh (expression of awe, surprise, pain or realization)",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "rank": 122,
+      "spanish": "siempre",
+      "english": "always",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 123,
+      "spanish": "papá",
+      "english": "dad",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 124,
+      "spanish": "Dios",
+      "english": "God",
+      "partOfSpeech": "proper noun"
+    },
+    {
+      "rank": 125,
+      "spanish": "antes",
+      "english": "earlier; before; sooner; previously; formerly; beforehand (at an earlier time)",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 126,
+      "spanish": "desde",
+      "english": "since (from a specified time in the past)",
+      "partOfSpeech": "preposition"
+    },
+    {
+      "rank": 127,
+      "spanish": "conocer",
+      "english": "to know (a person or a place), to be familiar with, to be acquainted with",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 128,
+      "spanish": "poco",
+      "english": "little (not much)",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 129,
+      "spanish": "ahí",
+      "english": "there (away from the speaker)",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 130,
+      "spanish": "alguien",
+      "english": "someone, somebody",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 131,
+      "spanish": "trabajo",
+      "english": "work, job",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 132,
+      "spanish": "mujer",
+      "english": "woman",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 133,
+      "spanish": "entre",
+      "english": "between",
+      "partOfSpeech": "preposition"
+    },
+    {
+      "rank": 134,
+      "spanish": "después",
+      "english": "later, afterwards, afterward, post",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 135,
+      "spanish": "parte",
+      "english": "part; section; portion; share; piece; bit; cut; proportion",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 136,
+      "spanish": "mi",
+      "english": "mu; the Greek letter Μ, μ",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 137,
+      "spanish": "acuerdo",
+      "english": "agreement",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 138,
+      "spanish": "escuchar",
+      "english": "to listen to, to hear out",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 139,
+      "spanish": "momento",
+      "english": "moment, instant",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 140,
+      "spanish": "matar",
+      "english": "to kill, slay",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 141,
+      "spanish": "donde",
+      "english": "where, in what place",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 142,
+      "spanish": "seguro",
+      "english": "secure; safe (free from danger)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 143,
+      "spanish": "mundo",
+      "english": "world, earth (human collective existence)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 144,
+      "spanish": "gente",
+      "english": "people",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 145,
+      "spanish": "niño",
+      "english": "child, boy",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 146,
+      "spanish": "hora",
+      "english": "hour (a time period of sixty minutes)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 147,
+      "spanish": "buscar",
+      "english": "to seek, search for, look for, try to find, to scour",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 148,
+      "spanish": "problema",
+      "english": "problem, issue, challenge (a difficulty or obstacle that has to be dealt with)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 149,
+      "spanish": "Estado",
+      "english": "state (any sovereign polity)",
+      "partOfSpeech": "proper noun"
+    },
+    {
+      "rank": 150,
+      "spanish": "lugar",
+      "english": "place",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 151,
+      "spanish": "nadie",
+      "english": "no one; nobody (anyone or anybody)",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 152,
+      "spanish": "tal",
+      "english": "such",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 153,
+      "spanish": "ayudar",
+      "english": "to help",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 154,
+      "spanish": "perder",
+      "english": "to lose",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 155,
+      "spanish": "ustedes",
+      "english": "you (plural), you guys, y'all, yous, yinz, ye",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 156,
+      "spanish": "persona",
+      "english": "person (an individual; usually a human being)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 157,
+      "spanish": "tipo",
+      "english": "kind, type, sort, manner",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 158,
+      "spanish": "claro",
+      "english": "clear (easily understood)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 159,
+      "spanish": "entender",
+      "english": "to understand, to fathom",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 160,
+      "spanish": "menos",
+      "english": "less",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 161,
+      "spanish": "fuera",
+      "english": "outside",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 162,
+      "spanish": "acabar",
+      "english": "to finish; to end",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 163,
+      "spanish": "tratar",
+      "english": "to treat (to handle, behave toward in a specific way)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 164,
+      "spanish": "tres",
+      "english": "three",
+      "partOfSpeech": "number"
+    },
+    {
+      "rank": 165,
+      "spanish": "último",
+      "english": "final; last",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 166,
+      "spanish": "trabajar",
+      "english": "to work",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 167,
+      "spanish": "morir",
+      "english": "to die",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 168,
+      "spanish": "cada",
+      "english": "each; every",
+      "partOfSpeech": "determiner"
+    },
+    {
+      "rank": 169,
+      "spanish": "dinero",
+      "english": "money",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 170,
+      "spanish": "mañana",
+      "english": "the morning",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 171,
+      "spanish": "hermano",
+      "english": "brother",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 172,
+      "spanish": "quien",
+      "english": "who",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 173,
+      "spanish": "vivir",
+      "english": "to live; to be alive",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 174,
+      "spanish": "valer",
+      "english": "to be worth",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 175,
+      "spanish": "allí",
+      "english": "there (away from the speaker and the listener)",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 176,
+      "spanish": "hoy",
+      "english": "today, tonight (on the current day)",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 177,
+      "spanish": "luego",
+      "english": "then (afterward)",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 178,
+      "spanish": "mano",
+      "english": "hand",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 179,
+      "spanish": "tanto",
+      "english": "so much, long, hard, often, etc",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 180,
+      "spanish": "quizá",
+      "english": "perhaps, maybe",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 181,
+      "spanish": "caso",
+      "english": "case (situation or fact)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 182,
+      "spanish": "nombre",
+      "english": "name",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 183,
+      "spanish": "entrar",
+      "english": "to enter; to come in; to get in; to go in; to get inside; to come on in",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 184,
+      "spanish": "forma",
+      "english": "shape; form; figure",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 185,
+      "spanish": "empezar",
+      "english": "to start, begin, to get started",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 186,
+      "spanish": "conseguir",
+      "english": "to achieve, succeed in, reach, accomplish, attain",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 187,
+      "spanish": "pedir",
+      "english": "to ask for something",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 188,
+      "spanish": "intentar",
+      "english": "to try, to attempt; especially: to strain or put forth effort in so doing",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 189,
+      "spanish": "ninguno",
+      "english": "no; none",
+      "partOfSpeech": "determiner"
+    },
+    {
+      "rank": 190,
+      "spanish": "traer",
+      "english": "to bring (in the sense of transport, for differences with llevar and examples see that entry)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 191,
+      "spanish": "pequeño",
+      "english": "small; little",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 192,
+      "spanish": "buena",
+      "english": "inheritance",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 193,
+      "spanish": "importar",
+      "english": "to matter, to be important (often translated idiomatically with care or mind, with subject and object reversed)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 194,
+      "spanish": "aún",
+      "english": "still, yet",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 195,
+      "spanish": "cuenta",
+      "english": "count, tally",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 196,
+      "spanish": "razón",
+      "english": "reason",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 197,
+      "spanish": "preguntar",
+      "english": "to ask",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 198,
+      "spanish": "terminar",
+      "english": "to (cause to) finish, to (cause to) end, to (cause to) terminate, to (cause to) conclude",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 199,
+      "spanish": "idea",
+      "english": "idea",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 200,
+      "spanish": "único",
+      "english": "only; single; sole",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 201,
+      "spanish": "mal",
+      "english": "badly, poorly, ill",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 202,
+      "spanish": "suponer",
+      "english": "to suppose, to surmise, to assume, to guess, to imagine, to figure, to say, to take it",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 203,
+      "spanish": "muerto",
+      "english": "dead",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 204,
+      "spanish": "durante",
+      "english": "during, in, over",
+      "partOfSpeech": "preposition"
+    },
+    {
+      "rank": 205,
+      "spanish": "pasado",
+      "english": "past, bygones",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 206,
+      "spanish": "recordar",
+      "english": "to remember, to recollect",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 207,
+      "spanish": "semana",
+      "english": "week (7 days)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 208,
+      "spanish": "cierto",
+      "english": "true",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 209,
+      "spanish": "contra",
+      "english": "against, versus",
+      "partOfSpeech": "preposition"
+    },
+    {
+      "rank": 210,
+      "spanish": "tarde",
+      "english": "late",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 211,
+      "spanish": "segundo",
+      "english": "second (after the first)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 212,
+      "spanish": "cambiar",
+      "english": "to change, to shift, to switch, to alter",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 213,
+      "spanish": "familia",
+      "english": "family (group of people related to each other)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 214,
+      "spanish": "usar",
+      "english": "to use",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 215,
+      "spanish": "policía",
+      "english": "Civility, polity, public order, police, fineness, neatness, urbanity",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 216,
+      "spanish": "comer",
+      "english": "to eat",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 217,
+      "spanish": "conmigo",
+      "english": "with me",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 218,
+      "spanish": "sacar",
+      "english": "to put out, to get out (e.g. a public statement, an APB, a release of media or entertainment)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 219,
+      "spanish": "mientras",
+      "english": "while, whilst, as (at the same time as)",
+      "partOfSpeech": "conjunction"
+    },
+    {
+      "rank": 220,
+      "spanish": "mantener",
+      "english": "to keep",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 221,
+      "spanish": "realmente",
+      "english": "really, actually, genuinely",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 222,
+      "spanish": "serio",
+      "english": "serious, earnest, sober, solemn (without humor)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 223,
+      "spanish": "país",
+      "english": "country (the territory of a nation)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 224,
+      "spanish": "contar",
+      "english": "to count; to tally",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 225,
+      "spanish": "minuto",
+      "english": "minute (a unit of time equal to 60 seconds or 1/60 hour)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 226,
+      "spanish": "mierda",
+      "english": "shit (solid excretory product evacuated from the bowels; feces.)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 227,
+      "spanish": "olvidar",
+      "english": "to forget",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 228,
+      "spanish": "propio",
+      "english": "own (belonging to)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 229,
+      "spanish": "pues",
+      "english": "so, then; in that case",
+      "partOfSpeech": "conjunction"
+    },
+    {
+      "rank": 230,
+      "spanish": "e",
+      "english": "and",
+      "partOfSpeech": "conjunction"
+    },
+    {
+      "rank": 231,
+      "spanish": "aunque",
+      "english": "though, although, even though, albeit",
+      "partOfSpeech": "conjunction"
+    },
+    {
+      "rank": 232,
+      "spanish": "historia",
+      "english": "history (the aggregate of past events)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 233,
+      "spanish": "amor",
+      "english": "love",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 234,
+      "spanish": "lado",
+      "english": "side",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 235,
+      "spanish": "junto",
+      "english": "together",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 236,
+      "spanish": "hacia",
+      "english": "toward, towards",
+      "partOfSpeech": "preposition"
+    },
+    {
+      "rank": 237,
+      "spanish": "manera",
+      "english": "way; manner; method; style",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 238,
+      "spanish": "cabeza",
+      "english": "head",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 239,
+      "spanish": "punto",
+      "english": "point (specific spot, location, or place)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 240,
+      "spanish": "mayor",
+      "english": "comparative of \"grande\": bigger",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 241,
+      "spanish": "todavía",
+      "english": "still, yet",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 242,
+      "spanish": "cualquiera",
+      "english": "any, whatever, whichever",
+      "partOfSpeech": "determiner"
+    },
+    {
+      "rank": 243,
+      "spanish": "casi",
+      "english": "almost",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 244,
+      "spanish": "mes",
+      "english": "month",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 245,
+      "spanish": "ciudad",
+      "english": "city",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 246,
+      "spanish": "importante",
+      "english": "important, that cares, that matters",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 247,
+      "spanish": "demasiado",
+      "english": "too much, excessively, far too much, overmuch (modifying a verb)",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 248,
+      "spanish": "preocupar",
+      "english": "to worry, to concern, to trouble, to be worrisome to, to preoccupy",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 249,
+      "spanish": "ganar",
+      "english": "to gain",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 250,
+      "spanish": "cuánto",
+      "english": "how much; how many",
+      "partOfSpeech": "determiner"
+    },
+    {
+      "rank": 251,
+      "spanish": "tío",
+      "english": "uncle (the brother, brother-in-law, or male cousin or cousin-in-law of either parent)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 252,
+      "spanish": "puerta",
+      "english": "door (portal of entry into a building)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 253,
+      "spanish": "palabra",
+      "english": "word",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 254,
+      "spanish": "ojo",
+      "english": "eye",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 255,
+      "spanish": "agua",
+      "english": "water",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 256,
+      "spanish": "medio",
+      "english": "half (one of two equal parts of any whole)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 257,
+      "spanish": "dentro",
+      "english": "inside (for space)",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 258,
+      "spanish": "abrir",
+      "english": "to open, open up",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 259,
+      "spanish": "jugar",
+      "english": "to play",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 260,
+      "spanish": "llamado",
+      "english": "called",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 261,
+      "spanish": "loco",
+      "english": "a crazy person; a madman",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 262,
+      "spanish": "ocurrir",
+      "english": "to happen, to occur",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 263,
+      "spanish": "alto",
+      "english": "tall",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 264,
+      "spanish": "aquel",
+      "english": "that (over there; implying some distance)",
+      "partOfSpeech": "determiner"
+    },
+    {
+      "rank": 265,
+      "spanish": "fin",
+      "english": "end",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 266,
+      "spanish": "pagar",
+      "english": "to pay",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 267,
+      "spanish": "camino",
+      "english": "way, route",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 268,
+      "spanish": "esposo",
+      "english": "husband",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 269,
+      "spanish": "permitir",
+      "english": "to allow, permit",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 270,
+      "spanish": "recibir",
+      "english": "to receive, get",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 271,
+      "spanish": "pregunta",
+      "english": "question (sentence that asks for information)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 272,
+      "spanish": "leer",
+      "english": "to read",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 273,
+      "spanish": "significar",
+      "english": "to signify",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 274,
+      "spanish": "suceder",
+      "english": "to happen, to befall, to occur",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 275,
+      "spanish": "muerte",
+      "english": "death (the cessation of life)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 276,
+      "spanish": "millón",
+      "english": "million (10^6)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 277,
+      "spanish": "general",
+      "english": "general, overall",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 278,
+      "spanish": "dormir",
+      "english": "to sleep",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 279,
+      "spanish": "realidad",
+      "english": "reality",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 280,
+      "spanish": "caer",
+      "english": "to fall (to move to a lower position due to gravity)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 281,
+      "spanish": "rápido",
+      "english": "rapid, quick, fast",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 282,
+      "spanish": "enviar",
+      "english": "to send",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 283,
+      "spanish": "acercar",
+      "english": "to bring close",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 284,
+      "spanish": "equipo",
+      "english": "team",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 285,
+      "spanish": "cuál",
+      "english": "(see usage notes) which one, what, which",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 286,
+      "spanish": "ayuda",
+      "english": "help, aid",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 287,
+      "spanish": "cuerpo",
+      "english": "body (the physical structure of a human or animal)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 288,
+      "spanish": "jefe",
+      "english": "chief; president; head; leader of a business, political party, or other organization",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 289,
+      "spanish": "presidente",
+      "english": "president, head (leader)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 290,
+      "spanish": "mover",
+      "english": "to move (to cause to change place or posture)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 291,
+      "spanish": "comprar",
+      "english": "to buy (to obtain in exchange of money or goods)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 292,
+      "spanish": "supuesto",
+      "english": "assumption, hypothesis",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 293,
+      "spanish": "bajo",
+      "english": "under (in both literal and figurative senses)",
+      "partOfSpeech": "preposition"
+    },
+    {
+      "rank": 294,
+      "spanish": "gobierno",
+      "english": "government",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 295,
+      "spanish": "comenzar",
+      "english": "to begin, to commence",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 296,
+      "spanish": "buenas",
+      "english": "hello, good morning, good afternoon, good evening (greeting used irrespective of the time)",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "rank": 297,
+      "spanish": "joven",
+      "english": "young, youthful",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 298,
+      "spanish": "viejo",
+      "english": "old person",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 299,
+      "spanish": "tierra",
+      "english": "Earth (planet of the Solar System in which all of humanity resides)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 300,
+      "spanish": "número",
+      "english": "number (counting)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 301,
+      "spanish": "cuatro",
+      "english": "four",
+      "partOfSpeech": "number"
+    },
+    {
+      "rank": 302,
+      "spanish": "feliz",
+      "english": "happy, merry (trait)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 303,
+      "spanish": "final",
+      "english": "end (the terminal point of something in space or time)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 304,
+      "spanish": "regresar",
+      "english": "to return, go back, come back",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 305,
+      "spanish": "grupo",
+      "english": "group",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 306,
+      "spanish": "guerra",
+      "english": "war, warfare",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 307,
+      "spanish": "cariño",
+      "english": "affection, fondness",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 308,
+      "spanish": "además",
+      "english": "in addition, moreover, furthermore, further, also, additionally",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 309,
+      "spanish": "posible",
+      "english": "possible",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 310,
+      "spanish": "echar",
+      "english": "to throw, toss, cast, jettison (to release an object from one's grasp so that it moves through the air)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 311,
+      "spanish": "clase",
+      "english": "lecture",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 312,
+      "spanish": "cual",
+      "english": "suchlike, like (which), such as",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 313,
+      "spanish": "arma",
+      "english": "weapon, arm",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 314,
+      "spanish": "cinco",
+      "english": "five",
+      "partOfSpeech": "number"
+    },
+    {
+      "rank": 315,
+      "spanish": "pronto",
+      "english": "soon",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 316,
+      "spanish": "convertir",
+      "english": "to turn into, to cause to become",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 317,
+      "spanish": "difícil",
+      "english": "difficult, hard, tough, challenging, rough, tricky, trying, arduous, testing",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 318,
+      "spanish": "cara",
+      "english": "face (the front part of the head)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 319,
+      "spanish": "sino",
+      "english": "but (rather) (after a negative clause)",
+      "partOfSpeech": "conjunction"
+    },
+    {
+      "rank": 320,
+      "spanish": "genial",
+      "english": "ingenious, genius",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 321,
+      "spanish": "tocar",
+      "english": "to touch",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 322,
+      "spanish": "largo",
+      "english": "long (having much distance from one terminating point to another)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 323,
+      "spanish": "juego",
+      "english": "play",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 324,
+      "spanish": "escribir",
+      "english": "to write (to form letters, words or symbols on a surface in order to communicate)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 325,
+      "spanish": "meter",
+      "english": "to put in, insert",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 326,
+      "spanish": "igual",
+      "english": "equal, same",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 327,
+      "spanish": "incluso",
+      "english": "even",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 328,
+      "spanish": "doctor",
+      "english": "doctor (Ph.D.)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 329,
+      "spanish": "corazón",
+      "english": "heart (organ of the body)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 330,
+      "spanish": "detener",
+      "english": "to detain",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 331,
+      "spanish": "adiós",
+      "english": "farewell; goodbye",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 332,
+      "spanish": "siquiera",
+      "english": "at least, at the least",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 333,
+      "spanish": "ello",
+      "english": "it, neuter third-person subject and disjunctive pronoun",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 334,
+      "spanish": "decidir",
+      "english": "to decide, to make up one's mind, to determine, to choose to",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 335,
+      "spanish": "suerte",
+      "english": "luck, fortune",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 336,
+      "spanish": "ayer",
+      "english": "yesterday",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 337,
+      "spanish": "libro",
+      "english": "book",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 338,
+      "spanish": "correr",
+      "english": "to run, to jog",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 339,
+      "spanish": "según",
+      "english": "according to",
+      "partOfSpeech": "preposition"
+    },
+    {
+      "rank": 340,
+      "spanish": "funcionar",
+      "english": "to work, to function",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 341,
+      "spanish": "vivo",
+      "english": "alive, living (having life)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 342,
+      "spanish": "luz",
+      "english": "light",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 343,
+      "spanish": "justo",
+      "english": "just",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 344,
+      "spanish": "miedo",
+      "english": "fear",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 345,
+      "spanish": "modo",
+      "english": "way, manner",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 346,
+      "spanish": "relación",
+      "english": "relation",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 347,
+      "spanish": "cambio",
+      "english": "change, shift",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 348,
+      "spanish": "público",
+      "english": "public",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 349,
+      "spanish": "derecho",
+      "english": "right (a legal, just or moral entitlement)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 350,
+      "spanish": "presentar",
+      "english": "to present, to submit",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 351,
+      "spanish": "cerca",
+      "english": "close, near, around, about, nearly, nigh (referring to quantity or time-related)",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 352,
+      "spanish": "suficiente",
+      "english": "sufficient, enough",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 353,
+      "spanish": "prueba",
+      "english": "proof; evidence (usually , in the plural)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 354,
+      "spanish": "próximo",
+      "english": "near",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 355,
+      "spanish": "fuerte",
+      "english": "strong",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 356,
+      "spanish": "existir",
+      "english": "to exist",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 357,
+      "spanish": "sentido",
+      "english": "sense (faculties of perception)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 358,
+      "spanish": "orden",
+      "english": "order (command)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 359,
+      "spanish": "perro",
+      "english": "dog (# The species Canis familiaris (sometimes designated Canis lupus familiaris), domesticated for thousands of years and of highly variable appearance because of human breeding.)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 360,
+      "spanish": "humano",
+      "english": "human",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 361,
+      "spanish": "vuelta",
+      "english": "turn",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 362,
+      "spanish": "listo",
+      "english": "clever, smart (with ser)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 363,
+      "spanish": "mostrar",
+      "english": "to show (have somebody see something)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 364,
+      "spanish": "subir",
+      "english": "to go up or come up",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 365,
+      "spanish": "coche",
+      "english": "car, automobile",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 366,
+      "spanish": "servir",
+      "english": "to serve (to be a servant or worker; to render service)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 367,
+      "spanish": "ox",
+      "english": "shoo",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "rank": 368,
+      "spanish": "sentar",
+      "english": "to seat",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 369,
+      "spanish": "salvar",
+      "english": "to save",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 370,
+      "spanish": "blanco",
+      "english": "white",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 371,
+      "spanish": "fuerza",
+      "english": "force",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 372,
+      "spanish": "sistema",
+      "english": "system",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 373,
+      "spanish": "explicar",
+      "english": "to explain",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 374,
+      "spanish": "bastante",
+      "english": "quite, rather, pretty, fairly",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 375,
+      "spanish": "levantar",
+      "english": "to lift",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 376,
+      "spanish": "adelante",
+      "english": "forward (toward the front)",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 377,
+      "spanish": "mil",
+      "english": "thousand",
+      "partOfSpeech": "number"
+    },
+    {
+      "rank": 378,
+      "spanish": "considerar",
+      "english": "to consider, to regard, to see, to look, to view",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 379,
+      "spanish": "paso",
+      "english": "step, footstep",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 380,
+      "spanish": "asegurar",
+      "english": "to secure (to make fast; to close or confine effectually)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 381,
+      "spanish": "aceptar",
+      "english": "to accept, to take up, to take up on",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 382,
+      "spanish": "quitar",
+      "english": "to remove, to take away, to take down, to take off, to pull off, to pull out, to clear, to clear away, to strip, to strip away",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 383,
+      "spanish": "plan",
+      "english": "plan",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 384,
+      "spanish": "calle",
+      "english": "street",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 385,
+      "spanish": "pueblo",
+      "english": "town, village",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 386,
+      "spanish": "cuidado",
+      "english": "care (close attention; concern)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 387,
+      "spanish": "negro",
+      "english": "black (absorbing all light and reflecting none; dark and hueless)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 388,
+      "spanish": "allá",
+      "english": "there, over there, thither, yonder (in a direction away from the speaker and the listener)",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 389,
+      "spanish": "partido",
+      "english": "party",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 390,
+      "spanish": "diferente",
+      "english": "different",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 391,
+      "spanish": "ante",
+      "english": "in front of, before",
+      "partOfSpeech": "preposition"
+    },
+    {
+      "rank": 392,
+      "spanish": "fiesta",
+      "english": "party",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 393,
+      "spanish": "amar",
+      "english": "to love, have great affection for, care about",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 394,
+      "spanish": "coger",
+      "english": "to take, catch, hold, to get, to seize",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 395,
+      "spanish": "disparar",
+      "english": "to shoot, to fire (e.g. a weapon, a rocket)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 396,
+      "spanish": "disculpar",
+      "english": "to excuse, forgive, pardon",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 397,
+      "spanish": "pie",
+      "english": "foot (a part of the body)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 398,
+      "spanish": "beber",
+      "english": "to drink",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 399,
+      "spanish": "frente",
+      "english": "forehead, brow",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 400,
+      "spanish": "escuela",
+      "english": "school (an institution dedicated to teaching and learning)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 401,
+      "spanish": "sangre",
+      "english": "blood",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 402,
+      "spanish": "oportunidad",
+      "english": "opportunity, chance, shot, break, occasion, time (in both senses: “chance for advancement, progress or profit” and “favorable circumstance or occasion”)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 403,
+      "spanish": "muchacho",
+      "english": "boy or young adult",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 404,
+      "spanish": "real",
+      "english": "real",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 405,
+      "spanish": "situación",
+      "english": "situation, scenario, picture",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 406,
+      "spanish": "política",
+      "english": "politics (activities associated with running a government or organisation)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 407,
+      "spanish": "ley",
+      "english": "law (a well-established characteristic of nature)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 408,
+      "spanish": "vender",
+      "english": "to sell",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 409,
+      "spanish": "teléfono",
+      "english": "telephone (a telecommunication device used for two-way talking with another person)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 410,
+      "spanish": "malo",
+      "english": "devil",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 411,
+      "spanish": "extraño",
+      "english": "strange, unusual, odd, weird, bizarre, uncanny, rare, peculiar, freaky, freakish, freak, curious",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 412,
+      "spanish": "perdonar",
+      "english": "to pardon, excuse, forgive",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 413,
+      "spanish": "arriba",
+      "english": "above, over",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 414,
+      "spanish": "aparecer",
+      "english": "to appear, to turn up, to pop up, to come up",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 415,
+      "spanish": "servicio",
+      "english": "service",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 416,
+      "spanish": "novio",
+      "english": "boyfriend (romantic partner)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 417,
+      "spanish": "tampoco",
+      "english": "neither; nor; also not",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 418,
+      "spanish": "especial",
+      "english": "special (distinguished by a unique quality)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 419,
+      "spanish": "casar",
+      "english": "to marry, wed someone to (unite two others in wedlock)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 420,
+      "spanish": "puesto",
+      "english": "position, employment, job",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 421,
+      "spanish": "dólar",
+      "english": "dollar (designation for specific currency)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 422,
+      "spanish": "cuándo",
+      "english": "when",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 423,
+      "spanish": "duro",
+      "english": "hard (not soft)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 424,
+      "spanish": "nacional",
+      "english": "national, nationwide (of or relating to a nation)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 425,
+      "spanish": "recuerdo",
+      "english": "memory (a specific thing that is remembered)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 426,
+      "spanish": "lograr",
+      "english": "to get, to obtain",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 427,
+      "spanish": "robar",
+      "english": "to rob",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 428,
+      "spanish": "seguridad",
+      "english": "safety, security",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 429,
+      "spanish": "prometer",
+      "english": "to promise",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 430,
+      "spanish": "enseñar",
+      "english": "to teach",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 431,
+      "spanish": "obra",
+      "english": "work (usually literary or artistic)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 432,
+      "spanish": "descubrir",
+      "english": "to discover",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 433,
+      "spanish": "andar",
+      "english": "to walk, to go",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 434,
+      "spanish": "fácil",
+      "english": "easy, facile, simple (requiring little effort)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 435,
+      "spanish": "película",
+      "english": "film (layer)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 436,
+      "spanish": "cuanto",
+      "english": "as much; however much; in whatever quantity",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 437,
+      "spanish": "lista",
+      "english": "list, roll",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 438,
+      "spanish": "tras",
+      "english": "after, following, in the wake of; upon",
+      "partOfSpeech": "preposition"
+    },
+    {
+      "rank": 439,
+      "spanish": "ambos",
+      "english": "both",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 440,
+      "spanish": "español",
+      "english": "Spanish (from or native to Spain)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 441,
+      "spanish": "sonar",
+      "english": "to sound, to ring",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 442,
+      "spanish": "referir",
+      "english": "to report",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 443,
+      "spanish": "vino",
+      "english": "wine (An alcoholic beverage made by fermenting grape juice, with an ABV ranging from 5.5-16%.)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 444,
+      "spanish": "centro",
+      "english": "center",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 445,
+      "spanish": "asunto",
+      "english": "matter, issue, business",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 446,
+      "spanish": "encantar",
+      "english": "to charm, to enchant",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 447,
+      "spanish": "embargo",
+      "english": "embargo",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 448,
+      "spanish": "imaginar",
+      "english": "to imagine",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 449,
+      "spanish": "información",
+      "english": "information, data",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 450,
+      "spanish": "habitación",
+      "english": "room (separate part of a building)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 451,
+      "spanish": "aprender",
+      "english": "to learn (to acquire, or attempt to acquire knowledge or an ability to do something)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 452,
+      "spanish": "falta",
+      "english": "lack, shortage",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 453,
+      "spanish": "cielo",
+      "english": "sky",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 454,
+      "spanish": "seis",
+      "english": "six",
+      "partOfSpeech": "number"
+    },
+    {
+      "rank": 455,
+      "spanish": "realizar",
+      "english": "to carry out; to perform; to conduct; to implement (e.g. a change, a task, project, plan, inspection, experiment, procedures)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 456,
+      "spanish": "negocio",
+      "english": "business, enterprise (commercial enterprise or establishment)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 457,
+      "spanish": "sueño",
+      "english": "sleep, slumber",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 458,
+      "spanish": "atrás",
+      "english": "behind",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 459,
+      "spanish": "social",
+      "english": "social",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 460,
+      "spanish": "capitán",
+      "english": "captain (leader)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 461,
+      "spanish": "comida",
+      "english": "food",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 462,
+      "spanish": "bebé",
+      "english": "baby",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 463,
+      "spanish": "libre",
+      "english": "free (not imprisoned or enslaved)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 464,
+      "spanish": "voz",
+      "english": "voice",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 465,
+      "spanish": "foto",
+      "english": "photo, photograph",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 466,
+      "spanish": "abajo",
+      "english": "down, downwards",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 467,
+      "spanish": "par",
+      "english": "pair (two of the same or similar items that go together)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 468,
+      "spanish": "paz",
+      "english": "peace (warlessness)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 469,
+      "spanish": "confiar",
+      "english": "to reassure",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 470,
+      "spanish": "culpa",
+      "english": "fault",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 471,
+      "spanish": "cerrar",
+      "english": "to close, to shut",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 472,
+      "spanish": "ofrecer",
+      "english": "to offer, to offer up, to provide",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 473,
+      "spanish": "noticia",
+      "english": "notice",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 474,
+      "spanish": "bajar",
+      "english": "to go down, come down",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 475,
+      "spanish": "desear",
+      "english": "to wish",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 476,
+      "spanish": "callar",
+      "english": "to calm",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 477,
+      "spanish": "música",
+      "english": "music",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 478,
+      "spanish": "diablo",
+      "english": "devil",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 479,
+      "spanish": "resto",
+      "english": "rest, remainder",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 480,
+      "spanish": "siguiente",
+      "english": "following",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 481,
+      "spanish": "cuidar",
+      "english": "to look after, take care of (e.g. a house, a person) transitive or +de (of)]",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 482,
+      "spanish": "médico",
+      "english": "doctor",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 483,
+      "spanish": "carta",
+      "english": "letter (document)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 484,
+      "spanish": "preparar",
+      "english": "to prepare",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 485,
+      "spanish": "don",
+      "english": "sir, master, lord",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 486,
+      "spanish": "correcto",
+      "english": "correct, right",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 487,
+      "spanish": "programa",
+      "english": "programme, program",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 488,
+      "spanish": "sitio",
+      "english": "site, place",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 489,
+      "spanish": "campo",
+      "english": "countryside, country",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 490,
+      "spanish": "elegir",
+      "english": "to choose",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 491,
+      "spanish": "exactamente",
+      "english": "exactly",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 492,
+      "spanish": "unido",
+      "english": "united",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 493,
+      "spanish": "desaparecer",
+      "english": "to disappear, to go missing, to vanish, to be gone",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 494,
+      "spanish": "hermoso",
+      "english": "gorgeous, beautiful, handsome, lovely",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 495,
+      "spanish": "mentir",
+      "english": "to lie (say something untrue)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 496,
+      "spanish": "romper",
+      "english": "to break",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 497,
+      "spanish": "invitar",
+      "english": "to invite",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 498,
+      "spanish": "bonito",
+      "english": "pretty, cute",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 499,
+      "spanish": "peor",
+      "english": "comparative of \"malo\": worse",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 500,
+      "spanish": "obtener",
+      "english": "to obtain",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 501,
+      "spanish": "molestar",
+      "english": "to bother, to disturb, to trouble, to impose, to inconvenience, to burden",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 502,
+      "spanish": "lejos",
+      "english": "far, far away",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 503,
+      "spanish": "necesario",
+      "english": "necessary, requisite",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 504,
+      "spanish": "cama",
+      "english": "bed",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 505,
+      "spanish": "utilizar",
+      "english": "to use; to make use of; to utilize",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 506,
+      "spanish": "varios",
+      "english": "various, several",
+      "partOfSpeech": "determiner"
+    },
+    {
+      "rank": 507,
+      "spanish": "abuelo",
+      "english": "grandfather",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 508,
+      "spanish": "parar",
+      "english": "to stop, halt",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 509,
+      "spanish": "viaje",
+      "english": "voyage",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 510,
+      "spanish": "demonio",
+      "english": "demon, devil",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 511,
+      "spanish": "perfecto",
+      "english": "perfect",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 512,
+      "spanish": "raro",
+      "english": "rare",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 513,
+      "spanish": "tirar",
+      "english": "to drop intentionally",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 514,
+      "spanish": "despertar",
+      "english": "to wake",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 515,
+      "spanish": "resultar",
+      "english": "to result, to turn out, to end up, to prove",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 516,
+      "spanish": "oficial",
+      "english": "official",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 517,
+      "spanish": "probablemente",
+      "english": "probably, likely",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 518,
+      "spanish": "oficina",
+      "english": "office (a room used for non-manual work)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 519,
+      "spanish": "continuar",
+      "english": "to continue, to carry on",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 520,
+      "spanish": "responder",
+      "english": "to answer, to reply",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 521,
+      "spanish": "acción",
+      "english": "action, act, deed (something done)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 522,
+      "spanish": "línea",
+      "english": "line (a straight path through two or more points)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 523,
+      "spanish": "agente",
+      "english": "agent",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 524,
+      "spanish": "personal",
+      "english": "personal",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 525,
+      "spanish": "papel",
+      "english": "paper",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 526,
+      "spanish": "OK",
+      "english": "OK",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 527,
+      "spanish": "aire",
+      "english": "air (the substance constituting earth's atmosphere)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 528,
+      "spanish": "arreglar",
+      "english": "to fix, to repair, to mend",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 529,
+      "spanish": "puta",
+      "english": "whore, slut, prostitute",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 530,
+      "spanish": "principio",
+      "english": "principle",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 531,
+      "spanish": "simplemente",
+      "english": "simply",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 532,
+      "spanish": "empresa",
+      "english": "company",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 533,
+      "spanish": "diez",
+      "english": "ten",
+      "partOfSpeech": "number"
+    },
+    {
+      "rank": 534,
+      "spanish": "director",
+      "english": "director",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 535,
+      "spanish": "través",
+      "english": "bend, turn",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 536,
+      "spanish": "producir",
+      "english": "to produce",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 537,
+      "spanish": "ejemplo",
+      "english": "example",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 538,
+      "spanish": "amo",
+      "english": "master (man who owns a slave)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 539,
+      "spanish": "rey",
+      "english": "king",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 540,
+      "spanish": "cuarto",
+      "english": "fourth (in a series)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 541,
+      "spanish": "idiota",
+      "english": "idiotic",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 542,
+      "spanish": "verdadero",
+      "english": "true, real",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 543,
+      "spanish": "España",
+      "english": "Spain (A country in Southern Europe, including most of the Iberian peninsula.)",
+      "partOfSpeech": "proper noun"
+    },
+    {
+      "rank": 544,
+      "spanish": "pesar",
+      "english": "to weigh (to determine the weight of an object)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 545,
+      "spanish": "probar",
+      "english": "to prove",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 546,
+      "spanish": "bastar",
+      "english": "to be enough; to suffice",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 547,
+      "spanish": "decisión",
+      "english": "decision",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 548,
+      "spanish": "demás",
+      "english": "others, other ones",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 549,
+      "spanish": "control",
+      "english": "control, or running of a business",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 550,
+      "spanish": "hospital",
+      "english": "hospital",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 551,
+      "spanish": "marido",
+      "english": "husband",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 552,
+      "spanish": "fuego",
+      "english": "fire",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 553,
+      "spanish": "tema",
+      "english": "theme; plot (of a book, film or other media)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 554,
+      "spanish": "respuesta",
+      "english": "reply, response, answer",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 555,
+      "spanish": "nivel",
+      "english": "level, tier, height (distance relative to a given reference elevation)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 556,
+      "spanish": "evitar",
+      "english": "to avoid, to bypass, to evade, to circumvent, to dodge, to shun, to eschew (to steer clear of)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 557,
+      "spanish": "estudio",
+      "english": "study",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 558,
+      "spanish": "secreto",
+      "english": "a secret",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 559,
+      "spanish": "mensaje",
+      "english": "message",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 560,
+      "spanish": "resultado",
+      "english": "result, outcome, finding, upshot",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 561,
+      "spanish": "error",
+      "english": "error",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 562,
+      "spanish": "futuro",
+      "english": "future (the time ahead)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 563,
+      "spanish": "lleno",
+      "english": "full",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 564,
+      "spanish": "maldito",
+      "english": "cursed",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 565,
+      "spanish": "compañero",
+      "english": "companion (someone with whom one spends time or keeps company)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 566,
+      "spanish": "soler",
+      "english": "to be accustomed to doing something, to do something on a regular basis, to do something usually or often",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 567,
+      "spanish": "reconocer",
+      "english": "to recognize",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 568,
+      "spanish": "pobre",
+      "english": "poor (lacking money, resources, etc.)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 569,
+      "spanish": "atención",
+      "english": "attention",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 570,
+      "spanish": "zona",
+      "english": "zone, district, area",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 571,
+      "spanish": "vista",
+      "english": "sight, vision, eyesight (the ability to see)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 572,
+      "spanish": "escapar",
+      "english": "to escape, get out",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 573,
+      "spanish": "cumplir",
+      "english": "to fulfil, to fulfill, to meet, to deliver (e.g., requirements, prerequisites, promise, vow)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 574,
+      "spanish": "edad",
+      "english": "age",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 575,
+      "spanish": "comprender",
+      "english": "to understand, to comprehend",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 576,
+      "spanish": "mandar",
+      "english": "to send",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 577,
+      "spanish": "abogado",
+      "english": "lawyer, solicitor, counsel",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 578,
+      "spanish": "Madrid",
+      "english": "Madrid (a capital city of Spain)",
+      "partOfSpeech": "proper noun"
+    },
+    {
+      "rank": 579,
+      "spanish": "dirección",
+      "english": "direction",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 580,
+      "spanish": "partir",
+      "english": "to divide, split",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 581,
+      "spanish": "temer",
+      "english": "to fear",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 582,
+      "spanish": "alegrar",
+      "english": "to make happy",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 583,
+      "spanish": "estúpido",
+      "english": "stupid",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 584,
+      "spanish": "fondo",
+      "english": "bottom",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 585,
+      "spanish": "llorar",
+      "english": "to cry, to weep",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 586,
+      "spanish": "señorito",
+      "english": "A son of an important or respectable person",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 587,
+      "spanish": "lindo",
+      "english": "pretty",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 588,
+      "spanish": "compañía",
+      "english": "company, enterprise, business, firm",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 589,
+      "spanish": "tranquilar",
+      "english": "to mark with two lines each of the debit and date items of a commercial book, up to where the account equals",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 590,
+      "spanish": "actuar",
+      "english": "to act, to behave",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 591,
+      "spanish": "proceso",
+      "english": "process",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 592,
+      "spanish": "investigación",
+      "english": "investigation",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 593,
+      "spanish": "tonto",
+      "english": "stupid",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 594,
+      "spanish": "café",
+      "english": "coffee",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 595,
+      "spanish": "duda",
+      "english": "doubt",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 596,
+      "spanish": "preferir",
+      "english": "to prefer",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 597,
+      "spanish": "conducir",
+      "english": "to drive; to conduct",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 598,
+      "spanish": "mía",
+      "english": "a regiment of 100 soldiers in the Spanish protectorate of Morocco",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 599,
+      "spanish": "ropa",
+      "english": "garment, clothing, clothes, robes",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 600,
+      "spanish": "valor",
+      "english": "value (all senses)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 601,
+      "spanish": "profesor",
+      "english": "professor (a faculty member)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 602,
+      "spanish": "reunión",
+      "english": "meeting, session, appointment",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 603,
+      "spanish": "boca",
+      "english": "mouth, oral cavity",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 604,
+      "spanish": "cámara",
+      "english": "room",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 605,
+      "spanish": "conocido",
+      "english": "known",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 606,
+      "spanish": "espacio",
+      "english": "space (distance between things)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 607,
+      "spanish": "encima",
+      "english": "on top of something",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 608,
+      "spanish": "imagen",
+      "english": "image",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 609,
+      "spanish": "abierto",
+      "english": "open, unlocked (not closed, accessible)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 610,
+      "spanish": "cargo",
+      "english": "charge, burden",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 611,
+      "spanish": "caballero",
+      "english": "horseman",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 612,
+      "spanish": "cantar",
+      "english": "to sing",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 613,
+      "spanish": "posibilidad",
+      "english": "possibility",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 614,
+      "spanish": "detrás",
+      "english": "behind, at the rear",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 615,
+      "spanish": "proteger",
+      "english": "to protect, to defend",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 616,
+      "spanish": "universidad",
+      "english": "university, (US) college",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 617,
+      "spanish": "sufrir",
+      "english": "to suffer (be confronted with something undesired)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 618,
+      "spanish": "golpear",
+      "english": "to hit, to knock, to tap",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 619,
+      "spanish": "abandonar",
+      "english": "to abandon, to leave",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 620,
+      "spanish": "consejo",
+      "english": "advice, counsel, piece of advice",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 621,
+      "spanish": "asesino",
+      "english": "murderer, killer (person who commits murder)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 622,
+      "spanish": "cuyo",
+      "english": "whose",
+      "partOfSpeech": "determiner"
+    },
+    {
+      "rank": 623,
+      "spanish": "vuestro",
+      "english": "yours, your, to you",
+      "partOfSpeech": "determiner"
+    },
+    {
+      "rank": 624,
+      "spanish": "caminar",
+      "english": "to walk",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 625,
+      "spanish": "daño",
+      "english": "damage",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 626,
+      "spanish": "sociedad",
+      "english": "society, social order",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 627,
+      "spanish": "base",
+      "english": "base",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 628,
+      "spanish": "proyecto",
+      "english": "project, plan",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 629,
+      "spanish": "anoche",
+      "english": "last night",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 630,
+      "spanish": "mesa",
+      "english": "table",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 631,
+      "spanish": "paciente",
+      "english": "patient",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 632,
+      "spanish": "tercero",
+      "english": "third",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 633,
+      "spanish": "crear",
+      "english": "to create",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 634,
+      "spanish": "dirigir",
+      "english": "to direct",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 635,
+      "spanish": "capaz",
+      "english": "able, capable",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 636,
+      "spanish": "movimiento",
+      "english": "movement (physical motion between points in space)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 637,
+      "spanish": "increíble",
+      "english": "incredible, unbelievable",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 638,
+      "spanish": "divertido",
+      "english": "entertaining, amusing, funny",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 639,
+      "spanish": "principal",
+      "english": "main, most important",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 640,
+      "spanish": "maestro",
+      "english": "master",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 641,
+      "spanish": "recoger",
+      "english": "to collect, to gather, to pick up, to fetch, to retrieve (something previously left behind)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 642,
+      "spanish": "carrera",
+      "english": "race",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 643,
+      "spanish": "caballo",
+      "english": "horse",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 644,
+      "spanish": "siglo",
+      "english": "century",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 645,
+      "spanish": "perdón",
+      "english": "pardon",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 646,
+      "spanish": "pena",
+      "english": "punishment, sentence",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 647,
+      "spanish": "antiguo",
+      "english": "old, former, erstwhile, quondam, one-time, onetime",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 648,
+      "spanish": "ocupar",
+      "english": "to occupy (to take or use space)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 649,
+      "spanish": "asesinar",
+      "english": "to murder",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 650,
+      "spanish": "banco",
+      "english": "bank (financial institution)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 651,
+      "spanish": "político",
+      "english": "political",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 652,
+      "spanish": "mayoría",
+      "english": "majority",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 653,
+      "spanish": "miembro",
+      "english": "member (one who belongs to a group)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 654,
+      "spanish": "condición",
+      "english": "condition",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 655,
+      "spanish": "efecto",
+      "english": "effect",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 656,
+      "spanish": "económico",
+      "english": "economic",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 657,
+      "spanish": "volar",
+      "english": "to fly, to fly away",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 658,
+      "spanish": "brazo",
+      "english": "arm",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 659,
+      "spanish": "ministro",
+      "english": "minister",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 660,
+      "spanish": "libertad",
+      "english": "liberty, freedom",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 661,
+      "spanish": "asesinato",
+      "english": "assassination",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 662,
+      "spanish": "reunir",
+      "english": "to gather, to collect, to bring together, to assemble, to get together, to round up, to marshal, to compile, to put together, to pull together, to draw together, to pool",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 663,
+      "spanish": "crecer",
+      "english": "to grow",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 664,
+      "spanish": "alcanzar",
+      "english": "to reach; to get to to catch up",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 665,
+      "spanish": "devolver",
+      "english": "to return, refund, restore, give back, hand back, bring back, send back etc",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 666,
+      "spanish": "interés",
+      "english": "interest (a fraction of the amount of what was borrowed)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 667,
+      "spanish": "joder",
+      "english": "to annoy, bug, bother, irritate",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 668,
+      "spanish": "animal",
+      "english": "animal",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 669,
+      "spanish": "destruir",
+      "english": "to destroy",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 670,
+      "spanish": "José",
+      "english": "given name",
+      "partOfSpeech": "proper noun"
+    },
+    {
+      "rank": 671,
+      "spanish": "sol",
+      "english": "sun",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 672,
+      "spanish": "entregar",
+      "english": "to deliver, to hand over, to hand off",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 673,
+      "spanish": "color",
+      "english": "color / colour, hue",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 674,
+      "spanish": "caja",
+      "english": "box, case",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 675,
+      "spanish": "cliente",
+      "english": "client",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 676,
+      "spanish": "distinto",
+      "english": "distinct",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 677,
+      "spanish": "víctima",
+      "english": "victim",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 678,
+      "spanish": "deseo",
+      "english": "desire, wish",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 679,
+      "spanish": "arte",
+      "english": "art",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 680,
+      "spanish": "rojo",
+      "english": "red (colour)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 681,
+      "spanish": "acompañar",
+      "english": "to accompany, to go with, to join, to tag along",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 682,
+      "spanish": "causa",
+      "english": "cause",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 683,
+      "spanish": "cita",
+      "english": "date (romantic outing)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 684,
+      "spanish": "trato",
+      "english": "treatment (the process or manner of treating someone or something)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 685,
+      "spanish": "demostrar",
+      "english": "to show, to demonstrate",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 686,
+      "spanish": "aforar",
+      "english": "to gauge, measure",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 687,
+      "spanish": "jamás",
+      "english": "never",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 688,
+      "spanish": "recuperar",
+      "english": "to recover",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 689,
+      "spanish": "merecer",
+      "english": "to deserve",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 690,
+      "spanish": "hotel",
+      "english": "hotel",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 691,
+      "spanish": "estrella",
+      "english": "star (celestial body)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 692,
+      "spanish": "sexo",
+      "english": "sex (the biological category)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 693,
+      "spanish": "normal",
+      "english": "normal, standard, regular, fine",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 694,
+      "spanish": "bailar",
+      "english": "to dance",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 695,
+      "spanish": "incluir",
+      "english": "to include, to enclose, to contain",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 696,
+      "spanish": "dolor",
+      "english": "pain, ache, aching soreness, tenderness (physical)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 697,
+      "spanish": "mitad",
+      "english": "half",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 698,
+      "spanish": "s",
+      "english": "letter",
+      "partOfSpeech": "letter"
+    },
+    {
+      "rank": 699,
+      "spanish": "gusto",
+      "english": "taste (sense)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 700,
+      "spanish": "canción",
+      "english": "song",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 701,
+      "spanish": "alrededor",
+      "english": "around (from place to place)",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 702,
+      "spanish": "militar",
+      "english": "military",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 703,
+      "spanish": "baño",
+      "english": "bath (act of taking a bath)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 704,
+      "spanish": "i",
+      "english": "letter: i",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 705,
+      "spanish": "querido",
+      "english": "dear (also used in letter introductions, etc.)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 706,
+      "spanish": "objetivo",
+      "english": "objective",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 707,
+      "spanish": "reír",
+      "english": "to laugh",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 708,
+      "spanish": "respecto",
+      "english": "respect, regard, connection, relation, relationship",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 709,
+      "spanish": "salud",
+      "english": "health",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 710,
+      "spanish": "completo",
+      "english": "full, complete",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 711,
+      "spanish": "sal",
+      "english": "salt; table salt",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 712,
+      "spanish": "mente",
+      "english": "mind, intellect",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 713,
+      "spanish": "suelo",
+      "english": "dirt, earth, ground, soil",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 714,
+      "spanish": "cortar",
+      "english": "to cut",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 715,
+      "spanish": "posición",
+      "english": "position",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 716,
+      "spanish": "medida",
+      "english": "measurement; measure, gauge",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 717,
+      "spanish": "especie",
+      "english": "species",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 718,
+      "spanish": "siete",
+      "english": "seven",
+      "partOfSpeech": "number"
+    },
+    {
+      "rank": 719,
+      "spanish": "diferencia",
+      "english": "difference",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 720,
+      "spanish": "formar",
+      "english": "to form, to create",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 721,
+      "spanish": "precio",
+      "english": "price",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 722,
+      "spanish": "maravilloso",
+      "english": "wonderful, marvelous",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 723,
+      "spanish": "pelo",
+      "english": "hair (a single hair)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 724,
+      "spanish": "York",
+      "english": "York",
+      "partOfSpeech": "proper noun"
+    },
+    {
+      "rank": 725,
+      "spanish": "luchar",
+      "english": "to fight, to battle, to do battle",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 726,
+      "spanish": "opinión",
+      "english": "opinion",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 727,
+      "spanish": "estudiar",
+      "english": "to study",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 728,
+      "spanish": "resolver",
+      "english": "to resolve, sort out, settle, address, tackle, overcome, iron out",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 729,
+      "spanish": "mercado",
+      "english": "market",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 730,
+      "spanish": "Iglesia",
+      "english": "Church (institution)",
+      "partOfSpeech": "proper noun"
+    },
+    {
+      "rank": 731,
+      "spanish": "elección",
+      "english": "election",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 732,
+      "spanish": "interior",
+      "english": "interior",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 733,
+      "spanish": "silencio",
+      "english": "silence",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 734,
+      "spanish": "necesidad",
+      "english": "need",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 735,
+      "spanish": "odio",
+      "english": "hate, hatred, loathing (strong aversion; intense dislike)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 736,
+      "spanish": "experiencia",
+      "english": "experience",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 737,
+      "spanish": "actividad",
+      "english": "activity (state of being active)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 738,
+      "spanish": "guardar",
+      "english": "to save (to store for future use)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 739,
+      "spanish": "droga",
+      "english": "drug",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 740,
+      "spanish": "controlar",
+      "english": "to control, to rein in",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 741,
+      "spanish": "accidente",
+      "english": "accident (unexpected event with negative consequences)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 742,
+      "spanish": "club",
+      "english": "(countable) club (An association of members joining together for some common purpose, especially sports or recreation.)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 743,
+      "spanish": "ejército",
+      "english": "army",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 744,
+      "spanish": "mar",
+      "english": "sea",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 745,
+      "spanish": "ataque",
+      "english": "attack (an attempt to damage an opponent or enemy)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 746,
+      "spanish": "imposible",
+      "english": "impossible",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 747,
+      "spanish": "contacto",
+      "english": "contact",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 748,
+      "spanish": "privado",
+      "english": "private, privy (e.g. a privy council)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 749,
+      "spanish": "alma",
+      "english": "soul",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 750,
+      "spanish": "común",
+      "english": "common, ordinary",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 751,
+      "spanish": "soldado",
+      "english": "soldier",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 752,
+      "spanish": "llave",
+      "english": "key (to open doors)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 753,
+      "spanish": "energía",
+      "english": "energy",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 754,
+      "spanish": "barco",
+      "english": "boat (usually with a concave hull)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 755,
+      "spanish": "observar",
+      "english": "to observe, to eye",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 756,
+      "spanish": "juez",
+      "english": "judge",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 757,
+      "spanish": "atacar",
+      "english": "to attack, to come at",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 758,
+      "spanish": "preparado",
+      "english": "prepared",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 759,
+      "spanish": "río",
+      "english": "river",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 760,
+      "spanish": "tienda",
+      "english": "tent",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 761,
+      "spanish": "señalar",
+      "english": "to signal",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 762,
+      "spanish": "negar",
+      "english": "to deny",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 763,
+      "spanish": "avión",
+      "english": "aeroplane, airplane, plane",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 764,
+      "spanish": "dulce",
+      "english": "candy, sweet",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 765,
+      "spanish": "marchar",
+      "english": "to go, travel",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 766,
+      "spanish": "operación",
+      "english": "operation (a surgical procedure)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 767,
+      "spanish": "encuentro",
+      "english": "encounter, meeting",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 768,
+      "spanish": "fuente",
+      "english": "spring (water), fountain",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 769,
+      "spanish": "informe",
+      "english": "report",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 770,
+      "spanish": "izquierda",
+      "english": "left (side, direction)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 771,
+      "spanish": "pierna",
+      "english": "leg (lower limb of a human)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 772,
+      "spanish": "sala",
+      "english": "room (a separate part of a building)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 773,
+      "spanish": "apenas",
+      "english": "barely, scarcely",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 774,
+      "spanish": "nacer",
+      "english": "to be born, to sprout, to begin to grow; to hatch (out)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 775,
+      "spanish": "ocho",
+      "english": "eight (8)",
+      "partOfSpeech": "number"
+    },
+    {
+      "rank": 776,
+      "spanish": "averiguar",
+      "english": "to find out, figure out, work out, determine",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 777,
+      "spanish": "esconder",
+      "english": "to hide",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 778,
+      "spanish": "señal",
+      "english": "sign",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 779,
+      "spanish": "anterior",
+      "english": "anterior (in time), previous, earlier, former, past",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 780,
+      "spanish": "costar",
+      "english": "to cost",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 781,
+      "spanish": "muestra",
+      "english": "sample, sampling",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 782,
+      "spanish": "nota",
+      "english": "note, memo",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 783,
+      "spanish": "derecha",
+      "english": "right (direction)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 784,
+      "spanish": "escena",
+      "english": "scene",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 785,
+      "spanish": "soltar",
+      "english": "to release",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 786,
+      "spanish": "interesante",
+      "english": "interesting",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 787,
+      "spanish": "vosotros",
+      "english": "you, you guys; second person plural personal pronoun",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "rank": 788,
+      "spanish": "menor",
+      "english": "comparative of \"pequeño\": smaller",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 789,
+      "spanish": "metro",
+      "english": "meter",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 790,
+      "spanish": "entrada",
+      "english": "entrance",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 791,
+      "spanish": "regalo",
+      "english": "present, gift",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 792,
+      "spanish": "edificio",
+      "english": "building",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 793,
+      "spanish": "enfermedad",
+      "english": "illness, disease",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 794,
+      "spanish": "traje",
+      "english": "suit",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 795,
+      "spanish": "gritar",
+      "english": "to shout, to scream, to cry out, to call out",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 796,
+      "spanish": "totalmente",
+      "english": "totally",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 797,
+      "spanish": "contestar",
+      "english": "to reply, retort, answer, respond",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 798,
+      "spanish": "peligroso",
+      "english": "perilous, dangerous",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 799,
+      "spanish": "salvo",
+      "english": "safe",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 800,
+      "spanish": "jurar",
+      "english": "to swear; to take an oath",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 801,
+      "spanish": "agradecer",
+      "english": "to thank",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 802,
+      "spanish": "disculpa",
+      "english": "excuse",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 803,
+      "spanish": "simple",
+      "english": "simple (uncomplicated)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 804,
+      "spanish": "uh",
+      "english": "used to express disappointment or disdain",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "rank": 805,
+      "spanish": "debido",
+      "english": "owed",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 806,
+      "spanish": "unir",
+      "english": "to unite, join",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 807,
+      "spanish": "disfrutar",
+      "english": "to enjoy",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 808,
+      "spanish": "internacional",
+      "english": "international",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 809,
+      "spanish": "total",
+      "english": "total, complete, outright",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 810,
+      "spanish": "equivocado",
+      "english": "mistaken, wrong",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 811,
+      "spanish": "casado",
+      "english": "married",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 812,
+      "spanish": "cena",
+      "english": "supper, dinner",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 813,
+      "spanish": "guardia",
+      "english": "custodian, warden (male)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 814,
+      "spanish": "desarrollo",
+      "english": "development",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 815,
+      "spanish": "apostar",
+      "english": "to bet",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 816,
+      "spanish": "presente",
+      "english": "present (appearing)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 817,
+      "spanish": "odiar",
+      "english": "to hate, to loathe",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 818,
+      "spanish": "cuestión",
+      "english": "matter, question, issue",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 819,
+      "spanish": "pelear",
+      "english": "to fight (to contend in physical conflict)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 820,
+      "spanish": "acordar",
+      "english": "to agree",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 821,
+      "spanish": "dato",
+      "english": "datum (a single piece of information)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 822,
+      "spanish": "motivo",
+      "english": "reason, ground, motive",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 823,
+      "spanish": "enfrentar",
+      "english": "to confront, to face, to stand up to, (a person or force aggressively)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 824,
+      "spanish": "crimen",
+      "english": "crime",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 825,
+      "spanish": "flor",
+      "english": "flower (structure in angiosperms)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 826,
+      "spanish": "boda",
+      "english": "wedding",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 827,
+      "spanish": "representar",
+      "english": "to represent",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 828,
+      "spanish": "unidad",
+      "english": "unit (object, military, or measure)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 829,
+      "spanish": "montón",
+      "english": "heap, pile (collection of things laid in a body, or thrown together so as to form an elevation)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 830,
+      "spanish": "éxito",
+      "english": "success",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 831,
+      "spanish": "haz",
+      "english": "bundle",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 832,
+      "spanish": "peligro",
+      "english": "danger, peril",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 833,
+      "spanish": "golpe",
+      "english": "hit, blow, strike",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 834,
+      "spanish": "corto",
+      "english": "short (having a small distance from one end to another)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 835,
+      "spanish": "construir",
+      "english": "to build",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 836,
+      "spanish": "mencionar",
+      "english": "to mention",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 837,
+      "spanish": "revisar",
+      "english": "to revise",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 838,
+      "spanish": "Carlos",
+      "english": "given name",
+      "partOfSpeech": "proper noun"
+    },
+    {
+      "rank": 839,
+      "spanish": "atrapar",
+      "english": "to capture",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 840,
+      "spanish": "producto",
+      "english": "product, commodity, item",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 841,
+      "spanish": "manejar",
+      "english": "to handle",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 842,
+      "spanish": "carne",
+      "english": "flesh, the soft part of a body which covers the bones",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 843,
+      "spanish": "placer",
+      "english": "pleasure; something done to please",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 844,
+      "spanish": "ventana",
+      "english": "window (opening for light and air)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 845,
+      "spanish": "interesar",
+      "english": "to interest",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 846,
+      "spanish": "despedir",
+      "english": "to dismiss",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 847,
+      "spanish": "alejar",
+      "english": "to remove to a distance, put farther away, to lead away, to draw away",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 848,
+      "spanish": "natural",
+      "english": "natural (of or relating to nature)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 849,
+      "spanish": "oro",
+      "english": "gold",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 850,
+      "spanish": "David",
+      "english": "David",
+      "partOfSpeech": "proper noun"
+    },
+    {
+      "rank": 851,
+      "spanish": "cometer",
+      "english": "to commit",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 852,
+      "spanish": "huir",
+      "english": "to flee, to run away",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 853,
+      "spanish": "lamento",
+      "english": "lament",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 854,
+      "spanish": "informar",
+      "english": "to inform",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 855,
+      "spanish": "acto",
+      "english": "act (something done)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 856,
+      "spanish": "cárcel",
+      "english": "prison",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 857,
+      "spanish": "hallar",
+      "english": "to find something, deliberately or not",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 858,
+      "spanish": "radio",
+      "english": "radio (device)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 859,
+      "spanish": "enemigo",
+      "english": "foe; enemy",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 860,
+      "spanish": "profesional",
+      "english": "professional",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 861,
+      "spanish": "local",
+      "english": "local",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 862,
+      "spanish": "hambre",
+      "english": "hunger",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 863,
+      "spanish": "departamento",
+      "english": "department",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 864,
+      "spanish": "piso",
+      "english": "floor, ground (surface of the earth)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 865,
+      "spanish": "finalmente",
+      "english": "lastly, finally, in the end",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 866,
+      "spanish": "espalda",
+      "english": "back",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 867,
+      "spanish": "vestido",
+      "english": "dress",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 868,
+      "spanish": "completamente",
+      "english": "completely",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 869,
+      "spanish": "terrible",
+      "english": "terrible, awful, horrible (very bad)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 870,
+      "spanish": "norte",
+      "english": "north (compass point)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 871,
+      "spanish": "cerrado",
+      "english": "shut, closed",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 872,
+      "spanish": "aspecto",
+      "english": "aspect",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 873,
+      "spanish": "familiar",
+      "english": "familial, family",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 874,
+      "spanish": "visita",
+      "english": "visit",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 875,
+      "spanish": "aun",
+      "english": "even (implying an extreme example in the case mentioned)",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 876,
+      "spanish": "adónde",
+      "english": "to where, whither, whereto",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 877,
+      "spanish": "contrario",
+      "english": "contrary, opposite",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 878,
+      "spanish": "enterar",
+      "english": "to inform",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 879,
+      "spanish": "broma",
+      "english": "joke, prank, practical joke",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 880,
+      "spanish": "sorpresa",
+      "english": "surprise (something not expected)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 881,
+      "spanish": "juicio",
+      "english": "good judgement; reason",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 882,
+      "spanish": "defensa",
+      "english": "defense",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 883,
+      "spanish": "depender",
+      "english": "to depend, to be subject to",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 884,
+      "spanish": "m",
+      "english": "letter",
+      "partOfSpeech": "letter"
+    },
+    {
+      "rank": 885,
+      "spanish": "regla",
+      "english": "rule (regulation, norm)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 886,
+      "spanish": "comunidad",
+      "english": "community",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 887,
+      "spanish": "intento",
+      "english": "attempt",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 888,
+      "spanish": "cantidad",
+      "english": "amount",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 889,
+      "spanish": "compartir",
+      "english": "to share",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 890,
+      "spanish": "entendido",
+      "english": "expert",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 891,
+      "spanish": "besar",
+      "english": "to kiss",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 892,
+      "spanish": "pertenecer",
+      "english": "to belong",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 893,
+      "spanish": "repetir",
+      "english": "to repeat (to do or say again (and again))",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 894,
+      "spanish": "engañar",
+      "english": "to trick, to deceive, to hoodwink, to cheat",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 895,
+      "spanish": "nave",
+      "english": "ship, vessel (with a concave hull)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 896,
+      "spanish": "riesgo",
+      "english": "risk; the possibility of harm or an unfavorable outcome from random chance",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 897,
+      "spanish": "justicia",
+      "english": "justice",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 898,
+      "spanish": "central",
+      "english": "central",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 899,
+      "spanish": "cubrir",
+      "english": "to cover",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 900,
+      "spanish": "salida",
+      "english": "exit, way out",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 901,
+      "spanish": "americano",
+      "english": "American (of, from or relating to the Americas)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 902,
+      "spanish": "tren",
+      "english": "train",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 903,
+      "spanish": "serie",
+      "english": "series (a number of things that follow one another)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 904,
+      "spanish": "sector",
+      "english": "section",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 905,
+      "spanish": "permanecer",
+      "english": "to stay, remain, stand",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 906,
+      "spanish": "viajar",
+      "english": "to travel, journey",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 907,
+      "spanish": "apartar",
+      "english": "to separate, to divide",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 908,
+      "spanish": "preocupado",
+      "english": "worried, concerned",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 909,
+      "spanish": "asustar",
+      "english": "to scare, to frighten, to spook",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 910,
+      "spanish": "desarrollar",
+      "english": "to develop",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 911,
+      "spanish": "uso",
+      "english": "use",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 912,
+      "spanish": "calmar",
+      "english": "to calm, to still (to limit and lessen in motion and disturbance)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 913,
+      "spanish": "cabo",
+      "english": "end, edge, extremity (furthest or terminal point of something)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 914,
+      "spanish": "horrible",
+      "english": "horrible (causing horror)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 915,
+      "spanish": "corte",
+      "english": "cut (the act of cutting)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 916,
+      "spanish": "prestar",
+      "english": "to lend",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 917,
+      "spanish": "dedo",
+      "english": "finger",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 918,
+      "spanish": "discutir",
+      "english": "to discuss, to argue; to talk about",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 919,
+      "spanish": "esperanza",
+      "english": "hope, hopefulness",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 920,
+      "spanish": "peso",
+      "english": "weight (the force on an object due to gravitational attraction)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 921,
+      "spanish": "opción",
+      "english": "option",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 922,
+      "spanish": "época",
+      "english": "epoch, era, age, time, day",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 923,
+      "spanish": "delante",
+      "english": "in front of, before (spatially)",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 924,
+      "spanish": "alemán",
+      "english": "German (of, from or relating to Germany)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 925,
+      "spanish": "rato",
+      "english": "a while, bit (a short period of time)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 926,
+      "spanish": "frío",
+      "english": "cold, coldness (a condition of low temperature)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 927,
+      "spanish": "testigo",
+      "english": "witness (someone who sees something)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 928,
+      "spanish": "pegar",
+      "english": "to stick",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 929,
+      "spanish": "admitir",
+      "english": "to accept, to admit, to agree to, to concede",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 930,
+      "spanish": "ocasión",
+      "english": "occasion",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 931,
+      "spanish": "área",
+      "english": "area (a particular geographic region)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 932,
+      "spanish": "detective",
+      "english": "detective",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 933,
+      "spanish": "triste",
+      "english": "sad, saddened, blue, gloomy, unhappy, joyless, triste",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 934,
+      "spanish": "matrimonio",
+      "english": "matrimony (sacrament)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 935,
+      "spanish": "superior",
+      "english": "superior",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 936,
+      "spanish": "árbol",
+      "english": "tree (a perennial woody plant)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 937,
+      "spanish": "destino",
+      "english": "destiny, fate",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 938,
+      "spanish": "objeto",
+      "english": "object",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 939,
+      "spanish": "sentado",
+      "english": "seated",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 940,
+      "spanish": "defender",
+      "english": "to defend, to protect, to hold down",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 941,
+      "spanish": "sur",
+      "english": "south",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 942,
+      "spanish": "cansado",
+      "english": "tired, weary, wearied",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 943,
+      "spanish": "azul",
+      "english": "blue",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 944,
+      "spanish": "oscuro",
+      "english": "dark (lacking light)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 945,
+      "spanish": "superar",
+      "english": "to surpass, exceed",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 946,
+      "spanish": "apoyar",
+      "english": "to lean, to rest, to lie or lay",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 947,
+      "spanish": "cine",
+      "english": "cinema, moviehouse",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 948,
+      "spanish": "doler",
+      "english": "to hurt (to cause physical or emotional pain) [(commonly) +dative]",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 949,
+      "spanish": "oler",
+      "english": "to smell (perceive by scent)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 950,
+      "spanish": "gracioso",
+      "english": "funny, amusing",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 951,
+      "spanish": "bromear",
+      "english": "to joke, to kid (to do or say something for amusement)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 952,
+      "spanish": "limpiar",
+      "english": "to clean",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 953,
+      "spanish": "marcha",
+      "english": "march",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 954,
+      "spanish": "misión",
+      "english": "mission, quest",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 955,
+      "spanish": "cocina",
+      "english": "kitchen",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 956,
+      "spanish": "isla",
+      "english": "island (area of land surrounded by water)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 957,
+      "spanish": "enfermo",
+      "english": "sick person, patient",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 958,
+      "spanish": "encargar",
+      "english": "to entrust",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 959,
+      "spanish": "responsable",
+      "english": "responsible, answerable",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 960,
+      "spanish": "declarar",
+      "english": "to declare; to state",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 961,
+      "spanish": "sentimiento",
+      "english": "feeling",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 962,
+      "spanish": "colocar",
+      "english": "to place",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 963,
+      "spanish": "visitar",
+      "english": "to visit",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 964,
+      "spanish": "indicar",
+      "english": "to indicate, signal, designate",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 965,
+      "spanish": "físico",
+      "english": "physical",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 966,
+      "spanish": "prensa",
+      "english": "press (print-based media)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 967,
+      "spanish": "actor",
+      "english": "actor (person who performs in a theatrical play or movie)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 968,
+      "spanish": "amable",
+      "english": "kind, amiable, gracious",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 969,
+      "spanish": "actual",
+      "english": "present, current",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 970,
+      "spanish": "francés",
+      "english": "French (as in French food, clothing, etc.)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 971,
+      "spanish": "organización",
+      "english": "organization",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 972,
+      "spanish": "causar",
+      "english": "to cause, to make",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 973,
+      "spanish": "afirmar",
+      "english": "to state, assert",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 974,
+      "spanish": "celebrar",
+      "english": "to celebrate",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 975,
+      "spanish": "televisión",
+      "english": "television (an electronic communication medium that allows the transmission of real-time visual images, and often sound)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 976,
+      "spanish": "prisa",
+      "english": "hurry, rush, urgency",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 977,
+      "spanish": "autoridad",
+      "english": "authority (the power to enforce rules or give orders)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 978,
+      "spanish": "nervioso",
+      "english": "nerve",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 979,
+      "spanish": "caliente",
+      "english": "hot, warm (emitting heat or warmth)",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 980,
+      "spanish": "lucha",
+      "english": "fight, fighting, fray",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 981,
+      "spanish": "entero",
+      "english": "whole; entire",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 982,
+      "spanish": "culo",
+      "english": "ass, arse, booty, rear, behind, butt, buttocks",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 983,
+      "spanish": "modelo",
+      "english": "model (a successful example to be copied)",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 984,
+      "spanish": "mentira",
+      "english": "lie, trick, falsity",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 985,
+      "spanish": "divertir",
+      "english": "to entertain",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 986,
+      "spanish": "comprobar",
+      "english": "to check, to check on, to check out, to see, to check to see (examine)",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 987,
+      "spanish": "cenar",
+      "english": "to dine; to have supper; to have a lavish meal",
+      "partOfSpeech": "verb"
+    },
+    {
+      "rank": 988,
+      "spanish": "bolsa",
+      "english": "bag",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 989,
+      "spanish": "honor",
+      "english": "honor",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 990,
+      "spanish": "científico",
+      "english": "scientific",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 991,
+      "spanish": "falso",
+      "english": "false; untrue",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 992,
+      "spanish": "luna",
+      "english": "moon",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 993,
+      "spanish": "pareja",
+      "english": "couple, pair",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 994,
+      "spanish": "dispuesto",
+      "english": "willing, ready, game, down",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 995,
+      "spanish": "directo",
+      "english": "direct, straightforward",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 996,
+      "spanish": "cerebro",
+      "english": "brain",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 997,
+      "spanish": "especialmente",
+      "english": "specially",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "rank": 998,
+      "spanish": "limpio",
+      "english": "clean",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "rank": 999,
+      "spanish": "pared",
+      "english": "wall, especially of a house or room",
+      "partOfSpeech": "noun"
+    },
+    {
+      "rank": 1000,
+      "spanish": "carajo",
+      "english": "cock",
+      "partOfSpeech": "noun"
+    }
+  ]
+}

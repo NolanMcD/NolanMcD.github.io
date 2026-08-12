@@ -20,6 +20,13 @@ description: A complete archive of Nolan McDermott's projects, essays, analysis,
 <p class="archive-count" id="archive-count" aria-live="polite"></p>
 
 <div class="archive-stream" id="archive-stream">
+  <article class="archive-card archive-project" data-archive-tags="project language education">
+    <div class="archive-card-top"><span>Project</span><time>New</time></div>
+    <h2><a href="{{ '/projects/top-1000-spanish-words/' | relative_url }}">Top 1,000 Spanish words</a></h2>
+    <p>A frequency-ranked Spanish vocabulary list with English translations, saved study progress, and a quiz mode.</p>
+    <div class="archive-tags"><span>Spanish</span><span>Interactive</span></div>
+  </article>
+
   <article class="archive-card archive-project" data-archive-tags="project sports code">
     <div class="archive-card-top"><span>Project</span><time>New</time></div>
     <h2><a href="{{ '/projects/sports-calendar/' | relative_url }}">Sports Calendar</a></h2>
