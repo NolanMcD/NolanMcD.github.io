@@ -1,5 +1,80 @@
 [
     {
+        "id":  "rss:letterboxd-review-1446268707",
+        "syncId":  "letterboxd-review-1446268707",
+        "title":  "Nimrods",
+        "year":  2025,
+        "rating":  4,
+        "review":  "I love Green Day so I’m biased but I really enjoyed this. It’s funny and has heart. I do think the emotional climax is maybe a little lacking but still solid road trip coming of age movie.",
+        "wordCount":  37,
+        "publishedDate":  "2026-08-12",
+        "watchedDate":  "2026-08-11",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/nimrods/",
+        "tmdbId":  "1432474",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1446057709",
+        "syncId":  "letterboxd-review-1446057709",
+        "title":  "One Night Only",
+        "year":  2026,
+        "rating":  2,
+        "review":  "Fascism played for laughs is what they came up with in The Producers when they wanted their play to bomb. Honestly investigate the producers of this for the same scam.",
+        "wordCount":  30,
+        "publishedDate":  "2026-08-12",
+        "watchedDate":  "2026-08-11",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/one-night-only-2026/",
+        "tmdbId":  "1433367",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1446580174",
+        "syncId":  "letterboxd-review-1446580174",
+        "title":  "The Trial",
+        "year":  1962,
+        "rating":  3,
+        "review":  "“This film was based on a novel by Franz Kafka”\n\nYeah you don’t say",
+        "wordCount":  14,
+        "publishedDate":  "2026-08-12",
+        "watchedDate":  "2026-08-11",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-trial/",
+        "tmdbId":  "3009",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1444843389",
         "syncId":  "letterboxd-review-1444843389",
         "title":  "Witness",
@@ -62,81 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/primal-fear/",
         "tmdbId":  "1592",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1439538131",
-        "syncId":  "letterboxd-review-1439538131",
-        "title":  "The Odyssey",
-        "year":  2026,
-        "rating":  5,
-        "review":  "Midnight 70MM IMAX showing yay",
-        "wordCount":  5,
-        "publishedDate":  "2026-08-08",
-        "watchedDate":  "2026-08-08",
-        "rewatch":  true,
-        "url":  "https://letterboxd.com/nolanmcd/film/the-odyssey-2026/2/",
-        "tmdbId":  "1368337",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1437429720",
-        "syncId":  "letterboxd-review-1437429720",
-        "title":  "I Want Your Sex",
-        "year":  2026,
-        "rating":  3,
-        "review":  "It’s okay, definitely feels like they ran out of money but the story is solid and it’s pretty funny",
-        "wordCount":  19,
-        "publishedDate":  "2026-08-07",
-        "watchedDate":  "2026-08-06",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/i-want-your-sex/",
-        "tmdbId":  "1288059",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1435997376",
-        "syncId":  "letterboxd-review-1435997376",
-        "title":  "The Verdict",
-        "year":  1982,
-        "rating":  4,
-        "review":  "Sidney Lumet behind the camera + David Mamet on the screenplay, of course this is fantastic.",
-        "wordCount":  16,
-        "publishedDate":  "2026-08-06",
-        "watchedDate":  "2026-08-05",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/the-verdict-1982/",
-        "tmdbId":  "24226",
         "tags":  [
 
                  ],
