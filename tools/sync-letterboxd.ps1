@@ -20,6 +20,32 @@ function Get-NodeText($Node, [string]$LocalName) {
     return [string]$match.InnerText
 }
 
+# Repair UTF-8 text that an upstream client previously decoded as Windows-1252.
+# Running the conversion repeatedly also recovers text that was corrupted over
+# several syncs. The strict decoder stops as soon as the text can no longer be
+# a valid UTF-8 byte sequence, which protects ordinary accented text.
+function Repair-Mojibake([string]$Text) {
+    if ([string]::IsNullOrEmpty($Text)) { return $Text }
+
+    $windows1252 = [Text.Encoding]::GetEncoding(1252)
+    $strictUtf8 = [Text.UTF8Encoding]::new($false, $true)
+    $markers = '[\u00C3\u00C2\u00E2\u00C6\u00F0\u20AC\u2122\u0153\u017E\u0161\u0192\u2020\u2021\u2030\uFFFD]'
+    $current = $Text
+
+    for ($attempt = 0; $attempt -lt 8; $attempt++) {
+        if (-not [regex]::IsMatch($current, $markers)) { break }
+        try {
+            $candidate = $strictUtf8.GetString($windows1252.GetBytes($current))
+        } catch {
+            break
+        }
+        if ($candidate -eq $current) { break }
+        $current = $candidate
+    }
+
+    return $current
+}
+
 function ConvertFrom-ReviewHtml([string]$Html) {
     if ([string]::IsNullOrWhiteSpace($Html)) { return "" }
     $paragraphs = [regex]::Matches($Html, '<p[^>]*>(.*?)</p>', 'Singleline') |
@@ -28,7 +54,7 @@ function ConvertFrom-ReviewHtml([string]$Html) {
     $text = ($paragraphs -join "`n`n")
     $text = [regex]::Replace($text, '<br\s*/?>', "`n", 'IgnoreCase')
     $text = [regex]::Replace($text, '<[^>]+>', '')
-    return [Net.WebUtility]::HtmlDecode($text).Trim()
+    return Repair-Mojibake ([Net.WebUtility]::HtmlDecode($text).Trim())
 }
 
 function Get-WordCount([string]$Text) {
@@ -74,7 +100,9 @@ function New-NormalizedEntry {
         [bool]$Rewatch, [string]$Url, [array]$Tags, [string]$Origin,
         [string]$TmdbId = "", [string]$SyncId = ""
     )
-    $cleanTags = @($Tags | ForEach-Object { ([string]$_).Trim().ToLowerInvariant() } | Where-Object { $_ })
+    $Title = Repair-Mojibake $Title
+    $Review = Repair-Mojibake $Review
+    $cleanTags = @($Tags | ForEach-Object { (Repair-Mojibake ([string]$_)).Trim().ToLowerInvariant() } | Where-Object { $_ })
     $sources = @($cleanTags | Where-Object { $sourceLabels.ContainsKey($_) } | ForEach-Object { $sourceLabels[$_] } | Select-Object -Unique)
     $awardTags = @($cleanTags | Where-Object { -not $sourceLabels.ContainsKey($_) } | ForEach-Object { Format-Tag $_ } | Select-Object -Unique)
     [ordered]@{
@@ -168,12 +196,17 @@ if (-not $SkipFeed) {
 
 $sortedEntries = @($entries | Sort-Object @{ Expression = { $_.publishedDate }; Descending = $true }, @{ Expression = { $_.title }; Descending = $false })
 $sorted = @($sortedEntries | ForEach-Object {
+    $cleanTitle = Repair-Mojibake ([string]$_.title)
+    $cleanReview = Repair-Mojibake ([string]$_.review)
+    $cleanTags = @($_.tags | ForEach-Object { Repair-Mojibake ([string]$_) })
+    $cleanSources = @($_.viewingSources | ForEach-Object { Repair-Mojibake ([string]$_) })
+    $cleanAwardTags = @($_.awardTags | ForEach-Object { Repair-Mojibake ([string]$_) })
     [ordered]@{
-        id = $_.id; syncId = $_.syncId; title = $_.title; year = [int]$_.year
-        rating = [int]$_.rating; review = $_.review; wordCount = [int]$_.wordCount
+        id = $_.id; syncId = $_.syncId; title = $cleanTitle; year = [int]$_.year
+        rating = [int]$_.rating; review = $cleanReview; wordCount = Get-WordCount $cleanReview
         publishedDate = $_.publishedDate; watchedDate = $_.watchedDate; rewatch = [bool]$_.rewatch
-        url = $_.url; tmdbId = $_.tmdbId; tags = @($_.tags); viewingSources = @($_.viewingSources)
-        awardTags = @($_.awardTags); awardTagsReliable = [bool]$_.awardTagsReliable; origin = $_.origin
+        url = $_.url; tmdbId = $_.tmdbId; tags = $cleanTags; viewingSources = $cleanSources
+        awardTags = $cleanAwardTags; awardTagsReliable = [bool]$_.awardTagsReliable; origin = $_.origin
     }
 })
 $outputDirectory = Split-Path -Parent $resolvedOutput

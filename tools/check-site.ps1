@@ -27,7 +27,12 @@ $jsonFiles = @(
 )
 foreach ($file in $jsonFiles) {
     try {
-        Get-Content -Raw -LiteralPath $file.FullName | ConvertFrom-Json | Out-Null
+        $jsonText = [IO.File]::ReadAllText($file.FullName, [Text.UTF8Encoding]::new($false, $true))
+        $jsonText | ConvertFrom-Json | Out-Null
+        $mojibakePattern = '\uFFFD|\u00C3[\u0080-\u00BF]|\u00C2[\u0080-\u00BF]|\u00E2[\u20AC\u201A\u0192\u201E\u2026\u2020\u2021\u02C6\u2030\u0160\u2039\u0152\u017D\u2018\u2019\u201C\u201D\u2022\u2013\u2014\u02DC\u2122\u0161\u203A\u0153\u017E\u0178]'
+        if ([regex]::IsMatch($jsonText, $mojibakePattern)) {
+            Add-Failure "Probable text encoding corruption in $(Get-RelativePath $file.FullName)"
+        }
     } catch {
         Add-Failure "Invalid JSON in $(Get-RelativePath $file.FullName): $($_.Exception.Message)"
     }
