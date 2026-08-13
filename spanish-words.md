@@ -2,6 +2,9 @@
 title: Top 1,000 Spanish Words
 permalink: /projects/top-1000-spanish-words/
 description: Study the 1,000 most common Spanish words with English translations, filters, saved progress, and a quiz.
+project_date: 2026-08-12
+project_label: Interactive study tool
+project_summary: Study a frequency-ranked vocabulary list, save your progress, and test yourself with two-way quizzes.
 ---
 
 <div class="vocab-app" id="vocab-app" data-source="{{ '/assets/data/spanish-1000.json' | relative_url }}">

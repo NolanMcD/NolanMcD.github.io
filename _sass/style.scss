@@ -213,7 +213,7 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
 .feed-lane h2 { margin: .05rem 0 0; font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; }
 .feed-letterboxd { --feed-color: #087e8b; }
 .feed-strava { --feed-color: #d44b18; }
-.feed-noland { --feed-color: #a32620; }
+.feed-noland, .feed-projects { --feed-color: #a32620; }
 .feed-items { flex: 1 1 auto; }
 .feed-item { padding: .85rem 0; border-bottom: 1px solid #eee8df; }
 .feed-item:last-child { border-bottom: 0; }

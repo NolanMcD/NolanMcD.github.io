@@ -3,6 +3,9 @@ layout: landing
 title: Sports Calendar
 permalink: /projects/sports-calendar/
 description: One calendar for the leagues, races, tournaments, and esports events Nolan follows.
+project_date: 2026-08-10
+project_label: Sports and schedules
+project_summary: Browse the leagues, races, college sports, soccer, and esports events I follow in one calendar.
 ---
 
 <section class="sports-cal-hero">

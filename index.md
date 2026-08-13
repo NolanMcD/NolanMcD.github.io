@@ -20,15 +20,19 @@ description: Nolan McDermott's latest movie reviews, writing, adventures, and pe
       <div class="feed-items" id="home-strava"><p class="feed-loading">Loading the latest activity…</p></div>
       <a class="feed-footer-link" href="https://www.strava.com/athletes/57377386">Follow on Strava <span aria-hidden="true">→</span></a>
     </article>
-    <article class="feed-lane feed-noland">
-      <header><span class="feed-mark" aria-hidden="true">N</span><div><p class="feed-source">Noland</p><h2>Latest dispatch</h2></div></header>
+    <article class="feed-lane feed-projects">
+      <header><span class="feed-mark" aria-hidden="true">N</span><div><p class="feed-source">Noland</p><h2>Latest projects</h2></div></header>
       <div class="feed-items">
-        {% assign feed_writing = site.posts | where_exp: "post", "post.layout != 'review'" %}
-        {% for post in feed_writing limit: 1 %}
-        <div class="feed-item"><p class="feed-date">{{ post.date | date: "%b %-d, %Y" }}</p><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><p>{{ post.excerpt | strip_html | truncatewords: 22 }}</p></div>
+        {% assign latest_projects = site.pages | where_exp: "page", "page.project_date" | sort: "project_date" | reverse %}
+        {% for project in latest_projects limit: 2 %}
+        <div class="feed-item feed-project-item">
+          <p class="feed-date">{{ project.project_label | default: "Project" }} · {{ project.project_date | date: "%b %-d, %Y" }}</p>
+          <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+          <p>{{ project.project_summary | default: project.description | strip_html | truncatewords: 22 }}</p>
+        </div>
         {% endfor %}
       </div>
-      <a class="feed-footer-link" href="{{ '/projects/' | relative_url }}">Explore the projects <span aria-hidden="true">→</span></a>
+      <a class="feed-footer-link" href="{{ '/projects/' | relative_url }}">Explore all projects <span aria-hidden="true">→</span></a>
     </article>
   </div>
 </section>
