@@ -1,5 +1,80 @@
 [
     {
+        "id":  "rss:letterboxd-review-1448829817",
+        "syncId":  "letterboxd-review-1448829817",
+        "title":  "It Follows",
+        "year":  2014,
+        "rating":  3,
+        "review":  "I liked it. Very matter of fact the way its shot with slow moving zooms and dollies. There is a little bit of horror nonsense going on but its mostly well done.",
+        "wordCount":  32,
+        "publishedDate":  "2026-08-14",
+        "watchedDate":  "2026-08-13",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/it-follows/",
+        "tmdbId":  "270303",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1448785197",
+        "syncId":  "letterboxd-review-1448785197",
+        "title":  "Spider-Man: Homecoming",
+        "year":  2017,
+        "rating":  4,
+        "review":  "This movie is good because the whole time you are just so pissed at Peter that he won\u0027t just be a kid most of the time.",
+        "wordCount":  26,
+        "publishedDate":  "2026-08-14",
+        "watchedDate":  "2026-08-13",
+        "rewatch":  true,
+        "url":  "https://letterboxd.com/nolanmcd/film/spider-man-homecoming/",
+        "tmdbId":  "315635",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1449162643",
+        "syncId":  "letterboxd-review-1449162643",
+        "title":  "The End of Oak Street",
+        "year":  2026,
+        "rating":  4,
+        "review":  "Holy shit it’s an original story with clever writing. Am I dreaming? Have I been worm-holed back to 1982? Good shit dude.",
+        "wordCount":  22,
+        "publishedDate":  "2026-08-14",
+        "watchedDate":  "2026-08-13",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-end-of-oak-street/",
+        "tmdbId":  "1101383",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1446268707",
         "syncId":  "letterboxd-review-1446268707",
         "title":  "Nimrods",

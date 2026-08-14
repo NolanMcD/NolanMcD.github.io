@@ -1,5 +1,80 @@
 [
     {
+        "id":  "rss:letterboxd-review-1448829817",
+        "syncId":  "letterboxd-review-1448829817",
+        "title":  "It Follows",
+        "year":  2014,
+        "rating":  3,
+        "review":  "I liked it. Very matter of fact the way its shot with slow moving zooms and dollies. There is a little bit of horror nonsense going on but its mostly well done.",
+        "wordCount":  32,
+        "publishedDate":  "2026-08-14",
+        "watchedDate":  "2026-08-13",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/it-follows/",
+        "tmdbId":  "270303",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1448785197",
+        "syncId":  "letterboxd-review-1448785197",
+        "title":  "Spider-Man: Homecoming",
+        "year":  2017,
+        "rating":  4,
+        "review":  "This movie is good because the whole time you are just so pissed at Peter that he won\u0027t just be a kid most of the time.",
+        "wordCount":  26,
+        "publishedDate":  "2026-08-14",
+        "watchedDate":  "2026-08-13",
+        "rewatch":  true,
+        "url":  "https://letterboxd.com/nolanmcd/film/spider-man-homecoming/",
+        "tmdbId":  "315635",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1449162643",
+        "syncId":  "letterboxd-review-1449162643",
+        "title":  "The End of Oak Street",
+        "year":  2026,
+        "rating":  4,
+        "review":  "Holy shit it’s an original story with clever writing. Am I dreaming? Have I been worm-holed back to 1982? Good shit dude.",
+        "wordCount":  22,
+        "publishedDate":  "2026-08-14",
+        "watchedDate":  "2026-08-13",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-end-of-oak-street/",
+        "tmdbId":  "1101383",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1446268707",
         "syncId":  "letterboxd-review-1446268707",
         "title":  "Nimrods",
@@ -62,81 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/the-trial/",
         "tmdbId":  "3009",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1444843389",
-        "syncId":  "letterboxd-review-1444843389",
-        "title":  "Witness",
-        "year":  1985,
-        "rating":  4,
-        "review":  "I feel bad for the Amish because they will never get to watch a movie about them that\u0027s really good",
-        "wordCount":  20,
-        "publishedDate":  "2026-08-11",
-        "watchedDate":  "2026-08-10",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/witness/",
-        "tmdbId":  "9281",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1441092872",
-        "syncId":  "letterboxd-review-1441092872",
-        "title":  "First Blood",
-        "year":  1982,
-        "rating":  3,
-        "review":  "All Rambo had to do was report these guys to the FAA for the crazy helicopter flying and all his problems would be solved",
-        "wordCount":  24,
-        "publishedDate":  "2026-08-09",
-        "watchedDate":  "2026-08-08",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/first-blood/",
-        "tmdbId":  "1368",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1440465854",
-        "syncId":  "letterboxd-review-1440465854",
-        "title":  "Primal Fear",
-        "year":  1996,
-        "rating":  3,
-        "review":  "Fire cast",
-        "wordCount":  2,
-        "publishedDate":  "2026-08-09",
-        "watchedDate":  "2026-08-08",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/primal-fear/",
-        "tmdbId":  "1592",
         "tags":  [
 
                  ],
