@@ -20,6 +20,13 @@ description: A complete archive of Nolan McDermott's projects, essays, analysis,
 <p class="archive-count" id="archive-count" aria-live="polite"></p>
 
 <div class="archive-stream" id="archive-stream">
+  <article class="archive-card archive-project" data-archive-tags="project sports code data baseball">
+    <div class="archive-card-top"><span>Project</span><time>New</time></div>
+    <h2><a href="{{ '/projects/war-league/' | relative_url }}">WARLeague</a></h2>
+    <p>A live fantasy baseball scorebook that combines player WAR into team standings, roster breakdowns, and a season-long transaction history.</p>
+    <div class="archive-tags"><span>Baseball</span><span>Streamlit</span><span>Python</span></div>
+  </article>
+
   <article class="archive-card archive-project" data-archive-tags="project language education">
     <div class="archive-card-top"><span>Project</span><time>New</time></div>
     <h2><a href="{{ '/projects/top-1000-spanish-words/' | relative_url }}">Top 1,000 Spanish words</a></h2>

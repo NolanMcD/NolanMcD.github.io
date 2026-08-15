@@ -55,6 +55,40 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
 .project-card h2 { margin: .5rem 0; }
 .project-meta { display: flex; gap: .5rem; }
 .project-meta span { padding: .2rem .55rem; border-radius: 999px; color: #075c65; background: #e4f3f1; font-size: .75rem; font-weight: 700; text-transform: uppercase; }
+
+/* WARLeague project */
+.war-hero { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(260px, .55fr); align-items: end; gap: clamp(2rem, 6vw, 5rem); margin: 1.5rem 0 4rem; padding: clamp(2rem, 6vw, 5rem); border-radius: 22px; color: white; background: linear-gradient(135deg, #101d2a 0%, #153d52 58%, #176b68 100%); box-shadow: 0 22px 55px rgba(16,29,42,.22); }
+.war-hero .eyebrow, .war-cta .eyebrow { color: #e5bd5b; }
+.war-hero h1 { margin: .15rem 0 1rem; color: white; font-family: Georgia, "Times New Roman", serif; font-size: clamp(3rem, 9vw, 6.5rem); line-height: .9; letter-spacing: -.06em; }
+.war-hero-copy > p:not(.eyebrow) { max-width: 720px; color: #d8e5e7; font-size: 1.1rem; line-height: 1.65; }
+.war-hero .button-primary { color: #122531; border-color: #e5bd5b; background: #e5bd5b; }
+.war-hero .button-secondary { color: white; border-color: rgba(255,255,255,.65); }
+.war-scoreboard { padding: 1.4rem; border: 1px solid rgba(255,255,255,.18); border-radius: 14px; background: rgba(4,15,23,.32); backdrop-filter: blur(6px); }
+.war-scoreboard p { margin: 0 0 1.2rem; color: #9fc8c6; font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.war-scoreboard strong { display: block; margin-bottom: .5rem; color: white; font-size: clamp(1.65rem, 4vw, 2.4rem); }
+.war-scoreboard span { color: #c6d8da; font-size: .85rem; line-height: 1.5; }
+.war-intro, .war-build { display: grid; grid-template-columns: minmax(220px, .7fr) minmax(0, 1.3fr); gap: clamp(2rem, 7vw, 6rem); margin: 0 0 4rem; }
+.war-intro h2, .war-build h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 5vw, 3.3rem); line-height: 1.05; }
+.war-intro > p { margin: 1.65rem 0 0; color: $muted; font-size: 1.05rem; line-height: 1.8; }
+.war-feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-bottom: 5rem; }
+.war-feature-grid article { padding: 1.6rem; border-top: 4px solid #176b68; background: #f4f0e8; }
+.war-feature-grid span { color: #a32620; font-size: .72rem; font-weight: 900; letter-spacing: .08em; }
+.war-feature-grid h2 { margin: 1.5rem 0 .6rem; font-family: Georgia, "Times New Roman", serif; font-size: 1.55rem; }
+.war-feature-grid p, .war-build-steps p { color: $muted; line-height: 1.65; }
+.war-build { padding: clamp(1.8rem, 5vw, 3.5rem); border: 1px solid $line; border-radius: 16px; background: white; }
+.war-build-steps p { margin: 0; padding: 1rem 0; border-bottom: 1px solid $line; }
+.war-build-steps p:first-child { padding-top: 0; }
+.war-build-steps p:last-child { padding-bottom: 0; border-bottom: 0; }
+.war-build-steps strong { color: $navy; }
+.war-cta { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-bottom: 2rem; padding: clamp(1.8rem, 5vw, 3.5rem); border-radius: 16px; color: white; background: #101d2a; }
+.war-cta h2 { margin: .2rem 0 0; color: white; font-size: clamp(1.8rem, 4vw, 2.8rem); }
+.war-cta .button { flex: 0 0 auto; color: #122531; border-color: #e5bd5b; background: #e5bd5b; }
+
+@media (max-width: 760px) {
+  .war-hero, .war-intro, .war-build { grid-template-columns: 1fr; }
+  .war-feature-grid { grid-template-columns: 1fr; }
+  .war-cta { align-items: flex-start; flex-direction: column; }
+}
 .callout { margin: 2.5rem 0; padding: 1.2rem 1.4rem; border-left: 4px solid $teal; background: $cream; }
 
 /* Combined projects and posts archive */
