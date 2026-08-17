@@ -1,0 +1,36 @@
+---
+layout: blood-manatees
+---
+{%- assign scenes = site.blood_manatees | sort: "scene_number" -%}
+{%- assign current_index = 0 -%}
+{%- for scene in scenes -%}
+  {%- if scene.url == page.url -%}{%- assign current_index = forloop.index0 -%}{%- endif -%}
+{%- endfor -%}
+{%- assign previous_index = current_index | minus: 1 -%}
+{%- assign next_index = current_index | plus: 1 -%}
+{%- if current_index > 0 -%}{%- assign previous_scene = scenes[previous_index] -%}{%- endif -%}
+{%- if next_index < scenes.size -%}{%- assign next_scene = scenes[next_index] -%}{%- endif -%}
+
+<article class="bm-scene bm-layout-{{ page.layout_type | default: 'screenplay' }}"
+  data-bm-scene
+  data-previous-url="{% if previous_scene %}{{ previous_scene.url | relative_url }}{% endif %}"
+  data-next-url="{% if next_scene %}{{ next_scene.url | relative_url }}{% endif %}"
+  {% if page.audio %}data-audio-src="{{ page.audio | relative_url }}"{% endif %}>
+  {% if page.background_image %}
+    <div class="bm-scene-background" style="background-image: url('{{ page.background_image | relative_url }}')" role="img" aria-label="{{ page.image_alt | escape }}"></div>
+  {% endif %}
+
+  <div class="bm-scene-content">
+    <p class="bm-title">Blood Manatees</p>
+    <p class="bm-scene-number">Scene {{ page.scene_number }}</p>
+    {% if page.scene_heading %}<h1>{{ page.scene_heading }}</h1>{% endif %}
+    {% if page.image %}<img class="bm-scene-image" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: '' | escape }}">{% endif %}
+    <div class="bm-screenplay-copy">{{ content }}</div>
+  </div>
+
+  <nav class="bm-scene-nav" aria-label="Scene navigation">
+    {% if previous_scene %}<a class="bm-nav-link" href="{{ previous_scene.url | relative_url }}" data-bm-direction="previous" aria-label="Previous scene">← <span>Previous scene</span></a>{% else %}<span></span>{% endif %}
+    {% if page.audio %}<button class="bm-audio-control" type="button" aria-label="Play scene audio" data-bm-audio>Play audio</button>{% endif %}
+    {% if next_scene %}<a class="bm-nav-link" href="{{ next_scene.url | relative_url }}" data-bm-direction="next" aria-label="Next scene"><span>Next scene</span> →</a>{% endif %}
+  </nav>
+</article>

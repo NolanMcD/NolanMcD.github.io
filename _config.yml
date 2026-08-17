@@ -16,6 +16,11 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+collections:
+  blood_manatees:
+    output: true
+    permalink: /blood-manatees/scene/:name/
+
 markdown: kramdown
 kramdown:
   input: GFM
@@ -51,6 +56,12 @@ defaults:
       type: pages
     values:
       layout: page
+  - scope:
+      path: ""
+      type: blood_manatees
+    values:
+      layout: blood-manatees-scene
+      sitemap: false
 
 exclude:
   - README.md
