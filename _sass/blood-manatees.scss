@@ -26,6 +26,26 @@
 .bm-nav-link { min-height: 44px; padding: .7rem; color: #aaa8a3; font-size: .78rem; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
 .bm-nav-link:last-child { text-align: right; }
 .bm-nav-link:hover, .bm-nav-link:focus-visible { color: #fff; }
+
+/* A screenplay presented through the visual language of a monitored program. */
+.bm-layout-program { color: #d7dbd8; background: #181b1d; }
+.bm-layout-program::before { position: absolute; top: 0; bottom: 0; left: clamp(1rem, 3vw, 2.5rem); width: 1px; background: #41474a; content: ""; }
+.bm-layout-program .bm-scene-content { box-sizing: border-box; padding: clamp(1.5rem, 4vw, 3.5rem); border: 1px solid #41474a; border-top: 3px solid #77827d; background: #202427; box-shadow: 0 22px 60px rgba(0,0,0,.28); }
+.bm-layout-program .bm-title { color: #e4e8e5; font-family: "Courier New", Courier, monospace; font-size: clamp(1.7rem, 5vw, 3.5rem); letter-spacing: .04em; }
+.bm-layout-program .bm-scene-number { margin-bottom: clamp(2rem, 6vh, 4rem); color: #87958e; font-family: "Courier New", Courier, monospace; }
+.bm-layout-program .bm-scene-number::before { color: #59625e; content: "> "; }
+.bm-layout-program .bm-scene-content h1 { padding-bottom: .8rem; border-bottom: 1px solid #41474a; color: #b8c2bd; font-family: "Courier New", Courier, monospace; font-size: clamp(1rem, 2.5vw, 1.3rem); }
+.bm-layout-program .bm-screenplay-copy { max-width: 720px; color: #d3d7d4; }
+.bm-layout-program .bm-screenplay-copy p::before { color: #65716b; content: "// "; }
+.bm-layout-program .bm-nav-link { color: #909a95; font-family: "Courier New", Courier, monospace; }
+
+/* Quiet entry point for a draft on the regular Screenplays page. */
+.screenplay-wip { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin: 4.5rem 0 1rem; padding: 1.2rem 0; border-top: 1px solid #ddd4c8; border-bottom: 1px solid #ddd4c8; }
+.screenplay-wip .eyebrow { margin-bottom: .25rem; color: #77716b; }
+.screenplay-wip h2 { margin: 0; color: #403c39; font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; }
+.screenplay-wip p:last-child { margin: .3rem 0 0; color: #77716b; font-size: .85rem; }
+.screenplay-wip > a { flex: 0 0 auto; color: #625d58; font-size: .82rem; font-weight: 700; text-decoration: none; }
+.screenplay-wip > a:hover, .screenplay-wip > a:focus-visible { color: #201d1b; text-decoration: underline; }
 @keyframes bm-fade-in { from { opacity: 0; } to { opacity: 1; } }
-@media (max-width: 520px) { .bm-nav-link span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); } .bm-scene-nav { padding-top: 1rem; } }
+@media (max-width: 520px) { .bm-nav-link span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); } .bm-scene-nav { padding-top: 1rem; } .bm-layout-program { padding-inline: 1.25rem; } .bm-layout-program::before { display: none; } .screenplay-wip { align-items: flex-start; flex-direction: column; gap: .8rem; } }
 @media (prefers-reduced-motion: reduce) { .bm-experience, .bm-opening, .bm-scene { animation: none; transition: none; } }

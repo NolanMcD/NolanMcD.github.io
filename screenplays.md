@@ -8,16 +8,6 @@ description: Screenplay transcriptions by Nolan McDermott.
 
 <article class="screenplay-entry">
   <header class="review-header">
-    <p class="eyebrow">Interactive screenplay</p>
-    <h2>Blood Manatees</h2>
-    <p class="screenplay-meta">An interactive, scene-by-scene screenplay experience.</p>
-  </header>
-
-  <p><a class="button button-primary" href="{{ '/blood-manatees/' | relative_url }}">Enter Blood Manatees</a></p>
-</article>
-
-<article class="screenplay-entry">
-  <header class="review-header">
     <p class="eyebrow">Screenplay transcription</p>
     <h2>The Kid Detective</h2>
     <p class="screenplay-meta">Written and directed by Evan Morgan · Transcribed by Nolan McDermott</p>
@@ -43,3 +33,12 @@ description: Screenplay transcriptions by Nolan McDermott.
 
   <p class="screenplay-prompt">Click the poster to open the screenplay PDF.</p>
 </article>
+
+<aside class="screenplay-wip" aria-labelledby="blood-manatees-title">
+  <div>
+    <p class="eyebrow">Work in progress</p>
+    <h2 id="blood-manatees-title">Blood Manatees</h2>
+    <p>An interactive, scene-by-scene screenplay experience.</p>
+  </div>
+  <a href="{{ '/blood-manatees/' | relative_url }}">Enter the current draft <span aria-hidden="true">→</span></a>
+</aside>
