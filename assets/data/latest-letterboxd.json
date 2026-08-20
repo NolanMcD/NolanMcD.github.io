@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1459358215",
+        "syncId":  "letterboxd-review-1459358215",
+        "title":  "The Lost World: Jurassic Park",
+        "year":  1997,
+        "rating":  2,
+        "review":  "Its Rebirth but with a director who actually knows what they are doing? So still bad...",
+        "wordCount":  16,
+        "publishedDate":  "2026-08-20",
+        "watchedDate":  "2026-08-19",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-lost-world-jurassic-park/",
+        "tmdbId":  "330",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1457542940",
         "syncId":  "letterboxd-review-1457542940",
         "title":  "The Year of Living Dangerously",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/it-follows/",
         "tmdbId":  "270303",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1448785197",
-        "syncId":  "letterboxd-review-1448785197",
-        "title":  "Spider-Man: Homecoming",
-        "year":  2017,
-        "rating":  4,
-        "review":  "This movie is good because the whole time you are just so pissed at Peter that he won\u0027t just be a kid most of the time.",
-        "wordCount":  26,
-        "publishedDate":  "2026-08-14",
-        "watchedDate":  "2026-08-13",
-        "rewatch":  true,
-        "url":  "https://letterboxd.com/nolanmcd/film/spider-man-homecoming/",
-        "tmdbId":  "315635",
         "tags":  [
 
                  ],
