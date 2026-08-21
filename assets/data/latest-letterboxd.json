@@ -1,5 +1,80 @@
 [
     {
+        "id":  "rss:letterboxd-review-1460176852",
+        "syncId":  "letterboxd-review-1460176852",
+        "title":  "Gallipoli",
+        "year":  1981,
+        "rating":  4,
+        "review":  "Deep in the western Australian outback a man walks with his camel. In the distance he hears some shouts, two boys come running out of the sandy expanse dusty and thirsty. They look very happy to see him. He tells them, “this would have to be your lucky day” he’s seen men lost for dead in the desert before. It seems their chance encounter with him has spared them that fate. He offers them water and some food, points them in the direction of the nearest settlement they foolishly set off for from who knows where. He asks them if they are looking for work, but the younger one says he’s off to the war. The man hasn’t heard of any war around here. “What war?” He asks. The boy says the war against Germany of course. The man thinks “I knew a German once.” He liked him too, “how did it start?” The boy doesn’t quite know all he knows is that it was their fault apparently. The man thinks some more, “the wars in Australia already?” They two explain that they will go to Turkey to fight because they are a German ally. The man reflects “You learn something new everyday. Still don’t see what that’s got to do with us.” The boy replies “if we don’t stop em there they’re gonna end up here!” The man looks around at the desolate landscape. “Then they’re welcome to it.” The older boy laughs.",
+        "wordCount":  244,
+        "publishedDate":  "2026-08-21",
+        "watchedDate":  "2026-08-20",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/gallipoli/",
+        "tmdbId":  "11646",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1460735379",
+        "syncId":  "letterboxd-review-1460735379",
+        "title":  "Mutiny",
+        "year":  2026,
+        "rating":  1,
+        "review":  "Absolute schlock",
+        "wordCount":  2,
+        "publishedDate":  "2026-08-21",
+        "watchedDate":  "2026-08-20",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/mutiny-2026/",
+        "tmdbId":  "1288445",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1460775542",
+        "syncId":  "letterboxd-review-1460775542",
+        "title":  "Tony",
+        "year":  2026,
+        "rating":  4,
+        "review":  "Never been a fan of biopics because they are usually so boring but thankfully this isn\u0027t a biopic at all. Its just a fun coming of age story loosely based on just one chapter from one of his books I assume. It is about working in a kitchen but don\u0027t go into this expecting some grand movie about cooking, it s a much more personal tale about finding your place.",
+        "wordCount":  70,
+        "publishedDate":  "2026-08-21",
+        "watchedDate":  "2026-08-20",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/tony-2026/",
+        "tmdbId":  "1329016",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1459358215",
         "syncId":  "letterboxd-review-1459358215",
         "title":  "The Lost World: Jurassic Park",
@@ -50,31 +125,6 @@
         "origin":  "rss"
     },
     {
-        "id":  "rss:letterboxd-review-1454671943",
-        "syncId":  "letterboxd-review-1454671943",
-        "title":  "Cape Fear",
-        "year":  1962,
-        "rating":  3,
-        "review":  "It’s a solid noir with good tension building but the climax it a little too long and drawn out for me",
-        "wordCount":  21,
-        "publishedDate":  "2026-08-17",
-        "watchedDate":  "2026-08-16",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/cape-fear/",
-        "tmdbId":  "11349",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
         "id":  "rss:letterboxd-review-1454944495",
         "syncId":  "letterboxd-review-1454944495",
         "title":  "Cape Fear",
@@ -87,56 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/cape-fear-1991/",
         "tmdbId":  "1598",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1452003233",
-        "syncId":  "letterboxd-review-1452003233",
-        "title":  "Made",
-        "year":  2001,
-        "rating":  3,
-        "review":  "Fucking Diddy man",
-        "wordCount":  3,
-        "publishedDate":  "2026-08-16",
-        "watchedDate":  "2026-08-15",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/made/",
-        "tmdbId":  "15745",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1448829817",
-        "syncId":  "letterboxd-review-1448829817",
-        "title":  "It Follows",
-        "year":  2014,
-        "rating":  3,
-        "review":  "I liked it. Very matter of fact the way its shot with slow moving zooms and dollies. There is a little bit of horror nonsense going on but its mostly well done.",
-        "wordCount":  32,
-        "publishedDate":  "2026-08-14",
-        "watchedDate":  "2026-08-13",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/it-follows/",
-        "tmdbId":  "270303",
         "tags":  [
 
                  ],
