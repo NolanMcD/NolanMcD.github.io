@@ -1,5 +1,55 @@
 [
     {
+        "id":  "rss:letterboxd-review-1461932612",
+        "syncId":  "letterboxd-review-1461932612",
+        "title":  "Fearless",
+        "year":  1993,
+        "rating":  3,
+        "review":  "Movies are the only way I can get over my anxiety of flying these days. At least now when I fly I can\u0027t watch a couple movies to take my mind off it.",
+        "wordCount":  33,
+        "publishedDate":  "2026-08-22",
+        "watchedDate":  "2026-08-21",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/fearless/",
+        "tmdbId":  "10443",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1462389078",
+        "syncId":  "letterboxd-review-1462389078",
+        "title":  "Green Room",
+        "year":  2015,
+        "rating":  4,
+        "review":  "Jeremy Saulnier know what the f he is doing. Can\u0027t wait for his next color based movie.",
+        "wordCount":  17,
+        "publishedDate":  "2026-08-22",
+        "watchedDate":  "2026-08-21",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/green-room/",
+        "tmdbId":  "313922",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1460176852",
         "syncId":  "letterboxd-review-1460176852",
         "title":  "Gallipoli",
@@ -125,18 +175,18 @@
         "origin":  "rss"
     },
     {
-        "id":  "rss:letterboxd-review-1454944495",
-        "syncId":  "letterboxd-review-1454944495",
+        "id":  "rss:letterboxd-review-1454671943",
+        "syncId":  "letterboxd-review-1454671943",
         "title":  "Cape Fear",
-        "year":  1991,
-        "rating":  4,
-        "review":  "Oh yeah, way more effecting than the original. Dials it up in just about every way. The frantic pace of the 1st act, the devil like presence of Cady, an added touch of moral and ethical ambiguity. Everything down the the nature and storm sounds of the end credits just works wonders for me.",
-        "wordCount":  54,
+        "year":  1962,
+        "rating":  3,
+        "review":  "It’s a solid noir with good tension building but the climax it a little too long and drawn out for me",
+        "wordCount":  21,
         "publishedDate":  "2026-08-17",
-        "watchedDate":  "2026-08-17",
+        "watchedDate":  "2026-08-16",
         "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/cape-fear-1991/",
-        "tmdbId":  "1598",
+        "url":  "https://letterboxd.com/nolanmcd/film/cape-fear/",
+        "tmdbId":  "11349",
         "tags":  [
 
                  ],
@@ -150,18 +200,18 @@
         "origin":  "rss"
     },
     {
-        "id":  "rss:letterboxd-review-1454671943",
-        "syncId":  "letterboxd-review-1454671943",
+        "id":  "rss:letterboxd-review-1454944495",
+        "syncId":  "letterboxd-review-1454944495",
         "title":  "Cape Fear",
-        "year":  1962,
-        "rating":  3,
-        "review":  "It’s a solid noir with good tension building but the climax it a little too long and drawn out for me",
-        "wordCount":  21,
+        "year":  1991,
+        "rating":  4,
+        "review":  "Oh yeah, way more effecting than the original. Dials it up in just about every way. The frantic pace of the 1st act, the devil like presence of Cady, an added touch of moral and ethical ambiguity. Everything down the the nature and storm sounds of the end credits just works wonders for me.",
+        "wordCount":  54,
         "publishedDate":  "2026-08-17",
-        "watchedDate":  "2026-08-16",
+        "watchedDate":  "2026-08-17",
         "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/cape-fear/",
-        "tmdbId":  "11349",
+        "url":  "https://letterboxd.com/nolanmcd/film/cape-fear-1991/",
+        "tmdbId":  "1598",
         "tags":  [
 
                  ],
