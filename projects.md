@@ -20,6 +20,13 @@ description: A complete archive of Nolan McDermott's projects, essays, analysis,
 <p class="archive-count" id="archive-count" aria-live="polite"></p>
 
 <div class="archive-stream" id="archive-stream">
+  <article class="archive-card archive-project" data-archive-tags="project game code strategy interactive">
+    <div class="archive-card-top"><span>Project</span><time>New</time></div>
+    <h2><a href="{{ '/elevator-game/' | relative_url }}">Elevator Game</a></h2>
+    <p>A browser strategy game about dispatching an increasingly busy elevator bank before passenger patience runs out.</p>
+    <div class="archive-tags"><span>Game</span><span>Strategy</span><span>Interactive</span></div>
+  </article>
+
   <article class="archive-card archive-project" data-archive-tags="project sports code data baseball">
     <div class="archive-card-top"><span>Project</span><time>New</time></div>
     <h2><a href="{{ '/projects/war-league/' | relative_url }}">WARLeague</a></h2>

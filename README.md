@@ -35,6 +35,10 @@ The `Sync Letterboxd reviews` GitHub Action runs every day and can also be start
 
 Run `powershell -File tools/check-site.ps1` before publishing. It validates JSON files, post naming and front matter, local asset references, the storm audio catalog, and GitHub's per-file size limit. GitHub Actions runs the same checks on every push and pull request.
 
+## Elevator Game
+
+The browser game at `/elevator-game/` is implemented by `elevator-game.md` and `assets/js/elevator-game.js`, with scoped styles in `_sass/style.scss`. Gameplay tuning lives in the `C` constants near the top of the script. High scores, sound preference, and achievements use the `nolandElevatorGame.*` local-storage namespace; the arrival ding is generated with the Web Audio API.
+
 ## Strava sync
 
 The homepage Strava lane reads `assets/data/strava-feed.json`, generated daily by the `Sync public Strava activities` GitHub Action. It publishes only activities marked **Everyone**, and its OAuth refresh token is rotated back into GitHub Actions secrets before feed generation continues. Follow [the one-time secure OAuth setup](docs/strava-oauth-setup.md) to activate it.
