@@ -87,7 +87,7 @@
       computerMode: Boolean(computerMode), aiIn: 0,
       passengers: [], elevators: [0, 1, 2, 3].map(freshElevator),
       phase: "Opening", shift: 1, lastPhase: "Opening", missesAtRushStart: 0,
-      missesAtShiftStart: 0, highestElevators: 1, lastRenderedSecond: -1
+      missesAtShiftStart: 0, highestElevators: 1, lastRenderedSecond: -1, dirty: true
     };
   }
 
@@ -134,6 +134,7 @@
   function startGame(computerMode) {
     cancelAnimationFrame(raf);
     state = freshState(computerMode === true);
+    el.toasts.textContent = "";
     buildBoard();
     el.start.hidden = true; el.play.hidden = false; el.gameover.hidden = true;
     closeAllOverlays();
@@ -154,6 +155,7 @@
   }
 
   function update(dt) {
+    if (!Number.isFinite(dt) || dt <= 0) return;
     var previousElapsed = state.elapsed;
     state.elapsed += dt * C.simRate;
     updatePhase(previousElapsed);
@@ -184,7 +186,9 @@
       }
     }
     state.elevators.forEach(function (elevator) {
-      elevator.optional = elevator.optional.filter(function (floor) { return waitingPassengers(floor).length > 0; });
+      var retained = elevator.optional.filter(function (floor) { return waitingPassengers(floor).length > 0; });
+      if (retained.length !== elevator.optional.length) markDirty();
+      elevator.optional = retained;
     });
     var assigned = [];
     state.elevators.forEach(function (elevator) {
@@ -224,6 +228,7 @@
       } else {
         selected.optional.push(demand.floor);
       }
+      markDirty();
       assigned.push(demand.floor);
     });
   }
@@ -260,12 +265,14 @@
         unlockAchievement("perfect"); toast("Perfect Shift", "Building cleared with no misses", "success");
       } else toast("Shift " + nextShift, "Demand is increasing", "info");
       state.shift = nextShift; state.missesAtShiftStart = state.misses;
+      markDirty();
     }
     var phase = currentPhase(state.elapsed);
     if (phase !== state.phase) {
       var endedCleanRush = isRush(state.phase) && state.misses === state.missesAtRushStart;
       if (endedCleanRush) unlockAchievement("rush");
       state.lastPhase = state.phase; state.phase = phase;
+      markDirty();
       if (isRush(phase)) {
         state.missesAtRushStart = state.misses;
         toast(phase.toUpperCase(), phase === "Morning Rush" ? "Lobby traffic is surging" : "Everyone is heading down", "rush");
@@ -296,17 +303,22 @@
       id: ++passengerId, origin: origin, destination: destination,
       created: state.elapsed, status: "waiting", elevatorId: null
     });
+    markDirty();
   }
   function updatePassengers() {
-    state.passengers.slice().forEach(function (passenger) {
-      if (passenger.status !== "waiting") return;
+    var waiting = state.passengers.slice();
+    for (var i = 0; i < waiting.length; i += 1) {
+      var passenger = waiting[i];
+      if (state.mode !== "playing") break;
+      if (passenger.status !== "waiting") continue;
       if (state.elapsed - passenger.created >= C.patience) missPassenger(passenger);
-    });
+    }
   }
   function missPassenger(passenger) {
     passenger.status = "missed";
     state.passengers = state.passengers.filter(function (item) { return item !== passenger; });
-    state.misses += 1;
+    state.misses = Math.min(C.maxMisses, state.misses + 1);
+    markDirty();
     toast("Took the stairs", "A rider on Floor " + passenger.origin + " gave up", "danger");
     announce("A passenger on Floor " + passenger.origin + " gave up. " + state.misses + " of 5 misses.");
     if (state.misses >= C.maxMisses) endGame();
@@ -363,10 +375,12 @@
     waitingPassengers(floor).slice(0, room).forEach(function (passenger) {
       passenger.status = "onboard"; passenger.elevatorId = elevator.id; elevator.passengers.push(passenger);
     });
+    markDirty();
     ding();
   }
   function addScore(amount) {
     state.score += amount;
+    markDirty();
     if (state.score >= 1) unlockAchievement("first");
     if (state.score >= 25) unlockAchievement("busy");
     if (state.score >= 100) unlockAchievement("century");
@@ -380,6 +394,7 @@
   function unlockElevator(index) {
     var elevator = state.elevators[index];
     elevator.unlocked = true; elevator.justUnlocked = true;
+    markDirty();
     state.highestElevators = index + 1;
     renderElevatorCards();
     setTimeout(function () { elevator.justUnlocked = false; }, 2200);
@@ -417,13 +432,14 @@
       if (Math.abs(elevator.position - floor) < 0.04) {
         if (elevator.dwellLeft <= 0) serviceFloor(elevator, floor);
         announce("Elevator " + elevator.id + " is serving Floor " + floor + ".");
+        render(true);
         return;
       }
-      elevator.optional.push(floor); announce("Floor " + floor + " added to Elevator " + elevator.id + ".");
+      elevator.optional.push(floor); markDirty(); announce("Floor " + floor + " added to Elevator " + elevator.id + ".");
     } else {
-      elevator.optional.splice(index, 1); announce("Floor " + floor + " removed from Elevator " + elevator.id + ".");
+      elevator.optional.splice(index, 1); markDirty(); announce("Floor " + floor + " removed from Elevator " + elevator.id + ".");
     }
-    render(false);
+    render(true);
   }
   function selectElevator(index) {
     if (!state || !state.elevators[index] || !state.elevators[index].unlocked) return;
@@ -435,8 +451,9 @@
     if (!state) return;
     renderCars();
     var second = Math.floor(state.elapsed);
-    if (!force && second === state.lastRenderedSecond) return;
+    if (!force && !state.dirty && second === state.lastRenderedSecond) return;
     state.lastRenderedSecond = second;
+    state.dirty = false;
     el.score.textContent = state.score;
     el.waiting.textContent = waitingPassengers().length;
     el.misses.textContent = state.misses + " / " + C.maxMisses;
@@ -445,14 +462,18 @@
     el.phase.textContent = state.phase;
     el.phase.classList.toggle("is-rush", isRush(state.phase));
     el.shift.textContent = "Shift " + state.shift;
-    el["ai-toggle"].setAttribute("aria-pressed", String(state.computerMode));
-    el["ai-toggle"].classList.toggle("is-active", state.computerMode);
-    el["ai-toggle"].querySelector("strong").textContent = state.computerMode ? "On" : "Off";
-    el["ai-note"].hidden = !state.computerMode;
+    if (el["ai-toggle"]) {
+      el["ai-toggle"].setAttribute("aria-pressed", String(state.computerMode));
+      el["ai-toggle"].classList.toggle("is-active", state.computerMode);
+      var aiValue = el["ai-toggle"].querySelector("strong");
+      if (aiValue) aiValue.textContent = state.computerMode ? "On" : "Off";
+    }
+    if (el["ai-note"]) el["ai-note"].hidden = !state.computerMode;
     var next = C.unlocks.find(function (threshold, index) { return index > 0 && state.score < threshold; });
     el["next-unlock"].textContent = next ? "Next elevator at " + next + " deliveries" : "Full elevator bank active";
     renderFloors(); renderElevatorCards(); renderAchievements();
   }
+  function markDirty() { if (state) state.dirty = true; }
   function renderCars() {
     if (!state) return;
     state.elevators.forEach(function (elevator, index) {
@@ -527,6 +548,7 @@
     });
   }
   function renderAchievements() {
+    if (!el["achievement-count"] || !el["achievement-list"]) return;
     el["achievement-count"].textContent = storage.achievements.length + " / " + achievementDefs.length;
     el["achievement-list"].textContent = "";
     achievementDefs.forEach(function (definition) {
@@ -654,19 +676,25 @@
     if (event.key.toLowerCase() === "r") { event.preventDefault(); openOverlay("restart-confirm"); }
   });
 
-  document.getElementById("eg-start-button").addEventListener("click", function () { startGame(false); });
-  document.getElementById("eg-computer-start").addEventListener("click", function () { startGame(true); });
-  document.getElementById("eg-replay").addEventListener("click", function () { startGame(state && state.computerMode); });
-  el["ai-toggle"].addEventListener("click", function () { setComputerMode(!state.computerMode); });
-  document.getElementById("eg-pause").addEventListener("click", function () { setPaused(true, false); });
-  document.getElementById("eg-resume").addEventListener("click", function () { setPaused(false, false); });
-  document.getElementById("eg-restart").addEventListener("click", function () { openOverlay("restart-confirm"); });
-  document.getElementById("eg-restart-yes").addEventListener("click", function () { startGame(state && state.computerMode); });
-  el.sound.checked = storage.sound;
-  el.sound.addEventListener("change", function () { storage.sound = el.sound.checked; writeRaw("sound", String(storage.sound)); if (storage.sound) ding(); });
+  function listen(id, eventName, handler) {
+    var node = document.getElementById(id);
+    if (node) node.addEventListener(eventName, handler);
+  }
+  listen("eg-start-button", "click", function () { startGame(false); });
+  listen("eg-computer-start", "click", function () { startGame(true); });
+  listen("eg-replay", "click", function () { startGame(state && state.computerMode); });
+  listen("eg-ai-toggle", "click", function () { if (state) setComputerMode(!state.computerMode); });
+  listen("eg-pause", "click", function () { setPaused(true, false); });
+  listen("eg-resume", "click", function () { setPaused(false, false); });
+  listen("eg-restart", "click", function () { openOverlay("restart-confirm"); });
+  listen("eg-restart-yes", "click", function () { startGame(state && state.computerMode); });
+  if (el.sound) {
+    el.sound.checked = storage.sound;
+    el.sound.addEventListener("change", function () { storage.sound = el.sound.checked; writeRaw("sound", String(storage.sound)); if (storage.sound) ding(); });
+  }
   document.addEventListener("visibilitychange", function () { if (document.hidden && state && state.mode === "playing" && !state.paused) setPaused(true, true); });
   window.addEventListener("blur", function () { if (state && state.mode === "playing" && !state.paused) setPaused(true, true); });
 
-  el["intro-best"].textContent = storage.best;
+  if (el["intro-best"]) el["intro-best"].textContent = storage.best;
   renderAchievements();
 })();
