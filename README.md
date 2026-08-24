@@ -37,7 +37,7 @@ Run `powershell -File tools/check-site.ps1` before publishing. It validates JSON
 
 ## Elevator Game
 
-The browser game at `/elevator-game/` is implemented by `elevator-game.md` and `assets/js/elevator-game.js`, with scoped styles in `_sass/style.scss`. Gameplay tuning lives in the `C` constants near the top of the script. High scores, sound preference, and achievements use the `nolandElevatorGame.*` local-storage namespace; the arrival ding is generated with the Web Audio API.
+The browser game at `/elevator-game/` is implemented by `elevator-game.md` and `assets/js/elevator-game.js`, with scoped styles in `_sass/style.scss`. Gameplay and computer-dispatch tuning live in the `C` constants near the top of the script. High scores, sound preference, and achievements use the `nolandElevatorGame.*` local-storage namespace; the arrival ding is generated with the Web Audio API.
 
 ## Strava sync
 

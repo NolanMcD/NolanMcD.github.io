@@ -7,7 +7,8 @@
   var C = {
     floors: 10, capacity: 6, maxMisses: 5, simRate: 10,
     patience: 300, floorTravel: 1, dwell: 0.72, shiftSeconds: 14400,
-    unlocks: [0, 25, 75, 150], storage: "nolandElevatorGame."
+    unlocks: [0, 25, 75, 150], aiInterval: 0.45, aiMaxPickups: 2,
+    storage: "nolandElevatorGame."
   };
   var achievementDefs = [
     ["first", "First Ride", "Deliver one passenger."],
@@ -36,7 +37,7 @@
     "next-unlock", "building", "elevator-cards", "achievement-count", "sound", "live",
     "toasts", "pause-overlay", "pause-reason", "gameover", "new-best", "final-score",
     "final-time", "final-missed", "final-elevators", "help", "achievements",
-    "achievement-list", "restart-confirm", "intro-best"].forEach(function (name) {
+    "achievement-list", "restart-confirm", "intro-best", "ai-toggle", "ai-note"].forEach(function (name) {
       el[name] = document.getElementById("eg-" + name);
     });
 
@@ -76,13 +77,14 @@
       optional: [], passengers: [], dwellLeft: 0, state: "Idle", justUnlocked: false
     };
   }
-  function freshState() {
+  function freshState(computerMode) {
     rngState = ((Date.now() ^ Math.floor(Math.random() * 0x7fffffff)) >>> 0) || 1;
     passengerId = 0;
     return {
       mode: "playing", paused: false, autoPaused: false, score: 0, misses: 0,
       elapsed: 0, spawnIn: 1.2, selectedElevator: 0, selectedFloor: 1,
       startingBest: storage.best,
+      computerMode: Boolean(computerMode), aiIn: 0,
       passengers: [], elevators: [0, 1, 2, 3].map(freshElevator),
       phase: "Opening", shift: 1, lastPhase: "Opening", missesAtRushStart: 0,
       missesAtShiftStart: 0, highestElevators: 1, lastRenderedSecond: -1
@@ -129,9 +131,9 @@
     el.building.appendChild(floors); el.building.appendChild(shafts);
   }
 
-  function startGame() {
+  function startGame(computerMode) {
     cancelAnimationFrame(raf);
-    state = freshState();
+    state = freshState(computerMode === true);
     buildBoard();
     el.start.hidden = true; el.play.hidden = false; el.gameover.hidden = true;
     closeAllOverlays();
@@ -139,7 +141,7 @@
     lastFrame = performance.now();
     raf = requestAnimationFrame(frame);
     root.focus({ preventScroll: true });
-    announce("Shift started. Elevator 1 is ready at the lobby.");
+    announce(state.computerMode ? "Computer dispatch started. Elevator 1 is ready at the lobby." : "Shift started. Elevator 1 is ready at the lobby.");
   }
 
   function frame(now) {
@@ -162,7 +164,83 @@
     }
     updatePassengers();
     if (state.mode !== "playing") return;
+    if (state.computerMode) updateComputer(dt);
     state.elevators.forEach(function (elevator) { if (elevator.unlocked) updateElevator(elevator, dt); });
+  }
+
+  function updateComputer(dt) {
+    state.aiIn -= dt;
+    if (state.aiIn > 0) return;
+    state.aiIn = C.aiInterval;
+
+    var waitingByFloor = [];
+    for (var floor = 1; floor <= C.floors; floor += 1) {
+      var queue = waitingPassengers(floor);
+      if (queue.length) {
+        var oldest = queue.reduce(function (age, passenger) {
+          return Math.max(age, (state.elapsed - passenger.created) / C.patience);
+        }, 0);
+        waitingByFloor.push({ floor: floor, count: queue.length, urgency: oldest });
+      }
+    }
+    state.elevators.forEach(function (elevator) {
+      elevator.optional = elevator.optional.filter(function (floor) { return waitingPassengers(floor).length > 0; });
+    });
+    var assigned = [];
+    state.elevators.forEach(function (elevator) {
+      elevator.optional.forEach(function (floor) { if (assigned.indexOf(floor) === -1) assigned.push(floor); });
+      mandatoryStops(elevator).forEach(function (floor) { if (assigned.indexOf(floor) === -1) assigned.push(floor); });
+    });
+    waitingByFloor.sort(function (a, b) {
+      return b.urgency - a.urgency || b.count - a.count || a.floor - b.floor;
+    });
+    waitingByFloor.forEach(function (demand) {
+      if (assigned.indexOf(demand.floor) !== -1) return;
+      var choice = null;
+      state.elevators.forEach(function (elevator) {
+        if (!elevator.unlocked || elevator.optional.length >= C.aiMaxPickups || elevator.passengers.length >= C.capacity) return;
+        var required = mandatoryStops(elevator);
+        var direct = Math.abs(elevator.position - demand.floor);
+        var detour = 0;
+        if (required.length) {
+          var currentRequired = Math.min.apply(null, required.map(function (floor) { return Math.abs(elevator.position - floor); }));
+          var viaPickup = Math.min.apply(null, required.map(function (floor) {
+            return direct + Math.abs(demand.floor - floor);
+          }));
+          detour = Math.max(0, viaPickup - currentRequired);
+        }
+        var loadRatio = elevator.passengers.length / C.capacity;
+        var cost = direct + detour * (1 + loadRatio * 2.5) + elevator.optional.length * 3;
+        cost -= demand.urgency * 15 + Math.min(demand.count, 6) * 0.45;
+        if (elevator.dwellLeft > 0) cost += 0.4;
+        if (!choice || cost < choice.cost || (cost === choice.cost && elevator.id < choice.elevator.id)) {
+          choice = { elevator: elevator, cost: cost };
+        }
+      });
+      if (!choice) return;
+      var selected = choice.elevator;
+      if (Math.abs(selected.position - demand.floor) < 0.04) {
+        if (selected.dwellLeft <= 0) serviceFloor(selected, demand.floor);
+      } else {
+        selected.optional.push(demand.floor);
+      }
+      assigned.push(demand.floor);
+    });
+  }
+
+  function setComputerMode(enabled) {
+    if (!state || state.mode !== "playing") return;
+    state.computerMode = Boolean(enabled);
+    state.aiIn = 0;
+    if (state.computerMode) {
+      updateComputer(0);
+      toast("Computer dispatching", "Autopilot has taken control", "info");
+      announce("Computer plays mode enabled.");
+    } else {
+      toast("Manual dispatch", "You have control of the elevator bank", "info");
+      announce("Computer plays mode disabled. Manual controls restored.");
+    }
+    render(true);
   }
 
   function currentPhase(simSeconds) {
@@ -327,6 +405,7 @@
 
   function toggleStop(floor) {
     if (!state || state.mode !== "playing" || state.paused) return;
+    if (state.computerMode) { announce("Computer plays mode is active. Turn it off to dispatch manually."); return; }
     var elevator = state.elevators[state.selectedElevator];
     if (!elevator || !elevator.unlocked) return;
     var mandatory = mandatoryStops(elevator);
@@ -366,6 +445,10 @@
     el.phase.textContent = state.phase;
     el.phase.classList.toggle("is-rush", isRush(state.phase));
     el.shift.textContent = "Shift " + state.shift;
+    el["ai-toggle"].setAttribute("aria-pressed", String(state.computerMode));
+    el["ai-toggle"].classList.toggle("is-active", state.computerMode);
+    el["ai-toggle"].querySelector("strong").textContent = state.computerMode ? "On" : "Off";
+    el["ai-note"].hidden = !state.computerMode;
     var next = C.unlocks.find(function (threshold, index) { return index > 0 && state.score < threshold; });
     el["next-unlock"].textContent = next ? "Next elevator at " + next + " deliveries" : "Full elevator bank active";
     renderFloors(); renderElevatorCards(); renderAchievements();
@@ -571,12 +654,14 @@
     if (event.key.toLowerCase() === "r") { event.preventDefault(); openOverlay("restart-confirm"); }
   });
 
-  document.getElementById("eg-start-button").addEventListener("click", startGame);
-  document.getElementById("eg-replay").addEventListener("click", startGame);
+  document.getElementById("eg-start-button").addEventListener("click", function () { startGame(false); });
+  document.getElementById("eg-computer-start").addEventListener("click", function () { startGame(true); });
+  document.getElementById("eg-replay").addEventListener("click", function () { startGame(state && state.computerMode); });
+  el["ai-toggle"].addEventListener("click", function () { setComputerMode(!state.computerMode); });
   document.getElementById("eg-pause").addEventListener("click", function () { setPaused(true, false); });
   document.getElementById("eg-resume").addEventListener("click", function () { setPaused(false, false); });
   document.getElementById("eg-restart").addEventListener("click", function () { openOverlay("restart-confirm"); });
-  document.getElementById("eg-restart-yes").addEventListener("click", startGame);
+  document.getElementById("eg-restart-yes").addEventListener("click", function () { startGame(state && state.computerMode); });
   el.sound.checked = storage.sound;
   el.sound.addEventListener("change", function () { storage.sound = el.sound.checked; writeRaw("sound", String(storage.sound)); if (storage.sound) ding(); });
   document.addEventListener("visibilitychange", function () { if (document.hidden && state && state.mode === "playing" && !state.paused) setPaused(true, true); });

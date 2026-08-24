@@ -31,6 +31,7 @@ project_summary: Dispatch elevators, manage passenger patience, and keep a ten-f
       <p class="eg-best-intro">Best score <strong id="eg-intro-best">0</strong></p>
       <div class="eg-start-actions">
         <button class="eg-primary" id="eg-start-button" type="button">Start game</button>
+        <button class="eg-secondary" id="eg-computer-start" type="button">Watch computer play</button>
         <button class="eg-secondary" type="button" data-eg-open="help">Instructions</button>
       </div>
     </div>
@@ -42,6 +43,7 @@ project_summary: Dispatch elevators, manage passenger patience, and keep a ten-f
         <div><span>Misses</span><strong id="eg-misses">0 / 5</strong></div>
         <div><span>Best</span><strong id="eg-best">0</strong></div>
         <div><span>Building time</span><strong id="eg-clock">8:00 AM</strong></div>
+        <button class="eg-ai-button" id="eg-ai-toggle" type="button" aria-pressed="false"><span>Computer</span><strong>Off</strong></button>
         <button class="eg-icon-button" id="eg-pause" type="button" aria-label="Pause game">Ⅱ <span>Pause</span></button>
       </header>
 
@@ -68,6 +70,7 @@ project_summary: Dispatch elevators, manage passenger patience, and keep a ten-f
             <p><span class="eg-route-mark eg-route-optional">○</span> Optional pickup — tap again to remove</p>
             <p><span class="eg-route-mark eg-route-required">◆</span> Rider destination — cannot be removed</p>
           </section>
+          <p class="eg-ai-note" id="eg-ai-note" hidden><strong>Computer dispatching</strong><span>Autopilot weighs urgency, distance, capacity, and route detours. Turn it off at any time to take control.</span></p>
           <section class="eg-achievements-mini">
             <h3>Achievements <span id="eg-achievement-count">0 / 8</span></h3>
             <button type="button" class="eg-text-button" data-eg-open="achievements">View collection</button>
@@ -114,6 +117,7 @@ project_summary: Dispatch elevators, manage passenger patience, and keep a ten-f
           <section><h3>Passengers</h3><p>Each badge shows a rider’s destination. Their label changes from Calm to Critical as the five-minute patience limit approaches.</p></section>
           <section><h3>Rush hour</h3><p>Morning traffic rises from the lobby. Evening traffic heads down. New elevators unlock at 25, 75, and 150 deliveries.</p></section>
           <section><h3>Keyboard</h3><p><kbd>1</kbd>–<kbd>4</kbd> select an elevator. <kbd>↑</kbd>/<kbd>↓</kbd> choose a floor. <kbd>Enter</kbd> or <kbd>Space</kbd> assigns it. <kbd>P</kbd> pauses.</p></section>
+          <section><h3>Computer plays</h3><p>Start in spectator mode or switch on Computer during a run. It continually balances urgent pickups against the destinations of riders already onboard.</p></section>
         </div>
         <p><strong>Scoring:</strong> one point per delivery. A rider who waits five simulated minutes takes the stairs; five misses ends the run.</p>
         <button class="eg-primary" type="button" data-eg-close>Got it</button>
