@@ -333,7 +333,7 @@
   }
   function routeFor(elevator) {
     var all = mandatoryStops(elevator).concat(elevator.optional).filter(function (floor, index, list) {
-      return list.indexOf(floor) === index && Math.abs(floor - elevator.position) > 0.04;
+      return list.indexOf(floor) === index;
     });
     var direction = elevator.direction || (all.length ? Math.sign(all[0] - elevator.position) : 0);
     var ahead = all.filter(function (floor) { return direction >= 0 ? floor > elevator.position : floor < elevator.position; });
@@ -354,14 +354,16 @@
       elevator.target = null; elevator.direction = 0; elevator.state = "Idle"; return;
     }
     elevator.target = route[0];
-    elevator.direction = Math.sign(elevator.target - elevator.position);
-    elevator.state = elevator.direction > 0 ? "Moving up" : "Moving down";
-    elevator.position += elevator.direction * dt / C.floorTravel;
-    if ((elevator.direction > 0 && elevator.position >= elevator.target) ||
-        (elevator.direction < 0 && elevator.position <= elevator.target)) {
+    var distance = elevator.target - elevator.position;
+    var travelStep = dt / C.floorTravel;
+    if (Math.abs(distance) <= travelStep) {
       elevator.position = elevator.target;
       serviceFloor(elevator, elevator.target);
+      return;
     }
+    elevator.direction = Math.sign(distance);
+    elevator.state = elevator.direction > 0 ? "Moving up" : "Moving down";
+    elevator.position += elevator.direction * travelStep;
   }
   function serviceFloor(elevator, floor) {
     elevator.state = "Doors open"; elevator.dwellLeft = C.dwell;
