@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1467255268",
+        "syncId":  "letterboxd-review-1467255268",
+        "title":  "Coach Carter",
+        "year":  2005,
+        "rating":  3,
+        "review":  "They should have T’ed up Ty Crane for that shove smh was that Scott Foster out there?",
+        "wordCount":  17,
+        "publishedDate":  "2026-08-25",
+        "watchedDate":  "2026-08-24",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/coach-carter/",
+        "tmdbId":  "7214",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1464949225",
         "syncId":  "letterboxd-review-1464949225",
         "title":  "Coyote vs. Acme",

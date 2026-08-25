@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1467255268",
+        "syncId":  "letterboxd-review-1467255268",
+        "title":  "Coach Carter",
+        "year":  2005,
+        "rating":  3,
+        "review":  "They should have T’ed up Ty Crane for that shove smh was that Scott Foster out there?",
+        "wordCount":  17,
+        "publishedDate":  "2026-08-25",
+        "watchedDate":  "2026-08-24",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/coach-carter/",
+        "tmdbId":  "7214",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1464949225",
         "syncId":  "letterboxd-review-1464949225",
         "title":  "Coyote vs. Acme",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/mutiny-2026/",
         "tmdbId":  "1288445",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1460775542",
-        "syncId":  "letterboxd-review-1460775542",
-        "title":  "Tony",
-        "year":  2026,
-        "rating":  4,
-        "review":  "Never been a fan of biopics because they are usually so boring but thankfully this isn\u0027t a biopic at all. Its just a fun coming of age story loosely based on just one chapter from one of his books I assume. It is about working in a kitchen but don\u0027t go into this expecting some grand movie about cooking, it s a much more personal tale about finding your place.",
-        "wordCount":  70,
-        "publishedDate":  "2026-08-21",
-        "watchedDate":  "2026-08-20",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/tony-2026/",
-        "tmdbId":  "1329016",
         "tags":  [
 
                  ],
