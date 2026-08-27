@@ -20,6 +20,13 @@ description: A complete archive of Nolan McDermott's projects, essays, analysis,
 <p class="archive-count" id="archive-count" aria-live="polite"></p>
 
 <div class="archive-stream" id="archive-stream">
+  <article class="archive-card archive-project" data-archive-tags="project code interactive puzzle">
+    <div class="archive-card-top"><span>Project</span><time>New</time></div>
+    <h2><a href="{{ '/crossword-creator/' | relative_url }}">Crossword Creator</a></h2>
+    <p>An interactive browser tool for designing, clueing, checking, previewing, and exporting crossword puzzles.</p>
+    <div class="archive-tags"><span>Crosswords</span><span>Tool</span><span>Interactive</span></div>
+  </article>
+
   <article class="archive-card archive-project" data-archive-tags="project game code strategy interactive">
     <div class="archive-card-top"><span>Project</span><time>New</time></div>
     <h2><a href="{{ '/elevator-game/' | relative_url }}">Elevator Game</a></h2>
