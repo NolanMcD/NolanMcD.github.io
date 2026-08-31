@@ -9,7 +9,7 @@ Nolan McDermott's movie-review site and personal portfolio, built with Jekyll an
 3. Run `bundle exec jekyll serve`.
 4. Open `http://localhost:4000`.
 
-Posts live in `_posts` and use the `YYYY-MM-DD-title.md` filename format. Site-wide settings and navigation are in `_config.yml`; visual styles are in `_sass/style.scss`.
+Standalone pages live in `pages/`, while posts live in `_posts` and use the `YYYY-MM-DD-title.md` filename format. Site-wide settings and navigation are in `_config.yml`; visual styles are in `_sass/style.scss`.
 
 ## Publish a movie review
 
@@ -37,7 +37,7 @@ Run `powershell -File tools/check-site.ps1` before publishing. It validates JSON
 
 ## Elevator Game
 
-The browser game at `/elevator-game/` is implemented by `elevator-game.md` and `assets/js/elevator-game.js`, with scoped styles in `_sass/style.scss`. Gameplay and computer-dispatch tuning live in the `C` constants near the top of the script. High scores, sound preference, and achievements use the `nolandElevatorGame.*` local-storage namespace; the arrival ding is generated with the Web Audio API.
+The browser game at `/elevator-game/` is implemented by `pages/elevator-game.md` and `assets/js/elevator-game.js`, with scoped styles in `_sass/style.scss`. Gameplay and computer-dispatch tuning live in the `C` constants near the top of the script. High scores, sound preference, and achievements use the `nolandElevatorGame.*` local-storage namespace; the arrival ding is generated with the Web Audio API.
 
 ## Strava sync
 
