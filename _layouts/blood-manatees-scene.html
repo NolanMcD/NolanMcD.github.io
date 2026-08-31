@@ -8,6 +8,7 @@ layout: blood-manatees
 {%- endfor -%}
 {%- assign previous_index = current_index | minus: 1 -%}
 {%- assign next_index = current_index | plus: 1 -%}
+{%- assign display_index = current_index | plus: 1 -%}
 {%- if current_index > 0 -%}{%- assign previous_scene = scenes[previous_index] -%}{%- endif -%}
 {%- if next_index < scenes.size -%}{%- assign next_scene = scenes[next_index] -%}{%- endif -%}
 
@@ -20,17 +21,28 @@ layout: blood-manatees
     <div class="bm-scene-background" style="background-image: url('{{ page.background_image | relative_url }}')" role="img" aria-label="{{ page.image_alt | escape }}"></div>
   {% endif %}
 
-  <div class="bm-scene-content">
-    <p class="bm-title">Blood Manatees</p>
-    <p class="bm-scene-number">Scene {{ page.scene_number }}</p>
-    {% if page.scene_heading %}<h1>{{ page.scene_heading }}</h1>{% endif %}
-    {% if page.image %}<img class="bm-scene-image" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: '' | escape }}">{% endif %}
-    <div class="bm-screenplay-copy">{{ content }}</div>
+  <header class="bm-monitor-bar" aria-label="Screenplay status">
+    <span>Blood Manatees / screenplay</span>
+    <span class="bm-observation-status"><i aria-hidden="true"></i> Observation active</span>
+  </header>
+
+  <div class="bm-observed-frame">
+    <div class="bm-frame-corner bm-frame-corner-top" aria-hidden="true"></div>
+    <div class="bm-frame-corner bm-frame-corner-bottom" aria-hidden="true"></div>
+    <div class="bm-scene-content">
+      <div class="bm-scene-header">
+        <p class="bm-title">Blood Manatees</p>
+        <p class="bm-scene-number">Record {{ page.scene_number }} / Scene {{ page.scene_number }}</p>
+      </div>
+      {% if page.scene_heading %}<h1>{{ page.scene_heading }}</h1>{% endif %}
+      {% if page.image %}<img class="bm-scene-image" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: '' | escape }}">{% endif %}
+      <div class="bm-screenplay-copy">{{ content }}</div>
+    </div>
   </div>
 
   <nav class="bm-scene-nav" aria-label="Scene navigation">
     {% if previous_scene %}<a class="bm-nav-link" href="{{ previous_scene.url | relative_url }}" data-bm-direction="previous" aria-label="Previous scene">← <span>Previous scene</span></a>{% else %}<span></span>{% endif %}
-    {% if page.audio %}<button class="bm-audio-control" type="button" aria-label="Play scene audio" data-bm-audio>Play audio</button>{% endif %}
+    {% if page.audio %}<button class="bm-audio-control" type="button" aria-label="Play scene audio" data-bm-audio>Play audio</button>{% else %}<span class="bm-progress" aria-label="Scene {{ display_index }} of {{ scenes.size }}">{{ display_index }} / {{ scenes.size }}</span>{% endif %}
     {% if next_scene %}<a class="bm-nav-link" href="{{ next_scene.url | relative_url }}" data-bm-direction="next" aria-label="Next scene"><span>Next scene</span> →</a>{% endif %}
   </nav>
 </article>
