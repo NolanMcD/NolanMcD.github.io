@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1478531597",
+        "syncId":  "letterboxd-review-1478531597",
+        "title":  "Finding Emily",
+        "year":  2026,
+        "rating":  4,
+        "review":  "Takes all the other rom coms so far this year and slams dunks them into the fucking TRASH.\n\nHilarious and British with a great original soundtrack and story.",
+        "wordCount":  28,
+        "publishedDate":  "2026-09-02",
+        "watchedDate":  "2026-09-01",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/finding-emily/",
+        "tmdbId":  "1339588",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1477759498",
         "syncId":  "letterboxd-review-1477759498",
         "title":  "Milk \u0026 Serial",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/coyote-vs-acme/",
         "tmdbId":  "1204680",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1461932612",
-        "syncId":  "letterboxd-review-1461932612",
-        "title":  "Fearless",
-        "year":  1993,
-        "rating":  3,
-        "review":  "Movies are the only way I can get over my anxiety of flying these days. At least now when I fly I can\u0027t watch a couple movies to take my mind off it.",
-        "wordCount":  33,
-        "publishedDate":  "2026-08-22",
-        "watchedDate":  "2026-08-21",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/fearless/",
-        "tmdbId":  "10443",
         "tags":  [
 
                  ],
