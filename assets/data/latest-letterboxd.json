@@ -1,5 +1,55 @@
 [
     {
+        "id":  "rss:letterboxd-review-1480346207",
+        "syncId":  "letterboxd-review-1480346207",
+        "title":  "Dark Horse",
+        "year":  2011,
+        "rating":  3,
+        "review":  "Why was this like a Kafka story what the hell. I watched some niche stuff today...",
+        "wordCount":  16,
+        "publishedDate":  "2026-09-03",
+        "watchedDate":  "2026-09-02",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/dark-horse-2011/",
+        "tmdbId":  "83384",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1479872353",
+        "syncId":  "letterboxd-review-1479872353",
+        "title":  "Honor Society",
+        "year":  2022,
+        "rating":  3,
+        "review":  "When you\u0027re so pure your evil plan makes everyone\u0027s lives better",
+        "wordCount":  11,
+        "publishedDate":  "2026-09-03",
+        "watchedDate":  "2026-09-02",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/honor-society/",
+        "tmdbId":  "929170",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1478531597",
         "syncId":  "letterboxd-review-1478531597",
         "title":  "Finding Emily",
@@ -87,56 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/beyond-the-infinite-two-minutes/",
         "tmdbId":  "805627",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1467255268",
-        "syncId":  "letterboxd-review-1467255268",
-        "title":  "Coach Carter",
-        "year":  2005,
-        "rating":  3,
-        "review":  "They should have T’ed up Ty Crane for that shove smh was that Scott Foster out there?",
-        "wordCount":  17,
-        "publishedDate":  "2026-08-25",
-        "watchedDate":  "2026-08-24",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/coach-carter/",
-        "tmdbId":  "7214",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1464949225",
-        "syncId":  "letterboxd-review-1464949225",
-        "title":  "Coyote vs. Acme",
-        "year":  2026,
-        "rating":  3,
-        "review":  "It’s solid, good laughs throughout. Not a gutbuster or anything for me but I’m happy it saw the light of day",
-        "wordCount":  21,
-        "publishedDate":  "2026-08-24",
-        "watchedDate":  "2026-08-23",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/coyote-vs-acme/",
-        "tmdbId":  "1204680",
         "tags":  [
 
                  ],
