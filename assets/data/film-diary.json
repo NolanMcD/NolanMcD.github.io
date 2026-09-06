@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1484320259",
+        "syncId":  "letterboxd-review-1484320259",
+        "title":  "The Runner",
+        "year":  2026,
+        "rating":  2,
+        "review":  "It’s not very good but it’s not like unabashedly awful or anything. Gal has a couple wooden line deliveries but what is she supposed to do with this character. She basically plays Jason Statham in every Jason Statham movie and she’s just a pretty good job with that.",
+        "wordCount":  48,
+        "publishedDate":  "2026-09-06",
+        "watchedDate":  "2026-09-05",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-runner-2026-2/",
+        "tmdbId":  "1386315",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1480346207",
         "syncId":  "letterboxd-review-1480346207",
         "title":  "Dark Horse",
