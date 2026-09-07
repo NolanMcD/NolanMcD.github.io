@@ -1,5 +1,55 @@
 [
     {
+        "id":  "rss:letterboxd-review-1485646743",
+        "syncId":  "letterboxd-review-1485646743",
+        "title":  "The Chair",
+        "year":  2022,
+        "rating":  3,
+        "review":  "It\u0027s a fine short",
+        "wordCount":  4,
+        "publishedDate":  "2026-09-07",
+        "watchedDate":  "2026-09-06",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-chair-2022-1/",
+        "tmdbId":  "1118403",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1485997548",
+        "syncId":  "letterboxd-review-1485997548",
+        "title":  "What Men Want",
+        "year":  2019,
+        "rating":  3,
+        "review":  "I kinda liked it. Joe Dolla was 100% right about Elon Musk",
+        "wordCount":  12,
+        "publishedDate":  "2026-09-07",
+        "watchedDate":  "2026-09-06",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/what-men-want/",
+        "tmdbId":  "487297",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1484320259",
         "syncId":  "letterboxd-review-1484320259",
         "title":  "The Runner",
@@ -87,56 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/finding-emily/",
         "tmdbId":  "1339588",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1477759498",
-        "syncId":  "letterboxd-review-1477759498",
-        "title":  "Milk \u0026 Serial",
-        "year":  2024,
-        "rating":  3,
-        "review":  "Barker is good at no budget horror",
-        "wordCount":  7,
-        "publishedDate":  "2026-09-01",
-        "watchedDate":  "2026-08-31",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/milk-serial/",
-        "tmdbId":  "1187782",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1470149591",
-        "syncId":  "letterboxd-review-1470149591",
-        "title":  "Wait Until Dark",
-        "year":  1967,
-        "rating":  3,
-        "review":  "Another one of those classic play movies where everything has to be so sharp story wise to keep the one location interesting. This one has a fun premise and great performances.",
-        "wordCount":  31,
-        "publishedDate":  "2026-08-27",
-        "watchedDate":  "2026-08-26",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/wait-until-dark/",
-        "tmdbId":  "11206",
         "tags":  [
 
                  ],
