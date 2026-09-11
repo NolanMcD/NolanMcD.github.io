@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1491360811",
+        "syncId":  "letterboxd-review-1491360811",
+        "title":  "I Swear",
+        "year":  2025,
+        "rating":  4,
+        "review":  "Nice story. Second british movie in a row that opened with Blue Monday by New Order whats going on with that",
+        "wordCount":  21,
+        "publishedDate":  "2026-09-11",
+        "watchedDate":  "2026-09-11",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/i-swear/",
+        "tmdbId":  "1317149",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1487700950",
         "syncId":  "letterboxd-review-1487700950",
         "title":  "Ghost World",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/dark-horse-2011/",
         "tmdbId":  "83384",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1479872353",
-        "syncId":  "letterboxd-review-1479872353",
-        "title":  "Honor Society",
-        "year":  2022,
-        "rating":  3,
-        "review":  "When you\u0027re so pure your evil plan makes everyone\u0027s lives better",
-        "wordCount":  11,
-        "publishedDate":  "2026-09-03",
-        "watchedDate":  "2026-09-02",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/honor-society/",
-        "tmdbId":  "929170",
         "tags":  [
 
                  ],
