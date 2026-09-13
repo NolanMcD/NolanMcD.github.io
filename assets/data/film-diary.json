@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1494131003",
+        "syncId":  "letterboxd-review-1494131003",
+        "title":  "Irresistible",
+        "year":  2020,
+        "rating":  2,
+        "review":  "Huge yikes. I like Jon Stewart but this is a terrible movie goddamn…",
+        "wordCount":  13,
+        "publishedDate":  "2026-09-13",
+        "watchedDate":  "2026-09-13",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/irresistible-2020/",
+        "tmdbId":  "595148",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1491360811",
         "syncId":  "letterboxd-review-1491360811",
         "title":  "I Swear",

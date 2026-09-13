@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1494131003",
+        "syncId":  "letterboxd-review-1494131003",
+        "title":  "Irresistible",
+        "year":  2020,
+        "rating":  2,
+        "review":  "Huge yikes. I like Jon Stewart but this is a terrible movie goddamn…",
+        "wordCount":  13,
+        "publishedDate":  "2026-09-13",
+        "watchedDate":  "2026-09-13",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/irresistible-2020/",
+        "tmdbId":  "595148",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1491360811",
         "syncId":  "letterboxd-review-1491360811",
         "title":  "I Swear",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/the-runner-2026-2/",
         "tmdbId":  "1386315",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1480346207",
-        "syncId":  "letterboxd-review-1480346207",
-        "title":  "Dark Horse",
-        "year":  2011,
-        "rating":  3,
-        "review":  "Why was this like a Kafka story what the hell. I watched some niche stuff today...",
-        "wordCount":  16,
-        "publishedDate":  "2026-09-03",
-        "watchedDate":  "2026-09-02",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/dark-horse-2011/",
-        "tmdbId":  "83384",
         "tags":  [
 
                  ],
