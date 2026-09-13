@@ -1,0 +1,64 @@
+---
+layout: landing
+title: Application Event Lab
+permalink: /projects/application-event-lab/
+description: An interactive architectural simulation of reliable webhook processing, background jobs, and live application updates.
+---
+
+<div class="application-event-lab" id="application-event-lab">
+  <header class="ael-hero">
+    <p class="eyebrow">Noland / Systems &amp; experiments</p>
+    <h1>Application Event Lab</h1>
+    <p class="ael-deck">Unreliable events. Reliable application updates.</p>
+    <p>I built this simulation to explore how a backend can safely process unreliable external events while keeping a customer-facing application updated in real time. The interface is client-side, but the behavior models the validation, idempotency, ordering, persistence, queueing, and reconnection concerns I would account for in a production system.</p>
+    <p class="ael-disclaimer"><strong>Architectural simulation.</strong> Everything runs in memory in this tab. No real backend, Twilio connection, database, or WebSocket server is running. Refreshing clears the lab. All applicant data is fictional.</p>
+  </header>
+  <noscript><p>This lab requires JavaScript. The production architecture and code sketches below are still available.</p></noscript>
+  <p class="ael-guide"><strong>Try this:</strong> Send a normal event, then send its duplicate. Disconnect live updates, change the target status, send another event, and reconnect.</p>
+  <div class="ael-columns">
+    <section class="ael-panel" id="ael-customer" aria-labelledby="ael-customer-heading">
+      <p class="eyebrow">01 / Customer view</p>
+      <h2 id="ael-customer-heading">Avery Example <small>Fictional applicant</small></h2>
+      <p>Passport Renewal <span class="ael-id">DEMO-1042</span></p>
+      <p id="ael-connection" class="ael-connection">Live updates connected</p>
+      <p id="ael-stale" hidden><strong>Customer view frozen.</strong> Live notifications are disconnected. Reconnect to load the latest database state.</p>
+      <h3 id="ael-status">Application Submitted</h3>
+      <label id="ael-progress-label" for="ael-progress">Step 1 of 6</label>
+      <progress id="ael-progress" max="6" value="1">1 of 6</progress>
+      <ol class="ael-workflow">
+        <li data-workflow>Application Submitted</li><li data-workflow>Documents Under Review</li><li data-workflow>Information Required</li><li data-workflow>Documents Verified</li><li data-workflow>Submitted to Agency</li><li data-workflow>Completed</li>
+      </ol>
+      <p class="ael-update" id="ael-message">Your fictional application has been submitted.</p>
+      <p class="ael-meta">Updated <span id="ael-updated">09:00:00 UTC</span> · <span id="ael-customer-version">Customer v0</span></p>
+      <div class="ael-actions"><button id="ael-disconnect" data-action="disconnect">Disconnect live updates</button><button id="ael-reconnect" data-action="reconnect" disabled>Reconnect live updates</button></div>
+    </section>
+    <section class="ael-panel" aria-labelledby="ael-generator-heading">
+      <p class="eyebrow">02 / Webhook generator</p><h2 id="ael-generator-heading">Introduce an event</h2>
+      <label for="ael-type">Event type</label><select id="ael-type"><option value="call.initiated">Call initiated</option><option value="call.completed">Call completed</option><option value="agent.assigned">Agent assigned</option><option value="document.received">Document received</option><option value="document.verified">Document verification completed</option><option value="application.status_changed" selected>Application status changed</option></select>
+      <label for="ael-target">Target application status (status-change events)</label><select id="ael-target"><option value="0">Application Submitted</option><option value="1" selected>Documents Under Review</option><option value="2">Information Required</option><option value="3">Documents Verified</option><option value="4">Submitted to Agency</option><option value="5">Completed</option></select>
+      <div class="ael-actions"><button class="ael-primary" data-send data-action="normal">Send normal event</button><button data-send id="ael-duplicate" data-action="duplicate" disabled>Send duplicate</button><button data-send data-action="invalid">Send invalid signature</button></div>
+      <details open><summary>Test difficult conditions</summary>
+        <div class="ael-actions"><button data-send id="ael-delay" data-action="delay">Delay event</button><button data-send id="ael-release" data-action="release" disabled>Release delayed event</button><button data-send data-action="out-of-order">Deliver events out of order</button><button id="ael-failure" data-action="failure" aria-pressed="false">Simulate worker failure</button><button data-send id="ael-retry" data-action="retry" disabled>Retry failed job</button></div>
+        <p class="ael-meta" id="ael-held">No delayed event.</p><p class="ael-meta">Out-of-order delivers Documents Verified, then an older Information Required snapshot. Worker failure affects the next attempt before commit.</p>
+      </details>
+      <details><summary>Inspect latest webhook envelope</summary><pre id="ael-payload">Send an event to inspect its simulated envelope.</pre></details>
+    </section>
+  </div>
+  <div class="ael-notice"><p id="ael-notice" role="status" aria-live="polite" aria-atomic="true">Ready. Send an event to follow its journey.</p><button data-action="reset">Reset simulation</button></div>
+  <section class="ael-panel" aria-labelledby="ael-pipeline-heading">
+    <p class="eyebrow">03 / Processing pipeline</p><h2 id="ael-pipeline-heading">From delivery to notification</h2><p class="ael-meta" id="ael-pipeline-event">Waiting for the first event</p>
+    <ol class="ael-pipeline"><li data-stage><b>HTTPS webhook received</b><small>Waiting</small></li><li data-stage><b>Signature validated</b><small>Waiting</small></li><li data-stage><b>Event deduplicated</b><small>Waiting</small></li><li data-stage><b>Event recorded</b><small>Waiting</small></li><li data-stage><b>Background job queued</b><small>Waiting</small></li><li data-stage><b>Application state updated</b><small>Waiting</small></li><li data-stage><b>Real-time event published</b><small>Waiting</small></li><li data-stage><b>Client notified</b><small>Waiting</small></li></ol>
+    <p class="ael-meta">The acknowledgement follows the simulated inbox + pending-job transaction. Background work commits application state and an outbox record together. Motion illustrates the stages; all times and latencies are deterministic model values, not network measurements.</p>
+  </section>
+  <section class="ael-panel" aria-labelledby="ael-health-heading"><p class="eyebrow">04 / System health</p><h2 id="ael-health-heading">Inside the simulated backend</h2>
+    <dl class="ael-metrics"><div><dt>Webhooks received</dt><dd id="ael-received">0</dd></div><div><dt>Events processed</dt><dd id="ael-processed">0</dd></div><div><dt>Invalid signatures</dt><dd id="ael-invalid">0</dd></div><div><dt>Duplicate deliveries</dt><dd id="ael-duplicates">0</dd></div><div><dt>Queue depth</dt><dd id="ael-queue">0</dd></div><div><dt>Failed jobs</dt><dd id="ael-failed">0</dd></div><div><dt>Connected clients</dt><dd id="ael-clients">1</dd></div><div><dt>Application version</dt><dd id="ael-version">0</dd></div></dl>
+    <p class="ael-meta">Queue depth includes failed, retryable jobs. Application version counts committed changes; source sequence orders incoming snapshots. Each is independent of webhook delivery attempts.</p>
+  </section>
+  <section class="ael-panel" aria-labelledby="ael-log-heading"><p class="eyebrow">05 / Internal event log</p><h2 id="ael-log-heading">Every delivery has a trace</h2>
+    <div class="ael-filters"><label>Processing result<select id="ael-filter-result"><option value="">All results</option><option>Accepted</option><option>Rejected: Invalid Signature</option><option>Ignored: Duplicate Event</option><option>Deferred: Older Event</option><option>Queued</option><option>Retried</option><option>Processed</option><option>Failed: Retryable</option></select></label><label>Event type<select id="ael-filter-type"><option value="">All event types</option><option>call.initiated</option><option>call.completed</option><option>agent.assigned</option><option>document.received</option><option>document.verified</option><option>application.status_changed</option></select></label></div>
+    <p class="ael-meta" id="ael-log-count"></p><div class="ael-table-scroll" tabindex="0" role="region" aria-label="Event log, horizontally scrollable"><table><caption>Newest first. Attempts are delivery / worker; latency is modeled per operation.</caption><thead><tr><th scope="col">Time</th><th scope="col">Event ID</th><th scope="col">Event type</th><th scope="col">Result</th><th scope="col">Attempts</th><th scope="col">Version</th><th scope="col">Latency</th></tr></thead><tbody id="ael-log"></tbody></table></div><p id="ael-empty">No matching events yet.</p>
+  </section>
+  {% include application-event-production.html %}
+</div>
+<script src="{{ '/assets/js/application-event-engine.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/application-event-lab.js' | relative_url }}" defer></script>

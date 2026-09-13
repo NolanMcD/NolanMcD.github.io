@@ -1,0 +1,53 @@
+/* Application Event Lab: scoped to the existing light Noland theme. */
+.application-event-lab {
+  margin-bottom: 4rem;
+  .ael-hero { padding: 2rem 0; border-bottom: 1px solid $line; margin-bottom: 1.5rem; }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.5rem, 6vw, 4.5rem); letter-spacing: -.045em; line-height: 1.05; }
+  h2 { font-size: 1.4rem; letter-spacing: -.025em; }
+  h2 small { display: block; margin-top: .3rem; font: normal .8rem sans-serif; color: $muted; }
+  h3 { font-size: 1.3rem; }
+  .ael-deck { font-size: 1.4rem; }
+  .ael-hero > p { max-width: 850px; }
+  .ael-disclaimer, .ael-guide { padding: 1rem; background: $cream; border-left: 3px solid $teal; font-size: .9rem; }
+  .ael-columns { display: grid; grid-template-columns: 1fr 1.15fr; gap: 1rem; }
+  .ael-panel { min-width: 0; padding: clamp(1rem, 3vw, 1.5rem); border: 1px solid $line; border-radius: 10px; margin-bottom: 1rem; background: #fff; }
+  .ael-id, .ael-meta { font-size: .8rem; color: $muted; }
+  .ael-id { display: inline-block; margin-left: .5rem; font-family: monospace; }
+  .ael-connection { border: 1px solid #b2ccc6; padding: .5rem .7rem; background: #eff7f3; color: #235849; font-size: .8rem; }
+  .is-stale { border: 2px dashed #946119; }
+  .is-stale .ael-connection, #ael-stale { background: #fff3db; color: #69460f; }
+  #ael-stale { padding: .6rem; font-size: .85rem; }
+  progress { width: 100%; height: .6rem; accent-color: #a32620; display: block; margin: .7rem 0 1rem; }
+  .ael-workflow { margin-left: 1.5rem; font-size: .8rem; color: $muted; }
+  .ael-workflow li { padding: .15rem .3rem; }
+  .ael-workflow [aria-current="step"] { font-weight: 700; color: $ink; background: $cream; }
+  .ael-update { border-top: 1px solid $line; padding-top: 1rem; }
+  label { display: block; font-size: .8rem; font-weight: 600; margin: .7rem 0 .3rem; }
+  select { box-sizing: border-box; width: 100%; min-height: 44px; padding: .5rem; border: 1px solid #94877b; border-radius: 5px; color: $ink; background: white; font: inherit; font-size: .85rem; }
+  button { min-height: 44px; padding: .5rem .75rem; border: 1px solid #94877b; border-radius: 5px; background: #fff; color: $ink; font: inherit; font-size: .8rem; cursor: pointer; }
+  button:hover:not(:disabled), button[aria-pressed="true"] { background: $cream; border-color: $teal; }
+  button:disabled { opacity: .5; cursor: default; }
+  .ael-primary { color: white; background: $teal; border-color: $teal; }
+  .ael-primary:hover:not(:disabled) { background: #7e1d18; color: white; }
+  :focus-visible { outline: 3px solid #086c78; outline-offset: 3px; }
+  .ael-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0; }
+  details { border-top: 1px solid $line; padding: .8rem 0; }
+  summary { cursor: pointer; min-height: 32px; font-weight: 600; font-size: .9rem; }
+  pre { background: #f5f2ed; border-color: $line; font-size: .8rem; padding: 1rem; max-height: 450px; overflow: auto; }
+  code { background: #f5f2ed; }
+  .ael-notice { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem; margin-bottom: 1rem; border: 1px solid $line; border-left: 3px solid $teal; background: $cream; }
+  .ael-notice p { margin: 0; font-size: .9rem; }.ael-notice button { flex-shrink: 0; }
+  .ael-pipeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: .65rem; margin: 0 0 1rem; list-style: none; counter-reset: stage; }
+  .ael-pipeline li { padding: .8rem; border: 1px solid $line; border-radius: 5px; counter-increment: stage; transition: background .15s; }
+  .ael-pipeline li::before { content: "0" counter(stage); display: block; color: $muted; font-family: monospace; margin-bottom: .5rem; }
+  .ael-pipeline b { display: block; font-size: .8rem; }.ael-pipeline small { display: block; font-size: .7rem; margin-top: .5rem; }
+  .ael-pipeline [data-state="done"] { background: #eff7f3; border-color: #598378; }
+  .ael-metrics { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; gap: 1rem; }
+  .ael-metrics div { border-top: 1px solid $line; padding-top: .6rem; }.ael-metrics dt { color: $muted; font-size: .75rem; }.ael-metrics dd { margin: 0; font: 2rem Georgia, serif; }
+  .ael-filters { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .ael-table-scroll { overflow: auto; max-height: 380px; } table { margin: 0; font-size: .75rem; } th, td { padding: .6rem; } th { background: $cream; } caption { text-align: left; padding: .5rem 0; color: $muted; }
+  .ael-architecture { margin-top: 3rem; }.ael-architecture p, .ael-architecture li { max-width: 900px; }
+  .ael-diagram { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem; margin: 1.5rem 0; }.ael-diagram span { padding: .8rem; background: $cream; border: 1px solid $line; border-radius: 5px; font-size: .8rem; }.ael-diagram small { display: block; }
+  @media (max-width: 700px) { .ael-columns { grid-template-columns: 1fr; }.ael-pipeline, .ael-metrics { grid-template-columns: repeat(2, 1fr); }.ael-notice { align-items: stretch; flex-direction: column; }.ael-filters { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) { *, *::before { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+}

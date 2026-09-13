@@ -20,6 +20,13 @@ description: A complete archive of Nolan McDermott's projects, essays, analysis,
 <p class="archive-count" id="archive-count" aria-live="polite"></p>
 
 <div class="archive-stream" id="archive-stream">
+  <article class="archive-card archive-project" data-archive-tags="project code interactive architecture">
+    <div class="archive-card-top"><span>Project</span><time>New</time></div>
+    <h2><a href="{{ '/projects/application-event-lab/' | relative_url }}">Application Event Lab</a></h2>
+    <p>A hands-on architectural simulation of reliable webhook processing, retryable background jobs, and live customer updates.</p>
+    <div class="archive-tags"><span>Backend architecture</span><span>Interactive</span><span>Reliability</span></div>
+  </article>
+
   <article class="archive-card archive-project" data-archive-tags="project code interactive puzzle">
     <div class="archive-card-top"><span>Project</span><time>New</time></div>
     <h2><a href="{{ '/crossword-creator/' | relative_url }}">Crossword Creator</a></h2>

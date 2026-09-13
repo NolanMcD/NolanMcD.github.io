@@ -1,0 +1,130 @@
+<section class="ael-architecture" aria-labelledby="ael-production-heading">
+  <p class="eyebrow">Design notes / Beyond the browser</p>
+  <h2 id="ael-production-heading">How I Would Build the Production Version</h2>
+  <p>I would keep receipt, business processing, and delivery separate. A NestJS REST controller accepts Twilio callbacks after a signature guard validates them. Injectable services normalize provider data and enforce application rules. PostgreSQL is the authority for applications, webhook events, pending jobs, and outgoing notifications.</p>
+  <div class="ael-diagram" role="img" aria-label="Twilio sends REST webhooks to a NestJS signature guard and service, then PostgreSQL inbox and jobs. A worker commits application state and outbox. An outbox publisher sends through Redis to Socket.io and the Next.js client. The client queries authoritative state through GraphQL on reconnect.">
+    <span>Twilio / provider<small>REST webhook</small></span><b aria-hidden="true">→</b><span>NestJS<small>Guard + service</small></span><b aria-hidden="true">→</b><span>PostgreSQL<small>Inbox + jobs</small></span><b aria-hidden="true">→</b><span>Worker transaction<small>Application + outbox</small></span><b aria-hidden="true">→</b><span>Publisher → Redis<small>Shared distribution</small></span><b aria-hidden="true">→</b><span>Socket.io → Next.js<small>Reconnect → GraphQL refetch</small></span>
+  </div>
+  <ul>
+    <li><strong>Validate before trusting.</strong> The simulation uses an explicit valid/invalid flag, not cryptography. Production validates <code>X-Twilio-Signature</code> using the official Twilio SDK, the exact public URL including query parameters, and original request data. Form callbacks and JSON callbacks require their appropriate SDK validation paths. See <a href="https://www.twilio.com/docs/usage/webhooks/webhooks-security">Twilio’s webhook security guidance</a>.</li>
+    <li><strong>Record before acknowledging.</strong> A PostgreSQL unique constraint on <code>(provider, event_id)</code> prevents duplicate inbox rows, even across server instances. Insert the inbox row and pending job in the same transaction, then acknowledge. A worker claims jobs with a lease and retries failed work with bounded backoff and a dead-letter path.</li>
+    <li><strong>Order deliberately.</strong> The lab assumes one trusted, application-wide source sequence. Older snapshots are recorded for audit but deferred without changing state. Twilio does not supply a universal application version: real adapters need provider-specific ordering and a server-owned application revision. Arrival timestamps alone are insufficient. Independent calls and document streams need their own ordering rules; a production state machine also validates permitted status transitions.</li>
+    <li><strong>Separate state from notifications.</strong> Redis distributes messages across instances; it is not the application database. Socket.io rooms or GraphQL subscriptions deliver notifications to authorized clients. A Next.js dashboard uses authenticated GraphQL queries and mutations. On reconnect it joins its authorized channel, refetches state, and reconciles overlapping notifications by version.</li>
+    <li><strong>Make failures diagnosable.</strong> Structured logs, counters, queue age, retry counts, and correlation IDs link receipt to commit to publish. Log identifiers and outcomes, never sensitive personal data, documents, tokens, or full webhook bodies. Authorization applies to every application query, mutation, and room subscription.</li>
+  </ul>
+  <h3>The transactional outbox</h3>
+  <p>A database update can succeed while publishing its notification fails. The stored state remains correct, but clients may not hear about it. Writing the state change and an outgoing event in the same database transaction closes that gap. A separate publisher claims outbox records, publishes with retries, and marks them sent only after publication. A crash after publishing can cause a second notification, so consumers still deduplicate by event ID or version. This is at-least-once delivery, not a promise of exactly-once transport.</p>
+  <p>The lab models that atomic commit and a successful outbox drain. Its worker-failure switch fails before commit; it does not simulate process crashes, disk persistence, network security, or broker outages. Its database is authoritative only within this tab’s lifetime.</p>
+  <div class="ael-table-scroll" tabindex="0" role="region" aria-label="Technology comparison"><table><caption>One responsibility per tool</caption><thead><tr><th scope="col">Technology</th><th scope="col">What I would use it for</th></tr></thead><tbody>
+    <tr><td>REST</td><td>Inbound Twilio webhooks with provider-defined request bodies and acknowledgements.</td></tr><tr><td>GraphQL</td><td>Flexible dashboard queries and authorized application mutations.</td></tr><tr><td>Socket.io</td><td>Named live events and application rooms; GraphQL subscriptions are an alternative.</td></tr><tr><td>PostgreSQL</td><td>Durable state, unique event identities, and atomic transactions.</td></tr><tr><td>Redis</td><td>Cross-instance event distribution, separate from durable application state.</td></tr><tr><td>Background queues</td><td>Asynchronous work with retries, backoff, leases, and failure inspection.</td></tr>
+  </tbody></table></div>
+  <h3>Production Sketch</h3>
+  <p>Explanatory TypeScript outlines only; none execute on this site. Imports, DTO definitions, dependency wiring, and repository implementations are omitted. The <code>db</code> methods below describe transaction contracts, not a particular ORM API. Normalized events share the lab’s <code>eventId</code>, <code>provider</code>, <code>eventType</code>, <code>applicationId</code>, <code>sequence</code>, and <code>payload</code> fields. <code>signatureStatus</code> is simulation-only and never trusted from a real request.</p>
+  {% raw %}
+  <details><summary>1. NestJS webhook controller</summary><pre><code>@Controller('webhooks/twilio')
+export class WebhookController {
+  constructor(private readonly events: ApplicationEvents) {}
+
+  @Post('status')
+  @UseGuards(TwilioSignatureGuard)
+  @HttpCode(202)
+  async receive(@Body() form: TwilioStatusCallback) {
+    // Adapter validates schema, maps provider IDs to an application,
+    // and derives a stable identity for this callback, not just CallSid.
+    const event = await this.events.normalizeTwilio(form);
+    await this.events.record(event); // inbox + pending job committed
+    return { accepted: true }; // acknowledgement, not completion
+  }
+}</code></pre></details>
+  <details><summary>2. Signature guard outline</summary><pre><code>@Injectable()
+export class TwilioSignatureGuard implements CanActivate {
+  constructor(private readonly config: WebhookConfig) {}
+  canActivate(context: ExecutionContext): boolean {
+    const req = context.switchToHttp().getRequest();
+    // This endpoint accepts form-encoded callbacks only.
+    // Config contains the exact externally configured callback URL.
+    const valid = twilio.validateRequest(
+      this.config.authToken,
+      req.get('X-Twilio-Signature') ?? '',
+      this.config.exactPublicCallbackUrl,
+      req.body, // original form parameters, before DTO transformation
+    );
+    if (!valid) throw new ForbiddenException();
+    return true;
+  }
+}</code></pre><p>Use the official SDK. Preserve the exact public URL and all original parameters; do not reconstruct it from untrusted forwarded headers. For JSON callbacks, preserve the raw body and use the SDK’s JSON-specific validation method. Secrets belong in server configuration only.</p></details>
+  <details><summary>3. Idempotent receipt and worker service</summary><pre><code>@Injectable()
+export class ApplicationEvents {
+  constructor(private readonly db: Database) {}
+  async record(event: ApplicationEvent) {
+    return this.db.transaction(async tx =&gt; {
+      // INSERT ... ON CONFLICT (provider, event_id) DO NOTHING
+      if (!await tx.inbox.insertIfAbsent(event)) return;
+      await tx.jobs.insert(event); // same durable transaction
+    });
+  }
+  async process(job: ClaimedJob) {
+    return this.db.transaction(async tx =&gt; {
+      const locked = await tx.jobs.lock(job.id);
+      if (locked.done) return;
+      const app = await tx.applications.lock(job.event.applicationId);
+      if (job.event.sequence &lt;= app.sequence) {
+        await tx.jobs.finish(job.id, 'Deferred: Older Event');
+        return;
+      }
+      const next = applyValidatedEvent(app, job.event);
+      await tx.applications.save(next); // revision + 1
+      await tx.outbox.insert(outboxRecord(job.event, next));
+      await tx.jobs.finish(job.id, 'Processed');
+    }); // rollback on failure; lease/backoff makes job retryable
+  }
+}</code></pre></details>
+  <details><summary>4. GraphQL application resolver</summary><pre><code>@Resolver(() =&gt; ApplicationView)
+@UseGuards(SessionGuard)
+export class ApplicationResolver {
+  constructor(private readonly apps: Applications) {}
+  @Query(() =&gt; ApplicationView)
+  application(@Args('id') id: string, @CurrentUser() user: User) {
+    return this.apps.findAuthorized(id, user.id);
+  }
+  @Mutation(() =&gt; ApplicationView)
+  requestReview(@Args('id') id: string, @CurrentUser() user: User) {
+    // Check ownership and allowed transition; commit with outbox.
+    return this.apps.requestReviewAuthorized(id, user.id);
+  }
+}</code></pre></details>
+  <details><summary>5. Socket.io gateway</summary><pre><code>@WebSocketGateway({ namespace: '/applications' })
+export class ApplicationGateway {
+  @WebSocketServer() server: Server;
+  constructor(private readonly access: ApplicationAccess) {}
+
+  @UseGuards(SocketSessionGuard)
+  @SubscribeMessage('application.watch')
+  async watch(@ConnectedSocket() client: Socket,
+              @MessageBody() input: WatchApplicationDto) {
+    await this.access.assertOwner(client.data.user.id, input.id);
+    await client.join(`application:${input.id}`);
+    return { joined: input.id }; // client then refetches via GraphQL
+  }
+  publish(event: ApplicationUpdated) {
+    this.server.to(`application:${event.applicationId}`)
+      .emit('application.updated', event);
+  }
+} // Configure a Redis adapter for distribution across instances.</code></pre></details>
+  <details><summary>6. Transactional outbox record</summary><pre><code>function outboxRecord(event: ApplicationEvent, app: Application) {
+  return {
+    id: `${event.provider}:${event.eventId}:application.updated`,
+    topic: 'application.updated',
+    applicationId: app.id,
+    payload: { applicationId: app.id, version: app.version },
+    publishedAt: null,
+    attempts: 0,
+  };
+}
+// Insert alongside application update and job completion.
+// Publisher claims with a lease, publishes, then marks sent.
+// Failed sends retry with backoff; expired leases recover crashes.
+// Repeated notifications are safe: clients compare versions/refetch.</code></pre></details>
+  {% endraw %}
+  <p class="ael-meta">Framework references: <a href="https://docs.nestjs.com/graphql/resolvers">NestJS resolvers</a> and <a href="https://docs.nestjs.com/websockets/gateways">NestJS gateways</a>. The proposed production architecture is a design sketch, not a deployed service.</p>
+</section>
