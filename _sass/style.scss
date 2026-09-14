@@ -431,14 +431,14 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
 .home-shortcut-crossword { --shortcut-accent: #775726; }
 .home-shortcut-code { --shortcut-accent: #a32620; }
 .home-shortcut-writing { --shortcut-accent: #6c4d78; }
-.home-shortcut-icon { display: block; width: 30px; height: 30px; color: var(--shortcut-accent); }
+.home-shortcut-icon { display: block; width: 36px; height: 36px; color: var(--shortcut-accent); }
 .home-shortcut-icon svg { display: block; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.home-shortcut-label { color: $ink; font-size: .78rem; font-weight: 600; line-height: 1.25; text-align: center; overflow-wrap: anywhere; }
+.home-shortcut-label { color: $ink; font-size: .72rem; font-weight: 600; line-height: 1.25; text-align: center; overflow-wrap: anywhere; }
 @media (max-width: 600px) {
   .home-shortcuts { gap: .3rem; }
   .home-shortcut { min-height: 76px; padding: .55rem .15rem; }
-  .home-shortcut-icon { width: 25px; height: 25px; }
-  .home-shortcut-label { font-size: .65rem; }
+  .home-shortcut-icon { width: 30px; height: 30px; }
+  .home-shortcut-label { font-size: .62rem; }
 }
 .feed-footer-link { display: block; margin-top: auto; padding-top: .8rem; border-top: 1px solid #eee8df; color: var(--feed-color); font-size: .8rem; font-weight: 800; text-decoration: none; }
 .split-heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; }
