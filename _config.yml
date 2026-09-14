@@ -39,11 +39,11 @@ minima:
 show_excerpts: true
 
 header_pages:
+  - pages/blog.html
   - pages/reviews.md
-  - pages/screenplays.md
-  - pages/miami-storms.md
-  - pages/about.md
   - pages/projects.md
+  - pages/screenplays.md
+  - pages/about.md
 
 defaults:
   - scope:

@@ -12,6 +12,8 @@ This site—**Noland**—is primarily my home for movie reviews: a record of wha
 
 ## Elsewhere
 
+For my professional background, see <a href="{{ '/resumes/' | relative_url }}">my resumes</a>. You can also browse <a href="{{ '/blog/' | relative_url }}">my writing</a> or <a href="{{ '/projects/' | relative_url }}">my projects</a>.
+
 You can find my code on [GitHub](https://github.com/NolanMcD), my professional experience on [LinkedIn](https://www.linkedin.com/in/nolan-mcdermott-b9a20220b/), films on [Letterboxd](https://letterboxd.com/NolanMcD/), and activities on [Strava](https://www.strava.com/athletes/57377386). You can also [email me](mailto:boltjets24@gmail.com).
 
 <p class="callout">Have an interesting dataset, sports question, or project idea? <a href="mailto:boltjets24@gmail.com">I'd enjoy hearing about it.</a></p>

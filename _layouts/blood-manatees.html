@@ -2,6 +2,7 @@
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
   {%- include head.html -%}
   <body class="blood-manatees-page">
+    <nav class="bm-site-exit" aria-label="Return to Noland"><a href="{{ '/' | relative_url }}">Noland home</a><a href="{{ '/screenplays/' | relative_url }}">All screenplays</a></nav>
     <main class="bm-experience" id="main-content">
       {{ content }}
     </main>

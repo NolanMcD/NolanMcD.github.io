@@ -26,3 +26,6 @@ jobs:
 
       - name: Build Jekyll site
         run: bundle exec jekyll build --strict_front_matter
+
+      - name: Check built navigation links
+        run: python3 tools/check-navigation.py _site

@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div class="wrapper site-header-inner">
+    <a class="site-title" rel="author" href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>{{ site.title | escape }}</a>
+    <nav class="primary-nav" aria-label="Main navigation">
+      {% for path in site.header_pages %}
+        {% assign nav_page = site.pages | where: "path", path | first %}
+        {% assign active = false %}
+        {% if page.url == nav_page.url %}{% assign active = true %}{% endif %}
+        {% if nav_page.url == '/blog/' and page.collection == 'posts' and page.layout != 'review' %}{% assign active = true %}{% endif %}
+        {% if nav_page.url == '/reviews/' %}{% if page.layout == 'review' or page.url == '/reviews/diary/' %}{% assign active = true %}{% endif %}{% endif %}
+        {% if nav_page.url == '/projects/' and page.collection != 'posts' and page.layout != 'review' %}
+          {% if page.url contains '/projects/' or page.url == '/crossword-creator/' or page.url == '/elevator-game/' or page.url == '/storms/' or page.url contains '/resumes/' %}{% assign active = true %}{% endif %}
+        {% endif %}
+        {% if nav_page %}<a href="{{ nav_page.url | relative_url }}"{% if active %} aria-current="{% if page.url == nav_page.url %}page{% else %}true{% endif %}"{% endif %}>{% if nav_page.url == '/reviews/' %}Movies{% else %}{{ nav_page.title | escape }}{% endif %}</a>{% endif %}
+      {% endfor %}
+    </nav>
+  </div>
+</header>

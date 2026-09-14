@@ -1,10 +1,11 @@
 ---
 title: Screenplays
 permalink: /screenplays/
-description: Screenplay transcriptions by Nolan McDermott.
+description: Original screenplays and screenplay transcriptions by Nolan McDermott.
 ---
 
-<p class="page-lede">Screenplays I have transcribed while studying how films move from the page to the screen.</p>
+<p class="page-lede">Original work and screenplays I've transcribed while studying how films move from the page to the screen.</p>
+<p><a href="{{ '/blood-manatees/' | relative_url }}">Read Blood Manatees, my original screenplay in progress</a>, or explore the transcriptions below. For essays and explanations, visit <a href="{{ '/blog/' | relative_url }}">the blog</a>.</p>
 
 <article class="screenplay-entry">
   <header class="review-header">

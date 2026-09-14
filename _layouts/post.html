@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{% include breadcrumbs.html %}
+<article class="post h-entry blog-article" itemscope itemtype="https://schema.org/BlogPosting">
+  <header class="post-header">
+    <p class="eyebrow">{% for category in page.categories %}{{ category | escape }}{% unless forloop.last %} / {% endunless %}{% endfor %}</p>
+    <h1 class="post-title p-name" itemprop="headline">{{ page.title | escape }}</h1>
+    <p class="post-meta"><time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time> · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">{{ page.author | default: 'Nolan McDermott' | escape }}</span></span> · {% assign words = content | strip_html | number_of_words %}{{ words | divided_by: 220 | plus: 1 }} min read</p>
+  </header>
+  <div class="post-content e-content" itemprop="articleBody">{{ content }}</div>
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
+{% assign blog_posts = site.posts | where_exp: "post", "post.layout != 'review'" %}
+{% assign previous_post = nil %}{% assign next_post = nil %}
+{% for post in blog_posts %}
+  {% if post.url == page.url %}
+    {% unless forloop.first %}{% assign next_index = forloop.index0 | minus: 1 %}{% assign next_post = blog_posts[next_index] %}{% endunless %}
+    {% unless forloop.last %}{% assign previous_index = forloop.index0 | plus: 1 %}{% assign previous_post = blog_posts[previous_index] %}{% endunless %}
+  {% endif %}
+{% endfor %}
+<nav class="post-pagination" aria-label="More blog posts">
+  <a href="{{ '/blog/' | relative_url }}">All blog posts</a>
+  {% if previous_post %}<a href="{{ previous_post.url | relative_url }}"><small>Older post</small>{{ previous_post.title | escape }}</a>{% endif %}
+  {% if next_post %}<a href="{{ next_post.url | relative_url }}"><small>Newer post</small>{{ next_post.title | escape }}</a>{% endif %}
+</nav>
+{% if page.tweet_embed %}<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>{% endif %}

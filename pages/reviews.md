@@ -5,6 +5,7 @@ description: All movie reviews published on Noland.
 ---
 
 <p class="page-lede">Every movie review, from new releases to old favorites.</p>
+<p>Looking for essays about how I watch movies? Browse <a href="{{ '/blog/' | relative_url }}#movies">film writing on the blog</a>.</p>
 
 <aside class="diary-invite">
   <div><p class="eyebrow">The complete archive</p><h2>1,500+ watches, one searchable diary.</h2><p>Browse every quick reaction, long review, rating, and rewatch synced from Letterboxd.</p></div>

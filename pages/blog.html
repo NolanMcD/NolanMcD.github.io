@@ -1,0 +1,28 @@
+---
+title: Blog
+permalink: /blog/
+description: Essays, explanations, field notes, and technical breakdowns by Nolan McDermott.
+---
+<p class="page-lede">Things I'm figuring out, explained along the way.</p>
+<p>Essays, data stories, weather rabbit holes, and technical notes. For film ratings, visit <a href="{{ '/reviews/' | relative_url }}">Movies</a>; for tools and ongoing work, explore <a href="{{ '/projects/' | relative_url }}">Projects</a>.</p>
+<nav class="archive-filters" aria-label="Filter blog posts">
+  <button type="button" class="is-active" data-archive-filter="all" aria-pressed="true">All posts</button>
+  <button type="button" data-archive-filter="code,data,math" aria-pressed="false">Code &amp; Data</button>
+  <button type="button" data-archive-filter="weather,miami" aria-pressed="false">Weather &amp; Miami</button>
+  <button type="button" data-archive-filter="movies" aria-pressed="false">Film writing</button>
+  <button type="button" data-archive-filter="baseball,sports" aria-pressed="false">Sports</button>
+  <button type="button" data-archive-filter="career,interviews,internet,humor,meta" aria-pressed="false">Life &amp; Internet</button>
+</nav>
+<p class="archive-count" id="archive-count" aria-live="polite"></p>
+<div class="blog-list" id="archive-stream">
+  {% assign blog_posts = site.posts | where_exp: "post", "post.layout != 'review'" %}
+  {% for post in blog_posts %}
+  <article data-archive-tags="{{ post.categories | join: ' ' | escape }}">
+    <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time> · {{ post.categories | join: ' / ' | escape }}</p>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+    <p>{{ post.excerpt | strip_html | escape }}</p>
+  </article>
+  {% endfor %}
+</div>
+<p id="archive-empty" hidden>No posts match this filter. Choose All posts to reset.</p>
+<script src="{{ '/assets/js/archive-filters.js' | relative_url }}" defer></script>

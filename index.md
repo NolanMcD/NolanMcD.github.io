@@ -34,6 +34,16 @@ description: Nolan McDermott's latest movie reviews, writing, adventures, and pe
 
 <script src="{{ '/assets/js/home-feed.js' | relative_url }}" defer></script>
 
+<section class="home-blog" aria-labelledby="home-blog-heading">
+  <div class="section-heading split-heading"><h2 id="home-blog-heading">Latest on the blog</h2><a class="text-link" href="{{ '/blog/' | relative_url }}">All posts &rarr;</a></div>
+  <ul>
+    {% assign blog_posts = site.posts | where_exp: "post", "post.layout != 'review'" %}
+    {% for post in blog_posts limit: 3 %}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d" }}</time></li>
+    {% endfor %}
+  </ul>
+</section>
+
 <section class="section review-section" id="latest-reviews" aria-labelledby="reviews-heading">
   <div class="section-heading split-heading">
     <div>

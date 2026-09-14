@@ -1,19 +1,19 @@
 ---
 title: Projects
 permalink: /projects/
-description: A complete archive of Nolan McDermott's projects, essays, analysis, reviews, and experiments.
+description: Interactive tools, ongoing adventures, and creative projects by Nolan McDermott.
 ---
 
 <div class="archive-intro">
-  <p class="eyebrow">Everything I make</p>
-  <p class="page-lede">Ongoing projects, finished experiments, data stories, movie writing, and technical work—all in one place.</p>
+  <p class="eyebrow">Tools, adventures, and creative work</p>
+  <p class="page-lede">Interactive tools, ongoing adventures, and creative projects. Looking for essays or technical breakdowns? <a href="{{ '/blog/' | relative_url }}">Read the blog</a>.</p>
 </div>
 
-<nav class="archive-filters" aria-label="Filter projects and posts">
-  <button type="button" class="is-active" data-archive-filter="all">All</button>
-  <button type="button" data-archive-filter="project">Projects</button>
+<nav class="archive-filters" aria-label="Filter projects">
+  <button type="button" class="is-active" data-archive-filter="all" aria-pressed="true">All</button>
+  <button type="button" data-archive-filter="adventure,audio,language">Life &amp; Adventures</button>
   <button type="button" data-archive-filter="code,data,math">Code & Data</button>
-  <button type="button" data-archive-filter="movies">Movies</button>
+  <button type="button" data-archive-filter="movies,writing">Creative work</button>
   <button type="button" data-archive-filter="career,interviews">Career</button>
 </nav>
 
@@ -104,46 +104,20 @@ description: A complete archive of Nolan McDermott's projects, essays, analysis,
     <div class="archive-tags"><span>Software</span><span>GitHub</span></div>
   </article>
 
-  {% for post in site.posts %}
-  <article class="archive-card archive-post" data-archive-tags="post {{ post.categories | join: ' ' | escape }}">
-    <div class="archive-card-top"><span>Post</span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></div>
-    <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
-    {% if post.excerpt %}<p>{{ post.excerpt | strip_html | strip_newlines | escape }}</p>{% endif %}
-    <div class="archive-tags">{% for category in post.categories %}<span>{{ category }}</span>{% endfor %}</div>
+  <article class="archive-card archive-project" data-archive-tags="project writing movies">
+    <div class="archive-card-top"><span>Screenplay</span><span>In progress</span></div>
+    <h2><a href="{{ '/blood-manatees/' | relative_url }}">Blood Manatees</a></h2>
+    <p>An original screenplay told through an interactive, scene-by-scene experience.</p>
+    <div class="archive-tags"><span>Writing</span><span>Interactive</span></div>
   </article>
-  {% endfor %}
+  <article class="archive-card archive-project" data-archive-tags="project writing movies">
+    <div class="archive-card-top"><span>Writing</span><span>Film study</span></div>
+    <h2><a href="{{ '/screenplays/' | relative_url }}">Screenplays</a></h2>
+    <p>Screenplay transcriptions and original work, collected in one place.</p>
+    <div class="archive-tags"><span>Screenplays</span><span>Writing</span></div>
+  </article>
 </div>
 
 <p class="archive-empty" id="archive-empty" hidden>No entries match this filter.</p>
 
-<script>
-(() => {
-  const stream = document.getElementById("archive-stream");
-  if (!stream) return;
-
-  const cards = [...stream.querySelectorAll(".archive-card")];
-  const buttons = [...document.querySelectorAll("[data-archive-filter]")];
-  const count = document.getElementById("archive-count");
-  const empty = document.getElementById("archive-empty");
-
-  function applyFilter(value) {
-    const wanted = value.split(",");
-    let visible = 0;
-    cards.forEach(card => {
-      const tags = card.dataset.archiveTags.toLowerCase().split(/\s+/);
-      const show = value === "all" || wanted.some(tag => tags.includes(tag));
-      card.hidden = !show;
-      if (show) visible += 1;
-    });
-    count.textContent = `${visible} ${visible === 1 ? "entry" : "entries"}`;
-    empty.hidden = visible !== 0;
-  }
-
-  buttons.forEach(button => button.addEventListener("click", () => {
-    buttons.forEach(item => item.classList.toggle("is-active", item === button));
-    applyFilter(button.dataset.archiveFilter);
-  }));
-
-  applyFilter("all");
-})();
-</script>
+<script src="{{ '/assets/js/archive-filters.js' | relative_url }}" defer></script>

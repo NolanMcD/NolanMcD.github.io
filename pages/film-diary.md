@@ -1,5 +1,6 @@
 ---
 title: Film Diary
+layout: landing
 permalink: /reviews/diary/
 description: Search Nolan McDermott's complete film diary, ratings, rewatches, and reviews synced from Letterboxd.
 ---
@@ -60,4 +61,3 @@ description: Search Nolan McDermott's complete film diary, ratings, rewatches, a
 </section>
 
 <script src="{{ '/assets/js/film-diary.js' | relative_url }}" defer></script>
-

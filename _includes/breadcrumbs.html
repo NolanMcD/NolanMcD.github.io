@@ -1,0 +1,17 @@
+{% unless page.url == '/' %}
+<nav class="site-breadcrumbs" aria-label="Breadcrumb">
+  <a href="{{ '/' | relative_url }}">Home</a><span aria-hidden="true">/</span>
+  {% if page.collection == 'posts' %}
+    {% if page.layout == 'review' %}<a href="{{ '/reviews/' | relative_url }}">Movies</a>{% else %}<a href="{{ '/blog/' | relative_url }}">Blog</a>{% endif %}<span aria-hidden="true">/</span>
+  {% elsif page.url == '/reviews/diary/' %}
+    <a href="{{ '/reviews/' | relative_url }}">Movies</a><span aria-hidden="true">/</span>
+  {% elsif page.url contains '/resumes/' and page.url != '/resumes/' %}
+    <a href="{{ '/resumes/' | relative_url }}">Resumes</a><span aria-hidden="true">/</span>
+  {% elsif page.url != '/projects/' %}
+    {% if page.url contains '/projects/' or page.url == '/crossword-creator/' or page.url == '/elevator-game/' or page.url == '/storms/' or page.url == '/resumes/' %}
+      <a href="{{ '/projects/' | relative_url }}">Projects</a><span aria-hidden="true">/</span>
+    {% endif %}
+  {% endif %}
+  <span aria-current="page">{{ page.title | escape }}</span>
+</nav>
+{% endunless %}

@@ -62,3 +62,6 @@
 @keyframes bm-recording { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
 @media (max-width: 520px) { .bm-scene { padding: .75rem; } .bm-monitor-bar { font-size: .54rem; letter-spacing: .07em; } .bm-observation-status { font-size: 0; } .bm-observation-status i { margin: 0; } .bm-scene-content { width: calc(100% - 1rem); padding: 2.5rem .75rem; } .bm-scene-header { align-items: flex-start; flex-direction: column; gap: .4rem; margin-bottom: 2.5rem; } .bm-dialogue { width: 88%; } .bm-nav-link span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); } .screenplay-wip { align-items: flex-start; flex-direction: column; gap: .8rem; } }
 @media (prefers-reduced-motion: reduce) { .bm-experience, .bm-opening, .bm-scene, .bm-observation-status i { animation: none; transition: none; } }
+.bm-site-exit { position: relative; z-index: 2; display: flex; justify-content: space-between; gap: 1rem; padding: .5rem 1rem; background: #101313; }
+.bm-site-exit a { display: inline-flex; align-items: center; min-height: 44px; color: #c4c6c2; font: .75rem "Courier New", monospace; }
+.bm-site-exit a:focus-visible { outline: 2px solid #e7d9ad; outline-offset: 3px; }
