@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1502826692",
+        "syncId":  "letterboxd-review-1502826692",
+        "title":  "Bad Apples",
+        "year":  2025,
+        "rating":  4,
+        "review":  "Yessss. I was so right to have had this as my most anticipated movie for September. It’s such a banger. Built on a perfect metaphor, it’s as rich with double meaning as an apple pie. So many funny and unexpected moments as well. Had me from start to finish.",
+        "wordCount":  49,
+        "publishedDate":  "2026-09-20",
+        "watchedDate":  "2026-09-19",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/bad-apples-2025/",
+        "tmdbId":  "1198654",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1497624768",
         "syncId":  "letterboxd-review-1497624768",
         "title":  "Hope",
