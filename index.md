@@ -59,7 +59,7 @@ description: Nolan McDermott's latest movie reviews, writing, adventures, and pe
     {% for review in movie_reviews limit: 6 %}
     <article class="review-card">
       {% if review.poster %}
-      <a class="poster" href="{{ review.url | relative_url }}"><img src="{{ review.poster | relative_url }}" alt="{{ review.title }} poster" loading="lazy"></a>
+      <a class="poster" href="{{ review.url | relative_url }}"><img src="{{ review.poster | relative_url }}" alt="{{ review.title }} poster" width="200" height="300" loading="lazy"></a>
       {% else %}
       <a class="poster poster-placeholder" href="{{ review.url | relative_url }}" aria-label="Read {{ review.title }}"><span aria-hidden="true">N</span></a>
       {% endif %}

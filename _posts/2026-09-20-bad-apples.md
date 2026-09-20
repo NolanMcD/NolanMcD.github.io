@@ -6,59 +6,65 @@ categories: [movies]
 film_year: 2026
 rating: 4
 poster: "/assets/images/movies/bad-apples-poster.jpg"
-excerpt: "Four stars for story, metaphor, twist, and humor."
+excerpt: "A teacher removes the problem child, and everyone loves the results. Four stars for a dark comedy that follows that terrible logic all the way through."
 ---
 
-**Review in progress.** This page currently includes the plot summary and initial notes.
+*Bad Apples* is a dark comic satire served with a side of vanilla ice cream. What impressed me most is how completely it commits to its ridiculous premise: a teacher kidnaps one of her students, keeps him in her basement, and somehow remains a person whose frustrations I can understand. That is a difficult balance to maintain. For the most part, the movie pulls it off.
 
-A dark comedic satire don't to perfection with a side on vanilla ice cream.
-
-<h2 class="review-category"><span class="category-star" aria-label="Star awarded">★</span> Story</h2>
+The absurdity works because there is a clear idea underneath it. A school can measure how much a classroom improves when a difficult child disappears without asking what that child needed in the first place. *Bad Apples* follows that logic somewhere horrible, and I found it very funny.
 
 **Spoilers ahead, including the ending.**
 
-Maria Spencer is a Year 5 teacher at a primary school in Somerset whose class is performing poorly. During a class trip to a local cider mill, one of her students, Danny, throws his shoe into the machinery and runs off, forcing Maria to search for him while the rest of the class is left waiting. The incident increases pressure on Maria from Sylvia, the school's headteacher, particularly with an upcoming Ofsted inspection.
+<h2 class="review-category"><span class="category-star" aria-label="Star awarded">★</span> Story</h2>
 
-The following day, Danny causes another disruption in class. Hoping to improve his behavior, Maria asks Pauline, a well-behaved student, to try to befriend him. Danny subsequently pushes Pauline down a flight of stairs, breaking her arm. He is suspended, but school staff are unable to contact his father, Josh.
+Maria Spencer is a Year 5 teacher at a primary school in Somerset. Her class is struggling, an Ofsted inspection is approaching, and Danny makes getting through a lesson feel almost impossible. He sabotages a trip to the cider mill, disrupts the classroom, and pushes Pauline down the stairs, breaking her arm. The opening steadily builds Maria’s frustration while the school keeps asking her to produce better results.
 
-Concerned that Danny may return to school unaware of his suspension, Maria visits the address the school has on file. She finds Josh working as a delivery driver and struggling to complete his route. He brushes off Maria's attempts to discuss Danny before leaving. As Maria returns to her car, she finds Danny vandalizing vehicles in a parking lot. When she intervenes, she accidentally knocks him unconscious.
+When Maria later finds Danny vandalizing cars, she intervenes and accidentally knocks him unconscious. She initially tries to take him to the hospital, but he wakes up and threatens to accuse her of assault. She panics, takes him home, and eventually locks him in the basement. Bringing him home is the point where her decision becomes indefensible, but the film has done enough work that I can follow the panic behind it. Understanding how she gets there keeps the story involving without making her actions acceptable.
 
-Maria puts Danny in her car and begins driving him to a hospital. After regaining consciousness, Danny threatens to accuse her of assault and tells her that she will lose her job. Panicking, Maria drives him to her house instead. Danny becomes destructive inside the house and enters the basement, where Maria locks him inside. Although he screams and pounds on the door, the basement cannot be heard from outside the house. Maria leaves him there overnight.
+Then the arrangement starts producing results. Without Danny, the class performs well during the inspection and Maria receives praise. Downstairs at home, she discovers that Danny can barely write and has been relying on other students to complete his work. She begins tutoring him, and he actually starts learning. The idea that he receives a better education while being held captive is both ridiculous and central to why the story works.
 
-The next morning, Danny is quiet, and Maria goes to work without releasing him. The Ofsted inspection takes place that day, and without Danny present, Maria's class performs well. Maria receives praise for the improvement.
-
-Maria continues to keep Danny confined in the basement. After discovering that he is unable to write and that other students have been completing schoolwork for him, she begins tutoring him privately. She also makes the basement more comfortable and gives him a video game console. Maria orders a harness to prevent Danny from escaping, which is unknowingly delivered to her house by Josh, who has continued working while frantically searching for his missing son.
-
-Police officers later question Maria at the school about Danny's disappearance. She initially hesitates to criticize him but eventually explains that Danny was frequently disruptive and that Josh was often late collecting him because of his job. Her reluctance to speak badly about Danny makes the police less suspicious of her, and they continue to believe that he may have run away.
-
-As time passes, Maria and Danny develop a less hostile relationship. She continues teaching him and occasionally plays video games with him. Danny's academic abilities improve, while Maria's class continues to thrive in his absence.
-
-Maria's professional success also brings her back into closer contact with Sam, the school's deputy headteacher and her former partner. Maria and Sam had originally purchased her house together before he left her for another woman. Earlier, Maria had seen Sam dining at a restaurant with his new partner and hid to avoid being noticed.
-
-Meanwhile, Pauline becomes increasingly attached to Maria. Although she is an eager and well-behaved student, she appears to have few friends and frequently seeks Maria's attention. One day, Pauline unexpectedly visits Maria's house and hears Danny in the basement. She discovers that Maria is holding him there but does not report her. Instead, Pauline begins using her knowledge of the secret to obtain special treatment from Maria.
-
-Maria gives Pauline a dress and later drives her home. Upon arriving, Maria discovers that Pauline's parents had not noticed she was gone. Pauline's father, Frank, the wealthy owner of the local cider mill, is hosting a party and has been drinking with his guests. Pauline subsequently wears Maria's dress to school despite objections from Sylvia.
-
-Pauline later returns to Maria's house and demands Danny's video game console. When Maria begins to comply, Danny and Pauline fight. Maria, frustrated with both children, briefly locks Pauline in the basement with Danny. Danny attacks her before Maria intervenes and allows Pauline to leave.
-
-At a subsequent parents' evening, Pauline insists on performing a song in front of the assembled parents and school staff. Maria allows her to perform because she fears that Pauline will otherwise expose her. Pauline repeatedly sings the song before changing its lyrics and publicly revealing that Maria is keeping Danny in her basement.
-
-Maria initially denies the accusation but becomes caught in her lies and eventually breaks down and admits that she has been holding Danny captive. Rather than immediately contacting the police, the parents begin arguing about what should be done. The head of the PTA proposes that they vote on whether to report Maria, with several parents arguing that their children and the school have improved since Danny disappeared.
-
-As the argument continues, Maria attempts to leave unnoticed by hiding behind a Christmas tree, but Pauline points her out. The parents confine Maria in a cupboard while they continue debating. Sylvia attempts to call the police, but Frank takes her phone.
-
-Sam later releases Maria and takes her to the same restaurant where she had previously seen him with his new partner. Maria tells him that she intends to turn herself in. Sam informs her that the parents have voted against reporting her and that Sylvia has resigned over the incident, making him the new headteacher. He tells Maria that he also intends to keep the matter secret, believing that the school has significantly improved since Danny disappeared.
-
-Maria returns home and tells Danny that he will never be released from the basement.
-
-Some time later, Maria is honored at a large school assembly for her success as a teacher. The students perform together, and the school announces a scholarship in honor of the still-missing Danny. Josh attends the ceremony and becomes emotional during the tribute to his son.
-
-The ceremony is intercut with Danny attempting to escape from Maria's basement. Using an electric toothbrush, he gradually digs through the mortar surrounding a brick in the wall. He eventually removes the brick, widens the opening, and climbs out of the house.
-
-The film ends with Danny running freely alongside a road.
+I especially liked the small changes in their relationship. Earlier, Maria spends her empty evenings playing *Farming Simulator* alone. Later, she and Danny play FIFA together. For a moment, he looks like an ordinary kid enjoying a game with an adult who has time for him. Those scenes give their relationship enough warmth to make the situation more uncomfortable. Maria is capable of helping him, even while doing something terrible to him.
 
 <h2 class="review-category"><span class="category-star" aria-label="Star awarded">★</span> Metaphor</h2>
 
-The movie starts with Maria's class on a tour of the local cider factory. All the apples are being neatly escorted through the system along with a shoe that Danny has thrown in the with them. The shoe makes its way past several filter seemingly right at home with the other apples, until it reaches a breaking point and it converbelted into the juicer. This stops the tour and its track and as the operators of the factory have to shut to machine down to deal with it the issue, Maria runs off to deal with a fleeing Danny, leaving the rest of her students behind.
+The cider-mill opening sets up the film’s metaphor before Maria ever locks a door. Apples move neatly through a processing line until Danny throws a shoe into the machinery. It travels through the system until it causes a breakdown, forcing the operators to stop everything. Maria runs after Danny, leaving the rest of her class behind. One disruption is enough to pull the whole operation away from its intended purpose.
 
-<!-- Still to write: Twist, Humor, and Final verdict. -->
+Danny initially seems to be the obvious “bad apple.” Remove him and the classroom improves almost immediately. But the more the film shows us of the children and their parents, the less useful that label becomes.
+
+Pauline is the best example. She appears to be everything Danny is not: quiet, obedient, eager to participate. Yet her cast tells another story. She asks Maria to sign it, and almost nobody else has. I loved that detail because it establishes her loneliness without needing a speech about it. Danny demands attention through disruption; Pauline tries to earn it by being the perfect student. Her need is easier for the school to ignore because it initially causes less trouble.
+
+Once Pauline discovers Danny in the basement, she uses Maria’s secret to demand attention and special treatment, from one of Maria’s dresses to Danny’s PlayStation. Her behavior grows more troubling, but the need behind it has been there all along.
+
+The parents sharpen that contrast. Danny’s father, Josh, is a delivery driver whose job keeps making him late and unavailable. From the school’s perspective, he looks irresponsible. Pauline’s father owns the cider mill and has money and standing in the community. Yet when Maria brings Pauline home, her parents are busy partying and have barely noticed their daughter was missing. Josh’s struggle is visible; their neglect is comfortably hidden by their circumstances.
+
+Both children need attention. Only one has been identified as the problem. The film earns its metaphor star by continuing to question who the bad apple is, and whether removing one person fixes anything beyond the numbers.
+
+<h2 class="review-category"><span class="category-star" aria-label="Star awarded">★</span> Twist</h2>
+
+The turn that really worked for me comes when Pauline exposes Maria at the parents’ evening. Once Maria admits she has Danny locked in her basement, the obvious next step is to call the police. Instead, the PTA wants a vote.
+
+That changes the scale of the whole story. Maria’s secret becomes something the other adults are willing to protect because their children are happier and the school is performing better. Sylvia tries to call the police, but Pauline’s father takes her phone. Later, Sam explains that the parents have voted against reporting Maria. Sylvia has resigned, he has become headteacher, and he also intends to keep quiet. Everyone has found a reason to accept an arrangement that benefits them.
+
+It is completely unrealistic, but by this point I bought into the film’s willingness to follow its premise that far. The discovery does not restore order. It reveals how many people will defend this version of it.
+
+The ending gives that reversal a strong payoff. Maria is celebrated at a school assembly, complete with a scholarship honoring the still-missing Danny. Josh sits in the audience grieving for his son while the ceremony congratulates the institution that has failed him.
+
+Meanwhile, Danny uses an electric toothbrush to work through the mortar in Maria’s basement wall. An Oral-B is an absurd escape tool, but I liked what the escape suggests: Maria has actually taught him something. I read his patience and resourcefulness as the practical result of the attention she finally gave him. He puts those abilities to use freeing himself from her.
+
+The final image of Danny running alongside the road matters. The adults may have agreed that removing him was a success, but the film gives him a future outside their arrangement.
+
+<h2 class="review-category"><span class="category-star" aria-label="Star awarded">★</span> Humor</h2>
+
+My favorite example of the film’s dark humor is the harness delivery. Maria orders something to restrain Danny more securely, and Danny’s own father delivers it while searching for his missing son. The coincidence is horrible enough to be funny, but Josh’s situation gives it an extra sting. He is distraught and still has to finish his route. Even this cannot release him from the demands of his job.
+
+The parents’ evening is the other standout. Everyone takes the debate so seriously that it becomes funnier the longer it continues. While the parents argue over whether kidnapping has improved the school, Maria tries to back away and hide behind a Christmas tree. Pauline immediately points her out. Maria ends up locked in a cupboard while the adults deliberate over the benefits of her keeping a child locked in a basement.
+
+I liked how much of the comedy comes from practical responses to an outrageous situation. There are deliveries to make, meetings to hold, and procedures to follow. The adults keep handling the next small task until something appalling begins to look like normal school business. The movie’s confidence in that joke is what makes the exaggeration work for me.
+
+## Final verdict
+
+Four stars for Story, Metaphor, Twist, and Humor. *Bad Apples* asks a lot of the viewer’s willingness to go along with it, but its commitment to the premise won me over.
+
+Maria cannot give thirty students individual attention. Josh’s delivery job leaves him struggling to be present for his son. Pauline’s parents have the resources to pay attention and barely do. The film connects those different failures, then lets the school congratulate itself for making the most disruptive evidence disappear.
+
+What stayed with me was Danny’s capacity to learn once somebody finally teaches him. That gives the comedy something to return to, however absurd it gets. The school has mistaken a quieter classroom for a solved problem, and *Bad Apples* is willing to follow that mistake all the way to an awards ceremony.
