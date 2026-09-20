@@ -1,0 +1,45 @@
+name: Sync Blood Manatees packing montage
+
+on:
+  push:
+    paths:
+      - '_blood_manatees/**'
+      - 'tools/sync-blood-manatees-kit.py'
+      - 'tools/test-blood-manatees-kit.py'
+      - '.github/workflows/sync-blood-manatees-kit.yml'
+  schedule:
+    - cron: '31 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: blood-manatees-kit-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  synchronize:
+    if: github.ref_type == 'branch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.ref_name }}
+      - name: Update packing beats
+        run: python3 tools/sync-blood-manatees-kit.py
+      - name: Verify packing continuity
+        run: |
+          python3 tools/test-blood-manatees-kit.py
+          python3 tools/sync-blood-manatees-kit.py --check
+      - name: Save updated montage
+        shell: bash
+        run: |
+          if git diff --quiet -- _blood_manatees/4.md; then
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- _blood_manatees/4.md
+          git commit -m "Sync Ewen's packing montage"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
