@@ -1,5 +1,5 @@
 {
-    "total":  1542,
+    "total":  1544,
     "average":  3.33,
     "mostCommon":  2,
     "ratings":  [
@@ -9,11 +9,11 @@
                     },
                     {
                         "rating":  4,
-                        "count":  611
+                        "count":  612
                     },
                     {
                         "rating":  3,
-                        "count":  557
+                        "count":  558
                     },
                     {
                         "rating":  2,

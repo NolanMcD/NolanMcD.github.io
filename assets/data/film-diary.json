@@ -1,5 +1,55 @@
 [
     {
+        "id":  "rss:letterboxd-review-1502826692",
+        "syncId":  "letterboxd-review-1502826692",
+        "title":  "Bad Apples",
+        "year":  2025,
+        "rating":  4,
+        "review":  "Yessss. I was so right to have had this as my most anticipated movie for September. It’s such a banger. Built on a perfect metaphor, it’s as rich with double meaning as an apple pie. So many funny and unexpected moments as well. Had me from start to finish.",
+        "wordCount":  49,
+        "publishedDate":  "2026-09-20",
+        "watchedDate":  "2026-09-19",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/bad-apples-2025/",
+        "tmdbId":  "1198654",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1497624768",
+        "syncId":  "letterboxd-review-1497624768",
+        "title":  "Hope",
+        "year":  2026,
+        "rating":  3,
+        "review":  "It’s a long hot mess but it’s actually pretty decent in the sci-fi action department. Several sequences go on way way way waaay too long but it also has several cool moments. Definitely one of those “what the fuck did I just watch” movies.",
+        "wordCount":  44,
+        "publishedDate":  "2026-09-16",
+        "watchedDate":  "2026-09-15",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/hope-2026/",
+        "tmdbId":  "1058424",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1494131003",
         "syncId":  "letterboxd-review-1494131003",
         "title":  "Irresistible",
@@ -525,18 +575,18 @@
         "origin":  "rss"
     },
     {
-        "id":  "rss:letterboxd-review-1454944495",
-        "syncId":  "letterboxd-review-1454944495",
+        "id":  "rss:letterboxd-review-1454671943",
+        "syncId":  "letterboxd-review-1454671943",
         "title":  "Cape Fear",
-        "year":  1991,
-        "rating":  4,
-        "review":  "Oh yeah, way more effecting than the original. Dials it up in just about every way. The frantic pace of the 1st act, the devil like presence of Cady, an added touch of moral and ethical ambiguity. Everything down the the nature and storm sounds of the end credits just works wonders for me.",
-        "wordCount":  54,
+        "year":  1962,
+        "rating":  3,
+        "review":  "It’s a solid noir with good tension building but the climax it a little too long and drawn out for me",
+        "wordCount":  21,
         "publishedDate":  "2026-08-17",
-        "watchedDate":  "2026-08-17",
+        "watchedDate":  "2026-08-16",
         "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/cape-fear-1991/",
-        "tmdbId":  "1598",
+        "url":  "https://letterboxd.com/nolanmcd/film/cape-fear/",
+        "tmdbId":  "11349",
         "tags":  [
 
                  ],
@@ -550,18 +600,18 @@
         "origin":  "rss"
     },
     {
-        "id":  "rss:letterboxd-review-1454671943",
-        "syncId":  "letterboxd-review-1454671943",
+        "id":  "rss:letterboxd-review-1454944495",
+        "syncId":  "letterboxd-review-1454944495",
         "title":  "Cape Fear",
-        "year":  1962,
-        "rating":  3,
-        "review":  "It’s a solid noir with good tension building but the climax it a little too long and drawn out for me",
-        "wordCount":  21,
+        "year":  1991,
+        "rating":  4,
+        "review":  "Oh yeah, way more effecting than the original. Dials it up in just about every way. The frantic pace of the 1st act, the devil like presence of Cady, an added touch of moral and ethical ambiguity. Everything down the the nature and storm sounds of the end credits just works wonders for me.",
+        "wordCount":  54,
         "publishedDate":  "2026-08-17",
-        "watchedDate":  "2026-08-16",
+        "watchedDate":  "2026-08-17",
         "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/cape-fear/",
-        "tmdbId":  "11349",
+        "url":  "https://letterboxd.com/nolanmcd/film/cape-fear-1991/",
+        "tmdbId":  "1598",
         "tags":  [
 
                  ],
