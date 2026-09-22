@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1505462428",
+        "syncId":  "letterboxd-review-1505462428",
+        "title":  "Resident Evil",
+        "year":  2026,
+        "rating":  3,
+        "review":  "It\u0027s solid but not really up my alley. Just too many jump scares and horror cliches for me. Like bro doesn\u0027t make a single decisive action the whole movie he just moves verrrrry slowly. Still its better than what your usually get for a video game movie and that\u0027s mostly thanks to Cregger.",
+        "wordCount":  53,
+        "publishedDate":  "2026-09-22",
+        "watchedDate":  "2026-09-21",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/resident-evil-2026/",
+        "tmdbId":  "1423191",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1502826692",
         "syncId":  "letterboxd-review-1502826692",
         "title":  "Bad Apples",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/ghost-world/",
         "tmdbId":  "1548",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1485646743",
-        "syncId":  "letterboxd-review-1485646743",
-        "title":  "The Chair",
-        "year":  2022,
-        "rating":  3,
-        "review":  "It\u0027s a fine short",
-        "wordCount":  4,
-        "publishedDate":  "2026-09-07",
-        "watchedDate":  "2026-09-06",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/the-chair-2022-1/",
-        "tmdbId":  "1118403",
         "tags":  [
 
                  ],
