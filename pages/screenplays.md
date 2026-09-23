@@ -5,7 +5,16 @@ description: Original screenplays and screenplay transcriptions by Nolan McDermo
 ---
 
 <p class="page-lede">Original work and screenplays I've transcribed while studying how films move from the page to the screen.</p>
-<p><a href="{{ '/blood-manatees/' | relative_url }}">Read Blood Manatees, my original screenplay in progress</a>, or explore the transcriptions below. For essays and explanations, visit <a href="{{ '/blog/' | relative_url }}">the blog</a>.</p>
+<p>Read the first draft of The Broken Sword below, explore <a href="{{ '/blood-manatees/' | relative_url }}">Blood Manatees, my interactive screenplay in progress</a>, or browse the transcriptions. For essays and explanations, visit <a href="{{ '/blog/' | relative_url }}">the blog</a>.</p>
+
+<article class="screenplay-entry">
+  <header class="review-header">
+    <p class="eyebrow">Original screenplay · First draft</p>
+    <h2>The Broken Sword</h2>
+    <p class="screenplay-meta">Written by Nolan McDermott</p>
+  </header>
+  <p><a href="{{ '/assets/screenplays/the-broken-sword.pdf' | relative_url }}" target="_blank" rel="noopener" aria-label="Read The Broken Sword screenplay PDF (opens in a new tab)">Read the screenplay (PDF)</a></p>
+</article>
 
 <article class="screenplay-entry">
   <header class="review-header">

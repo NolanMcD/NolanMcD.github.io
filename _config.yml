@@ -64,6 +64,10 @@ defaults:
       sitemap: false
 
 exclude:
+  - assets/screenplays/Gambit.docx
+  - assets/screenplays/The Kid Detective.docx
+  - assets/screenplays/The Broken Sword.docx
+  - tmp
   - README.md
   - Gemfile
   - Gemfile.lock
