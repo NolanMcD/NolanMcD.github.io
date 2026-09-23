@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1506986268",
+        "syncId":  "letterboxd-review-1506986268",
+        "title":  "Digger",
+        "year":  2026,
+        "rating":  4,
+        "review":  "Saw a sneak preview. Will my review even show up right now? We’ll see.\n\nIt’s a little pretentious on the surface level but that’s just there in an attempt to hide its true theme from the audience. The ending is very smart, it holds all its cards until after the credits roll. The screenplay is a well structured idea, and the cast is having a lot of fun with it.",
+        "wordCount":  70,
+        "publishedDate":  "2026-09-23",
+        "watchedDate":  "2026-09-22",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/digger-2026/",
+        "tmdbId":  "1248832",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1505462428",
         "syncId":  "letterboxd-review-1505462428",
         "title":  "Resident Evil",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/i-swear/",
         "tmdbId":  "1317149",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1487700950",
-        "syncId":  "letterboxd-review-1487700950",
-        "title":  "Ghost World",
-        "year":  2001,
-        "rating":  3,
-        "review":  "I didn’t really get it. It’s very understated. Tough to relate to these characters even though they feel very real. Still pretty entertaining besides the fact that not a whole lot happens and it is slightly humorous. Okay wait as I was writing this an after credits scene came on that was hilarious, you absolutely have to see it if you ever watch this watch until the end hahahaha",
-        "wordCount":  69,
-        "publishedDate":  "2026-09-08",
-        "watchedDate":  "2026-09-07",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/ghost-world/",
-        "tmdbId":  "1548",
         "tags":  [
 
                  ],

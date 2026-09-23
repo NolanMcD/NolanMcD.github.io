@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1506986268",
+        "syncId":  "letterboxd-review-1506986268",
+        "title":  "Digger",
+        "year":  2026,
+        "rating":  4,
+        "review":  "Saw a sneak preview. Will my review even show up right now? We’ll see.\n\nIt’s a little pretentious on the surface level but that’s just there in an attempt to hide its true theme from the audience. The ending is very smart, it holds all its cards until after the credits roll. The screenplay is a well structured idea, and the cast is having a lot of fun with it.",
+        "wordCount":  70,
+        "publishedDate":  "2026-09-23",
+        "watchedDate":  "2026-09-22",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/digger-2026/",
+        "tmdbId":  "1248832",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1505462428",
         "syncId":  "letterboxd-review-1505462428",
         "title":  "Resident Evil",
