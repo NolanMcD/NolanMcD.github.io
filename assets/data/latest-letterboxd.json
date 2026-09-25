@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1509518437",
+        "syncId":  "letterboxd-review-1509518437",
+        "title":  "Verity",
+        "year":  2026,
+        "rating":  3,
+        "review":  "I’m not a huge fan of domestic dramas, but I still enjoyed it. A lot of the serious scenes are awkward and Johnson’s involvement really makes them feel right out of 50 Shades of Gray. It’s unintentionally funny which usually is a bad sign but that was the most enjoyable part for me. It’s better than other similar movies I’ve seen like The Housemaid and Swallow just from its complexity alone. I’ll have to rewatch a hot ones interview for this.",
+        "wordCount":  81,
+        "publishedDate":  "2026-09-25",
+        "watchedDate":  "2026-09-24",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/verity-2026/",
+        "tmdbId":  "1283515",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1506986268",
         "syncId":  "letterboxd-review-1506986268",
         "title":  "Digger",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/irresistible-2020/",
         "tmdbId":  "595148",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1491360811",
-        "syncId":  "letterboxd-review-1491360811",
-        "title":  "I Swear",
-        "year":  2025,
-        "rating":  4,
-        "review":  "Nice story. Second british movie in a row that opened with Blue Monday by New Order whats going on with that",
-        "wordCount":  21,
-        "publishedDate":  "2026-09-11",
-        "watchedDate":  "2026-09-11",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/i-swear/",
-        "tmdbId":  "1317149",
         "tags":  [
 
                  ],
