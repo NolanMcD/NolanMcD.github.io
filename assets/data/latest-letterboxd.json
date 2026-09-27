@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1512717868",
+        "syncId":  "letterboxd-review-1512717868",
+        "title":  "Primetime",
+        "year":  2026,
+        "rating":  3,
+        "review":  "You gotta appreciate how stylized it is. This guy saw the movie he wanted to make and made it. I appreciate that.",
+        "wordCount":  22,
+        "publishedDate":  "2026-09-27",
+        "watchedDate":  "2026-09-26",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/primetime-2026/",
+        "tmdbId":  "1375441",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1510364191",
         "syncId":  "letterboxd-review-1510364191",
         "title":  "Cemetery Man",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/bad-apples-2025/",
         "tmdbId":  "1198654",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1497624768",
-        "syncId":  "letterboxd-review-1497624768",
-        "title":  "Hope",
-        "year":  2026,
-        "rating":  3,
-        "review":  "It’s a long hot mess but it’s actually pretty decent in the sci-fi action department. Several sequences go on way way way waaay too long but it also has several cool moments. Definitely one of those “what the fuck did I just watch” movies.",
-        "wordCount":  44,
-        "publishedDate":  "2026-09-16",
-        "watchedDate":  "2026-09-15",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/hope-2026/",
-        "tmdbId":  "1058424",
         "tags":  [
 
                  ],
