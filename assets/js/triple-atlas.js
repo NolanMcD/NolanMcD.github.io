@@ -45,6 +45,39 @@
   function chip(t, selected, prefix, shortcuts = false) {
     return `<label class="ta-chip"><input type="checkbox" name="${prefix}" value="${esc(t.id)}" ${selected ? 'checked' : ''}>${esc(t.label)}${shortcuts && t.key ? ` <kbd>${esc(t.key)}</kbd>` : ''}</label>`;
   }
+  function setTags(definitions) {
+    tagList = [...definitions].sort((a,b) => a.label.localeCompare(b.label));
+    tagNames = Object.fromEntries(tagList.map(t => [t.id,t.label]));
+    groups = tagList.length ? [{label:'Your tags', tags:tagList}] : [];
+    data.tag_definitions = tagList;
+  }
+  function tagOptions(selected) {
+    return tagList.length ? `<div class="ta-chips">${tagList.map(t => chip(t,selected.includes(t.id),'tag',true)).join('')}</div>` : '<p class="ta-help">No tags yet. Create your first tag to start describing these plays your way.</p>';
+  }
+  function tagFilters() {
+    const selected = new FormData($('#ta-filters')).getAll('filter-tag');
+    $('#ta-tag-filters').innerHTML = `<legend>Tags · match every selected tag</legend><div class="ta-chips">${tagList.map(t => chip(t,selected.includes(t.id),'filter-tag')).join('')}</div>${tagList.length ? '' : '<p class="ta-help">No tags have been created or published yet.</p>'}`;
+  }
+  function renderTagManager() {
+    $('#ta-manage-tags').innerHTML = tagList.length ? `<h3>Your tag collection</h3><p class="ta-help">Renaming a tag updates its name everywhere without changing saved selections.</p>${tagList.map(t => `<form class="ta-tag-form" data-tag-id="${esc(t.id)}"><label>Tag name<input name="label" value="${esc(t.label)}" maxlength="80" required></label><label>Shortcut<input name="key" value="${esc(t.key || '')}" maxlength="1" pattern="[A-Za-z0-9]"></label><button type="submit">Save changes</button></form>`).join('')}` : '<p class="ta-help">Your collection starts empty. No preset categories or tags.</p>';
+  }
+  async function submitTag(e) {
+    e.preventDefault();
+    const form = e.target, button = form.querySelector('button'), fields = new FormData(form);
+    const old = tagList.find(t => t.id === form.dataset.tagId);
+    button.disabled = true;
+    try {
+      const saved = await api('/api/tags', {label:fields.get('label'), key:fields.get('key'), ...(old ? {id:old.id,revision:old.revision} : {})});
+      // Update just the tag controls. Never replace a note the owner is still typing.
+      const selected = current && owner ? annotationFromForm().tags : [];
+      setTags([...tagList.filter(t => t.id !== saved.id), saved]);
+      if (current && owner) $('#ta-tag-options').innerHTML = tagOptions(selected);
+      tagFilters(); renderCatalog(); renderTagManager();
+      if (!old) form.reset();
+      $('#ta-tag-message').textContent = old ? 'Tag updated everywhere. Saved selections are preserved.' : `Created “${saved.label}”. It’s ready to select on any play.`;
+    } catch (error) { $('#ta-tag-message').textContent = error.message; }
+    finally { button.disabled = false; }
+  }
   function annotationFromForm() {
     const form = $('#ta-edit');
     if (!form || !current) return null;
@@ -128,8 +161,7 @@
       <div id="ta-watch">${videoLink(p)}</div>
       <a href="https://noland.blog/triple-atlas/?play=${encodeURIComponent(p.id)}" target="_blank" rel="noopener">Public play link ↗</a>
       <p class="ta-help">Game ${p.game_pk} · Plate appearance ${p.at_bat_number} · Pitch ${p.pitch_number}. Opens at the source; playback availability may vary.</p>
-      ${owner ? `<form id="ta-edit">${groups.map(g => `<fieldset><legend>${esc(g.label)} <small>· choose any</small></legend><div class="ta-chips">${g.tags.map(t => chip(t, a.tags.includes(t.id), 'tag', true)).join('')}</div></fieldset>`).join('')}
-      <p class="ta-help">“Fielder misplay” is your observation, independent of an official scoring error.</p>
+      ${owner ? `<form id="ta-edit"><fieldset><legend>Your tags <small>· choose any</small></legend><div id="ta-tag-options">${tagOptions(a.tags)}</div><button type="button" id="ta-new-tag">+ Create a tag</button></fieldset>
       <div class="ta-fields"><label class="ta-wide">Field notes<textarea name="note" maxlength="20000" placeholder="What made this one worth remembering?">${esc(a.note)}</textarea></label>
       <label>Enjoyment<select name="rating"><option value="">Unrated</option>${[1,2,3,4,5].map(n => `<option value="${n}" ${a.rating === n ? 'selected' : ''}>${n} / 5</option>`).join('')}</select></label>
       <label>Status<select name="status">${['unwatched','tagged','review again'].map(s => `<option ${s === a.status ? 'selected' : ''}>${s}</option>`).join('')}</select></label>
@@ -139,12 +171,13 @@
       <details><summary>Draft recovery</summary><button type="button" id="ta-draft">Export current draft</button> <button type="button" id="ta-discard">Clear device draft &amp; reload saved play</button></details></form>` : `<p>${a.tags.map(t => `<span class="ta-badge">${esc(tagNames[t] || t)}</span>`).join('')}</p><p class="ta-note">${esc(a.note)}</p><p>${a.rating ? `Enjoyment: ${a.rating} / 5` : 'Not rated yet'}</p><button id="ta-public-next" type="button">Next unwatched triple →</button>`}`;
     if (!owner) { $('#ta-public-next').onclick = () => next(true); return; }
     $('#ta-edit').addEventListener('input', changed);
+    $('#ta-new-tag').onclick = () => { $('#ta-tag-manager').open = true; $('#ta-create-tag [name=label]').focus(); };
     $('#ta-edit').addEventListener('submit', async e => {
       e.preventDefault(); $('#ta-edit').elements.status.value = 'tagged'; changed(); await next();
     });
     $('#ta-skip').onclick = () => next(true);
     $('#ta-review').onclick = () => { $('#ta-edit').elements.status.value = 'review again'; changed(); next(); };
-    $('#ta-draft').onclick = () => download({schema_version:1, plays:[{...p, annotation:annotationFromForm()}]}, `triple-atlas-draft-${p.id}.json`);
+    $('#ta-draft').onclick = () => download({schema_version:1, tag_definitions:tagList, plays:[{...p, annotation:annotationFromForm()}]}, `triple-atlas-draft-${p.id}.json`);
     $('#ta-discard').onclick = () => {
       if (!confirm('Discard the device draft and reload the saved annotation? Export it first if you need it.')) return;
       clearTimeout(timer); try { localStorage.removeItem(draftKey(p.id)); } catch (_) { /* Reload disk state. */ } location.reload();
@@ -178,16 +211,23 @@
       `<div><h3>Tag combinations</h3><ul>${Object.entries(pairs).sort((a,b) => b[1]-a[1]).map(([key,n]) => `<li><span>${key.split('|').map(t => esc(tagNames[t] || t)).join(' + ')}</span><strong>${n}</strong></li>`).join('') || '<li>No combinations yet.</li>'}</ul></div>`;
   }
   async function start() {
-    const responses = await Promise.all([owner ? api('/api/data') : fetch(root.dataset.source).then(r => { if (!r.ok) throw new Error('Catalog unavailable'); return r.json(); }), fetch(root.dataset.tags).then(r => { if (!r.ok) throw new Error('Tag definitions unavailable'); return r.json(); })]);
-    [data, groups] = responses; data.plays.sort((a,b) => a.date.localeCompare(b.date) || a.game_pk-b.game_pk || a.at_bat_number-b.at_bat_number);
-    tagList = groups.flatMap(g => g.tags); tagNames = Object.fromEntries(tagList.map(t => [t.id,t.label]));
+    data = owner ? await api('/api/data') : await fetch(root.dataset.source).then(r => { if (!r.ok) throw new Error('Catalog unavailable'); return r.json(); });
+    data.plays.sort((a,b) => a.date.localeCompare(b.date) || a.game_pk-b.game_pk || a.at_bat_number-b.at_bat_number);
+    setTags(data.tag_definitions || []);
     $('#ta-mode').textContent = owner ? 'Owner console · Annotations save to your local database.' : `Read-only catalog · ${data.annotations_published ? 'Published owner annotations' : 'Annotations have not been published'}`;
     $('.ta-import').hidden = !owner;
+    $('#ta-tag-manager').hidden = !owner;
+    if (owner) {
+      renderTagManager();
+      $('#ta-tag-manager').open = !tagList.length;
+      $('#ta-create-tag').onsubmit = submitTag;
+      $('#ta-manage-tags').addEventListener('submit', submitTag);
+    }
     ['player','team','park'].forEach(key => {
       const select = $(`#ta-filters [name=${key}]`);
       [...new Set(data.plays.map(p => p[key]).filter(Boolean))].sort().forEach(value => select.add(new Option(value,value)));
     });
-    $('#ta-tag-filters').insertAdjacentHTML('beforeend', `<div class="ta-chips">${tagList.map(t => chip(t,false,'filter-tag')).join('')}</div>`);
+    tagFilters();
     $('#ta-filters').oninput = () => { limit = 36; renderCatalog(); };
     $('#ta-filters').onsubmit = e => e.preventDefault();
     $('#ta-filters').onreset = () => setTimeout(() => { limit = 36; renderCatalog(); }, 0);
@@ -226,10 +266,11 @@
     document.addEventListener('visibilitychange', () => { if (document.hidden && dirty) { retainDraft(); save().catch(() => {}); } });
     document.addEventListener('keydown', e => {
       if (!owner || !current || e.repeat) return;
+      if (e.target.closest('#ta-tag-manager')) return;
       if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') { e.preventDefault(); $('#ta-edit').requestSubmit(); return; }
       if (e.altKey && e.key === 'ArrowRight') { e.preventDefault(); next(true); return; }
       if (e.ctrlKey || e.metaKey || e.altKey || e.target.matches('textarea, select, input:not([type=checkbox]):not([type=radio])') || e.target.isContentEditable) return;
-      const t = tagList.find(t => t.key === e.key.toLowerCase());
+      const t = tagList.find(t => t.key && t.key === e.key.toLowerCase());
       if (t) { e.preventDefault(); const input = [...$('#ta-edit').querySelectorAll('[name=tag]')].find(i => i.value === t.id); input.checked = !input.checked; changed(); }
     });
   }

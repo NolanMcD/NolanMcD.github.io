@@ -8,7 +8,7 @@ project_label: Baseball
 project_summary: A video queue and field notes for every regular-season triple.
 ---
 <link rel="stylesheet" href="{{ '/assets/triple-atlas.css' | relative_url }}">
-<div id="triple-atlas" data-source="{{ '/assets/data/triple-atlas.json' | relative_url }}" data-tags="{{ '/assets/data/triple-atlas-tags.json' | relative_url }}">
+<div id="triple-atlas" data-source="{{ '/assets/data/triple-atlas.json' | relative_url }}">
   <header class="ta-hero">
     <p class="ta-eyebrow">2026 regular season · A love letter to the triple</p>
     <h1>Triple Atlas<span>Three bases. A thousand ways there.</span></h1>
@@ -23,6 +23,18 @@ project_summary: A video queue and field notes for every regular-season triple.
     <label class="ta-import" hidden>Import annotations <input id="ta-import" type="file" accept=".json,application/json"></label>
   </nav>
   <p id="ta-message" role="status" aria-live="polite">Loading triples…</p>
+  <details id="ta-tag-manager" class="ta-tag-manager" hidden>
+    <summary>Create &amp; manage your tags</summary>
+    <p>Make this collection your own. Create any tags you like, then choose as many as you want for each play.</p>
+    <form id="ta-create-tag" class="ta-tag-form">
+      <label>New tag name<input name="label" maxlength="80" required placeholder="Name your tag"></label>
+      <label>Shortcut (optional)<input name="key" maxlength="1" pattern="[A-Za-z0-9]" aria-describedby="ta-shortcut-help"></label>
+      <button type="submit">Create tag</button>
+    </form>
+    <p id="ta-shortcut-help" class="ta-help">Choose one letter or number. Shortcuts toggle tags when you’re not typing in a field.</p>
+    <p id="ta-tag-message" role="status" aria-live="polite"></p>
+    <div id="ta-manage-tags"></div>
+  </details>
   <section id="ta-player" class="ta-play" aria-label="Focused play"></section>
   <section id="ta-catalog" class="ta-section">
     <p class="ta-eyebrow">The collection</p><h2>Find your kind of triple.</h2>

@@ -40,8 +40,55 @@ def connect(path=None):
     db.executescript('''CREATE TABLE IF NOT EXISTS plays(id TEXT PRIMARY KEY, metadata TEXT NOT NULL);
       CREATE TABLE IF NOT EXISTS annotations(id TEXT PRIMARY KEY REFERENCES plays(id), body TEXT NOT NULL,
       revision INTEGER NOT NULL DEFAULT 1);
-      CREATE TABLE IF NOT EXISTS settings(key TEXT PRIMARY KEY, value TEXT NOT NULL);''')
+      CREATE TABLE IF NOT EXISTS settings(key TEXT PRIMARY KEY, value TEXT NOT NULL);
+      CREATE TABLE IF NOT EXISTS tags(id TEXT PRIMARY KEY, label TEXT NOT NULL, shortcut TEXT NOT NULL,
+      revision INTEGER NOT NULL DEFAULT 1);''')
+    # Migrate only tags already used in saved annotations, never unused presets.
+    if not db.execute("SELECT 1 FROM settings WHERE key='custom_tags_migrated'").fetchone():
+        legacy = {t['id']: t for g in json.loads(TAGS.read_text(encoding='utf-8')) for t in g['tags']}
+        used = {t for row in db.execute('SELECT body FROM annotations') for t in json.loads(row[0]).get('tags', [])}
+        with db:
+            for tag in sorted(used):
+                definition = legacy.get(tag, {'label': tag.replace('-', ' ').title()})
+                db.execute('INSERT OR IGNORE INTO tags VALUES(?,?,?,1)',
+                           (tag, definition['label'], definition.get('key', '')))
+            db.execute("INSERT INTO settings VALUES('custom_tags_migrated','1')")
     return db
+
+def tag_definitions(db):
+    return [dict(id=r['id'], label=r['label'], key=r['shortcut'], revision=r['revision'])
+            for r in db.execute('SELECT * FROM tags ORDER BY label COLLATE NOCASE, id')]
+
+def validate_tag(body):
+    if not isinstance(body, dict) or not isinstance(body.get('label'), str):
+        raise ValueError('Enter a tag name')
+    label = body['label'].strip()
+    key = body.get('key', '')
+    if not label or len(label) > 80 or any(ord(c) < 32 for c in label):
+        raise ValueError('Tag names must contain 1–80 characters without line breaks')
+    if not isinstance(key, str) or (key and not re.fullmatch('[a-zA-Z0-9]', key)):
+        raise ValueError('Shortcut must be one letter or number, or empty')
+    return label, key.lower()
+
+def save_tag(db, body):
+    label, key = validate_tag(body)
+    tag_id = body.get('id')
+    with db:
+        db.execute('BEGIN IMMEDIATE')
+        existing = db.execute('SELECT * FROM tags WHERE id=?', (tag_id,)).fetchone() if tag_id else None
+        if tag_id and not existing:
+            raise ValueError('Unknown tag')
+        if existing and body.get('revision') != existing['revision']:
+            raise FileExistsError('This tag changed in another tab. Reload before renaming it.')
+        for t in tag_definitions(db):
+            if t['id'] != tag_id and t['label'].casefold() == label.casefold():
+                raise ValueError('A tag with that name already exists')
+            if key and t['id'] != tag_id and t['key'] == key:
+                raise ValueError('That shortcut is already assigned to another tag')
+        tag_id = tag_id or 'tag-' + secrets.token_hex(8)
+        revision = existing['revision'] + 1 if existing else 1
+        db.execute('INSERT OR REPLACE INTO tags VALUES(?,?,?,?)', (tag_id, label, key, revision))
+    return dict(id=tag_id, label=label, key=key, revision=revision)
 
 def empty_annotation():
     return dict(status='unwatched', tags=[], note='', rating=None, video_url=None)
@@ -52,15 +99,16 @@ def snapshot(db):
     plays = [dict(json.loads(r['metadata']), annotation=annotations.get(r['id'], dict(empty_annotation(), revision=0)))
              for r in db.execute('SELECT * FROM plays ORDER BY id')]
     return dict(schema_version=1, season=2026, source_url=SOURCE, exported_at=now(),
-                import_info=dict(db.execute('SELECT key,value FROM settings')), plays=plays)
+                import_info=dict(db.execute('SELECT key,value FROM settings')),
+                tag_definitions=tag_definitions(db), plays=plays)
 
-def validate_annotation(a):
+def validate_annotation(a, known=None):
     if not isinstance(a, dict):
         raise ValueError('Annotation must be an object')
     if a.get('status') not in ('unwatched', 'tagged', 'review again'):
         raise ValueError('Invalid status')
     tags = a.get('tags', [])
-    known = {t['id'] for g in json.loads(TAGS.read_text(encoding='utf-8')) for t in g['tags']}
+    known = known if known is not None else set()
     if not isinstance(tags, list) or any(not isinstance(t, str) or t not in known for t in tags):
         raise ValueError('Unknown tag. Restore its definition before importing.')
     if not isinstance(a.get('note', ''), str) or len(a.get('note', '')) > 20000:
@@ -75,9 +123,9 @@ def validate_annotation(a):
                 rating=rating, video_url=url, updated_at=now())
 
 def save_annotation(db, play_id, body, revision):
-    a = validate_annotation(body)
     with db:
         db.execute('BEGIN IMMEDIATE')
+        a = validate_annotation(body, {t['id'] for t in tag_definitions(db)})
         if not db.execute('SELECT 1 FROM plays WHERE id=?', (play_id,)).fetchone():
             raise ValueError('Unknown play')
         row = db.execute('SELECT revision FROM annotations WHERE id=?', (play_id,)).fetchone()
@@ -201,6 +249,36 @@ def run_import(db, args):
 def restore(db, document):
     if not isinstance(document, dict) or document.get('schema_version') != 1 or not isinstance(document.get('plays'), list):
         raise ValueError('Expected a Triple Atlas JSON export (schema_version 1)')
+    with db:
+        db.execute('BEGIN IMMEDIATE')
+        return restore_transaction(db, document)
+
+def restore_transaction(db, document):
+    incoming = document.get('tag_definitions', [])
+    if not isinstance(incoming, list):
+        raise ValueError('Tag definitions must be a list')
+    definitions = {t['id']: t for t in tag_definitions(db)}
+    seen_tags = set()
+    # Old exports did not include definitions; recover only the IDs they use.
+    if 'tag_definitions' not in document:
+        legacy = {t['id']: t for g in json.loads(TAGS.read_text(encoding='utf-8')) for t in g['tags']}
+        referenced = {t for p in document['plays'] if isinstance(p, dict)
+                      for t in (p.get('annotation') or {}).get('tags', []) if isinstance(t, str)}
+        incoming = [legacy[t] for t in referenced if t not in definitions and t in legacy]
+    for t in incoming:
+        label, key = validate_tag(t)
+        tag_id = t.get('id')
+        if not isinstance(tag_id, str) or not re.fullmatch('[a-zA-Z0-9-]{1,100}', tag_id) or tag_id in seen_tags:
+            raise ValueError('Invalid or duplicate tag ID')
+        seen_tags.add(tag_id)
+        if tag_id in definitions:
+            continue  # Keep the owner's current name and shortcut for an existing ID.
+        if any(old['label'].casefold() == label.casefold() for old in definitions.values()):
+            raise ValueError('Imported tag name collides with a different tag ID: ' + label)
+        if key and any(old['key'] == key for old in definitions.values()):
+            key = ''  # Preserve the local shortcut assignment.
+        db.execute('INSERT INTO tags VALUES(?,?,?,1)', (tag_id, label, key))
+        definitions[tag_id] = dict(id=tag_id, label=label, key=key)
     items = document['plays']
     seen = set()
     validated = []
@@ -211,11 +289,10 @@ def restore(db, document):
         if key in seen or not db.execute('SELECT 1 FROM plays WHERE id=?', (key,)).fetchone():
             raise ValueError(f'Duplicate or unknown play {key}; import source metadata first')
         seen.add(key)
-        validated.append((key, validate_annotation(p.get('annotation'))))
-    with db:
-        for key, annotation in validated:
-            db.execute('''INSERT INTO annotations VALUES(?,?,1) ON CONFLICT(id) DO UPDATE
-                          SET body=excluded.body, revision=annotations.revision+1''', (key, json.dumps(annotation)))
+        validated.append((key, validate_annotation(p.get('annotation'), set(definitions))))
+    for key, annotation in validated:
+        db.execute('''INSERT INTO annotations VALUES(?,?,1) ON CONFLICT(id) DO UPDATE
+                      SET body=excluded.body, revision=annotations.revision+1''', (key, json.dumps(annotation)))
     return len(validated)
 
 def atomic_json(path, data):
@@ -279,6 +356,8 @@ def serve(args):
                     raise ValueError('Invalid request size')
                 body = json.loads(self.rfile.read(size))
                 with connect(args.db) as db:
+                    if self.path == '/api/tags':
+                        return self.respond(200, save_tag(db, body))
                     if self.path == '/api/save':
                         return self.respond(200, save_annotation(db, body['id'], body['annotation'], body['revision']))
                     if self.path == '/api/restore':
@@ -324,6 +403,7 @@ def main():
             data = snapshot(db)
             if args.command == 'publish':
                 if not args.annotations:
+                    data['tag_definitions'] = []
                     for p in data['plays']:
                         p['annotation'] = dict(empty_annotation(), revision=0)
                 data['annotations_published'] = args.annotations

@@ -2,10 +2,12 @@
   "schema_version": 1,
   "season": 2026,
   "source_url": "https://baseballsavant.mlb.com/statcast_search?hfAB=triple%7C&hfGT=R%7C&hfSea=2026%7C&player_type=batter&group_by=name-event&min_pitches=0&min_results=0&min_pas=0",
-  "exported_at": "2026-09-28T05:29:57.745419+00:00",
+  "exported_at": "2026-09-28T05:56:09.620802+00:00",
   "import_info": {
-    "last_import": "{\"imported_at\": \"2026-09-28T05:29:22.310048+00:00\", \"source\": \"Savant monthly CSV\", \"imported\": 668, \"matched\": 664, \"unresolved\": 4, \"feed_failures\": []}"
+    "last_import": "{\"imported_at\": \"2026-09-28T05:29:22.310048+00:00\", \"source\": \"Savant monthly CSV\", \"imported\": 668, \"matched\": 664, \"unresolved\": 4, \"feed_failures\": []}",
+    "custom_tags_migrated": "1"
   },
+  "tag_definitions": [],
   "plays": [
     {
       "id": "822682-66-3",

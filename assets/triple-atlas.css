@@ -45,5 +45,10 @@
 #triple-atlas .ta-counts li { display:flex; justify-content:space-between; gap:12px; border-bottom:1px solid var(--ta-line); padding:6px 0; }
 #triple-atlas .ta-note { white-space:pre-wrap; overflow-wrap:anywhere; }
 #ta-message.ta-error { color:#a32620; font-weight:700; }
+#triple-atlas .ta-tag-manager { margin:20px 0; padding:20px; border:1px solid var(--ta-line); border-radius:8px; background:#faf7f1; }
+#triple-atlas .ta-tag-manager summary { cursor:pointer; min-height:44px; font-weight:700; }
+#triple-atlas .ta-tag-form { display:grid; grid-template-columns:minmax(150px,1fr) 140px auto; gap:12px; align-items:end; padding:12px 0; border-bottom:1px solid var(--ta-line); }
+#triple-atlas #ta-new-tag { margin-top:12px; }
+@media(max-width:600px) { #triple-atlas .ta-tag-form { grid-template-columns:1fr 1fr; } #triple-atlas .ta-tag-form label:first-child { grid-column:1/-1; } }
 @media(max-width:700px) { #triple-atlas .ta-filters,#triple-atlas .ta-fields,#triple-atlas .ta-counts { grid-template-columns:1fr 1fr; } #triple-atlas .ta-results { grid-template-columns:1fr; } #triple-atlas .ta-actions { position:sticky; bottom:0; background:#f5efe4; padding:12px 0; } }
 @media(max-width:440px) { #triple-atlas .ta-counts,#triple-atlas .ta-fields { grid-template-columns:1fr; } }

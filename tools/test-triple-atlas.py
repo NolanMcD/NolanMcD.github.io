@@ -27,10 +27,16 @@ FEED = {'gameData': {'venue': {'name': 'Test Park'}}, 'liveData': {'plays': {'al
          {'isPitch': True, 'pitchNumber': 3, 'playId': 'right-pitch', 'details': {'isInPlay': True}}]}
 ]}}}
 
+def fixture_tags(db):
+    with db:
+        for tag in ('misplay', 'carom', 'speed'):
+            db.execute('INSERT INTO tags VALUES(?,?,?,1)', (tag, tag.title(), ''))
+
 class StorageTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.db = atlas.connect(Path(self.tmp.name) / 'test.db')
+        fixture_tags(self.db)
         self.play = atlas.parse_csv(CSV)[0]
         atlas.merge_plays(self.db, [self.play])
 
@@ -110,6 +116,7 @@ class ServerTests(unittest.TestCase):
         cls.tmp = tempfile.TemporaryDirectory()
         dbpath = Path(cls.tmp.name) / 'server.db'
         db = atlas.connect(dbpath)
+        fixture_tags(db)
         atlas.merge_plays(db, atlas.parse_csv(CSV))
         db.close()
         cls.process = subprocess.Popen([sys.executable, str(Path(__file__).with_name('triple-atlas.py')),
@@ -146,6 +153,19 @@ class ServerTests(unittest.TestCase):
         with self.assertRaises(HTTPError) as error:
             self.request('/api/data', token=False)
         self.assertEqual(error.exception.code, 401)
+        with self.assertRaises(HTTPError) as error:
+            self.request('/api/tags', {'label':'Public tag'}, token=False)
+        self.assertEqual(error.exception.code, 401)
+
+    def test_custom_tag_api(self):
+        with self.request('/api/tags', {'label':'My first tag', 'key':'z'}) as response:
+            tag = json.load(response)
+        with self.request('/api/tags', dict(tag, label='My renamed tag')) as response:
+            renamed = json.load(response)
+        self.assertEqual(renamed['id'], tag['id'])
+        self.assertEqual(renamed['revision'], 2)
+        with self.request('/api/data') as response:
+            self.assertIn('My renamed tag', [t['label'] for t in json.load(response)['tag_definitions']])
 
     def test_owner_workflow_and_unknown_play(self):
         body = dict(id='123-2-3', revision=0, annotation=dict(atlas.empty_annotation(), note='Watch again', tags=['speed'], status='tagged'))
@@ -169,6 +189,69 @@ class ServerTests(unittest.TestCase):
             self.assertNotIn('{{', html)
             self.assertIn('id="triple-atlas"', html)
             self.assertIn("frame-ancestors 'none'",response.headers['Content-Security-Policy'])
+
+class CustomTagTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.path = Path(self.tmp.name) / 'custom.db'
+        self.db = atlas.connect(self.path)
+        atlas.merge_plays(self.db, atlas.parse_csv(CSV))
+
+    def tearDown(self):
+        self.db.close()
+        self.tmp.cleanup()
+
+    def test_new_collection_has_no_presets(self):
+        self.assertEqual(atlas.tag_definitions(self.db), [])
+
+    def test_create_apply_rename_and_restart(self):
+        tag = atlas.save_tag(self.db, {'label':'My kind of triple', 'key':'Q'})
+        atlas.save_annotation(self.db, '123-2-3', dict(atlas.empty_annotation(), tags=[tag['id']], note='Keep this'), 0)
+        renamed = atlas.save_tag(self.db, dict(tag, label='My favorite triples', key='x'))
+        self.assertEqual(tag['id'], renamed['id'])
+        self.db.close()
+        self.db = atlas.connect(self.path)
+        export = atlas.snapshot(self.db)
+        self.assertEqual(export['tag_definitions'][0]['label'], 'My favorite triples')
+        self.assertEqual(export['plays'][0]['annotation']['tags'], [tag['id']])
+        self.assertEqual(export['plays'][0]['annotation']['note'], 'Keep this')
+
+    def test_duplicates_shortcuts_and_stale_rename(self):
+        tag = atlas.save_tag(self.db, {'label':'My tag', 'key':'q'})
+        for body in [{'label':' my TAG '}, {'label':'Another', 'key':'Q'}, {'label':''}, {'label':'x','key':'!!'}]:
+            with self.assertRaises(ValueError):
+                atlas.save_tag(self.db, body)
+        atlas.save_tag(self.db, dict(tag, label='Renamed'))
+        with self.assertRaises(FileExistsError):
+            atlas.save_tag(self.db, dict(tag, label='Stale'))
+
+    def test_export_restores_custom_definitions_into_fresh_database(self):
+        tag = atlas.save_tag(self.db, {'label':'A tag I invented'})
+        atlas.save_annotation(self.db, '123-2-3', dict(atlas.empty_annotation(), tags=[tag['id']]), 0)
+        exported = atlas.snapshot(self.db)
+        other = atlas.connect(Path(self.tmp.name) / 'other.db')
+        try:
+            atlas.merge_plays(other, atlas.parse_csv(CSV))
+            atlas.restore(other, exported)
+            self.assertEqual(atlas.tag_definitions(other)[0]['label'], 'A tag I invented')
+            self.assertEqual(atlas.snapshot(other)['plays'][0]['annotation']['tags'], [tag['id']])
+            invalid = copy.deepcopy(exported)
+            invalid['tag_definitions'].append({'id':'new-tag', 'label':'Rollback tag'})
+            invalid['plays'][0]['annotation']['rating'] = 99
+            with self.assertRaises(ValueError):
+                atlas.restore(other, invalid)
+            self.assertEqual(len(atlas.tag_definitions(other)), 1)
+        finally:
+            other.close()
+
+    def test_legacy_saved_tags_migrate_without_unused_presets(self):
+        with self.db:
+            self.db.execute('INSERT INTO annotations VALUES(?,?,1)', ('123-2-3',json.dumps(dict(atlas.empty_annotation(),tags=['speed']))))
+            self.db.execute("DELETE FROM settings WHERE key='custom_tags_migrated'")
+        self.db.close()
+        self.db = atlas.connect(self.path)
+        self.assertEqual([t['id'] for t in atlas.tag_definitions(self.db)], ['speed'])
+        self.assertEqual(atlas.tag_definitions(self.db)[0]['label'], 'Runner speed')
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

@@ -14,7 +14,7 @@ python tools/triple-atlas.py serve
 Open the **private owner URL printed in the terminal**. Keep the terminal running while tagging. The console serves the same page, script, and stylesheet as the public site; Ruby is not needed for this console. The default address is `http://127.0.0.1:8765/triple-atlas/`, but you must use the printed URL with its random token to unlock it. Restarting the server invalidates the previous token. Ctrl+C stops it.
 
 1. Open the Unwatched queue, then **Watch on Baseball Savant**. The video opens in another tab; return to the atlas to tag it.
-2. Choose any number of tags in each group. Enter notes and optionally a 1–5 rating.
+2. Open **Create & manage your tags** and enter a tag name. Tags start empty: you create the vocabulary yourself, with no required groups or preset choices. Add as many tags as you like, then select any number on a play. Enter notes and optionally a 1–5 rating.
 3. **Save & next** marks it tagged and advances to the next unwatched play. Ctrl/⌘ + Enter does the same. Tags have single-key shortcuts printed beside them; these do not fire while typing in a field.
 4. **Skip for now** (Alt + right arrow) preserves the draft and skips the play for this session. Unwatched queue resets skips. **Review again & next** saves that status and advances. Filter the catalog by review again to return to those plays.
 
@@ -27,8 +27,9 @@ The interface uses touch-sized controls and responsive layouts. This first versi
 - Source metadata and annotations are stored in **`local-data/triple-atlas/atlas.sqlite3`**. This directory is git-ignored and excluded by Jekyll. Browser storage is only a recovery draft, never the authoritative annotation store.
 - SQLite transactions make saves durable. Back up this directory with the server stopped, or export JSON while running. SQLite may use `-wal` and `-shm` files while open; do not copy just the database file while writing.
 - The public site reads **`assets/data/triple-atlas.json`**. It has no write endpoint and no public editing controls. GitHub Pages has no built-in owner authentication, so editing is available only through the token-protected loopback console. The server checks token, Host, and Origin, and serves only an explicit allowlist of assets.
-- Tag definitions and keyboard shortcuts live in **`assets/data/triple-atlas-tags.json`**. Change a label to rename a tag, keeping its ID stable. Add a new unique ID under any group to add a tag; the form, filters, counts, and server validation use this file. Keep shortcuts unique. Retain old IDs when importing historical annotations.
-- “Fielder misplay” is an independent observation. It never sets or implies an official scoring error.
+- Create tags directly in the owner console using **Create & manage your tags**, or **+ Create a tag** beside the play's tag choices. Names and optional single-letter/number shortcuts save to the database's `tags` table. Rename a tag with **Save changes**; its stable ID keeps every existing play selection attached. Names and shortcuts must be unique. New tags appear in the play choices, catalog filters, and counts immediately, without a page reload or a code change.
+- Only previously used preset tags are retained when an older database is opened. Unused presets disappear from the interface. `assets/data/triple-atlas-tags.json` is now a legacy lookup used only to recover names from older databases/exports; editing it does not manage the new tag collection. Your custom tag definitions travel with JSON exports and published annotation snapshots. Metadata-only publication hides them along with annotations.
+- Tags are personal observations. They never set or imply an official scoring error.
 
 Publish metadata only (keeps your notes private):
 
@@ -69,7 +70,7 @@ This still attempts game-feed enrichment. If lookup fails or Savant lacks a clip
 
 ## Portable annotations
 
-The console has Export JSON and owner-only Import annotations controls. JSON exports include all source IDs, original and overridden video URLs, tags, notes, ratings, statuses, and revisions. Imports replace annotations for the included play IDs and leave other plays untouched. They validate the entire document before writing; unknown IDs or tag definitions abort the restore. Import the source plays first. A timestamped backup JSON is written to `local-data/triple-atlas/` before every restore.
+The console has Export JSON and owner-only Import annotations controls. JSON exports include all source IDs, original and overridden video URLs, custom tag definitions, notes, ratings, statuses, and revisions. Imports replace annotations for the included play IDs and leave other plays untouched. They restore missing tag definitions while keeping local names/shortcuts for existing IDs. Conflicting imported shortcuts are left blank; duplicate names with different IDs are rejected. They validate the entire document before committing; unknown play IDs or invalid definitions roll back both tag and annotation changes. Import the source plays first. A timestamped backup JSON is written to `local-data/triple-atlas/` before every restore.
 
 Equivalent commands:
 
@@ -88,6 +89,6 @@ powershell -File tools/check-site.ps1
 bundle exec jekyll build --strict_front_matter
 ```
 
-All 12 regression tests passed during implementation. Tests cover stable identity, source filtering, exact pitch matching, duplicate imports, preserving annotations and manual URLs, feed outages, transactional restoration, validation, persistence after reconnect, conflicting-tab writes, token/Origin/Host enforcement, and private-file denial. They use temporary databases and never modify owner annotations. JavaScript syntax checking passed. The repository checker passed against a clean snapshot of versioned/new files; running it directly in the workspace was blocked by an unrelated inaccessible `tmp/broken-sword/soffice_convert_9gndn738` directory.
+All 18 regression tests passed after the custom-tag update. Tests cover tag creation/renaming, empty initial collections, legacy migration, tag definition export/restore, duplicate names/shortcuts, stable identity, source filtering, exact pitch matching, duplicate imports, preserving annotations and manual URLs, feed outages, transactional restoration, validation, persistence after reconnect, conflicting-tab writes, token/Origin/Host enforcement, and private-file denial. They use temporary databases and never modify owner annotations. JavaScript syntax checking passed. The repository checker passed against a clean snapshot of versioned/new files; running it directly in the workspace was blocked by an unrelated inaccessible `tmp/broken-sword/soffice_convert_9gndn738` directory. GitHub also passed the full Jekyll build and navigation checks for the initial deployment.
 
 For a manual browser check: tag two plays, save/advance, skip one, mark another review again, refresh, filter by tags/status/rating, export, change a note, reimport the export, and verify the restored note. Check the same URL without a token and on the public site: neither should allow writes. Also check a narrow phone viewport and a corrected/missing video URL. The implementation environment had no connected browser and no Ruby/Bundler, so interactive browser QA and a full local Jekyll build could not be completed there; the local owner HTTP server and automated regression tests were exercised instead. The existing GitHub workflow builds Jekyll on push/PR.
