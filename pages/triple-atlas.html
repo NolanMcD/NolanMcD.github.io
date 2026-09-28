@@ -1,0 +1,51 @@
+---
+layout: landing
+title: Triple Atlas
+permalink: /triple-atlas/
+description: Watching every triple of the 2026 MLB regular season, one glorious trip around the bases at a time.
+project_date: 2026-09-28
+project_label: Baseball
+project_summary: A video queue and field notes for every regular-season triple.
+---
+<link rel="stylesheet" href="{{ '/assets/triple-atlas.css' | relative_url }}">
+<div id="triple-atlas" data-source="{{ '/assets/data/triple-atlas.json' | relative_url }}" data-tags="{{ '/assets/data/triple-atlas-tags.json' | relative_url }}">
+  <header class="ta-hero">
+    <p class="ta-eyebrow">2026 regular season · A love letter to the triple</p>
+    <h1>Triple Atlas<span>Three bases. A thousand ways there.</span></h1>
+    <p>Into the gap, off the wall, around the corner. Watch the play. Mark what made it.</p>
+    <p id="ta-mode">Read-only catalog · The owner tags plays in the local console.</p>
+    <p id="ta-progress"></p><progress id="ta-meter" value="0" max="1" aria-label="Tagging completion"></progress>
+  </header>
+  <nav class="ta-toolbar" aria-label="Atlas views">
+    <button id="ta-queue" type="button">Unwatched queue</button>
+    <a href="#ta-catalog">Browse catalog</a><a href="#ta-analysis">Patterns &amp; counts</a>
+    <button id="ta-export" type="button">Export JSON</button>
+    <label class="ta-import" hidden>Import annotations <input id="ta-import" type="file" accept=".json,application/json"></label>
+  </nav>
+  <p id="ta-message" role="status" aria-live="polite">Loading triples…</p>
+  <section id="ta-player" class="ta-play" aria-label="Focused play"></section>
+  <section id="ta-catalog" class="ta-section">
+    <p class="ta-eyebrow">The collection</p><h2>Find your kind of triple.</h2>
+    <form id="ta-filters" class="ta-filters" role="search">
+      <label>Search player or notes<input name="search" type="search" placeholder="Player, play, or a little detail…"></label>
+      <label>Player<select name="player"><option value="">Every player</option></select></label>
+      <label>Team<select name="team"><option value="">Every team</option></select></label>
+      <label>Park<select name="park"><option value="">Every park</option></select></label>
+      <label>From<input name="from" type="date"></label><label>Through<input name="through" type="date"></label>
+      <label>Status<select name="status"><option value="">Any status</option><option>unwatched</option><option>tagged</option><option>review again</option></select></label>
+      <label>Enjoyment<select name="rating"><option value="">Any rating</option><option value="0">Unrated</option><option value="1">1 / 5</option><option value="2">2 / 5</option><option value="3">3 / 5</option><option value="4">4 / 5</option><option value="5">5 / 5</option></select></label>
+      <label>Video link<select name="video"><option value="">Any availability</option><option value="missing">Missing link</option><option value="linked">Has a link</option></select></label>
+      <fieldset id="ta-tag-filters"><legend>Tags · match every selected tag</legend></fieldset>
+      <button type="reset">Clear filters</button>
+    </form>
+    <p id="ta-count" aria-live="polite"></p><div id="ta-results" class="ta-results"></div>
+    <button type="button" id="ta-more" hidden>Show more triples</button>
+  </section>
+  <section id="ta-analysis" class="ta-section"><p class="ta-eyebrow">Patterns in the plays</p><h2>What makes a triple?</h2>
+    <p>Counts use the filtered catalog, including drafts. Combinations count pairs of selected tags on the same play.</p>
+    <div id="ta-counts" class="ta-counts"></div>
+  </section>
+  <footer class="ta-section"><p>Play metadata: <a href="https://baseballsavant.mlb.com/statcast_search?hfAB=triple%7C&amp;hfGT=R%7C&amp;hfSea=2026%7C&amp;player_type=batter&amp;group_by=name-event" target="_blank" rel="noopener noreferrer">Baseball Savant</a> and MLB. Videos open at their original source. No video is stored here.</p><p id="ta-import-info"></p></footer>
+  <noscript>Enable JavaScript to browse Triple Atlas.</noscript>
+</div>
+<script src="{{ '/assets/js/triple-atlas.js' | relative_url }}" defer></script>

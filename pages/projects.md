@@ -20,6 +20,12 @@ description: Interactive tools, ongoing adventures, and creative projects by Nol
 <p class="archive-count" id="archive-count" aria-live="polite"></p>
 
 <div class="archive-stream" id="archive-stream">
+  <article class="archive-card archive-project" data-archive-tags="project sports code data baseball">
+    <div class="archive-card-top"><span>Project</span><time>2026 season</time></div>
+    <h2><a href="{{ '/triple-atlas/' | relative_url }}">Triple Atlas</a></h2>
+    <p>Every regular-season triple, one play at a time. Watch the videos, explore the field notes, and find what makes three bases so special.</p>
+    <div class="archive-tags"><span>Baseball</span><span>Video catalog</span><span>Field notes</span></div>
+  </article>
   <article class="archive-card archive-project" data-archive-tags="project code interactive architecture">
     <div class="archive-card-top"><span>Project</span><time>New</time></div>
     <h2><a href="{{ '/projects/application-event-lab/' | relative_url }}">Application Event Lab</a></h2>

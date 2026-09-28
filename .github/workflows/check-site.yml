@@ -18,6 +18,9 @@ jobs:
         shell: pwsh
         run: ./tools/check-site.ps1
 
+      - name: Test Triple Atlas import and owner storage
+        run: python3 tools/test-triple-atlas.py
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:

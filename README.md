@@ -43,6 +43,10 @@ The browser game at `/elevator-game/` is implemented by `pages/elevator-game.md`
 
 The homepage Strava lane reads `assets/data/strava-feed.json`, generated daily by the `Sync public Strava activities` GitHub Action. It publishes only activities marked **Everyone**, and its OAuth refresh token is rotated back into GitHub Actions secrets before feed generation continues. Follow [the one-time secure OAuth setup](docs/strava-oauth-setup.md) to activate it.
 
+## Triple Atlas
+
+The 2026 triple catalog lives at `/triple-atlas/`. Run `python tools/triple-atlas.py import` to sync Savant metadata, then `python tools/triple-atlas.py serve` and open the private URL it prints to watch and tag plays. Annotations live in the git-ignored `local-data/triple-atlas/atlas.sqlite3`. Publish a read-only snapshot with `python tools/triple-atlas.py publish`; add `--annotations` only when notes and tags should be public. See [the workflow, video matching limitations, backups, and security model](docs/triple-atlas.md).
+
 ## Custom domain
 
 The canonical domain is `noland.blog`. The root `CNAME` file and `url` in

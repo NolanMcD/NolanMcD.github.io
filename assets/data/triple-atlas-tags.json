@@ -1,0 +1,23 @@
+[
+  {"id":"destination","label":"Destination","tags":[
+    {"id":"lf-corner","label":"LF corner","key":"1"},
+    {"id":"left-center","label":"Left-center gap","key":"2"},
+    {"id":"center","label":"Center","key":"3"},
+    {"id":"right-center","label":"Right-center gap","key":"4"},
+    {"id":"rf-corner","label":"RF corner","key":"5"},
+    {"id":"destination-other","label":"Other","key":"6"}]},
+  {"id":"path","label":"Ball path","tags":[
+    {"id":"grounder","label":"Grounder / roller","key":"q"},
+    {"id":"line-drive","label":"Line drive","key":"w"},
+    {"id":"fly-ball","label":"Fly ball","key":"e"},
+    {"id":"bloop","label":"Bloop","key":"r"},
+    {"id":"wall-ball","label":"Wall ball","key":"t"},
+    {"id":"carom","label":"Carom","key":"y"}]},
+  {"id":"reason","label":"Why it became a triple","tags":[
+    {"id":"speed","label":"Runner speed","key":"a"},
+    {"id":"park","label":"Deep or unusual park","key":"s"},
+    {"id":"misplay","label":"Fielder misplay","key":"d"},
+    {"id":"relay","label":"Slow retrieval or relay","key":"f"},
+    {"id":"aggressive","label":"Aggressive baserunning","key":"g"},
+    {"id":"reason-other","label":"Other","key":"h"}]}
+]
