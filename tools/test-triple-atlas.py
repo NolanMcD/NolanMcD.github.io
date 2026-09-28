@@ -167,6 +167,11 @@ class ServerTests(unittest.TestCase):
         with self.request('/api/data') as response:
             self.assertIn('My renamed tag', [t['label'] for t in json.load(response)['tag_definitions']])
 
+    def test_second_owner_server_cannot_share_the_port(self):
+        with self.assertRaises(OSError):
+            server = atlas.OwnerServer(('127.0.0.1', 18765), atlas.BaseHTTPRequestHandler)
+            server.server_close()
+
     def test_owner_workflow_and_unknown_play(self):
         body = dict(id='123-2-3', revision=0, annotation=dict(atlas.empty_annotation(), note='Watch again', tags=['speed'], status='tagged'))
         with self.request('/api/save', body) as response:

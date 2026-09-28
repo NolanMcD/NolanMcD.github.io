@@ -13,6 +13,8 @@ python tools/triple-atlas.py serve
 
 Open the **private owner URL printed in the terminal**. Keep the terminal running while tagging. The console serves the same page, script, and stylesheet as the public site; Ruby is not needed for this console. The default address is `http://127.0.0.1:8765/triple-atlas/`, but you must use the printed URL with its random token to unlock it. Restarting the server invalidates the previous token. Ctrl+C stops it.
 
+If the tab says its connection expired, paste the latest complete terminal URL into the reconnect form. Opening a fresh owner link in the same tab now reconnects correctly. Run only one owner server per port: the server reserves its port exclusively, including on Windows. If the port is already occupied, use the existing console or stop it before restarting; you can also choose `serve --port 8766`.
+
 1. Open the Unwatched queue, then **Watch on Baseball Savant**. The video opens in another tab; return to the atlas to tag it.
 2. Open **Create & manage your tags** and enter a tag name. Tags start empty: you create the vocabulary yourself, with no required groups or preset choices. Add as many tags as you like, then select any number on a play. Enter notes and optionally a 1–5 rating.
 3. **Save & next** marks it tagged and advances to the next unwatched play. Ctrl/⌘ + Enter does the same. Tags have single-key shortcuts printed beside them; these do not fire while typing in a field.

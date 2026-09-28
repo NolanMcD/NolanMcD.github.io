@@ -23,6 +23,13 @@ project_summary: A video queue and field notes for every regular-season triple.
     <label class="ta-import" hidden>Import annotations <input id="ta-import" type="file" accept=".json,application/json"></label>
   </nav>
   <p id="ta-message" role="status" aria-live="polite">Loading triples…</p>
+  <form id="ta-unlock" class="ta-tag-manager" hidden>
+    <h2>Connect to your owner console</h2>
+    <p>Paste the complete owner URL from the terminal running Triple Atlas. It starts with http://127.0.0.1 and includes #owner=.</p>
+    <label>Owner URL<input name="ownerUrl" type="url" required autocomplete="off" spellcheck="false" placeholder="Paste the full URL from your terminal"></label>
+    <button type="submit">Connect</button>
+    <p id="ta-unlock-error" role="alert"></p>
+  </form>
   <details id="ta-tag-manager" class="ta-tag-manager" hidden>
     <summary>Create &amp; manage your tags</summary>
     <p>Make this collection your own. Create any tags you like, then choose as many as you want for each play.</p>

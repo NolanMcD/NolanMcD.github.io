@@ -21,6 +21,9 @@ jobs:
       - name: Test Triple Atlas import and owner storage
         run: python3 tools/test-triple-atlas.py
 
+      - name: Test Triple Atlas owner connection recovery
+        run: node --test tools/test-triple-atlas-auth.cjs
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:

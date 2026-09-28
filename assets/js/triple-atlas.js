@@ -16,6 +16,27 @@
     if (local) token = sessionStorage.getItem('tripleAtlas.owner') || '';
   } catch (_) { token = local ? ownerHash.get('owner') || '' : ''; storageWorks = false; }
   const owner = Boolean(token);
+  // Opening a fresh terminal link in the same tab may change only the fragment.
+  // Reload so the new token is consumed instead of continuing with the old one.
+  window.addEventListener('hashchange', () => {
+    if (local && new URLSearchParams(location.hash.slice(1)).has('owner')) location.reload();
+  });
+  function showUnlock(text) {
+    $('#ta-mode').textContent = 'Owner console · Connection required';
+    message(text, true);
+    $('#ta-unlock').hidden = false;
+    $('#ta-unlock').onsubmit = e => {
+      e.preventDefault();
+      try {
+        const url = new URL(new FormData(e.target).get('ownerUrl').trim());
+        if (url.origin !== location.origin || !new URLSearchParams(url.hash.slice(1)).get('owner')) {
+          throw new Error('Paste the complete owner URL for this server, including #owner=.');
+        }
+        history.replaceState(null, '', url.href);
+        location.reload();
+      } catch (error) { $('#ta-unlock-error').textContent = error.message; }
+    };
+  }
   let data, groups, tagList, tagNames, current, dirty = false, timer, saving = null, editVersion = 0, blocked = false, limit = 36, advancing = false;
   const skipped = new Set();
   const draftKey = id => `tripleAtlas.draft.${id}`;
@@ -211,6 +232,7 @@
       `<div><h3>Tag combinations</h3><ul>${Object.entries(pairs).sort((a,b) => b[1]-a[1]).map(([key,n]) => `<li><span>${key.split('|').map(t => esc(tagNames[t] || t)).join(' + ')}</span><strong>${n}</strong></li>`).join('') || '<li>No combinations yet.</li>'}</ul></div>`;
   }
   async function start() {
+    if (local && !owner) { showUnlock('Connect using the owner URL printed in your terminal.'); return; }
     data = owner ? await api('/api/data') : await fetch(root.dataset.source).then(r => { if (!r.ok) throw new Error('Catalog unavailable'); return r.json(); });
     data.plays.sort((a,b) => a.date.localeCompare(b.date) || a.game_pk-b.game_pk || a.at_bat_number-b.at_bat_number);
     setTags(data.tag_definitions || []);
@@ -274,5 +296,10 @@
       if (t) { e.preventDefault(); const input = [...$('#ta-edit').querySelectorAll('[name=tag]')].find(i => i.value === t.id); input.checked = !input.checked; changed(); }
     });
   }
-  start().catch(error => message(`Could not load Triple Atlas: ${error.message}. Start the owner console again if your session expired, or reload to retry.`,true));
+  start().catch(error => {
+    if (local && error.status === 401) {
+      try { sessionStorage.removeItem('tripleAtlas.owner'); } catch (_) { /* Recovery also works without storage. */ }
+      showUnlock('This tab’s owner connection expired. Paste the latest terminal URL below to reconnect. Your saved tags and notes are safe.');
+    } else message(`Could not load Triple Atlas: ${error.message}. Reload to retry.`,true);
+  });
 })();

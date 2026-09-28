@@ -9,6 +9,7 @@ import os
 from pathlib import Path
 import re
 import secrets
+import socket
 import sqlite3
 import sys
 import time
@@ -23,6 +24,16 @@ PUBLIC = ROOT / 'assets/data/triple-atlas.json'
 TAGS = ROOT / 'assets/data/triple-atlas-tags.json'
 SOURCE = 'https://baseballsavant.mlb.com/statcast_search?hfAB=triple%7C&hfGT=R%7C&hfSea=2026%7C&player_type=batter&group_by=name-event&min_pitches=0&min_results=0&min_pas=0'
 VIDEO = re.compile(r'https://baseballsavant\.mlb\.com/sporty-videos\?playId=[a-zA-Z0-9-]+\Z')
+
+class OwnerServer(ThreadingHTTPServer):
+    # Windows SO_REUSEADDR allows multiple listeners with different owner tokens.
+    # Reserve this port exclusively so the printed URL always reaches this server.
+    allow_reuse_address = False
+
+    def server_bind(self):
+        if hasattr(socket, 'SO_EXCLUSIVEADDRUSE'):
+            self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE, 1)
+        super().server_bind()
 
 class NoRedirect(HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
@@ -371,7 +382,11 @@ def serve(args):
                 return self.respond(400, {'error': str(exc)})
             except Exception:
                 return self.respond(500, {'error': 'Save failed. Your draft is retained; check the owner server.'})
-    server = ThreadingHTTPServer(('127.0.0.1', args.port), Handler)
+    try:
+        server = OwnerServer(('127.0.0.1', args.port), Handler)
+    except OSError as exc:
+        raise OSError(f'Cannot start the owner console on port {args.port}. Another console may already be running. '
+                      f'Use its terminal URL, stop it with Ctrl+C, or choose serve --port {args.port + 1}.') from exc
     print(f'Owner console: {origin}/triple-atlas/#owner={token}', flush=True)
     print('Loopback only. Keep this URL private. Ctrl+C stops the console.', flush=True)
     server.serve_forever()
