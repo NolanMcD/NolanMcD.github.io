@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1513900241",
+        "syncId":  "letterboxd-review-1513900241",
+        "title":  "American Graffiti",
+        "year":  1973,
+        "rating":  4,
+        "review":  "Had a nice Sunday showing at UM, one of my former professors gave a nice overview with discussion afterwards",
+        "wordCount":  19,
+        "publishedDate":  "2026-09-28",
+        "watchedDate":  "2026-09-27",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/american-graffiti/",
+        "tmdbId":  "838",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1512717868",
         "syncId":  "letterboxd-review-1512717868",
         "title":  "Primetime",
