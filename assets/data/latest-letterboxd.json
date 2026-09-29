@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1515877303",
+        "syncId":  "letterboxd-review-1515877303",
+        "title":  "The Love Hypothesis",
+        "year":  2026,
+        "rating":  2,
+        "review":  "So close, it’s gets the comedy part but the romance is meh. Also why even have narration if you are going to use it for one montage at the beginning and one line at the end… just lazy.",
+        "wordCount":  38,
+        "publishedDate":  "2026-09-29",
+        "watchedDate":  "2026-09-28",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-love-hypothesis/",
+        "tmdbId":  "1032863",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1513900241",
         "syncId":  "letterboxd-review-1513900241",
         "title":  "American Graffiti",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/digger-2026/",
         "tmdbId":  "1248832",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1505462428",
-        "syncId":  "letterboxd-review-1505462428",
-        "title":  "Resident Evil",
-        "year":  2026,
-        "rating":  3,
-        "review":  "It\u0027s solid but not really up my alley. Just too many jump scares and horror cliches for me. Like bro doesn\u0027t make a single decisive action the whole movie he just moves verrrrry slowly. Still its better than what your usually get for a video game movie and that\u0027s mostly thanks to Cregger.",
-        "wordCount":  53,
-        "publishedDate":  "2026-09-22",
-        "watchedDate":  "2026-09-21",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/resident-evil-2026/",
-        "tmdbId":  "1423191",
         "tags":  [
 
                  ],

@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1515877303",
+        "syncId":  "letterboxd-review-1515877303",
+        "title":  "The Love Hypothesis",
+        "year":  2026,
+        "rating":  2,
+        "review":  "So close, it’s gets the comedy part but the romance is meh. Also why even have narration if you are going to use it for one montage at the beginning and one line at the end… just lazy.",
+        "wordCount":  38,
+        "publishedDate":  "2026-09-29",
+        "watchedDate":  "2026-09-28",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-love-hypothesis/",
+        "tmdbId":  "1032863",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1513900241",
         "syncId":  "letterboxd-review-1513900241",
         "title":  "American Graffiti",
