@@ -45,6 +45,8 @@ Publish your annotations, **including every note**, when ready to share them:
 python tools/triple-atlas.py publish --annotations
 ```
 
+To publish tags, ratings, statuses, and corrected video links while keeping free-text notes private, use `python tools/triple-atlas.py publish --annotations --omit-notes`. This changes only the public snapshot; your local notes and backups remain intact. Rerun this command and push the snapshot whenever you want later local edits to appear on the website.
+
 Review and commit the generated JSON, then publish through the site's usual GitHub Pages workflow. The tool does not commit or deploy for you. Share a play using `/triple-atlas/?play=GAME-ATBAT-PITCH`; query URLs work directly on Pages without server routing. Link previews use the atlas page's general metadata; the visible page title updates to the selected play.
 
 ## Repeatable source import

@@ -405,6 +405,7 @@ def main():
     load.add_argument('file', type=Path)
     publish = sub.add_parser('publish', help='Write a read-only snapshot for GitHub Pages')
     publish.add_argument('--annotations', action='store_true', help='Include notes, tags and ratings publicly')
+    publish.add_argument('--omit-notes', action='store_true', help='Keep free-text notes private when publishing annotations')
     args = parser.parse_args()
     if args.command == 'serve':
         return serve(args)
@@ -422,6 +423,10 @@ def main():
                     for p in data['plays']:
                         p['annotation'] = dict(empty_annotation(), revision=0)
                 data['annotations_published'] = args.annotations
+                if args.omit_notes:
+                    for p in data['plays']:
+                        p['annotation']['note'] = ''
+                data['notes_published'] = args.annotations and not args.omit_notes
             atomic_json(PUBLIC if args.command == 'publish' else args.file, data)
             print('Wrote', PUBLIC if args.command == 'publish' else args.file)
 
