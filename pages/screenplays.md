@@ -4,44 +4,35 @@ permalink: /screenplays/
 description: Original screenplays and screenplay transcriptions by Nolan McDermott.
 ---
 
-<p class="page-lede">Original work and screenplays I've transcribed while studying how films move from the page to the screen.</p>
-<p>Read the first draft of The Broken Sword below, explore <a href="{{ '/blood-manatees/' | relative_url }}">Blood Manatees, my interactive screenplay in progress</a>, or browse the transcriptions. For essays and explanations, visit <a href="{{ '/blog/' | relative_url }}">the blog</a>.</p>
+<p class="screenplays-intro">Original work and transcriptions from studying how films move from page to screen. For essays and explanations, visit <a href="{{ '/blog/' | relative_url }}">the blog</a>.</p>
 
 <article class="screenplay-entry">
-  <header class="review-header">
-    <p class="eyebrow">Original screenplay · First draft</p>
+  <div class="screenplay-copy">
+    <p class="eyebrow">Original screenplay &middot; First draft</p>
     <h2>The Broken Sword</h2>
     <p class="screenplay-meta">Written by Nolan McDermott</p>
-  </header>
-  <p><a href="{{ '/assets/screenplays/the-broken-sword.pdf' | relative_url }}" target="_blank" rel="noopener" aria-label="Read The Broken Sword screenplay PDF (opens in a new tab)">Read the screenplay (PDF)</a></p>
+    <a class="screenplay-read" href="{{ '/assets/screenplays/the-broken-sword.pdf' | relative_url }}" target="_blank" rel="noopener" aria-label="Read The Broken Sword screenplay PDF (opens in a new tab)">Read screenplay <span>PDF &nearr;</span></a>
+  </div>
 </article>
 
 <article class="screenplay-entry">
-  <header class="review-header">
+  <a class="screenplay-poster" href="{{ '/assets/screenplays/the-kid-detective.pdf' | relative_url }}" target="_blank" rel="noopener" aria-label="Read The Kid Detective screenplay PDF (opens in a new tab)"><img src="{{ '/assets/images/movies/kid-detective-poster.jpg' | relative_url }}" alt="The Kid Detective poster" width="100" height="150" loading="lazy"></a>
+  <div class="screenplay-copy">
     <p class="eyebrow">Screenplay transcription</p>
     <h2>The Kid Detective</h2>
-    <p class="screenplay-meta">Written and directed by Evan Morgan · Transcribed by Nolan McDermott</p>
-  </header>
-
-  <a class="screenplay-poster" href="{{ '/assets/screenplays/the-kid-detective.pdf' | relative_url }}" target="_blank" rel="noopener" aria-label="Open The Kid Detective screenplay PDF">
-    <img class="review-hero-poster" src="{{ '/assets/images/movies/kid-detective-poster.jpg' | relative_url }}" alt="The Kid Detective poster">
-  </a>
-
-  <p class="screenplay-prompt">Click the poster to open the screenplay PDF.</p>
+    <p class="screenplay-meta">Written and directed by Evan Morgan<br>Transcribed by Nolan McDermott</p>
+    <a class="screenplay-read" href="{{ '/assets/screenplays/the-kid-detective.pdf' | relative_url }}" target="_blank" rel="noopener" aria-label="Read The Kid Detective screenplay PDF (opens in a new tab)">Read screenplay <span>PDF &nearr;</span></a>
+  </div>
 </article>
 
 <article class="screenplay-entry">
-  <header class="review-header">
+  <a class="screenplay-poster" href="{{ '/assets/screenplays/gambit.pdf' | relative_url }}" target="_blank" rel="noopener" aria-label="Read Gambit screenplay PDF (opens in a new tab)"><img src="{{ '/assets/images/movies/gambit-poster.jpg' | relative_url }}" alt="Gambit poster" width="100" height="150" loading="lazy"></a>
+  <div class="screenplay-copy">
     <p class="eyebrow">Screenplay transcription</p>
     <h2>Gambit</h2>
-    <p class="screenplay-meta">Screenplay by Jack Davies and Alvin Sargent · Directed by Ronald Neame · Transcribed by Nolan McDermott</p>
-  </header>
-
-  <a class="screenplay-poster" href="{{ '/assets/screenplays/gambit.pdf' | relative_url }}" target="_blank" rel="noopener" aria-label="Open Gambit screenplay PDF">
-    <img class="review-hero-poster" src="{{ '/assets/images/movies/gambit-poster.jpg' | relative_url }}" alt="Gambit poster">
-  </a>
-
-  <p class="screenplay-prompt">Click the poster to open the screenplay PDF.</p>
+    <p class="screenplay-meta">Screenplay by Jack Davies and Alvin Sargent<br>Directed by Ronald Neame &middot; Transcribed by Nolan McDermott</p>
+    <a class="screenplay-read" href="{{ '/assets/screenplays/gambit.pdf' | relative_url }}" target="_blank" rel="noopener" aria-label="Read Gambit screenplay PDF (opens in a new tab)">Read screenplay <span>PDF &nearr;</span></a>
+  </div>
 </article>
 
 <aside class="screenplay-wip" aria-labelledby="blood-manatees-title">

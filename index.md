@@ -25,7 +25,8 @@ description: Nolan McDermott's latest movie reviews, writing, adventures, and pe
       <span class="home-shortcut-icon" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><rect x="6" y="10" width="52" height="42" rx="4"/><path d="M6 21h52M13 16h1M19 16h1M25 16h1m-3 13-7 7 7 7m20-14 7 7-7 7m-7-17-6 20"/></svg></span>
       <span class="home-shortcut-label">Latest code</span>
     </a>
-    <a class="home-shortcut home-shortcut-writing" aria-label="Latest writing project: Blood Manatees" title="Blood Manatees" href="{{ '/blood-manatees/' | relative_url }}">
+    {% assign latest_writing = site.posts.first %}
+    <a class="home-shortcut home-shortcut-writing" aria-label="Latest writing: {{ latest_writing.title | default: 'Blog' | escape }}" title="{{ latest_writing.title | default: 'Blog' | escape }}" href="{{ latest_writing.url | default: '/blog/' | relative_url }}">
       <span class="home-shortcut-icon" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M14 7h27l9 9v41H14zM41 7v11h9M22 27h20M22 34h16M22 41h20M22 48h10"/></svg></span>
       <span class="home-shortcut-label">Latest writing</span>
     </a>
