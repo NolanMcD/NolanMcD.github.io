@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1518415752",
+        "syncId":  "letterboxd-review-1518415752",
+        "title":  "The Cable Guy",
+        "year":  1996,
+        "rating":  2,
+        "review":  "The premise works better as a thriller than it does a comedy. Like who thinks its funny that the insane stalker ruins the reasonable guy\u0027s life.",
+        "wordCount":  26,
+        "publishedDate":  "2026-10-01",
+        "watchedDate":  "2026-10-01",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-cable-guy/",
+        "tmdbId":  "9894",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1515877303",
         "syncId":  "letterboxd-review-1515877303",
         "title":  "The Love Hypothesis",
