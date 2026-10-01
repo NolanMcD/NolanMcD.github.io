@@ -1,0 +1,44 @@
+---
+layout: landing
+title: Every Verb a Baseball Announcer Can Use to Describe How a Baseball Is Hit
+permalink: /baseball-verbs/
+description: A growing dictionary of baseball contact, one verb and one broadcast clip at a time.
+project_date: 2026-09-30
+project_label: Baseball
+project_summary: An illustrated-by-broadcast dictionary of every way to hit a baseball.
+---
+<link rel="stylesheet" href="{{ '/assets/baseball-verbs.css' | relative_url }}">
+<div id="baseball-verbs" data-source="{{ '/assets/data/baseball-verbs.json' | relative_url }}">
+  <header class="bv-hero">
+    <p class="bv-eyebrow">The language of contact</p>
+    <h1>Every Verb a Baseball Announcer Can Use to Describe How a Baseball Is Hit</h1>
+    <p class="bv-lede">Struck. Lined. Roped. A growing collection of the words behind the swing, with the calls to prove it.</p>
+    <p id="bv-stats" class="bv-muted"></p>
+  </header>
+  <p id="bv-message" role="status" aria-live="polite">Opening the dictionary…</p>
+  <section id="bv-owner" hidden aria-labelledby="bv-editor-title">
+    <h2 id="bv-editor-title">Add a word to the collection</h2>
+    <form id="bv-editor">
+      <div class="bv-fields">
+        <label>Verb or phrase<input name="verb" required maxlength="100" placeholder="e.g. roped"></label>
+        <label>Baseball Savant link (optional)<input name="url" type="url" maxlength="2000" placeholder="https://baseballsavant.mlb.com/…"></label>
+        <label>Announcer (optional)<input name="announcer" maxlength="150"></label>
+        <label>The call / notes (optional)<textarea name="notes" maxlength="3000" rows="3" placeholder="The exact call, player, game, or moment to listen for"></textarea></label>
+      </div>
+      <div class="bv-actions"><button type="submit">Save word</button><button id="bv-cancel" type="button" hidden>Cancel edit</button></div>
+    </form>
+    <p class="bv-muted">Saved words stay on this computer until you publish a snapshot.</p>
+  </section>
+  <section aria-labelledby="bv-collection-title">
+    <div class="bv-section-heading"><h2 id="bv-collection-title">The dictionary</h2><button id="bv-export" type="button" disabled>Export JSON</button></div>
+    <form id="bv-filters" role="search" class="bv-filters">
+      <label>Find a word or a call<input name="search" type="search" placeholder="Search the collection…"></label>
+      <label>Examples<select name="status"><option value="">All words</option><option value="linked">With a clip</option><option value="missing">Awaiting a clip</option></select></label>
+    </form>
+    <p id="bv-count" class="bv-muted" aria-live="polite"></p>
+    <div id="bv-results" class="bv-results"></div>
+  </section>
+  <footer><p>A work in progress, from the routine to the ridiculous. Clips open on Baseball Savant; videos are not hosted here.</p><a href="{{ '/triple-atlas/' | relative_url }}">Also exploring: Triple Atlas →</a></footer>
+  <noscript>Enable JavaScript to browse the dictionary. The collection is also available as <a href="{{ '/assets/data/baseball-verbs.json' | relative_url }}">JSON</a>.</noscript>
+</div>
+<script src="{{ '/assets/js/baseball-verbs.js' | relative_url }}" defer></script>

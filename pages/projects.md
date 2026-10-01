@@ -20,6 +20,12 @@ description: Interactive tools, ongoing adventures, and creative projects by Nol
 <p class="archive-count" id="archive-count" aria-live="polite"></p>
 
 <div class="archive-stream" id="archive-stream">
+  <article class="archive-card archive-project" data-archive-tags="project sports writing data baseball">
+    <div class="archive-card-top"><span>Project</span><time>In progress</time></div>
+    <h2><a href="{{ '/baseball-verbs/' | relative_url }}">Every Verb a Baseball Announcer Can Use to Describe How a Baseball Is Hit</a></h2>
+    <p>Struck, lined, roped. A growing dictionary of the ways announcers describe contact, with Baseball Savant clips to hear each word in action.</p>
+    <div class="archive-tags"><span>Baseball</span><span>Language</span><span>Video catalog</span></div>
+  </article>
   <article class="archive-card archive-project" data-archive-tags="project sports code data baseball">
     <div class="archive-card-top"><span>Project</span><time>2026 season</time></div>
     <h2><a href="{{ '/triple-atlas/' | relative_url }}">Triple Atlas</a></h2>

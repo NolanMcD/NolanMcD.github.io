@@ -47,6 +47,10 @@ The homepage Strava lane reads `assets/data/strava-feed.json`, generated daily b
 
 The 2026 triple catalog lives at `/triple-atlas/`. Run `python tools/triple-atlas.py import` to sync Savant metadata, then `python tools/triple-atlas.py serve` and open the private URL it prints to watch and tag plays. Annotations live in the git-ignored `local-data/triple-atlas/atlas.sqlite3`. Publish a read-only snapshot with `python tools/triple-atlas.py publish`; add `--annotations` only when notes and tags should be public. See [the workflow, video matching limitations, backups, and security model](docs/triple-atlas.md).
 
+## Baseball verbs
+
+The broadcast vocabulary collection lives at `/baseball-verbs/`. Run `python tools/baseball-verbs.py serve`, open the private URL it prints, and add words and Baseball Savant links. Run `python tools/baseball-verbs.py publish` to prepare the public snapshot. See [the editing and publishing guide](docs/baseball-verbs.md).
+
 ## Custom domain
 
 The canonical domain is `noland.blog`. The root `CNAME` file and `url` in

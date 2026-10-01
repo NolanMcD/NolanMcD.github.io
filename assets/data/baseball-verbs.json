@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {"id": "lined", "verb": "lined", "url": "", "announcer": "", "notes": "", "revision": 1},
+    {"id": "roped", "verb": "roped", "url": "", "announcer": "", "notes": "", "revision": 1},
+    {"id": "struck", "verb": "struck", "url": "", "announcer": "", "notes": "", "revision": 1}
+  ]
+}

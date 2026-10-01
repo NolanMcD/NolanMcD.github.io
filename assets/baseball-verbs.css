@@ -1,0 +1,31 @@
+#baseball-verbs { --ink:#29251f; --muted:#6d665e; --line:#ddd4c8; --accent:#a32620; max-width:1080px; margin:auto; padding:28px 20px; color:var(--ink); font:16px/1.6 system-ui,sans-serif; }
+#baseball-verbs * { box-sizing:border-box; }
+#baseball-verbs [hidden] { display:none!important; }
+#baseball-verbs .bv-hero { border-top:4px solid var(--accent); padding:30px 0; }
+#baseball-verbs .bv-eyebrow { color:var(--accent); font-size:12px; text-transform:uppercase; letter-spacing:2px; font-weight:750; }
+#baseball-verbs h1,#baseball-verbs h2,#baseball-verbs h3 { font-family:Georgia,serif; line-height:1.12; }
+#baseball-verbs h1 { font-size:clamp(32px,5.7vw,62px); max-width:940px; margin:18px 0 24px; letter-spacing:-1px; }
+#baseball-verbs h2 { font-size:28px; }
+#baseball-verbs .bv-lede { font-size:19px; max-width:660px; }
+#baseball-verbs .bv-muted,#baseball-verbs footer { color:var(--muted); font-size:14px; }
+#baseball-verbs a { color:#086c78; text-underline-offset:4px; }
+#baseball-verbs button,#baseball-verbs input,#baseball-verbs select,#baseball-verbs textarea { font:inherit; }
+#baseball-verbs input,#baseball-verbs select,#baseball-verbs textarea { display:block; width:100%; border:1px solid #b6aa9e; border-radius:5px; padding:10px; background:white; color:var(--ink); min-height:44px; }
+#baseball-verbs textarea { resize:vertical; }
+#baseball-verbs label { font-size:14px; }
+#baseball-verbs button { min-height:44px; border:1px solid var(--line); border-radius:5px; padding:9px 16px; cursor:pointer; color:var(--ink); background:white; }
+#baseball-verbs button:hover { background:#f5efe4; }
+#baseball-verbs button:disabled { opacity:.5; cursor:wait; }
+#baseball-verbs :focus-visible { outline:3px solid #086c78; outline-offset:3px; }
+#bv-owner { padding:22px; border:1px solid var(--line); background:#f5efe4; border-radius:8px; margin-bottom:30px; }
+#baseball-verbs .bv-fields { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+#baseball-verbs .bv-actions,#baseball-verbs .bv-section-heading { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin:16px 0; }
+#baseball-verbs .bv-section-heading { justify-content:space-between; }
+#baseball-verbs .bv-filters { display:grid; grid-template-columns:2fr 1fr; gap:16px; }
+#baseball-verbs .bv-results { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin:24px 0; }
+#baseball-verbs .bv-card { border:1px solid var(--line); border-top:3px solid var(--accent); border-radius:4px; padding:24px; overflow-wrap:anywhere; }
+#baseball-verbs .bv-card h3 { font-size:36px; margin:0 0 14px; }
+#baseball-verbs .bv-notes { white-space:pre-wrap; }
+#baseball-verbs .bv-clip { display:inline-block; padding:10px 0; min-height:44px; font-weight:650; }
+#baseball-verbs footer { border-top:1px solid var(--line); padding:24px 0; }
+@media(max-width:640px) { #baseball-verbs .bv-fields,#baseball-verbs .bv-filters,#baseball-verbs .bv-results { grid-template-columns:1fr; } }
