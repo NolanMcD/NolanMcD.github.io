@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1520452269",
+        "syncId":  "letterboxd-review-1520452269",
+        "title":  "Possession",
+        "year":  1981,
+        "rating":  4,
+        "review":  "I’m not smart enough to fully unpack what going on thematically here but I liked it",
+        "wordCount":  16,
+        "publishedDate":  "2026-10-03",
+        "watchedDate":  "2026-10-02",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/possession/",
+        "tmdbId":  "21484",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1518415752",
         "syncId":  "letterboxd-review-1518415752",
         "title":  "The Cable Guy",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/cemetery-man/",
         "tmdbId":  "21588",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1509518437",
-        "syncId":  "letterboxd-review-1509518437",
-        "title":  "Verity",
-        "year":  2026,
-        "rating":  3,
-        "review":  "I’m not a huge fan of domestic dramas, but I still enjoyed it. A lot of the serious scenes are awkward and Johnson’s involvement really makes them feel right out of 50 Shades of Gray. It’s unintentionally funny which usually is a bad sign but that was the most enjoyable part for me. It’s better than other similar movies I’ve seen like The Housemaid and Swallow just from its complexity alone. I’ll have to rewatch a hot ones interview for this.",
-        "wordCount":  81,
-        "publishedDate":  "2026-09-25",
-        "watchedDate":  "2026-09-24",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/verity-2026/",
-        "tmdbId":  "1283515",
         "tags":  [
 
                  ],

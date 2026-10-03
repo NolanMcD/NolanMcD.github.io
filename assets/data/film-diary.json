@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1520452269",
+        "syncId":  "letterboxd-review-1520452269",
+        "title":  "Possession",
+        "year":  1981,
+        "rating":  4,
+        "review":  "I’m not smart enough to fully unpack what going on thematically here but I liked it",
+        "wordCount":  16,
+        "publishedDate":  "2026-10-03",
+        "watchedDate":  "2026-10-02",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/possession/",
+        "tmdbId":  "21484",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1518415752",
         "syncId":  "letterboxd-review-1518415752",
         "title":  "The Cable Guy",
@@ -775,18 +800,18 @@
         "origin":  "rss"
     },
     {
-        "id":  "rss:letterboxd-review-1454944495",
-        "syncId":  "letterboxd-review-1454944495",
+        "id":  "rss:letterboxd-review-1454671943",
+        "syncId":  "letterboxd-review-1454671943",
         "title":  "Cape Fear",
-        "year":  1991,
-        "rating":  4,
-        "review":  "Oh yeah, way more effecting than the original. Dials it up in just about every way. The frantic pace of the 1st act, the devil like presence of Cady, an added touch of moral and ethical ambiguity. Everything down the the nature and storm sounds of the end credits just works wonders for me.",
-        "wordCount":  54,
+        "year":  1962,
+        "rating":  3,
+        "review":  "It’s a solid noir with good tension building but the climax it a little too long and drawn out for me",
+        "wordCount":  21,
         "publishedDate":  "2026-08-17",
-        "watchedDate":  "2026-08-17",
+        "watchedDate":  "2026-08-16",
         "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/cape-fear-1991/",
-        "tmdbId":  "1598",
+        "url":  "https://letterboxd.com/nolanmcd/film/cape-fear/",
+        "tmdbId":  "11349",
         "tags":  [
 
                  ],
@@ -800,18 +825,18 @@
         "origin":  "rss"
     },
     {
-        "id":  "rss:letterboxd-review-1454671943",
-        "syncId":  "letterboxd-review-1454671943",
+        "id":  "rss:letterboxd-review-1454944495",
+        "syncId":  "letterboxd-review-1454944495",
         "title":  "Cape Fear",
-        "year":  1962,
-        "rating":  3,
-        "review":  "It’s a solid noir with good tension building but the climax it a little too long and drawn out for me",
-        "wordCount":  21,
+        "year":  1991,
+        "rating":  4,
+        "review":  "Oh yeah, way more effecting than the original. Dials it up in just about every way. The frantic pace of the 1st act, the devil like presence of Cady, an added touch of moral and ethical ambiguity. Everything down the the nature and storm sounds of the end credits just works wonders for me.",
+        "wordCount":  54,
         "publishedDate":  "2026-08-17",
-        "watchedDate":  "2026-08-16",
+        "watchedDate":  "2026-08-17",
         "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/cape-fear/",
-        "tmdbId":  "11349",
+        "url":  "https://letterboxd.com/nolanmcd/film/cape-fear-1991/",
+        "tmdbId":  "1598",
         "tags":  [
 
                  ],
