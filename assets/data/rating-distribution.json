@@ -1,27 +1,28 @@
 {
-    "total":  1552,
-    "average":  3.33,
-    "mostCommon":  2,
+    "total":  1874,
+    "average":  3.16,
+    "mostCommon":  3,
+    "source":  "letterboxd-ratings-export",
     "ratings":  [
                     {
-                        "rating":  5,
-                        "count":  101
-                    },
-                    {
-                        "rating":  4,
-                        "count":  614
-                    },
-                    {
-                        "rating":  3,
-                        "count":  562
+                        "rating":  1,
+                        "count":  50
                     },
                     {
                         "rating":  2,
-                        "count":  244
+                        "count":  353
                     },
                     {
-                        "rating":  1,
-                        "count":  31
+                        "rating":  3,
+                        "count":  765
+                    },
+                    {
+                        "rating":  4,
+                        "count":  651
+                    },
+                    {
+                        "rating":  5,
+                        "count":  55
                     }
                 ]
 }

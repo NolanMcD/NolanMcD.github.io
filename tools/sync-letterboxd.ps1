@@ -3,6 +3,7 @@ param(
     [string]$OutputPath = "assets/data/film-diary.json",
     [string]$LatestOutputPath = "assets/data/latest-letterboxd.json",
     [string]$DistributionOutputPath = "assets/data/rating-distribution.json",
+    [string]$RatingsCsvPath = "local-data/ratings.csv",
     [string]$FeedUrl = "https://letterboxd.com/nolanmcd/rss/",
     [switch]$SkipFeed
 )
@@ -225,14 +226,29 @@ for ($rating = 5; $rating -ge 1; $rating--) {
     $ratingWeightedTotal += $rating * $count
     $ratingRows += [ordered]@{ rating = $rating; count = $count }
 }
-$mostCommonRating = ($ratingRows | Sort-Object count -Descending | Select-Object -First 1).rating
+$mostCommonRating = ($ratingRows | Sort-Object @{Expression = { [int]$_.count }; Descending = $true} | Select-Object -First 1).rating
 $distribution = [ordered]@{
     total = $ratingTotal
     average = if ($ratingTotal) { [math]::Round($ratingWeightedTotal / $ratingTotal, 2) } else { 0 }
     mostCommon = $mostCommonRating
+    source = "film-diary"
     ratings = $ratingRows
 }
 $distributionJson = ConvertTo-Json -InputObject $distribution -Depth 4
-[IO.File]::WriteAllText($resolvedDistributionOutput, $distributionJson + "`n", [Text.UTF8Encoding]::new($false))
+$resolvedRatingsCsv = Resolve-RepositoryPath $RatingsCsvPath
+if (-not (Test-Path -LiteralPath $resolvedRatingsCsv) -and $RatingsCsvPath -eq 'local-data/ratings.csv') {
+    $resolvedRatingsCsv = Resolve-RepositoryPath 'ratings.csv'
+}
+if (Test-Path -LiteralPath $resolvedRatingsCsv) {
+    & (Join-Path $PSScriptRoot 'sync-rating-distribution.ps1') -CsvPath $resolvedRatingsCsv -OutputPath $resolvedDistributionOutput
+} else {
+    # A review/rewatch sync must not overwrite a complete profile export.
+    $previousDistribution = if (Test-Path -LiteralPath $resolvedDistributionOutput) {
+        Get-Content -Raw -LiteralPath $resolvedDistributionOutput | ConvertFrom-Json
+    } else { $null }
+    if ($previousDistribution.source -ne 'letterboxd-ratings-export') {
+        [IO.File]::WriteAllText($resolvedDistributionOutput, $distributionJson + "`n", [Text.UTF8Encoding]::new($false))
+    }
+}
 
 Write-Host "Wrote $($sorted.Count) Film Diary entries, the latest-review feed, and the rating distribution."

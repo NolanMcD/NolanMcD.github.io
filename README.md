@@ -13,6 +13,8 @@ Standalone pages live in `pages/`, while posts live in `_posts` and use the `YYY
 
 The shared site header includes a light/dark mode toggle. It follows the system preference initially and saves a manual choice in `noland.theme` local storage. Palette overrides live in `_sass/theme.scss`, with early initialization in `assets/js/theme.js` to avoid a light-theme flash. The standalone airport kiosk retains the ANA screen colors.
 
+The homepage ratings curve uses a local Letterboxd `ratings.csv` export, with one current rating per film, rather than review/rewatch counts. The raw export is git-ignored; only aggregate counts are published. After replacing the export, run `powershell -File tools/sync-rating-distribution.ps1`; `python tools/test-rating-distribution.py` checks the published counts against it. The daily review sync also imports this export when present and preserves the profile snapshot when it is absent. A newer private export at `local-data/ratings.csv` takes precedence in the daily sync. To import that file directly, pass `-CsvPath local-data/ratings.csv`.
+
 The standalone airport kiosk simulator lives at `/airport-check-in/` (`pages/airport-check-in.html`, `assets/css/airport-check-in.css`, and `assets/js/airport-check-in.js`). Its terminal styling references [ANA's official screen guide](https://www.ana.co.jp/en/jp/guide/boarding-procedures/checkin/international/auto_howto-1/). Try booking reference `ABC123`, e-ticket `2051234567890`, or membership number `1234567890`; all correctly formatted entries return a fictional itinerary. Passport/barcode scanning and boarding-pass printing are simulated entirely in the browser.
 
 ## Publish a movie review

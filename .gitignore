@@ -5,4 +5,5 @@ vendor/
 
 # Private/local source data. Generated public artifacts belong in assets/data/.
 local-data/
+ratings.csv
 __pycache__/

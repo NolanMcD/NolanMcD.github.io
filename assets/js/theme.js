@@ -12,7 +12,8 @@
     if (toggle) {
       const dark = theme === 'dark';
       toggle.hidden = false;
-      toggle.textContent = dark ? 'Light mode' : 'Dark mode';
+      toggle.dataset.icon = dark ? 'sun' : 'moon';
+      toggle.title = `Switch to ${dark ? 'light' : 'dark'} mode`;
       toggle.setAttribute('aria-label', `Switch to ${dark ? 'light' : 'dark'} mode`);
       toggle.setAttribute('aria-pressed', String(dark));
     }

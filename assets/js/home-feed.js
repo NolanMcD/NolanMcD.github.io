@@ -27,21 +27,22 @@
 
     ratingChart.innerHTML = "";
     ratingChart.setAttribute("aria-label", "Distribution of " + total.toLocaleString() + " film ratings");
-    for (var rating = 5; rating >= 1; rating -= 1) {
+    for (var rating = 1; rating <= 5; rating += 1) {
       var count = counts[rating];
       var percentage = count / total * 100;
-      var row = element("div", "home-rating-row");
+      var row = element("a", "home-rating-column");
+      row.href = "https://letterboxd.com/nolanmcd/films/rated/" + rating + "/";
+      row.title = rating + " stars · " + count.toLocaleString() + " ratings (" + percentage.toFixed(1) + "%)";
       row.setAttribute("aria-label", rating + " stars: " + count.toLocaleString() + " films, " + percentage.toFixed(1) + " percent");
-      row.appendChild(element("strong", "home-rating-label", rating + " ★"));
+      row.appendChild(element("b", "home-rating-count", count.toLocaleString()));
       var track = element("span", "home-rating-track");
       var bar = element("i", "home-rating-bar");
-      bar.style.width = (count / maximum * 100).toFixed(2) + "%";
+      bar.style.height = (count / maximum * 100).toFixed(2) + "%";
+      bar.setAttribute("aria-hidden", "true");
       track.appendChild(bar);
       row.appendChild(track);
-      var value = element("span", "home-rating-value");
-      value.appendChild(element("b", "", count.toLocaleString()));
-      value.appendChild(element("small", "", percentage.toFixed(1) + "%"));
-      row.appendChild(value);
+      row.appendChild(element("strong", "home-rating-label", "★".repeat(rating)));
+      row.appendChild(element("small", "home-rating-percentage", percentage.toFixed(1) + "%"));
       ratingChart.appendChild(row);
     }
 
@@ -49,6 +50,10 @@
     summaries[0].querySelector("strong").textContent = total.toLocaleString();
     summaries[1].querySelector("strong").textContent = (weightedTotal / total).toFixed(2) + " ★";
     summaries[2].querySelector("strong").textContent = mostCommon + " stars";
+    var isProfile = distribution.source === "letterboxd-ratings-export";
+    summaries[0].querySelector("span").textContent = isProfile ? "rated films" : "rated diary entries";
+    var source = document.getElementById("home-rating-source");
+    if (source) source.textContent = isProfile ? "Your Letterboxd ratings · One current rating per film" : "Film Diary ratings · Includes rewatches; profile totals may differ";
   }
 
   if (ratingChart && ratingSummary) {

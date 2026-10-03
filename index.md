@@ -83,17 +83,18 @@ description: Nolan McDermott's latest movie reviews, writing, adventures, and pe
 
 <section class="home-rating-distribution" aria-labelledby="rating-distribution-heading">
   <header>
-    <div><p class="eyebrow">The full Film Diary</p><h2 id="rating-distribution-heading">How I rate what I watch</h2></div>
-    <p>Every logged rating, from the rare disasters to the movies I cannot stop recommending.</p>
+    <div><p class="eyebrow">My ratings curve</p><h2 id="rating-distribution-heading">How I rate what I watch</h2></div>
+    <p>From the rare disasters to the movies I cannot stop recommending.</p>
   </header>
   <div class="home-rating-summary" id="home-rating-summary" aria-live="polite">
     <div><strong>—</strong><span>rated films</span></div>
     <div><strong>—</strong><span>average rating</span></div>
     <div><strong>—</strong><span>most common</span></div>
   </div>
-  <div class="home-rating-chart" id="home-rating-chart" aria-label="Loading rating distribution">
+  <div class="home-rating-chart" id="home-rating-chart" role="group" aria-label="Loading rating distribution">
     <p class="feed-loading">Loading the Film Diary distribution…</p>
   </div>
+  <p class="home-rating-source" id="home-rating-source"></p>
   <a class="text-link" href="{{ '/reviews/diary/' | relative_url }}">Explore every rating <span aria-hidden="true">→</span></a>
 </section>
 
