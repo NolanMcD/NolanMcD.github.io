@@ -14,5 +14,6 @@
         {% if nav_page %}<a href="{{ nav_page.url | relative_url }}"{% if active %} aria-current="{% if page.url == nav_page.url %}page{% else %}true{% endif %}"{% endif %}>{% if nav_page.url == '/reviews/' %}Movies{% else %}{{ nav_page.title | escape }}{% endif %}</a>{% endif %}
       {% endfor %}
     </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" hidden>Dark mode</button>
   </div>
 </header>

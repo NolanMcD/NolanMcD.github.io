@@ -2,7 +2,9 @@
 
 ## Scenes
 
-Scenes live in `_blood_manatees/`. To add a scene, create the next numbered Markdown file, give it the matching `scene_number`, and write its heading and body. The numeric filename creates `/blood-manatees/scene/<number>/`; Jekyll orders Previous/Next controls by `scene_number`, so routing code does not need to change. Scene 4 is the apartment packing / opening-title sequence.
+Scenes live in `_blood_manatees/`. To add a scene, create the next numbered Markdown file, give it the matching `scene_number`, and write its heading and body. The numeric filename creates `/blood-manatees/scene/<number>/`; Jekyll orders Previous/Next controls by `scene_number`, so routing code does not need to change. Scene 4 is the apartment packing / opening-title sequence. Scene 5 follows Ewen’s drive from Dublin to Shannon International Airport.
+
+Scene 5 interleaves five supplied traffic-camera references from `assets/images/screenshots/` with the drive. Preserve their original framing, overlays and camera directions. These are visual references, not consecutive documentary sightings: the capture times overlap and some cameras face east. The number-plate tracking and airport barrier are fictional screenplay action, not claims about capabilities demonstrated by the supplied images. The `bm-route-frame` treatment keeps each full image visible with a caption and descriptive alt text.
 
 Optional scene front matter includes:
 

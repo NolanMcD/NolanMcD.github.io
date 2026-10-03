@@ -11,6 +11,10 @@ Nolan McDermott's movie-review site and personal portfolio, built with Jekyll an
 
 Standalone pages live in `pages/`, while posts live in `_posts` and use the `YYYY-MM-DD-title.md` filename format. Site-wide settings and navigation are in `_config.yml`; visual styles are in `_sass/style.scss`.
 
+The shared site header includes a light/dark mode toggle. It follows the system preference initially and saves a manual choice in `noland.theme` local storage. Palette overrides live in `_sass/theme.scss`, with early initialization in `assets/js/theme.js` to avoid a light-theme flash. The standalone airport kiosk retains the ANA screen colors.
+
+The standalone airport kiosk simulator lives at `/airport-check-in/` (`pages/airport-check-in.html`, `assets/css/airport-check-in.css`, and `assets/js/airport-check-in.js`). Its terminal styling references [ANA's official screen guide](https://www.ana.co.jp/en/jp/guide/boarding-procedures/checkin/international/auto_howto-1/). Try booking reference `ABC123`, e-ticket `2051234567890`, or membership number `1234567890`; all correctly formatted entries return a fictional itinerary. Passport/barcode scanning and boarding-pass printing are simulated entirely in the browser.
+
 ## Publish a movie review
 
 Copy `_drafts/movie-review-template.md` into `_posts`, rename it using `YYYY-MM-DD-movie-title.md`, fill in the front matter, and write the review. Keep `categories: [movies]` so it appears automatically on the homepage and review archive.

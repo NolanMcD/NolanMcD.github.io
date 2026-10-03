@@ -1,0 +1,85 @@
+/* Shared site palette. The standalone airline kiosk keeps its reference colors. */
+:root {
+  --site-ink: #201d1b;
+  --site-muted: #68615c;
+  --site-heading: #241f1c;
+  --site-soft: #f5efe4;
+  --site-line: #ddd4c8;
+  --site-surface: #fff;
+}
+.theme-toggle {
+  min-height: 44px;
+  padding: .4rem .8rem;
+  border: 1px solid var(--site-line);
+  border-radius: 999px;
+  color: var(--site-ink);
+  background: var(--site-surface);
+  font: inherit;
+  font-size: .8rem;
+  cursor: pointer;
+}
+.theme-toggle[hidden] { display: none; }
+.theme-toggle:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; }
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --site-ink: #eee8df;
+  --site-muted: #b9b1a7;
+  --site-heading: #f6eee3;
+  --site-soft: #282521;
+  --site-line: #49423b;
+  --site-surface: #211f1d;
+  body { background: #171614; }
+  a { color: #84d0d9; }
+  a:hover, a:focus { color: #b6eaf0; }
+  .site-header { background: #1c1a18; }
+  .primary-nav a { color: var(--site-ink); }
+  .primary-nav a[aria-current], .eyebrow { color: #ffaaa0; }
+  .home-compact .feed-heading .eyebrow { color: #ffaaa0; }
+  .hero { background: linear-gradient(135deg, #282521, #1d3433); }
+  .button-primary, .connect-strip { background: #241f1c; }
+  .connect-strip h2, .connect-strip a { color: white; }
+  .button-primary, .button-primary:hover { color: white; }
+  .button-secondary { color: var(--site-heading); }
+  .post-meta, .footer-col-wrapper, blockquote { color: var(--site-muted); }
+  blockquote, hr, table, table th, table td { border-color: var(--site-line); }
+  pre, code, table th { color: var(--site-ink); background: var(--site-soft); }
+  table { color: var(--site-ink); }
+  table tr:nth-child(even) { background: var(--site-surface); }
+  .homepage-screenplay, .war-feature-grid article,
+  .archive-tags span, .project-meta span, .sports-cal-blank,
+  .vocab-tabs, .vocab-table th, .vocab-pos { background: var(--site-soft); }
+  .archive-tags span, .project-meta span { color: var(--site-muted); }
+  .feed-item, .feed-footer-link { border-color: var(--site-line); }
+  .feed-lane > header { border-color: var(--site-line); }
+  .feed-letterboxd { --feed-color: #84d0d9; }
+  .feed-strava { --feed-color: #ffab83; }
+  .feed-noland, .feed-projects { --feed-color: #ffaaa0; }
+  .feed-mark { color: #171614; }
+  .feed-footer-link { color: #84d0d9; }
+  .home-shortcut-icon { color: #b9d5ce; }
+  .feed-item h3 a { color: var(--site-ink); }
+  .sports-cal-day:hover, .sports-cal-day:focus-visible, .sports-cal-day.is-selected { background: #363028; }
+  .rating-scale strong { color: #edbe67; }
+  .resume-kicker, .resume-sheet section > h2 { color: #ffaaa0; }
+  .resume-download:hover { color: #171614; }
+  .route-content h3, .expedition-next h2 { color: #84d0d9; }
+  .strava-frame, .expedition-next { background: var(--site-soft); }
+  .vocab-panel { --vocab-ink: #eee8df; --vocab-green: #92d7b4; }
+  .vocab-table th, .vocab-result-count, .vocab-tools label,
+  .quiz-options label, .vocab-pagination, .quiz-meta,
+  .quiz-prompt-label, .quiz-feedback { color: var(--site-muted); }
+}
+@media print {
+  .theme-toggle { display: none; }
+  html[data-theme="dark"] {
+    color-scheme: light;
+    --site-ink: #201d1b;
+    --site-muted: #68615c;
+    --site-heading: #241f1c;
+    --site-soft: #f5efe4;
+    --site-line: #ddd4c8;
+    --site-surface: #fff;
+    body { background: white; }
+    a { color: #086c78; }
+  }
+}
