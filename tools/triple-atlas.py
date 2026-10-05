@@ -346,6 +346,7 @@ def serve(args):
                         return self.respond(200, snapshot(db))
                 return self.respond(404, {'error': 'Not found'})
             files = {'/assets/js/triple-atlas.js': ('assets/js/triple-atlas.js', 'text/javascript'),
+                     '/assets/js/triple-atlas-explorer.js': ('assets/js/triple-atlas-explorer.js', 'text/javascript'),
                      '/assets/triple-atlas.css': ('assets/triple-atlas.css', 'text/css'),
                      '/assets/data/triple-atlas-tags.json': ('assets/data/triple-atlas-tags.json', 'application/json')}
             if path in ('/', '/triple-atlas/'):

@@ -51,7 +51,7 @@ The homepage Strava lane reads `assets/data/strava-feed.json`, generated daily b
 
 ## Triple Atlas
 
-The 2026 triple catalog lives at `/triple-atlas/`. Run `python tools/triple-atlas.py import` to sync Savant metadata, then `python tools/triple-atlas.py serve` and open the private URL it prints to watch and tag plays. Annotations live in the git-ignored `local-data/triple-atlas/atlas.sqlite3`. Publish a read-only snapshot with `python tools/triple-atlas.py publish`; add `--annotations` only when notes and tags should be public. See [the workflow, video matching limitations, backups, and security model](docs/triple-atlas.md).
+The 2026 triple catalog lives at `/triple-atlas/`. Explore interactive player/ballpark leaderboards, month-by-month counts, shareable filters, and a random linked play from any view. Run `python tools/triple-atlas.py import` to sync Savant metadata, then `python tools/triple-atlas.py serve` and open the private URL it prints to watch and tag plays. Annotations live in the git-ignored `local-data/triple-atlas/atlas.sqlite3`. Publish a read-only snapshot with `python tools/triple-atlas.py publish`; add `--annotations` only when notes and tags should be public. See [the explorer, owner workflow, video matching limitations, backups, and security model](docs/triple-atlas.md).
 
 ## Baseball verbs
 

@@ -8,7 +8,7 @@
   {% elsif page.url contains '/resumes/' and page.url != '/resumes/' %}
     <a href="{{ '/resumes/' | relative_url }}">Resumes</a><span aria-hidden="true">/</span>
   {% elsif page.url != '/projects/' %}
-    {% if page.url contains '/projects/' or page.url == '/crossword-creator/' or page.url == '/elevator-game/' or page.url == '/storms/' or page.url == '/resumes/' %}
+    {% if page.url contains '/projects/' or page.url == '/crossword-creator/' or page.url == '/elevator-game/' or page.url == '/storms/' or page.url == '/triple-atlas/' or page.url == '/resumes/' %}
       <a href="{{ '/projects/' | relative_url }}">Projects</a><span aria-hidden="true">/</span>
     {% endif %}
   {% endif %}

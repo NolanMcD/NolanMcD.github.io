@@ -10,19 +10,38 @@ project_summary: A video queue and field notes for every regular-season triple.
 <link rel="stylesheet" href="{{ '/assets/triple-atlas.css' | relative_url }}">
 <div id="triple-atlas" data-source="{{ '/assets/data/triple-atlas.json' | relative_url }}">
   <header class="ta-hero">
+    <svg class="ta-diamond" viewBox="0 0 180 180" aria-hidden="true" focusable="false">
+      <path class="ta-diamond-outline" d="m90 155 65-65-65-65-65 65z"/>
+      <path class="ta-diamond-route" d="m90 155 65-65-65-65-65 65"/>
+      <path class="ta-diamond-base" d="m90 148 7 7-7 7-7-7zM148 83h14v14h-14zM83 18h14v14H83zM18 83h14v14H18z"/>
+      <circle class="ta-diamond-third" cx="25" cy="90" r="16"/>
+      <text x="90" y="96" text-anchor="middle">3B</text>
+    </svg>
     <p class="ta-eyebrow">2026 regular season · A love letter to the triple</p>
     <h1>Triple Atlas<span>Three bases. A thousand ways there.</span></h1>
     <p>Into the gap, off the wall, around the corner. Watch the play. Mark what made it.</p>
-    <p id="ta-mode">Read-only catalog · The owner tags plays in the local console.</p>
+    <p id="ta-mode">A season of three-base adventures.</p>
     <p id="ta-progress"></p><progress id="ta-meter" value="0" max="1" aria-label="Tagging completion"></progress>
   </header>
   <nav class="ta-toolbar" aria-label="Atlas views">
-    <button id="ta-queue" type="button">Unwatched queue</button>
-    <a href="#ta-catalog">Browse catalog</a><a href="#ta-analysis">Patterns &amp; counts</a>
+    <button id="ta-surprise" type="button" class="ta-primary" disabled>Surprise me →</button>
+    <button id="ta-queue" type="button" hidden>Unwatched queue</button>
+    <a href="#ta-explore">Explore the season</a><a href="#ta-catalog">Browse catalog</a><a href="#ta-analysis">Field notes</a>
     <button id="ta-export" type="button">Export JSON</button>
     <label class="ta-import" hidden>Import annotations <input id="ta-import" type="file" accept=".json,application/json"></label>
   </nav>
   <p id="ta-message" role="status" aria-live="polite">Loading triples…</p>
+  <section id="ta-explore" class="ta-explore" aria-labelledby="ta-explore-title" hidden>
+    <div class="ta-explore-heading"><div><p class="ta-eyebrow">Follow the extra base</p><h2 id="ta-explore-title">A season worth exploring.</h2></div><button id="ta-reset-explore" type="button">Reset exploration</button></div>
+    <p id="ta-snapshot" class="ta-help"></p>
+    <div id="ta-season-stats" class="ta-season-stats"></div>
+    <p id="ta-explore-scope" class="ta-help" aria-live="polite"></p>
+    <div class="ta-explore-grid">
+      <section class="ta-ranking" aria-labelledby="ta-player-leaders-title"><p class="ta-eyebrow">The runners</p><h3 id="ta-player-leaders-title">Who keeps finding third?</h3><p class="ta-help">Choose a player to explore their triples.</p><div id="ta-player-leaders"></div></section>
+      <section class="ta-ranking" aria-labelledby="ta-park-leaders-title"><p class="ta-eyebrow">The ballparks</p><h3 id="ta-park-leaders-title">Where the ball keeps rolling.</h3><p class="ta-help">Choose a park to see its plays.</p><div id="ta-park-leaders"></div></section>
+    </div>
+    <section class="ta-timeline" aria-labelledby="ta-months-title"><div class="ta-explore-heading"><div><p class="ta-eyebrow">The rhythm of the season</p><h3 id="ta-months-title">One month at a time.</h3></div><p class="ta-help">All months shown; your other filters still apply. Choose a month to narrow the collection.</p></div><div id="ta-months" class="ta-months"></div></section>
+  </section>
   <form id="ta-unlock" class="ta-tag-manager" hidden>
     <h2>Connect to your owner console</h2>
     <p>Paste the complete owner URL from the terminal running Triple Atlas. It starts with http://127.0.0.1 and includes #owner=.</p>
@@ -42,7 +61,7 @@ project_summary: A video queue and field notes for every regular-season triple.
     <p id="ta-tag-message" role="status" aria-live="polite"></p>
     <div id="ta-manage-tags"></div>
   </details>
-  <section id="ta-player" class="ta-play" aria-label="Focused play"></section>
+  <section id="ta-player" class="ta-play" aria-label="Focused play" aria-busy="true"></section>
   <section id="ta-catalog" class="ta-section">
     <p class="ta-eyebrow">The collection</p><h2>Find your kind of triple.</h2>
     <form id="ta-filters" class="ta-filters" role="search">
@@ -54,17 +73,22 @@ project_summary: A video queue and field notes for every regular-season triple.
       <label>Status<select name="status"><option value="">Any status</option><option>unwatched</option><option>tagged</option><option>review again</option></select></label>
       <label>Enjoyment<select name="rating"><option value="">Any rating</option><option value="0">Unrated</option><option value="1">1 / 5</option><option value="2">2 / 5</option><option value="3">3 / 5</option><option value="4">4 / 5</option><option value="5">5 / 5</option></select></label>
       <label>Video link<select name="video"><option value="">Any availability</option><option value="missing">Missing link</option><option value="linked">Has a link</option></select></label>
+      <label>Sort by<select name="sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="player">Player name</option><option value="rating">Highest enjoyment</option></select></label>
       <fieldset id="ta-tag-filters"><legend>Tags · match every selected tag</legend></fieldset>
       <button type="reset">Clear filters</button>
+      <button type="button" id="ta-share">Copy this view’s link</button>
     </form>
+    <label id="ta-share-fallback" class="ta-help" hidden>Copy this link<input id="ta-share-url" type="text" readonly></label>
+    <p id="ta-share-message" class="ta-help" role="status"></p>
     <p id="ta-count" aria-live="polite"></p><div id="ta-results" class="ta-results"></div>
     <button type="button" id="ta-more" hidden>Show more triples</button>
   </section>
   <section id="ta-analysis" class="ta-section"><p class="ta-eyebrow">Patterns in the plays</p><h2>What makes a triple?</h2>
-    <p>Counts use the filtered catalog, including drafts. Combinations count pairs of selected tags on the same play.</p>
+    <p id="ta-tag-scope">Counts use the filtered catalog. Combinations count pairs of selected tags on the same play.</p>
     <div id="ta-counts" class="ta-counts"></div>
   </section>
   <footer class="ta-section"><p>Play metadata: <a href="https://baseballsavant.mlb.com/statcast_search?hfAB=triple%7C&amp;hfGT=R%7C&amp;hfSea=2026%7C&amp;player_type=batter&amp;group_by=name-event" target="_blank" rel="noopener noreferrer">Baseball Savant</a> and MLB. Videos open at their original source. No video is stored here.</p><p id="ta-import-info"></p></footer>
   <noscript>Enable JavaScript to browse Triple Atlas.</noscript>
 </div>
+<script src="{{ '/assets/js/triple-atlas-explorer.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/triple-atlas.js' | relative_url }}" defer></script>

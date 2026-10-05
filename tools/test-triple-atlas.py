@@ -194,6 +194,10 @@ class ServerTests(unittest.TestCase):
             self.assertNotIn('{{', html)
             self.assertIn('id="triple-atlas"', html)
             self.assertIn("frame-ancestors 'none'",response.headers['Content-Security-Policy'])
+            self.assertIn('/assets/js/triple-atlas-explorer.js', html)
+        with self.request('/assets/js/triple-atlas-explorer.js', token=False) as response:
+            self.assertIn('javascript', response.headers['Content-Type'])
+            self.assertIn('TripleAtlasExplorer', response.read().decode())
 
 class CustomTagTests(unittest.TestCase):
     def setUp(self):

@@ -1,12 +1,12 @@
-#triple-atlas { --ta-ink:#241f1c; --ta-muted:#68615c; --ta-line:#ddd4c8; --ta-red:#a32620; max-width:1080px; margin:auto; padding:24px 16px; color:var(--ta-ink); font:16px/1.55 system-ui,sans-serif; }
+#triple-atlas { --ta-ink:var(--site-ink,#241f1c); --ta-muted:var(--site-muted,#68615c); --ta-line:var(--site-line,#ddd4c8); --ta-red:#a32620; --ta-surface:var(--site-surface,#fff); --ta-soft:var(--site-soft,#f5efe4); --ta-link:#086c78; max-width:1080px; margin:auto; padding:24px 16px; color:var(--ta-ink); font:16px/1.55 system-ui,sans-serif; }
 #triple-atlas * { box-sizing:border-box; }
 #triple-atlas [hidden] { display:none!important; }
-#triple-atlas a { color:#086c78; text-underline-offset:4px; }
+#triple-atlas a { color:var(--ta-link); text-underline-offset:4px; }
 #triple-atlas button, #triple-atlas input, #triple-atlas select, #triple-atlas textarea { font:inherit; }
-#triple-atlas button, #triple-atlas .ta-video { min-height:44px; padding:9px 15px; border:1px solid var(--ta-line); border-radius:7px; background:#fff; color:var(--ta-ink); cursor:pointer; }
-#triple-atlas button:hover { background:#f5efe4; }
+#triple-atlas button, #triple-atlas .ta-video { min-height:44px; padding:9px 15px; border:1px solid var(--ta-line); border-radius:7px; background:var(--ta-surface); color:var(--ta-ink); cursor:pointer; }
+#triple-atlas button:hover { background:var(--ta-soft); }
 #triple-atlas button:disabled { opacity:.5; cursor:wait; }
-#triple-atlas :focus-visible { outline:3px solid #086c78; outline-offset:3px; }
+#triple-atlas :focus-visible { outline:3px solid var(--ta-link); outline-offset:3px; }
 #triple-atlas h1,#triple-atlas h2,#triple-atlas h3 { font-family:Georgia,serif; line-height:1.15; }
 #triple-atlas h1 { font-size:clamp(40px,7vw,70px); margin:15px 0; letter-spacing:-2px; }
 #triple-atlas h1 span { display:block; font:normal 20px/1.4 system-ui,sans-serif; letter-spacing:0; margin-top:20px; }
@@ -16,7 +16,7 @@
 #ta-mode,#ta-progress,#ta-message,.ta-meta,.ta-help { font-size:14px; color:var(--ta-muted); }
 #ta-meter { width:100%; height:8px; accent-color:var(--ta-red); }
 #triple-atlas .ta-toolbar,#triple-atlas .ta-actions { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin:20px 0; }
-#triple-atlas .ta-play { background:#f5efe4; padding:clamp(18px,4vw,36px); border:1px solid var(--ta-line); border-radius:12px; }
+#triple-atlas .ta-play { background:var(--ta-soft); padding:clamp(18px,4vw,36px); border:1px solid var(--ta-line); border-radius:12px; }
 #triple-atlas .ta-play:empty { display:none; }
 #triple-atlas .ta-video,#triple-atlas .ta-primary { display:inline-flex; align-items:center; background:var(--ta-ink); color:white; border-color:var(--ta-ink); text-decoration:none; font-weight:700; }
 #triple-atlas .ta-video { padding:16px 24px; margin:8px 12px 16px 0; }
@@ -24,11 +24,11 @@
 #triple-atlas fieldset { border:0; padding:0; margin:18px 0; }
 #triple-atlas legend { font-weight:750; margin-bottom:10px; }
 #triple-atlas .ta-chips { display:flex; flex-wrap:wrap; gap:8px; }
-#triple-atlas .ta-chip { display:inline-flex; align-items:center; gap:7px; padding:9px 11px; min-height:44px; border:1px solid var(--ta-line); border-radius:6px; background:white; cursor:pointer; }
+#triple-atlas .ta-chip { display:inline-flex; align-items:center; gap:7px; padding:9px 11px; min-height:44px; border:1px solid var(--ta-line); border-radius:6px; background:var(--ta-surface); cursor:pointer; }
 #triple-atlas .ta-chip:has(input:checked) { border-color:var(--ta-red); background:#fce7df; }
 #triple-atlas input[type=checkbox] { accent-color:var(--ta-red); }
 #triple-atlas kbd { font-size:11px; color:var(--ta-muted); }
-#triple-atlas textarea,#triple-atlas input:not([type=checkbox]):not([type=file]),#triple-atlas select { display:block; width:100%; min-height:44px; border:1px solid #b6aa9e; border-radius:5px; padding:9px; background:white; color:var(--ta-ink); }
+#triple-atlas textarea,#triple-atlas input:not([type=checkbox]):not([type=file]),#triple-atlas select { display:block; width:100%; min-height:44px; border:1px solid var(--ta-line); border-radius:5px; padding:9px; background:var(--ta-surface); color:var(--ta-ink); }
 #triple-atlas textarea { min-height:110px; resize:vertical; }
 #triple-atlas .ta-fields { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
 #triple-atlas .ta-fields .ta-wide { grid-column:1/-1; }
@@ -39,16 +39,76 @@
 #triple-atlas .ta-results { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
 #triple-atlas .ta-card { padding:18px; border:1px solid var(--ta-line); border-radius:8px; }
 #triple-atlas .ta-card h3 { margin:8px 0; font-size:22px; }
-#triple-atlas .ta-badge { display:inline-block; font-size:12px; padding:3px 7px; background:#f5efe4; margin:3px; border-radius:4px; }
+#triple-atlas .ta-badge { display:inline-block; font-size:12px; padding:3px 7px; background:var(--ta-soft); margin:3px; border-radius:4px; }
 #triple-atlas .ta-counts { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
 #triple-atlas .ta-counts ul { list-style:none; padding:0; margin:0; }
 #triple-atlas .ta-counts li { display:flex; justify-content:space-between; gap:12px; border-bottom:1px solid var(--ta-line); padding:6px 0; }
 #triple-atlas .ta-note { white-space:pre-wrap; overflow-wrap:anywhere; }
-#ta-message.ta-error { color:#a32620; font-weight:700; }
-#triple-atlas .ta-tag-manager { margin:20px 0; padding:20px; border:1px solid var(--ta-line); border-radius:8px; background:#faf7f1; }
+#ta-message.ta-error { color:var(--ta-red); font-weight:700; }
+#triple-atlas .ta-tag-manager { margin:20px 0; padding:20px; border:1px solid var(--ta-line); border-radius:8px; background:var(--ta-soft); }
 #triple-atlas .ta-tag-manager summary { cursor:pointer; min-height:44px; font-weight:700; }
 #triple-atlas .ta-tag-form { display:grid; grid-template-columns:minmax(150px,1fr) 140px auto; gap:12px; align-items:end; padding:12px 0; border-bottom:1px solid var(--ta-line); }
 #triple-atlas #ta-new-tag { margin-top:12px; }
 @media(max-width:600px) { #triple-atlas .ta-tag-form { grid-template-columns:1fr 1fr; } #triple-atlas .ta-tag-form label:first-child { grid-column:1/-1; } }
-@media(max-width:700px) { #triple-atlas .ta-filters,#triple-atlas .ta-fields,#triple-atlas .ta-counts { grid-template-columns:1fr 1fr; } #triple-atlas .ta-results { grid-template-columns:1fr; } #triple-atlas .ta-actions { position:sticky; bottom:0; background:#f5efe4; padding:12px 0; } }
+@media(max-width:700px) { #triple-atlas .ta-filters,#triple-atlas .ta-fields,#triple-atlas .ta-counts { grid-template-columns:1fr 1fr; } #triple-atlas .ta-results { grid-template-columns:1fr; } #triple-atlas .ta-actions { position:sticky; bottom:0; background:var(--ta-soft); padding:12px 0; } }
 @media(max-width:440px) { #triple-atlas .ta-counts,#triple-atlas .ta-fields { grid-template-columns:1fr; } }
+
+/* Explore the collection: every graphic is backed by the imported plays. */
+#triple-atlas .ta-explore { margin:30px 0 40px; padding:clamp(18px,3vw,30px); border:1px solid var(--ta-line); border-radius:14px; background:var(--ta-soft); }
+#triple-atlas .ta-hero { position:relative; }
+#triple-atlas .ta-diamond { display:none; }
+@media(min-width:900px) {
+  #triple-atlas .ta-hero { padding-right:220px; }
+  #triple-atlas .ta-diamond { display:block; position:absolute; right:12px; top:38px; width:180px; height:180px; overflow:visible; }
+}
+#triple-atlas .ta-diamond-outline { fill:var(--ta-soft); stroke:var(--ta-line); stroke-width:2; }
+#triple-atlas .ta-diamond-route { fill:none; stroke:var(--ta-red); stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+#triple-atlas .ta-diamond-base { fill:var(--ta-surface); stroke:var(--ta-ink); stroke-width:1.5; }
+#triple-atlas .ta-diamond-third { fill:none; stroke:var(--ta-red); stroke-width:2; }
+#triple-atlas .ta-diamond text { fill:var(--ta-red); font:700 28px Georgia,serif; }
+#triple-atlas .ta-explore-heading { display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; }
+#triple-atlas .ta-explore-heading h2 { margin-bottom:8px; }
+#triple-atlas .ta-season-stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:22px 0; }
+#triple-atlas .ta-season-stats > div { background:var(--ta-surface); padding:18px; border:1px solid var(--ta-line); border-radius:8px; }
+#triple-atlas .ta-season-stats strong { display:block; font:700 clamp(28px,4vw,42px)/1.1 Georgia,serif; font-variant-numeric:tabular-nums; }
+#triple-atlas .ta-season-stats span { display:block; margin-top:8px; color:var(--ta-muted); font-size:12px; text-transform:uppercase; letter-spacing:1px; }
+#triple-atlas .ta-explore-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:24px 0; }
+#triple-atlas .ta-ranking { padding:22px; border:1px solid var(--ta-line); border-radius:9px; background:var(--ta-surface); min-width:0; }
+#triple-atlas .ta-ranking h3,#triple-atlas .ta-timeline h3 { margin:8px 0 10px; font-size:25px; }
+#triple-atlas button.ta-rank-row { position:relative; display:flex; align-items:center; justify-content:space-between; gap:12px; width:100%; min-height:48px; padding:10px; margin:7px 0; overflow:hidden; border:1px solid transparent; text-align:left; background:var(--ta-soft); }
+#triple-atlas .ta-rank-row > span,#triple-atlas .ta-rank-row > strong { position:relative; z-index:1; }
+#triple-atlas .ta-rank-row span { display:flex; gap:10px; font-size:14px; }
+#triple-atlas .ta-rank-row small { color:var(--ta-muted); min-width:12px; }
+#triple-atlas .ta-rank-row strong { font-variant-numeric:tabular-nums; }
+#triple-atlas .ta-rank-row meter { position:absolute; inset:0; height:100%; width:100%; opacity:.12; }
+#triple-atlas meter { appearance:none; border:0; background:transparent; }
+#triple-atlas meter::-webkit-meter-bar { border:0; border-radius:0; background:transparent; }
+#triple-atlas meter::-webkit-meter-optimum-value { background:var(--ta-link); }
+#triple-atlas meter::-moz-meter-bar { background:var(--ta-link); }
+#triple-atlas [data-explore][aria-pressed=true] { border-color:var(--ta-link); box-shadow:inset 0 0 0 1px var(--ta-link); }
+#triple-atlas [data-explore]:hover { border-color:var(--ta-link); }
+#triple-atlas .ta-months { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:8px; }
+#triple-atlas .ta-months button { padding:14px 8px; min-width:0; text-align:left; }
+#triple-atlas .ta-months span { display:block; font-size:12px; color:var(--ta-muted); }
+#triple-atlas .ta-months strong { display:block; margin:6px 0; font:700 25px/1.2 Georgia,serif; }
+#triple-atlas .ta-months meter { display:block; width:100%; height:6px; background:var(--ta-soft); }
+#triple-atlas .ta-card { display:flex; flex-direction:column; background:var(--ta-surface); }
+#triple-atlas .ta-card.is-current { border-color:var(--ta-link); box-shadow:inset 0 0 0 1px var(--ta-link); }
+#triple-atlas .ta-card-watch { margin-top:auto; padding:12px 0 0; min-height:44px; font-weight:650; }
+#triple-atlas .ta-play-navigation { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin:10px 0; }
+#triple-atlas .ta-counts li > button { display:flex; justify-content:space-between; align-items:center; gap:12px; width:100%; text-align:left; border-color:transparent; padding:8px; }
+#triple-atlas .ta-counts li:has(> button) { padding:0; }
+#triple-atlas .ta-more-pairs { margin-top:12px; }
+#triple-atlas .ta-more-pairs summary { cursor:pointer; min-height:44px; padding:10px 0; color:var(--ta-link); }
+#triple-atlas #ta-share-fallback { display:block; margin:18px 0; }
+#triple-atlas .ta-toolbar > a { min-height:44px; display:inline-flex; align-items:center; }
+html[data-theme=dark] #triple-atlas { --ta-red:#ffaaa0; --ta-link:#84d0d9; }
+html[data-theme=dark] #triple-atlas .ta-chip:has(input:checked) { background:#363028; }
+html[data-theme=dark] #triple-atlas .ta-video,html[data-theme=dark] #triple-atlas .ta-primary { background:var(--ta-link); color:#171614; border-color:var(--ta-link); }
+html[data-theme=dark] #triple-atlas .ta-primary:hover { background:#b6eaf0; }
+@media(max-width:700px) {
+  #triple-atlas .ta-explore-grid { grid-template-columns:1fr; }
+  #triple-atlas .ta-season-stats { grid-template-columns:1fr 1fr; }
+  #triple-atlas .ta-months { grid-template-columns:repeat(4,minmax(0,1fr)); }
+}
+@media(prefers-reduced-motion:no-preference) { #triple-atlas .ta-rank-row { transition:border-color .15s ease; } }

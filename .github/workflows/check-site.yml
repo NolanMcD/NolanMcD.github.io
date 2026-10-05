@@ -24,8 +24,21 @@ jobs:
       - name: Test Triple Atlas import and owner storage
         run: python3 tools/test-triple-atlas.py
 
+      - name: Set up Node for client checks
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+
       - name: Test Triple Atlas owner connection recovery
         run: node --test tools/test-triple-atlas-auth.cjs
+
+      - name: Test Triple Atlas exploration and share links
+        run: node --test tools/test-triple-atlas-explorer.cjs
+
+      - name: Test Triple Atlas DOM interactions
+        run: |
+          npm install --prefix "$RUNNER_TEMP/atlas-dom" --ignore-scripts --no-audit --no-fund jsdom@30.1.2
+          NODE_PATH="$RUNNER_TEMP/atlas-dom/node_modules" node --test tools/test-triple-atlas-ui.cjs
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1

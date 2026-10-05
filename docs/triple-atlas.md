@@ -1,6 +1,18 @@
 # Triple Atlas
 
-Triple Atlas follows this site's Jekyll/GitHub Pages setup: `pages/triple-atlas.html`, plain JavaScript, scoped CSS, and a generated public JSON snapshot. Find it from Projects or `/triple-atlas/`. There are no new Python packages, JavaScript build dependencies, cloud services, or video assets.
+Triple Atlas follows this site's Jekyll/GitHub Pages setup: `pages/triple-atlas.html`, plain JavaScript, scoped CSS, and a generated public JSON snapshot. Find it from Projects or `/triple-atlas/`. There are no new Python packages, JavaScript build dependencies, cloud services, or video assets. DOM regression tests use a pinned, test-only jsdom installation in a temporary directory; nothing from that package is shipped to visitors.
+
+## Explore the season
+
+The public page opens with an interactive season explorer. Player and ballpark leaderboards, four summary counts, and a March–September timeline are calculated from the actual published plays. Clicking a player, park, month, or field-note tag filters the catalog; clicking that selected item again removes its filter. Reset exploration clears all filters.
+
+Totals and leaderboards reflect the complete filtered set, not just the cards currently shown. The timeline deliberately ignores the date range while keeping the other filters, so you can switch months without first clearing a date selection. Counts describe the imported snapshot, not per-game rates, official player standings, or a guaranteed complete season. The snapshot date range appears above the dashboard.
+
+**Surprise me** and **Another from this view** pick a different play with a valid video link from the current filtered set. They work even when every play is already tagged. The owner-only Unwatched queue still follows the annotation workflow below. Random selection never marks a play watched or changes its annotation.
+
+The catalog defaults to newest first, with oldest, player name, and enjoyment sorting available. Each card has a direct clip link. Player, team, park, date, status, rating, clip availability, sort, and all chosen tags can travel in a shareable query URL. Copy this view’s link shares the filter selection; Copy play link includes the selected play. Browser Back restores prior exploration clicks and play selections. Search typing replaces the current history entry to avoid creating an entry per keystroke. Clipboard denial exposes a selectable URL instead. Shared URLs always point to the public site and omit local owner credentials.
+
+The explorer and editor share the same source data and filtering helpers in `assets/js/triple-atlas-explorer.js`. Exploring never replaces an owner’s open edit form; play navigation still waits for a successful save and stops on a conflict. No new annotations, tags, ratings, notes, or clips are invented or published by this interface update. The styles follow the site’s light/dark palette and collapse the leaderboards to one column on narrower screens.
 
 ## Owner workflow
 
@@ -89,9 +101,20 @@ JSON is the portable format for this first version (it preserves multiple tags w
 
 ```powershell
 python tools/test-triple-atlas.py
+node --test tools/test-triple-atlas-auth.cjs tools/test-triple-atlas-explorer.cjs
 powershell -File tools/check-site.ps1
 bundle exec jekyll build --strict_front_matter
 ```
+
+For DOM integration tests, use Node 24.15 or later. Install the test-only library in a temporary directory (PowerShell):
+
+```powershell
+npm install --prefix "$env:TEMP/noland-atlas-dom-qa" --ignore-scripts --no-audit --no-fund jsdom@30.1.2
+$env:NODE_PATH = "$env:TEMP/noland-atlas-dom-qa/node_modules"
+node --test tools/test-triple-atlas-ui.cjs
+```
+
+The explorer update passed 19 Python storage/server tests, 14 dependency-free JavaScript analytics/auth tests, and 10 DOM integration tests. The DOM tests exercise the real page template and scripts: public startup, clickable rankings and months, browser Back, restored shared filters, random browsing, pagination, empty-view recovery, clipboard denial, owner save/advance, conflict draft retention, escaped catalog text, and failed-load recovery. They use a cloned public fixture and simulated API responses, never the owner database. These checks do not imply screenshot, touch-device, or external video playback verification. GitHub runs the same tests plus the Jekyll build and navigation checks on push.
 
 All 18 regression tests passed after the custom-tag update. Tests cover tag creation/renaming, empty initial collections, legacy migration, tag definition export/restore, duplicate names/shortcuts, stable identity, source filtering, exact pitch matching, duplicate imports, preserving annotations and manual URLs, feed outages, transactional restoration, validation, persistence after reconnect, conflicting-tab writes, token/Origin/Host enforcement, and private-file denial. They use temporary databases and never modify owner annotations. JavaScript syntax checking passed. The repository checker passed against a clean snapshot of versioned/new files; running it directly in the workspace was blocked by an unrelated inaccessible `tmp/broken-sword/soffice_convert_9gndn738` directory. GitHub also passed the full Jekyll build and navigation checks for the initial deployment.
 

@@ -4,6 +4,7 @@
   const root = document.querySelector('#triple-atlas');
   if (!root) return;
   const $ = (s) => root.querySelector(s);
+  const explorer = globalThis.TripleAtlasExplorer;
   const esc = (v) => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const local = location.hostname === '127.0.0.1';
   const ownerHash = new URLSearchParams(location.hash.slice(1));
@@ -56,8 +57,7 @@
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
   function videoUrl(p) {
-    const url = p.annotation.video_url ?? p.video_url;
-    return /^https:\/\/baseballsavant\.mlb\.com\/sporty-videos\?playId=[a-zA-Z0-9-]+$/.test(url) ? url : '';
+    return explorer.videoURL(p);
   }
   function videoLink(p) {
     const url = videoUrl(p);
@@ -142,7 +142,7 @@
   async function select(p, updateUrl = true) {
     try { await save(); } catch (_) { return false; }
     current = p; blocked = false; dirty = false;
-    if (updateUrl) { const url = new URL(location.href); url.searchParams.set('play', p.id); history.pushState(null, '', url); }
+    if (updateUrl) history.pushState(null, '', explorer.writeURL(location.href, filterState(), p.id));
     renderPlayer();
     if (owner) {
       try {
@@ -180,7 +180,7 @@
       <p class="ta-meta">${esc(p.date)} · ${esc(p.away_team)} at ${esc(p.home_team)} · ${esc(p.park)}</p>
       <p>${esc(p.description)}</p>
       <div id="ta-watch">${videoLink(p)}</div>
-      <a href="https://noland.blog/triple-atlas/?play=${encodeURIComponent(p.id)}" target="_blank" rel="noopener">Public play link ↗</a>
+      <div class="ta-play-navigation"><a href="${esc(publicURL(p.id))}" target="_blank" rel="noopener">Shareable play link ↗</a><button id="ta-copy-play" type="button">Copy play link</button></div>
       <p class="ta-help">Game ${p.game_pk} · Plate appearance ${p.at_bat_number} · Pitch ${p.pitch_number}. Opens at the source; playback availability may vary.</p>
       ${owner ? `<form id="ta-edit"><fieldset><legend>Your tags <small>· choose any</small></legend><div id="ta-tag-options">${tagOptions(a.tags)}</div><button type="button" id="ta-new-tag">+ Create a tag</button></fieldset>
       <div class="ta-fields"><label class="ta-wide">Field notes<textarea name="note" maxlength="20000" placeholder="What made this one worth remembering?">${esc(a.note)}</textarea></label>
@@ -189,8 +189,14 @@
       <label class="ta-wide">Add or correct the direct Savant video URL<input name="video" type="url" value="${esc(a.video_url ?? p.video_url)}" placeholder="https://baseballsavant.mlb.com/sporty-videos?playId=…"></label></div>
       <div class="ta-actions"><button type="submit" class="ta-primary">Save &amp; next</button><button type="button" id="ta-skip">Skip for now</button><button type="button" id="ta-review">Review again &amp; next</button></div>
       <p class="ta-help">Drafts autosave. Save &amp; next marks this play tagged. Ctrl/⌘ + Enter: save &amp; next. Alt + →: skip. Tag keys work outside text fields.</p>
-      <details><summary>Draft recovery</summary><button type="button" id="ta-draft">Export current draft</button> <button type="button" id="ta-discard">Clear device draft &amp; reload saved play</button></details></form>` : `<p>${a.tags.map(t => `<span class="ta-badge">${esc(tagNames[t] || t)}</span>`).join('')}</p><p class="ta-note">${esc(a.note)}</p><p>${a.rating ? `Enjoyment: ${a.rating} / 5` : 'Not rated yet'}</p><button id="ta-public-next" type="button">Next unwatched triple →</button>`}`;
-    if (!owner) { $('#ta-public-next').onclick = () => next(true); return; }
+      <details><summary>Draft recovery</summary><button type="button" id="ta-draft">Export current draft</button> <button type="button" id="ta-discard">Clear device draft &amp; reload saved play</button></details></form>` : `<p>${a.tags.map(t => `<span class="ta-badge">${esc(tagNames[t] || t)}</span>`).join('')}</p>${a.note ? `<p class="ta-note">${esc(a.note)}</p>` : ''}${a.rating ? `<p>Enjoyment: ${a.rating} / 5</p>` : ''}<button id="ta-public-next" type="button">Another from this view →</button>`}`;
+    $('#ta-player').setAttribute('aria-busy', 'false');
+    $('#ta-copy-play').onclick = () => copyLink(p.id);
+    if (!owner) {
+      $('#ta-public-next').onclick = surprise;
+      $('#ta-public-next').disabled = !explorer.pick(filtered(), current.id, () => 0);
+      return;
+    }
     $('#ta-edit').addEventListener('input', changed);
     $('#ta-new-tag').onclick = () => { $('#ta-tag-manager').open = true; $('#ta-create-tag [name=label]').focus(); };
     $('#ta-edit').addEventListener('submit', async e => {
@@ -204,39 +210,116 @@
       clearTimeout(timer); try { localStorage.removeItem(draftKey(p.id)); } catch (_) { /* Reload disk state. */ } location.reload();
     };
   }
+  function filterState() {
+    const f = new FormData($('#ta-filters'));
+    return {...Object.fromEntries(explorer.fields.map(key => [key, f.get(key) || ''])), tags: f.getAll('filter-tag')};
+  }
+  function restoreFilters() {
+    const state = explorer.readURL(location.href), form = $('#ta-filters');
+    for (const key of explorer.fields) form.elements[key].value = state[key];
+    form.querySelectorAll('[name=filter-tag]').forEach(input => { input.checked = state.tags.includes(input.value); });
+  }
   function filtered() {
-    const f = new FormData($('#ta-filters')), tags = f.getAll('filter-tag'), q = f.get('search').toLowerCase();
-    return data.plays.filter(p => {
-      const a = p.annotation;
-      return (!q || `${p.player} ${p.description} ${a.note}`.toLowerCase().includes(q)) &&
-        ['player','team','park'].every(k => !f.get(k) || p[k] === f.get(k)) &&
-        (!f.get('from') || p.date >= f.get('from')) && (!f.get('through') || p.date <= f.get('through')) &&
-        (!f.get('status') || a.status === f.get('status')) && (!f.get('rating') || (a.rating ?? 0) === Number(f.get('rating'))) &&
-        (!f.get('video') || Boolean(videoUrl(p)) === (f.get('video') === 'linked')) && tags.every(t => a.tags.includes(t));
-    });
+    const state = filterState();
+    return explorer.sort(explorer.filter(data.plays, state), state.sort);
+  }
+  function publicURL(play = '') {
+    return explorer.writeURL('https://noland.blog/triple-atlas/', filterState(), play).href;
+  }
+  async function copyLink(play = '') {
+    const url = publicURL(play);
+    try {
+      await navigator.clipboard.writeText(url);
+      $('#ta-share-fallback').hidden = true;
+      $('#ta-share-message').textContent = play ? 'Play link copied, including your filters.' : 'View link copied. Your filters will open with it.';
+      message('Link copied.');
+    } catch (_) {
+      $('#ta-share-fallback').hidden = false;
+      $('#ta-share-url').value = url;
+      $('#ta-share-url').focus(); $('#ta-share-url').select();
+      $('#ta-share-message').textContent = 'Select and copy the link below.';
+      message('Your link is ready to copy above the catalog.');
+    }
+  }
+  function updateFilters(push = false) {
+    limit = 36;
+    history[push ? 'pushState' : 'replaceState'](null, '', explorer.writeURL(location.href, filterState(), current?.id));
+    $('#ta-share-fallback').hidden = true; $('#ta-share-message').textContent = '';
+    renderCatalog();
+    if (current) {
+      const link = $('.ta-play-navigation a'); if (link) link.href = publicURL(current.id);
+    }
+  }
+  function exploreFilter(key, value) {
+    const form = $('#ta-filters');
+    if (key === 'tag') {
+      const input = [...form.querySelectorAll('[name=filter-tag]')].find(input => input.value === value);
+      if (input) input.checked = !input.checked;
+    } else if (key === 'month') {
+      const month = explorer.months([], data.season).find(month => month.month === value);
+      if (!month) return;
+      const active = form.elements.from.value === month.from && form.elements.through.value === month.through;
+      form.elements.from.value = active ? '' : month.from; form.elements.through.value = active ? '' : month.through;
+    } else form.elements[key].value = form.elements[key].value === value ? '' : value;
+    updateFilters(true);
+  }
+  async function surprise() {
+    if (advancing) return;
+    advancing = true;
+    try {
+      const play = explorer.pick(filtered(), current?.id);
+      if (!play) { message('No other linked plays in this view. Try clearing a filter.'); return; }
+      if (await select(play)) {
+        renderCatalog();
+        $('#ta-player').scrollIntoView({block: 'start'});
+        $('#ta-player h2').focus({preventScroll: true});
+        message(`A little three-base adventure: ${play.player}, ${play.date}.`);
+      }
+    } finally { advancing = false; }
+  }
+  function renderExploration(list) {
+    const state = filterState(), stats = explorer.summarize(list);
+    $('#ta-season-stats').innerHTML = [['Triples', stats.total], ['Players', stats.players], ['Ballparks', stats.parks], ['Video links', stats.linked]].map(([label, value]) => `<div><strong>${value.toLocaleString()}</strong><span>${label}</span></div>`).join('');
+    $('#ta-explore-scope').textContent = `Showing ${list.length} of ${data.plays.length} cataloged triples. Totals and leaderboards follow your filters; choose a highlighted item again to remove it. These are catalog totals, not rates per game.`;
+    for (const [key, target] of [['player', '#ta-player-leaders'], ['park', '#ta-park-leaders']]) {
+      const ranking = explorer.rank(list, key), maximum = ranking[0]?.count || 1;
+      $(target).innerHTML = ranking.slice(0, 8).map((row, i) => `<button type="button" class="ta-rank-row" data-explore="${key}" data-value="${esc(row.label)}" aria-pressed="${state[key] === row.label}"><meter min="0" max="${maximum}" value="${row.count}" aria-hidden="true"></meter><span><small>${i + 1}</small>${esc(row.label)}</span><strong>${row.count}</strong></button>`).join('') || '<p class="ta-help">No matching plays in this view.</p>';
+    }
+    // Ignore only the date filters here so the other months remain discoverable.
+    const monthly = explorer.months(explorer.filter(data.plays, {...state, from: '', through: ''}), data.season);
+    const maximum = Math.max(1, ...monthly.map(month => month.count));
+    $('#ta-months').innerHTML = monthly.map(month => `<button type="button" data-explore="month" data-value="${month.month}" aria-pressed="${state.from === month.from && state.through === month.through}" aria-label="${new Date(month.from + 'T00:00:00Z').toLocaleDateString('en-US', {month: 'long', timeZone: 'UTC'})}: ${month.count} triples"><span>${new Date(month.from + 'T00:00:00Z').toLocaleDateString('en-US', {month: 'short', timeZone: 'UTC'})}</span><strong>${month.count}</strong><meter min="0" max="${maximum}" value="${month.count}" aria-hidden="true"></meter></button>`).join('');
+    $('#ta-surprise').disabled = !explorer.pick(list, current?.id, () => 0);
+    if ($('#ta-public-next')) $('#ta-public-next').disabled = $('#ta-surprise').disabled;
   }
   function renderCatalog() {
     const list = filtered(), tagged = data.plays.filter(p => p.annotation.status === 'tagged').length;
     const review = data.plays.filter(p => p.annotation.status === 'review again').length;
     $('#ta-progress').textContent = `${tagged} / ${data.plays.length} tagged · ${data.plays.length - tagged - review} unwatched · ${review} to review again`;
     $('#ta-meter').max = data.plays.length || 1; $('#ta-meter').value = tagged;
-    $('#ta-count').textContent = `${list.length} matching triples · showing ${Math.min(limit,list.length)}`;
-    $('#ta-results').innerHTML = list.slice(0, limit).map(p => `<article class="ta-card"><p class="ta-meta">${esc(p.date)} · ${esc(p.annotation.status)}</p><h3><a href="?play=${encodeURIComponent(p.id)}" data-play="${esc(p.id)}">${esc(p.player)}</a></h3><p>${esc(p.away_team)} at ${esc(p.home_team)}<br>${esc(p.park)}</p>${p.annotation.tags.map(t => `<span class="ta-badge">${esc(tagNames[t] || t)}</span>`).join('')}${p.annotation.rating ? `<p>Enjoyment ${p.annotation.rating} / 5</p>` : ''}</article>`).join('') || '<p>No triples match. Try clearing the filters.</p>';
+    const state = filterState();
+    $('#ta-count').textContent = state.from && state.through && state.from > state.through ? 'The start date is after the end date. Adjust the date range to see plays.' : `${list.length} matching triples · showing ${Math.min(limit,list.length)}`;
+    $('#ta-results').innerHTML = list.slice(0, limit).map(p => `<article class="ta-card${p.id === current?.id ? ' is-current' : ''}"><p class="ta-meta">${esc(p.date)}${owner ? ` · ${esc(p.annotation.status)}` : ''}</p><h3><a href="${esc(explorer.writeURL(location.href, state, p.id).href)}" data-play="${esc(p.id)}"${p.id === current?.id ? ' aria-current="true"' : ''}>${esc(p.player)}</a></h3><p>${esc(p.away_team)} at ${esc(p.home_team)}<br>${esc(p.park)}</p>${p.annotation.tags.map(t => `<span class="ta-badge">${esc(tagNames[t] || t)}</span>`).join('')}${p.annotation.rating ? `<p>Enjoyment ${p.annotation.rating} / 5</p>` : ''}${videoUrl(p) ? `<a class="ta-card-watch" href="${esc(videoUrl(p))}" target="_blank" rel="noopener noreferrer">Watch clip ↗</a>` : '<p class="ta-help">Awaiting a video link</p>'}</article>`).join('') || '<p>No triples match. Try clearing the filters.</p>';
     $('#ta-more').hidden = list.length <= limit;
     const counts = {}, pairs = {};
     list.forEach(p => {
       const tags = [...p.annotation.tags].sort();
       tags.forEach((t,i) => { counts[t] = (counts[t] || 0)+1; tags.slice(i+1).forEach(u => { const key = `${t}|${u}`; pairs[key] = (pairs[key] || 0)+1; }); });
     });
-    $('#ta-counts').innerHTML = groups.map(g => `<div><h3>${esc(g.label)}</h3><ul>${g.tags.map(t => `<li><span>${esc(t.label)}</span><strong>${counts[t.id] || 0}</strong></li>`).join('')}</ul></div>`).join('') +
-      `<div><h3>Tag combinations</h3><ul>${Object.entries(pairs).sort((a,b) => b[1]-a[1]).map(([key,n]) => `<li><span>${key.split('|').map(t => esc(tagNames[t] || t)).join(' + ')}</span><strong>${n}</strong></li>`).join('') || '<li>No combinations yet.</li>'}</ul></div>`;
+    $('#ta-tag-scope').textContent = `${list.filter(p => p.annotation.status === 'tagged').length} of ${list.length} matching plays tagged. Counts reflect ${owner ? 'your saved observations' : "Nolan’s published observations"}, not official scoring decisions. Select a tag below to filter the collection.`;
+    const pairRows = Object.entries(pairs).sort((a,b) => b[1]-a[1] || a[0].localeCompare(b[0])).map(([key,n]) => `<li><span>${key.split('|').map(t => esc(tagNames[t] || t)).join(' + ')}</span><strong>${n}</strong></li>`);
+    $('#ta-counts').innerHTML = groups.map(g => `<div><h3>${owner ? 'Your tags' : 'What Nolan noticed'}</h3><ul>${[...g.tags].sort((a,b) => (counts[b.id] || 0) - (counts[a.id] || 0) || a.label.localeCompare(b.label)).map(t => `<li><button type="button" data-explore="tag" data-value="${esc(t.id)}" aria-pressed="${state.tags.includes(t.id)}"><span>${esc(t.label)}</span><strong>${counts[t.id] || 0}</strong></button></li>`).join('')}</ul></div>`).join('') +
+      `<div><h3>Tag combinations</h3><p class="ta-help">Two observations on the same play.</p><ul>${pairRows.slice(0, 12).join('') || '<li>No combinations yet.</li>'}</ul>${pairRows.length > 12 ? `<details class="ta-more-pairs"><summary>See ${pairRows.length - 12} more combinations</summary><ul>${pairRows.slice(12).join('')}</ul></details>` : ''}</div>`;
+    renderExploration(list);
   }
   async function start() {
     if (local && !owner) { showUnlock('Connect using the owner URL printed in your terminal.'); return; }
     data = owner ? await api('/api/data') : await fetch(root.dataset.source).then(r => { if (!r.ok) throw new Error('Catalog unavailable'); return r.json(); });
     data.plays.sort((a,b) => a.date.localeCompare(b.date) || a.game_pk-b.game_pk || a.at_bat_number-b.at_bat_number);
     setTags(data.tag_definitions || []);
-    $('#ta-mode').textContent = owner ? 'Owner console · Annotations save to your local database.' : `Read-only catalog · ${data.annotations_published ? 'Published owner annotations' : 'Annotations have not been published'}`;
+    $('#ta-mode').textContent = owner ? 'Owner console · Annotations save to your local database.' : `Explore the ${data.season} collection · ${data.annotations_published ? 'With Nolan’s field notes' : 'Play metadata; field notes coming later'}`;
+    $('#ta-queue').hidden = !owner; $('#ta-progress').hidden = !owner; $('#ta-meter').hidden = !owner;
+    $('#ta-explore').hidden = false;
     $('.ta-import').hidden = !owner;
     $('#ta-tag-manager').hidden = !owner;
     if (owner) {
@@ -250,13 +333,23 @@
       [...new Set(data.plays.map(p => p[key]).filter(Boolean))].sort().forEach(value => select.add(new Option(value,value)));
     });
     tagFilters();
-    $('#ta-filters').oninput = () => { limit = 36; renderCatalog(); };
+    restoreFilters();
+    $('#ta-filters').oninput = () => updateFilters();
     $('#ta-filters').onsubmit = e => e.preventDefault();
-    $('#ta-filters').onreset = () => setTimeout(() => { limit = 36; renderCatalog(); }, 0);
+    $('#ta-filters').onreset = () => setTimeout(() => updateFilters(true), 0);
+    $('#ta-reset-explore').onclick = () => $('#ta-filters').reset();
+    $('#ta-share').onclick = () => copyLink();
+    $('#ta-surprise').onclick = surprise;
+    root.addEventListener('click', e => {
+      const button = e.target.closest('[data-explore]');
+      if (button) exploreFilter(button.dataset.explore, button.dataset.value);
+    });
     $('#ta-more').onclick = () => { limit += 36; renderCatalog(); };
     $('#ta-results').onclick = async e => {
-      const link = e.target.closest('[data-play]'); if (!link || e.ctrlKey || e.metaKey) return;
-      e.preventDefault(); if (await select(data.plays.find(p => p.id === link.dataset.play))) $('#ta-player').scrollIntoView({block:'start'});
+      const link = e.target.closest('[data-play]'); if (!link || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+      e.preventDefault(); if (await select(data.plays.find(p => p.id === link.dataset.play))) {
+        renderCatalog(); $('#ta-player').scrollIntoView({block:'start'}); $('#ta-player h2').focus({preventScroll:true});
+      }
     };
     $('#ta-queue').onclick = async () => {
       try { await save(); } catch (_) { return; }
@@ -278,12 +371,23 @@
     };
     const report = data.import_info?.last_import ? JSON.parse(data.import_info.last_import) : null;
     $('#ta-import-info').textContent = report ? `Last import: ${report.imported_at.slice(0,10)} · ${report.imported} source plays · ${report.unresolved} links unresolved. Matched links do not guarantee playback.` : 'No source import yet.';
+    const dates = data.plays.map(p => p.date).sort();
+    $('#ta-snapshot').textContent = dates.length ? `${data.season} regular-season snapshot · ${dates[0]} through ${dates[dates.length - 1]} · Counts cover the imported collection, not a live feed or a guaranteed complete season.` : 'The season explorer will fill in as plays are imported.';
     renderCatalog();
     const requested = new URL(location.href).searchParams.get('play');
-    const selected = data.plays.find(p => p.id === requested) || data.plays.find(p => p.annotation.status === 'unwatched') || data.plays[0];
-    if (selected) { message('Choose a play, then open its video.'); await select(selected,false); if (requested && requested !== selected.id) message('That play was not found in this snapshot. Showing the next available triple.',true); }
-    else message(owner ? 'No triples imported yet. Run python tools/triple-atlas.py import, then reload.' : 'The first collection of triples is on its way.');
-    window.addEventListener('popstate', async () => { const p = data.plays.find(p => p.id === new URL(location.href).searchParams.get('play')); if (p && !(await select(p,false))) { const url = new URL(location.href); url.searchParams.set('play',current.id); history.replaceState(null,'',url); } });
+    const selected = data.plays.find(p => p.id === requested) || (owner ? data.plays.find(p => p.annotation.status === 'unwatched') : null) || filtered()[0];
+    if (selected) { message('Choose a play, explore a player or park, or let the atlas surprise you.'); await select(selected,false); renderCatalog(); if (requested && requested !== selected.id) message('That play was not found in this snapshot. Showing the next available triple.',true); }
+    else {
+      $('#ta-player').setAttribute('aria-busy', 'false');
+      message(data.plays.length ? 'No plays match this view. Clear or adjust the filters to explore.' : owner ? 'No triples imported yet. Run python tools/triple-atlas.py import, then reload.' : 'The first collection of triples is on its way.');
+    }
+    window.addEventListener('popstate', async () => {
+      try { await save(); } catch (_) { history.replaceState(null, '', explorer.writeURL(location.href, filterState(), current?.id)); return; }
+      restoreFilters(); limit = 36;
+      const p = data.plays.find(p => p.id === new URL(location.href).searchParams.get('play')) || filtered()[0];
+      if (p && p.id !== current?.id) await select(p, false);
+      renderCatalog();
+    });
     window.addEventListener('beforeunload', e => { if (dirty || saving) { e.preventDefault(); e.returnValue = ''; } });
     document.addEventListener('visibilitychange', () => { if (document.hidden && dirty) { retainDraft(); save().catch(() => {}); } });
     document.addEventListener('keydown', e => {
@@ -297,6 +401,7 @@
     });
   }
   start().catch(error => {
+    $('#ta-player').setAttribute('aria-busy', 'false');
     if (local && error.status === 401) {
       try { sessionStorage.removeItem('tripleAtlas.owner'); } catch (_) { /* Recovery also works without storage. */ }
       showUnlock('This tab’s owner connection expired. Paste the latest terminal URL below to reconnect. Your saved tags and notes are safe.');
