@@ -24,6 +24,11 @@ jobs:
       - name: Test Triple Atlas import and owner storage
         run: python3 tools/test-triple-atlas.py
 
+      - name: Test weather collection and publication
+        run: |
+          python3 -m pip install -r tools/miami-weather-requirements.txt
+          python3 tools/test-miami-weather.py
+
       - name: Set up Node for client checks
         uses: actions/setup-node@v6
         with:
@@ -34,6 +39,9 @@ jobs:
 
       - name: Test Triple Atlas exploration and share links
         run: node --test tools/test-triple-atlas-explorer.cjs
+
+      - name: Test weather stale labels
+        run: node --test tools/test-miami-weather-ui.cjs
 
       - name: Test Triple Atlas DOM interactions
         run: |
@@ -51,3 +59,6 @@ jobs:
 
       - name: Check built navigation links
         run: python3 tools/check-navigation.py _site
+
+      - name: Check built weather archive and image references
+        run: python3 tools/check-miami-weather.py _site

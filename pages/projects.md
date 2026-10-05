@@ -20,6 +20,12 @@ description: Interactive tools, ongoing adventures, and creative projects by Nol
 <p class="archive-count" id="archive-count" aria-live="polite"></p>
 
 <div class="archive-stream" id="archive-stream">
+  <article class="archive-card archive-project" data-archive-tags="project adventure code data weather">
+    <div class="archive-card-top"><span>Project</span><time>Every morning</time></div>
+    <h2><a href="{{ '/miami-weather/' | relative_url }}">Morning Miami Weather Report</a></h2>
+    <p>A daily illustrated briefing for Miami and Brickell: forecasts, satellite, radar, marine guidance, and the tropical outlook.</p>
+    <div class="archive-tags"><span>Miami</span><span>Weather</span><span>Daily briefing</span></div>
+  </article>
   <article class="archive-card archive-project" data-archive-tags="project sports writing data baseball">
     <div class="archive-card-top"><span>Project</span><time>In progress</time></div>
     <h2><a href="{{ '/baseball-verbs/' | relative_url }}">Every Verb a Baseball Announcer Can Use to Describe How a Baseball Is Hit</a></h2>

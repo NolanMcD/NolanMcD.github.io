@@ -1,0 +1,24 @@
+﻿.weather-feature { display:grid; grid-template-columns:1.35fr 1fr; gap:2rem; margin:2rem 0 3rem; padding:1.6rem; border:1px solid var(--site-line); border-radius:16px; background:var(--site-soft); align-items:center; }
+.weather-feature h2 { font-size:1.7rem; margin:.2rem 0 .8rem; }
+.weather-feature h3 { font-size:1.15rem; }
+.weather-feature-image img { display:block; width:100%; height:280px; object-fit:cover; border-radius:10px; }
+.weather-meta { color:var(--site-muted); font-size:.85rem; }
+.weather-title { margin:1.5rem 0; }
+.weather-report { max-width:900px; margin:auto; }
+.weather-report h2 { margin-top:2rem; }
+.weather-lede { font-size:1.25rem; }
+.weather-notice, .weather-stale { border-left:4px solid var(--site-accent, #ab7542); padding:1rem; background:var(--site-soft); }
+.weather-stale[hidden] { display:none; }
+.weather-figure { margin:1.2rem 0 2rem; }
+.weather-figure img { display:block; width:100%; height:auto; border:1px solid var(--site-line); border-radius:8px; }
+.weather-figure figcaption { font-size:.8rem; margin-top:.5rem; color:var(--site-muted); }
+.weather-report details { margin:1rem 0; border:1px solid var(--site-line); border-radius:8px; padding:1rem; }
+.weather-report summary { cursor:pointer; font-weight:600; }
+.weather-report pre { white-space:pre-wrap; overflow-wrap:anywhere; font-size:.85rem; margin:1rem 0 0; max-height:32rem; overflow:auto; }
+.weather-table { overflow-x:auto; }
+.weather-table table { font-size:.8rem; min-width:550px; }
+.weather-archive-card { display:grid; grid-template-columns:160px 1fr; gap:1.5rem; padding:1.5rem 0; border-top:1px solid var(--site-line); }
+.weather-archive-card img { width:160px; height:160px; object-fit:cover; border-radius:8px; }
+.weather-archive-card h2 { font-size:1.3rem; }
+@media (max-width:650px) { .weather-feature { grid-template-columns:1fr; padding:1.2rem; gap:1rem; } .weather-feature-image img { height:240px; } .weather-archive-card { grid-template-columns:85px 1fr; gap:1rem; } .weather-archive-card img { width:85px; height:110px; } }
+

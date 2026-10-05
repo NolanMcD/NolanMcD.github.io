@@ -1,0 +1,16 @@
+---
+layout: landing
+title: Morning Miami Weather Report
+permalink: /miami-weather/
+description: Daily illustrated weather briefings for Miami and Brickell, with official forecasts, satellite, radar, and tropical outlooks.
+---
+<header class="archive-intro"><p class="eyebrow">A little context before heading out</p><h1>Morning Miami Weather Report</h1><p class="page-lede">Miami and Brickell, one morning at a time. Official forecasts, archived satellite and radar frames, marine guidance, and the Atlantic outlook.</p><p>Automated briefings normally publish between 5:30 and 7:30 a.m. Eastern. The scheduler can run late. Every report shows its actual date and publication time; check <a href="https://www.weather.gov/mfl/">NWS Miami</a> for current conditions and alerts.</p></header>
+{% assign reports = site.miami_weather | sort: 'report_date' | reverse %}
+<div class="weather-archive">
+{% for report in reports %}
+<article class="weather-archive-card">
+  {% if report.image %}<a href="{{ report.url | relative_url }}"><img src="{{ report.image | relative_url }}" alt="{{ report.image_alt | escape }}" width="1200" height="1200" loading="lazy"></a>{% endif %}
+  <div><p class="weather-meta">{{ report.report_date }}{% if report.manual_preview %} · Manual preview{% endif %}</p><h2><a href="{{ report.url | relative_url }}">{{ report.title | escape }}</a></h2><p>{{ report.summary | escape }}</p><p class="weather-meta">Published {{ report.publication_time | escape }}</p><a href="{{ report.url | relative_url }}">Read the report &rarr;</a></div>
+</article>
+{% else %}<p>The first briefing will appear here after a successful collection.</p>{% endfor %}
+</div>

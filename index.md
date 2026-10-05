@@ -41,6 +41,8 @@ description: Nolan McDermott's latest movie reviews, writing, adventures, and pe
 
 <script src="{{ '/assets/js/home-feed.js' | relative_url }}" defer></script>
 
+{% include miami-weather-feature.html %}
+
 <section class="home-blog" aria-labelledby="home-blog-heading">
   <div class="section-heading split-heading"><h2 id="home-blog-heading">Latest on the blog</h2><a class="text-link" href="{{ '/blog/' | relative_url }}">All posts &rarr;</a></div>
   <ul>

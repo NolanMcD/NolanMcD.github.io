@@ -1,0 +1,75 @@
+name: Morning Miami Weather Report
+
+on:
+  schedule:
+    # Covers both EST and EDT, including the bounded late-run catch-up period.
+    - cron: '*/15 9-15 * * *'
+  workflow_dispatch:
+    inputs:
+      update_today:
+        description: Publish now, updating today's report even if it already exists
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: morning-miami-weather
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install collection dependencies
+        run: python -m pip install -r tools/miami-weather-requirements.txt
+      - name: Test weather publication
+        run: python tools/test-miami-weather.py
+      - name: Collect and stage the briefing
+        id: weather
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          UPDATE_TODAY: ${{ inputs.update_today }}
+        run: |
+          if [ "$UPDATE_TODAY" = "true" ]; then
+            python tools/miami_weather.py --manual
+          else
+            python tools/miami_weather.py
+          fi
+      - name: Validate generated content
+        if: steps.weather.outputs.changed == 'true'
+        shell: pwsh
+        run: ./tools/check-site.ps1
+      - name: Set up Ruby
+        if: steps.weather.outputs.changed == 'true'
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+      - name: Build and validate the full site
+        if: steps.weather.outputs.changed == 'true'
+        run: |
+          bundle exec jekyll build --strict_front_matter
+          python tools/check-navigation.py _site
+          python tools/check-miami-weather.py _site
+      - name: Commit validated report
+        if: steps.weather.outputs.changed == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add _miami_weather _data/miami_weather_latest.json assets/weather
+          git commit -m 'Publish Miami weather briefing'
+          # Do not force or rebase an unverified merge. A racing edit fails safely.
+          git push origin HEAD:main
+      - name: Request the existing GitHub Pages build
+        if: steps.weather.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"

@@ -17,6 +17,9 @@ plugins:
   - jekyll-sitemap
 
 collections:
+  miami_weather:
+    output: true
+    permalink: /miami-weather/:name/
   blood_manatees:
     output: true
     permalink: /blood-manatees/scene/:name/
