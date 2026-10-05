@@ -6,29 +6,34 @@ description: Nolan McDermott's latest movie reviews, writing, adventures, and pe
 
 <section class="feed-hero home-compact" aria-labelledby="feed-heading">
   <header class="feed-heading">
-    <div><p class="eyebrow">Movies, miles, and side quests</p><h1 id="feed-heading">Noland.</h1></div>
+    <div><p class="eyebrow">My digital life</p><h1 id="feed-heading">Noland.</h1></div>
   </header>
-  <nav class="home-shortcuts" aria-label="Explore Noland">
-    <a class="home-shortcut home-shortcut-movies" href="{{ '/reviews/diary/' | relative_url }}">
+  <nav class="home-shortcuts" aria-label="My digital life">
+    <a class="home-shortcut home-shortcut-movies" href="https://letterboxd.com/NolanMcD/">
       <span class="home-shortcut-icon" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><rect x="9" y="12" width="46" height="40" rx="4"/><path d="M19 12v40M45 12v40M9 22h10M9 32h10M9 42h10M45 22h10M45 32h10M45 42h10"/><path d="m27 24 12 8-12 8z"/></svg></span>
-      <span class="home-shortcut-label">Film diary</span>
+      <span class="home-shortcut-label">Letterboxd</span>
     </a>
-    <a class="home-shortcut home-shortcut-paddle" href="{{ '/projects/florida-keys/' | relative_url }}">
-      <span class="home-shortcut-icon" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M8 48q6-6 12 0t12 0t12 0t12 0M10 56q6-6 12 0t12 0t12 0"/><ellipse cx="30" cy="40" rx="21" ry="4"/><circle cx="30" cy="10" r="4"/><path d="m30 15-4 12 8 5 3 8M26 27l-5 13M29 20l11 5M42 15l-4 24"/><path d="m38 34-3 9 5 1 2-9z"/></svg></span>
-      <span class="home-shortcut-label">Paddleboard</span>
+    <a class="home-shortcut home-shortcut-paddle" href="https://www.strava.com/athletes/57377386">
+      <span class="home-shortcut-icon" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><circle cx="39" cy="10" r="5"/><path d="m34 19-9 13 13 8-7 15M34 19l9 11 11-3M29 26l-12-3-7 10M25 32l-8 13H6"/></svg></span>
+      <span class="home-shortcut-label">Strava</span>
     </a>
-    <a class="home-shortcut home-shortcut-crossword" href="{{ '/crossword-creator/' | relative_url }}">
-      <span class="home-shortcut-icon" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><rect x="8" y="8" width="48" height="48" rx="3"/><path d="M24 8v48M40 8v48M8 24h48M8 40h48"/><path d="M9 9h14v14H9zM41 41h14v14H41z" fill="currentColor"/><path d="m29 34 3-6 3 6M30 32h4"/></svg></span>
-      <span class="home-shortcut-label">Crossword</span>
+    <a class="home-shortcut home-shortcut-crossword" href="https://www.instagram.com/nolan_mcdermott/">
+      <span class="home-shortcut-icon" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M9 19h12l5-7h12l5 7h12v34H9z"/><circle cx="32" cy="36" r="11"/><path d="M46 25h3"/></svg></span>
+      <span class="home-shortcut-label">Instagram</span>
     </a>
-    <a class="home-shortcut home-shortcut-code" aria-label="Latest coding project: Application Event Lab" title="Application Event Lab" href="{{ '/projects/application-event-lab/' | relative_url }}">
+    <details class="home-social-menu">
+      <summary class="home-shortcut home-shortcut-writing">
+        <span class="home-shortcut-icon" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M17 40a9 9 0 0 1-6-16 10 10 0 0 1 13-13 12 12 0 0 1 21 1 10 10 0 0 1 10 16 9 9 0 0 1-9 14H24"/><circle cx="19" cy="47" r="4"/><circle cx="10" cy="56" r="2"/></svg></span>
+        <span class="home-shortcut-label">X / Reddit</span>
+      </summary>
+      <div class="home-social-links">
+        <a href="https://x.com/NolanMcDerm">X</a>
+        <a href="https://old.reddit.com/user/Sheepies123/">Reddit</a>
+      </div>
+    </details>
+    <a class="home-shortcut home-shortcut-code" href="https://github.com/NolanMcD">
       <span class="home-shortcut-icon" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><rect x="6" y="10" width="52" height="42" rx="4"/><path d="M6 21h52M13 16h1M19 16h1M25 16h1m-3 13-7 7 7 7m20-14 7 7-7 7m-7-17-6 20"/></svg></span>
-      <span class="home-shortcut-label">Latest code</span>
-    </a>
-    {% assign latest_writing = site.posts.first %}
-    <a class="home-shortcut home-shortcut-writing" aria-label="Latest writing: {{ latest_writing.title | default: 'Blog' | escape }}" title="{{ latest_writing.title | default: 'Blog' | escape }}" href="{{ latest_writing.url | default: '/blog/' | relative_url }}">
-      <span class="home-shortcut-icon" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M14 7h27l9 9v41H14zM41 7v11h9M22 27h20M22 34h16M22 41h20M22 48h10"/></svg></span>
-      <span class="home-shortcut-label">Latest writing</span>
+      <span class="home-shortcut-label">GitHub</span>
     </a>
   </nav>
 </section>

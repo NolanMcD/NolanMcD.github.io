@@ -476,6 +476,14 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
 .home-shortcut-icon { display: block; width: 36px; height: 36px; color: var(--shortcut-accent); }
 .home-shortcut-icon svg { display: block; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .home-shortcut-label { color: $ink; font-size: .72rem; font-weight: 600; line-height: 1.25; text-align: center; overflow-wrap: anywhere; }
+.home-social-menu { position: relative; min-width: 0; }
+.home-social-menu > summary { height: 100%; cursor: pointer; list-style: none; }
+.home-social-menu > summary::-webkit-details-marker { display: none; }
+.home-social-menu[open] > summary { border-color: var(--shortcut-accent); }
+.home-social-links { position: absolute; top: calc(100% + .4rem); right: 0; z-index: 10; width: 150px; padding: .35rem; border: 1px solid $line; border-radius: 7px; background: var(--site-surface, white); box-shadow: 0 6px 18px rgba(42,31,25,.12); }
+.home-social-links a { display: block; padding: .65rem .8rem; border-radius: 4px; color: $ink; font-size: .85rem; }
+.home-social-links a:hover { background: $cream; }
+.home-social-links a:focus-visible { outline: 3px solid $teal; outline-offset: -3px; }
 @media (max-width: 600px) {
   .home-shortcuts { gap: .3rem; }
   .home-shortcut { min-height: 76px; padding: .55rem .15rem; }
