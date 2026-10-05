@@ -8,6 +8,7 @@
   --site-surface: #fff;
 }
 .theme-toggle {
+  box-sizing: border-box;
   display: inline-grid;
   place-items: center;
   width: 44px;
@@ -30,6 +31,9 @@
 .theme-toggle:hover { background: var(--site-soft); }
 .theme-toggle[hidden] { display: none; }
 .theme-toggle:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; }
+@media (min-width: 601px) {
+  .theme-toggle { margin-right: -8px; }
+}
 html[data-theme="dark"] {
   color-scheme: dark;
   --site-ink: #eee8df;

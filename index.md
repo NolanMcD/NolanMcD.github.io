@@ -24,11 +24,12 @@ description: Nolan McDermott's latest movie reviews, writing, adventures, and pe
     <details class="home-social-menu">
       <summary class="home-shortcut home-shortcut-writing">
         <span class="home-shortcut-icon" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M17 40a9 9 0 0 1-6-16 10 10 0 0 1 13-13 12 12 0 0 1 21 1 10 10 0 0 1 10 16 9 9 0 0 1-9 14H24"/><circle cx="19" cy="47" r="4"/><circle cx="10" cy="56" r="2"/></svg></span>
-        <span class="home-shortcut-label">X / Reddit</span>
+        <span class="home-shortcut-label">X / Reddit / YouTube</span>
       </summary>
       <div class="home-social-links">
         <a href="https://x.com/NolanMcDerm">X</a>
         <a href="https://old.reddit.com/user/Sheepies123/">Reddit</a>
+        <a href="https://www.youtube.com/@NolanMcD">YouTube</a>
       </div>
     </details>
     <a class="home-shortcut home-shortcut-code" href="https://github.com/NolanMcD">
