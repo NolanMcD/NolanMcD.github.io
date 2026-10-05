@@ -79,6 +79,10 @@ class WeatherTests(unittest.TestCase):
         self.assertEqual(w.select_x_post(posts, self.now, self.config)['id'], '1')
         self.assertIsNone(w.select_x_post(posts[1:], self.now, self.config))
 
+    def test_effective_alert_with_future_hazard_onset_is_retained(self):
+        properties = {'status': 'Actual', 'messageType': 'Alert', 'effective': w.stamp(self.now - timedelta(minutes=20)), 'onset': w.stamp(self.now + timedelta(hours=2)), 'expires': w.stamp(self.now + timedelta(hours=10)), 'event': 'Heat Advisory'}
+        self.assertEqual(w.active_alerts([{'properties': properties}], self.now)[0]['event'], 'Heat Advisory')
+
     def test_source_text_cannot_be_html_or_liquid(self):
         self.assertEqual(w.escape('<script>{{ site.secret }}</script>'), '&lt;script&gt;&#123;&#123; site.secret &#125;&#125;&lt;/script&gt;')
 

@@ -362,7 +362,7 @@ def active_alerts(features, now):
             continue
         try:
             end = parse_time(properties.get('ends') or properties.get('expires'))
-            start = parse_time(properties.get('onset') or properties.get('effective'))
+            start = parse_time(properties.get('effective') or properties.get('onset'))
             if properties.get('status') == 'Actual' and properties.get('messageType') != 'Cancel' and start <= now < end:
                 result.append({key: properties.get(key) for key in ['event', 'headline', 'description', 'instruction', 'severity', 'sent', 'onset', 'expires', 'ends']})
         except (ValueError, SourceError):
@@ -565,7 +565,10 @@ def coastal_text(text):
 def render_report(sources, config, now, asset_url, preview=False):
     date = now.astimezone(ZoneInfo(config['timezone'])).date().isoformat()
     period = sources['forecast']['data']['period']
-    summary = '{}: {}°F. {} Wind {} {}.'.format(period['name'], period['temperature'], period.get('shortForecast', ''), period.get('windSpeed', 'not supplied'), period.get('windDirection', ''))
+    summary = '{}: {}°F. {}. Wind {} {}.'.format(period['name'], period['temperature'], period.get('shortForecast') or 'Forecast available', period.get('windSpeed') or 'not supplied', period.get('windDirection') or '')
+    probability = period.get('probabilityOfPrecipitation', {}).get('value')
+    if isinstance(probability, (int, float)):
+        summary += ' Rain chance: {}%.'.format(probability)
     headline = 'Miami, {} — {}'.format(now.astimezone(ZoneInfo(config['timezone'])).strftime('%B %-d') if os.name != 'nt' else now.astimezone(ZoneInfo(config['timezone'])).strftime('%B %d').replace(' 0', ' '), period.get('shortForecast', 'daily forecast'))
     images = sources.get('satellite', {}).get('images', []) or sources.get('regional_radar', {}).get('images', [])
     metadata = {'report_date': date, 'generated_at': stamp(now), 'publication_time': eastern(stamp(now), config), 'title': headline,
@@ -576,7 +579,7 @@ def render_report(sources, config, now, asset_url, preview=False):
     out = ['---'] + [key + ': ' + json.dumps(value, ensure_ascii=False) for key, value in front.items()] + ['---', '<article class="weather-report" data-weather-date="' + date + '">']
     out.append('<p class="weather-notice">Automated weather summary from official sources; factual templates with validated source timestamps. Follow <a href="https://www.weather.gov/mfl/">NWS Miami</a> and <a href="https://www.nhc.noaa.gov/">NHC</a> for current guidance.</p>')
     if preview:
-        out.append('<p class="weather-notice">Manual setup preview collected outside the morning schedule. These are real source data from the publication time below.</p>')
+        out.append('<p class="weather-notice">Manual setup preview. These are real source data from the publication time below.</p>')
     out.append('<p class="weather-meta">Report date: ' + date + ' · Published ' + escape(metadata['publication_time']) + '</p><p class="weather-stale" data-weather-stale hidden></p>')
     out.append('<h2>Forecast for Miami / Brickell</h2><p class="weather-lede">' + escape(summary) + '</p><p>' + escape(period['detailedForecast']) + '</p><p class="weather-meta">Forecast issued ' + escape(eastern(sources['forecast']['issued_at'], config)) + '. Forecast values, not observed conditions.</p>')
     for extra in sources['forecast']['data']['periods']:
@@ -624,7 +627,9 @@ def render_report(sources, config, now, asset_url, preview=False):
     else:
         out.append('<p>Current Miami-Dade beach guidance could not be isolated; no rip-current risk is assumed.</p>')
     out.append('<h2>Satellite and radar</h2><p>Archived frames show what the instruments captured at their labeled times. Radar echoes can include non-rain returns. No movement or future arrival is inferred automatically from these frames.</p>')
-    for key, title in [('satellite', 'Southeast GeoColor satellite'), ('local_radar', 'Detailed Miami radar — official KAMX fallback'), ('regional_radar', 'Regional South Florida radar')]:
+    local_key = 'mcnoldy' if sources.get('mcnoldy', {}).get('availability') == 'available' and sources['mcnoldy'].get('images') else 'local_radar'
+    local_title = 'Detailed Miami radar — Brian McNoldy' if local_key == 'mcnoldy' else 'Detailed Miami radar — official KAMX fallback'
+    for key, title in [('satellite', 'Southeast GeoColor satellite'), (local_key, local_title), ('regional_radar', 'Regional South Florida radar')]:
         record = sources.get(key, {})
         out.append('<h3>' + title + '</h3>')
         if not record.get('images'):
