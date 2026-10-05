@@ -9,7 +9,9 @@ const source = fs.readFileSync(path.join(__dirname, '../assets/js/triple-atlas.j
 async function boot(fragment = '', saved = '') {
   const elements = new Map();
   const element = selector => {
-    if (!elements.has(selector)) elements.set(selector, {hidden:true, textContent:'', classList:{toggle() {}}});
+    if (!elements.has(selector)) elements.set(selector, {hidden:true, textContent:'', attributes:{},
+      setAttribute(name, value) { this.attributes[name] = value; },
+      getAttribute(name) { return this.attributes[name]; }, classList:{toggle() {}}});
     return elements.get(selector);
   };
   const root = {querySelector:element, dataset:{source:'/assets/data/triple-atlas.json'}};
@@ -35,6 +37,7 @@ test('an expired token offers reconnect and clears stale session credentials', a
   assert.equal(app.element('#ta-unlock').hidden, false);
   assert.match(app.element('#ta-message').textContent, /expired/);
   assert.equal(app.store.has('tripleAtlas.owner'), false);
+  assert.equal(app.element('#ta-player').getAttribute('aria-busy'), 'false');
 });
 
 test('a new terminal token takes precedence over an old tab token', async () => {
