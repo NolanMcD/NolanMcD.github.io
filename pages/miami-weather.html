@@ -4,7 +4,7 @@ title: Morning Miami Weather Report
 permalink: /miami-weather/
 description: Daily illustrated weather briefings for Miami and Brickell, with official forecasts, satellite, radar, and tropical outlooks.
 ---
-<header class="archive-intro"><p class="eyebrow">A little context before heading out</p><h1>Morning Miami Weather Report</h1><p class="page-lede">Miami and Brickell, one morning at a time. Official forecasts, archived satellite and radar frames, marine guidance, and the Atlantic outlook.</p><p>Automated briefings normally publish between 5:30 and 7:30 a.m. Eastern. The scheduler can run late. Every report shows its actual date and publication time; check <a href="https://www.weather.gov/mfl/">NWS Miami</a> for current conditions and alerts.</p></header>
+<header class="archive-intro"><p class="eyebrow">A little context before heading out</p><h1>Morning Miami Weather Report</h1><p class="page-lede">Miami and Brickell, one morning at a time. Official forecasts, archived satellite and radar frames, marine guidance, and the Atlantic outlook.</p><p>Automated briefings normally publish starting at 5:30 a.m. Eastern. The scheduler can run late. Every report shows its actual date and publication time; check <a href="https://www.weather.gov/mfl/">NWS Miami</a> for current conditions and alerts.</p></header>
 {% assign reports = site.miami_weather | sort: 'report_date' | reverse %}
 <div class="weather-archive">
 {% for report in reports %}

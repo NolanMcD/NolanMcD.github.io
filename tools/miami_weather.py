@@ -68,10 +68,10 @@ def eastern(value, config):
 def config_for(root=ROOT):
     config = json.loads((root / '_data/miami_weather_settings.json').read_text(encoding='utf-8'))
     ZoneInfo(config['timezone'])
-    for key in ['start', 'deadline', 'catch_up_until', 'x_morning_start', 'x_morning_end']:
+    for key in ['start', 'catch_up_until']:
         clock_time.fromisoformat(config[key])
-    if not config['start'] < config['deadline'] <= config['catch_up_until']:
-        raise ValueError('Require start < deadline <= catch_up_until on the same local day')
+    if not config['start'] < config['catch_up_until']:
+        raise ValueError('Require start < catch_up_until on the same local day')
     if not 1 <= config['interval_minutes'] <= 60:
         raise ValueError('interval_minutes must be between 1 and 60')
     if not 5 <= config['timeout_seconds'] <= 60 or not 1 <= config['retries'] <= 3:
@@ -79,7 +79,7 @@ def config_for(root=ROOT):
     return config
 
 
-def schedule_action(now, config, published_date=None, manual=False, has_post=False):
+def schedule_action(now, config, published_date=None, manual=False):
     local = now.astimezone(ZoneInfo(config['timezone']))
     if manual:
         return 'publish'
@@ -91,11 +91,7 @@ def schedule_action(now, config, published_date=None, manual=False, has_post=Fal
         return value.hour * 60 + value.minute
     if minute < minutes('start') or minute > minutes('catch_up_until'):
         return 'outside-window'
-    if minute >= minutes('deadline'):
-        return 'publish'
-    if has_post:
-        return 'publish'
-    return 'check-x'
+    return 'publish'
 
 
 def source_record(name, url, now, status='available', issued=None, reason=''):
@@ -147,61 +143,6 @@ def plain(value):
     return html.unescape(re.sub(r'<[^>]*>', '', re.sub(r'<br\s*/?>', '\n', value, flags=re.I))).strip()
 
 
-def select_x_post(posts, now, config):
-    zone = ZoneInfo(config['timezone'])
-    local = now.astimezone(zone)
-    eligible = []
-    for post in posts:
-        try:
-            created = parse_time(post.get('created_at'))
-            when = created.astimezone(zone)
-            text = post.get('text', '')
-            if when.date() != local.date() or created > now:
-                continue
-            if not config['x_morning_start'] <= when.strftime('%H:%M') <= config['x_morning_end']:
-                continue
-            if not re.search(r'\b(morning|today|daily|forecast)\b', text, re.I):
-                continue
-            if not re.search(r'\b(weather|forecast|rain|showers|thunderstorms?|wind|heat|temperature)\b', text, re.I):
-                continue
-            if not re.fullmatch(r'\d+', str(post.get('id', ''))):
-                continue
-            eligible.append(post)
-        except (ValueError, SourceError):
-            continue
-    return max(eligible, key=lambda post: parse_time(post['created_at'])) if eligible else None
-
-
-def collect_x(client, config, now, token=None):
-    record = source_record('nws_x', config['sources']['nws_x'], now)
-    token = token or os.environ.get('X_BEARER_TOKEN')
-    if not token:
-        record.update(availability='unavailable', retrieved_at=None, reason='Authorized X API access is not configured; using the NWS fallback.')
-        return record
-    try:
-        headers = {'Authorization': 'Bearer ' + token}
-        user = client.json('https://api.x.com/2/users/by/username/NWSMiami', headers)['data']
-        if user['username'].lower() != 'nwsmiami' or not re.fullmatch(r'\d+', user['id']):
-            raise SourceError('X account identity could not be verified')
-        local = now.astimezone(ZoneInfo(config['timezone']))
-        start = datetime.combine(local.date(), clock_time.fromisoformat(config['x_morning_start']), tzinfo=local.tzinfo)
-        end = min(now, datetime.combine(local.date(), clock_time.fromisoformat(config['x_morning_end']), tzinfo=local.tzinfo))
-        if start >= end:
-            raise SourceError('No eligible morning time range yet')
-        query = urllib.parse.urlencode({'max_results': 100, 'tweet.fields': 'created_at,author_id',
-            'exclude': 'retweets,replies', 'start_time': stamp(start), 'end_time': stamp(end)})
-        payload = client.json('https://api.x.com/2/users/' + user['id'] + '/tweets?' + query, headers)
-        post = select_x_post([post for post in payload.get('data', []) if post.get('author_id') == user['id']], now, config)
-        if not post:
-            record.update(availability='missing', reason='No relevant NWS Miami briefing from this local morning was returned.')
-        else:
-            record.update(url='https://x.com/NWSMiami/status/' + post['id'], issued_at=post['created_at'],
-                          data={'text': post['text'], 'summary': 'NWS Miami’s morning post is reproduced as source text below; forecast numbers come from the official forecast.'})
-    except (SourceError, KeyError, ValueError, TypeError) as error:
-        record.update(availability='unavailable', reason='Authorized X API request could not supply the morning briefing: ' + str(error))
-    return record
-
-
 def collect_nhc(client, config, now, directory):
     record = source_record('nhc', config['sources']['nhc'], now)
     tree = ET.fromstring(client.get(record['url'])[0])
@@ -251,14 +192,14 @@ def observe(client, now, config, url):
     return record
 
 
-def collect_sources(client, config, now, directory, x_record=None):
+def collect_sources(client, config, now, directory):
     point_url = 'https://api.weather.gov/points/' + str(config['latitude']) + ',' + str(config['longitude'])
     point = client.json(point_url)['properties']
     forecast_url = safe_official(point['forecast'])
     forecast_data = official_forecast(client.json(forecast_url), now, config)
     forecast = source_record('forecast', forecast_url, now, issued=forecast_data['issued_at'])
     forecast['data'] = forecast_data
-    sources = {'forecast': forecast, 'nws_x': x_record or collect_x(client, config, now)}
+    sources = {'forecast': forecast}
     def hourly():
         url = safe_official(point['forecastHourly'])
         payload = client.json(url)
@@ -574,7 +515,7 @@ def render_report(sources, config, now, asset_url, preview=False):
     metadata = {'report_date': date, 'generated_at': stamp(now), 'publication_time': eastern(stamp(now), config), 'title': headline,
                 'summary': summary, 'url': '/miami-weather/' + date + '/', 'image': asset_url + '/' + images[-1]['filename'] if images else None,
                 'image_alt': 'Latest archived NOAA satellite frame' if sources.get('satellite', {}).get('images') else 'Timestamped NOAA South Florida radar',
-                'manual_preview': preview, 'partial': any(s['availability'] in ('unavailable', 'missing') for key, s in sources.items() if key not in ('nws_x', 'tropical_tidbits', 'mcnoldy'))}
+                'manual_preview': preview, 'partial': any(s['availability'] in ('unavailable', 'missing') for key, s in sources.items() if key not in ('tropical_tidbits', 'mcnoldy'))}
     front = {'layout': 'miami-weather', 'title': headline, 'date': stamp(now), 'description': summary, **metadata}
     out = ['---'] + [key + ': ' + json.dumps(value, ensure_ascii=False) for key, value in front.items()] + ['---', '<article class="weather-report" data-weather-date="' + date + '">']
     out.append('<p class="weather-notice">Automated weather summary from official sources; factual templates with validated source timestamps. Follow <a href="https://www.weather.gov/mfl/">NWS Miami</a> and <a href="https://www.nhc.noaa.gov/">NHC</a> for current guidance.</p>')
@@ -648,25 +589,19 @@ def render_report(sources, config, now, asset_url, preview=False):
             out.append('<figure class="weather-figure"><a href="' + url + '"><img src="' + url + '" width="' + str(image['width']) + '" height="' + str(image['height']) + '" loading="lazy" alt="' + escape(title + ' at ' + when + '; open full-size image for map and legend') + '"></a><figcaption>' + escape(when + ' · ' + image['credit']) + ' · <a href="' + escape(image['source_url']) + '">Original source</a> · <a href="' + url + '">Open full size</a></figcaption></figure>')
         if len(record['images']) > 1:
             out.append('</details>')
-    for key, title in [('nws_x', 'NWS Miami morning briefing'), ('nhc', 'Tropical outlook'), ('discussion', 'Miami forecast discussion')]:
+    for key, title in [('nhc', 'Tropical outlook'), ('discussion', 'Miami forecast discussion')]:
         record = sources.get(key, {})
         out.append('<h2>' + title + '</h2>')
         if record.get('availability') != 'available':
             out.append('<p>' + escape(record.get('reason', 'Current source unavailable.')) + '</p>')
-            if key == 'nws_x':
-                out.append('<p><strong>NWS fallback:</strong> This briefing uses the official Miami point forecast, alert queries, and the forecast discussion when available. It does not imply that an X morning post was retrieved.</p>')
             continue
         out.append('<p class="weather-meta">Issued ' + escape(eastern(record['issued_at'], config)) + ' · <a href="' + escape(record['url']) + '">Official source</a></p>')
-        if key == 'nws_x':
-            sentences = re.split(r'(?<=[.!?])\s+|\n+', record['data']['text'])
-            excerpt = ' '.join(sentence for sentence in sentences if re.search(r'weather|forecast|rain|shower|storm|wind|heat|temperature', sentence, re.I))[:450]
-            out.append('<p>Morning message excerpt: ' + escape(excerpt or record['data']['text'][:300]) + '</p>')
         if key == 'nhc':
             out.append('<p>The Atlantic outlook describes development potential, not a forecast of impacts in Miami. No local hurricane impact is inferred here.</p>')
             for image in record['images']:
                 url = asset_url + '/' + image['filename']
                 out.append('<figure class="weather-figure"><a href="' + url + '"><img src="' + url + '" width="' + str(image['width']) + '" height="' + str(image['height']) + '" loading="lazy" alt="NHC Atlantic seven-day outlook; issuance timestamp and probability legend embedded in graphic"></a><figcaption>NOAA / NHC. ' + escape(image.get('timestamp_note', '')) + ' <a href="' + url + '">Open full size</a></figcaption></figure>')
-        out.append('<details' + (' open' if key == 'nws_x' else '') + '><summary>Read official source text</summary><pre>' + escape(record['data']['text']) + '</pre></details>')
+        out.append('<details><summary>Read official source text</summary><pre>' + escape(record['data']['text']) + '</pre></details>')
     out.append('<h2>Sources and freshness</h2><p>Supplementary failures do not replace missing data with reassuring conclusions. All source times below are Eastern; source metadata and original downloads are archived with this report.</p><div class="weather-source-list">')
     for key in sorted(sources):
         record = sources[key]
@@ -724,10 +659,6 @@ def run(root=ROOT, manual=False, preview_dir=None, now=None, client=None):
         LOG.info(action)
         return False
     client = client or Client(config)
-    x_record = collect_x(client, config, now)
-    if action == 'check-x' and x_record['availability'] != 'available':
-        LOG.info('Waiting for the morning post or the configured deadline')
-        return False
     lock = root / 'local-data/miami-weather.lock'
     lock.parent.mkdir(parents=True, exist_ok=True)
     try:
@@ -737,7 +668,7 @@ def run(root=ROOT, manual=False, preview_dir=None, now=None, client=None):
     os.close(handle)
     staging = Path(tempfile.mkdtemp(prefix='miami-weather-', dir=str(root / 'local-data')))
     try:
-        sources = collect_sources(client, config, now, staging, x_record)
+        sources = collect_sources(client, config, now, staging)
         destination = Path(preview_dir) if preview_dir else root
         if preview_dir:
             destination.mkdir(parents=True, exist_ok=True)

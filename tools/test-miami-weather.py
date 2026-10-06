@@ -38,8 +38,7 @@ class WeatherTests(unittest.TestCase):
         for date, utc_start in [('2026-07-01', 9), ('2026-01-01', 10), ('2026-03-08', 9), ('2026-11-01', 10)]:
             start = datetime.fromisoformat(date).replace(hour=utc_start, minute=30, tzinfo=UTC)
             self.assertEqual(w.schedule_action(start - timedelta(minutes=1), self.config), 'outside-window')
-            self.assertEqual(w.schedule_action(start, self.config), 'check-x')
-            self.assertEqual(w.schedule_action(start, self.config, has_post=True), 'publish')
+            self.assertEqual(w.schedule_action(start, self.config), 'publish')
             self.assertEqual(w.schedule_action(start + timedelta(hours=2), self.config), 'publish')
             self.assertEqual(w.schedule_action(start + timedelta(hours=5, minutes=1), self.config), 'outside-window')
 
@@ -74,11 +73,6 @@ class WeatherTests(unittest.TestCase):
         self.assertIn('alert check unavailable', text)
         self.assertNotIn('no active alerts returned', text)
 
-    def test_x_uses_relevant_same_local_morning(self):
-        posts = [{'id': '1', 'text': 'Good morning! Today weather forecast: showers.', 'created_at': '2026-07-01T10:00:00Z'}, {'id': '2', 'text': 'Good morning weather forecast', 'created_at': '2026-06-30T10:00:00Z'}, {'id': '3', 'text': 'Office anniversary celebration', 'created_at': '2026-07-01T11:00:00Z'}]
-        self.assertEqual(w.select_x_post(posts, self.now, self.config)['id'], '1')
-        self.assertIsNone(w.select_x_post(posts[1:], self.now, self.config))
-
     def test_effective_alert_with_future_hazard_onset_is_retained(self):
         properties = {'status': 'Actual', 'messageType': 'Alert', 'effective': w.stamp(self.now - timedelta(minutes=20)), 'onset': w.stamp(self.now + timedelta(hours=2)), 'expires': w.stamp(self.now + timedelta(hours=10)), 'event': 'Heat Advisory'}
         self.assertEqual(w.active_alerts([{'properties': properties}], self.now)[0]['event'], 'Heat Advisory')
@@ -97,20 +91,19 @@ class WeatherTests(unittest.TestCase):
                 raise w.SourceError('test source unavailable')
             def get(_, url, headers=None):
                 raise w.SourceError('test source unavailable')
-        sources = w.collect_sources(Fake(), self.config, self.now, self.root, {'availability': 'unavailable', 'reason': 'X unavailable', 'url': 'https://x.com/NWSMiami', 'retrieved_at': None})
+        sources = w.collect_sources(Fake(), self.config, self.now, self.root)
         self.assertEqual(sources['forecast']['availability'], 'available')
         self.assertEqual(sources['alerts']['availability'], 'unavailable')
         self.assertEqual(sources['regional_radar']['availability'], 'unavailable')
         text, metadata = w.render_report(sources, self.config, self.now, '/example')
         self.assertTrue(metadata['partial'])
-        self.assertIn('NWS fallback', text)
         self.assertNotIn('no active alerts returned', text)
 
     def test_required_source_failure_retains_latest_and_releases_lock(self):
         pointer = self.root / '_data/miami_weather_latest.json'
         pointer.write_text('{"report_date":"2026-06-30"}')
         before = pointer.read_bytes()
-        with patch.object(w, 'collect_x', return_value={'availability': 'unavailable'}), patch.object(w, 'collect_sources', side_effect=w.SourceError('forecast stale')):
+        with patch.object(w, 'collect_sources', side_effect=w.SourceError('forecast stale')):
             with self.assertRaises(w.SourceError):
                 w.run(self.root, manual=True, now=self.now)
         self.assertEqual(pointer.read_bytes(), before)
@@ -127,7 +120,7 @@ class WeatherTests(unittest.TestCase):
         self.assertEqual(len(list((self.root / '_miami_weather').glob('*.html'))), 1)
         self.assertEqual(len(list((self.root / 'assets/weather/2026-07-01').iterdir())), 2)
         self.assertEqual(w.latest_metadata(self.root)['generated_at'], w.stamp(self.now + timedelta(minutes=15)))
-        with patch.object(w, 'collect_x', side_effect=AssertionError('should skip all requests')):
+        with patch.object(w, 'collect_sources', side_effect=AssertionError('should skip all requests')):
             self.assertFalse(w.run(self.root, now=self.now))
 
     def test_bad_image_never_updates_pointer(self):

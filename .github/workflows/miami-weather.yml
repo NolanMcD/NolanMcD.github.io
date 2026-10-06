@@ -35,7 +35,6 @@ jobs:
       - name: Collect and stage the briefing
         id: weather
         env:
-          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
           UPDATE_TODAY: ${{ inputs.update_today }}
         run: |
           if [ "$UPDATE_TODAY" = "true" ]; then

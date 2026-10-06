@@ -1,12 +1,14 @@
 {
   "timezone": "America/New_York",
   "start": "05:30",
-  "deadline": "07:30",
   "catch_up_until": "10:30",
   "interval_minutes": 15,
   "latitude": 25.7617,
   "longitude": -80.1918,
-  "regional_center": [-80.217, 26.379],
+  "regional_center": [
+    -80.217,
+    26.379
+  ],
   "regional_zoom": 7.36,
   "forecast_max_age_hours": 6,
   "observation_max_age_hours": 2,
@@ -18,8 +20,6 @@
   "nhc_max_age_hours": 9,
   "timeout_seconds": 20,
   "retries": 2,
-  "x_morning_start": "04:00",
-  "x_morning_end": "10:00",
   "mcnoldy_reuse_authorized": false,
   "sources": {
     "satellite": "https://www.star.nesdis.noaa.gov/GOES/sector_band.php?sat=G16&sector=se&band=GEOCOLOR&length=12",
@@ -29,7 +29,6 @@
     "basemap": "https://mapservices.weather.noaa.gov/static/rest/services/nws_reference_maps/nws_reference_map/MapServer",
     "nhc": "https://www.nhc.noaa.gov/xml/TWOAT.xml",
     "nhc_page": "https://www.nhc.noaa.gov/",
-    "tropical_tidbits": "https://www.tropicaltidbits.com/",
-    "nws_x": "https://x.com/NWSMiami"
+    "tropical_tidbits": "https://www.tropicaltidbits.com/"
   }
 }
