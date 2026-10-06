@@ -196,7 +196,10 @@ def collect_sources(client, config, now, directory):
     point_url = 'https://api.weather.gov/points/' + str(config['latitude']) + ',' + str(config['longitude'])
     point = client.json(point_url)['properties']
     forecast_url = safe_official(point['forecast'])
-    forecast_data = official_forecast(client.json(forecast_url), now, config)
+    forecast_payload = client.json(forecast_url)
+    properties = forecast_payload.get('properties', {})
+    LOG.info('NWS forecast updated=%s generated=%s collected=%s', properties.get('updateTime'), properties.get('generatedAt'), stamp(now))
+    forecast_data = official_forecast(forecast_payload, now, config)
     forecast = source_record('forecast', forecast_url, now, issued=forecast_data['issued_at'])
     forecast['data'] = forecast_data
     sources = {'forecast': forecast}
@@ -327,7 +330,7 @@ def official_forecast(data, now, config):
     chosen = next((period for period in periods if period.get('isDaytime')), periods[0])
     if chosen.get('temperatureUnit') != 'F' or not isinstance(chosen.get('temperature'), (int, float)) or not chosen.get('detailedForecast'):
         raise SourceError('Official forecast lacks usable Fahrenheit forecast data')
-    return {'issued_at': issued, 'period': chosen, 'periods': periods}
+    return {'issued_at': issued, 'generated_at': properties['generatedAt'], 'period': chosen, 'periods': periods}
 
 
 def hourly_today(data, now, config):

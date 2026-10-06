@@ -11,7 +11,7 @@
   ],
   "regional_zoom": 7.36,
   "forecast_max_age_hours": 12,
-  "forecast_generated_max_age_hours": 2,
+  "forecast_generated_max_age_hours": 12,
   "observation_max_age_hours": 2,
   "discussion_max_age_hours": 18,
   "marine_max_age_hours": 18,

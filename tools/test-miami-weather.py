@@ -63,7 +63,7 @@ class WeatherTests(unittest.TestCase):
         data = self.forecast()
         data['properties']['updateTime'] = w.stamp(self.now - timedelta(hours=8))
         self.assertEqual(w.official_forecast(data, self.now, self.config)['issued_at'], data['properties']['updateTime'])
-        data['properties']['generatedAt'] = w.stamp(self.now - timedelta(hours=3))
+        data['properties']['generatedAt'] = w.stamp(self.now - timedelta(hours=self.config['forecast_generated_max_age_hours'] + 1))
         with self.assertRaises(w.SourceError):
             w.official_forecast(data, self.now, self.config)
 
