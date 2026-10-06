@@ -521,6 +521,8 @@ def render_report(sources, config, now, asset_url, preview=False):
     out.append('<p class="weather-notice">Automated weather summary from official sources; factual templates with validated source timestamps. Follow <a href="https://www.weather.gov/mfl/">NWS Miami</a> and <a href="https://www.nhc.noaa.gov/">NHC</a> for current guidance.</p>')
     if preview:
         out.append('<p class="weather-notice">Manual setup preview. These are real source data from the publication time below.</p>')
+    if now.astimezone(ZoneInfo(config['timezone'])).strftime('%H:%M') > '10:30':
+        out.append('<p class="weather-notice">Late report: current weather data were collected at the publication time below, rather than early this morning.</p>')
     out.append('<p class="weather-meta">Report date: ' + date + ' · Published ' + escape(metadata['publication_time']) + '</p><p class="weather-stale" data-weather-stale hidden></p>')
     out.append('<h2>Forecast for Miami / Brickell</h2><p class="weather-lede">' + escape(summary) + '</p><p>' + escape(period['detailedForecast']) + '</p><p class="weather-meta">Forecast issued ' + escape(eastern(sources['forecast']['issued_at'], config)) + '. Forecast values, not observed conditions.</p>')
     for extra in sources['forecast']['data']['periods']:

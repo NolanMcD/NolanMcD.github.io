@@ -4,9 +4,9 @@ The Jekyll project publishes an illustrated, dated Miami / Brickell briefing. Re
 
 ## Schedule and publication
 
-The **Morning Miami Weather Report** Actions workflow runs every 15 minutes during a broad UTC window. Python applies America/New_York using IANA timezone data, including DST changes. Starting at **5:30 a.m. Eastern**, it publishes directly from free official NWS/NOAA sources. If collection fails, subsequent runs retry until **10:30 a.m.** Existing dated reports prevent repeated publication on the same local date. X is not queried and no API token is needed.
+The **Morning Miami Weather Report** Actions workflow runs every 15 minutes throughout the day, at minutes 7, 22, 37 and 52 to avoid busy scheduling boundaries. Python applies America/New_York using IANA timezone data, including DST changes. Starting at **5:30 a.m. Eastern**, it publishes directly from free official NWS/NOAA sources. If collection fails, subsequent runs retry until **11:59 p.m. Eastern**. Reports collected after 10:30 a.m. are explicitly labeled late Existing dated reports prevent repeated publication on the same local date. X is not queried and no API token is needed.
 
-Settings are in `_data/miami_weather_settings.json`: start, catch-up limit, timezone, interval, freshness limits, coordinates, source URLs, timeout and retries. When changing `interval_minutes`, change the workflow cron too. The current UTC cron covers both EST and EDT; a substantially different local window requires adjusting it. The interval is workflow cadence, not an exact execution-time promise.
+Settings are in `_data/miami_weather_settings.json`: start, catch-up limit, timezone, interval, freshness limits, coordinates, source URLs, timeout and retries. When changing `interval_minutes`, change the workflow cron too. The all-day UTC cron covers both EST and EDT; Python enforces the configured local publication window. The interval is workflow cadence, not an exact execution-time promise.
 
 [GitHub scheduled workflows](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule) can be delayed or dropped during busy periods; inactive public repositories can have schedules disabled. **5:30 is the target, not a guaranteed deadline.** Actual publication time is displayed. Reports older than the viewer's current Eastern date show a stale message, refreshed every minute while the page remains open. If runs miss the catch-up period, the previous report remains dated and stale; a manual run can recover.
 
@@ -45,3 +45,5 @@ Every source record includes availability, URL, retrieval time when actually ret
 ## Checks
 
 `tools/test-miami-weather.py` checks DST, local dates, publication-window behavior, duplicate prevention, stale forecasts, missing/expired alerts, escaped text, failed publication, manual reruns, image validation, Miami-Dade beach isolation and NHC issuance. `tools/test-miami-weather-ui.cjs` checks Eastern stale labels. `tools/check-miami-weather.py _site` verifies the built homepage/archive/latest page and archived images. Existing repository, Triple Atlas and Jekyll/navigation checks remain enabled.
+
+On October 6, 2026, the only recorded scheduled run started at 11:47 a.m. Eastern and skipped publication under the previous 10:30 cutoff. The all-day schedule and end-of-day recovery window address that failure. GitHub scheduling still cannot guarantee a morning execution.

@@ -1,7 +1,7 @@
 {
   "timezone": "America/New_York",
   "start": "05:30",
-  "catch_up_until": "10:30",
+  "catch_up_until": "23:59",
   "interval_minutes": 15,
   "latitude": 25.7617,
   "longitude": -80.1918,

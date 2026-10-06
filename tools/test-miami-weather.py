@@ -40,7 +40,9 @@ class WeatherTests(unittest.TestCase):
             self.assertEqual(w.schedule_action(start - timedelta(minutes=1), self.config), 'outside-window')
             self.assertEqual(w.schedule_action(start, self.config), 'publish')
             self.assertEqual(w.schedule_action(start + timedelta(hours=2), self.config), 'publish')
-            self.assertEqual(w.schedule_action(start + timedelta(hours=5, minutes=1), self.config), 'outside-window')
+            self.assertEqual(w.schedule_action(start + timedelta(hours=6), self.config), 'publish')
+            self.assertEqual(w.schedule_action(start + timedelta(hours=18, minutes=29), self.config), 'publish')
+            self.assertEqual(w.schedule_action(start + timedelta(hours=18, minutes=30), self.config), 'outside-window')
 
     def test_local_date_and_duplicate(self):
         self.assertEqual(w.schedule_action(self.now, self.config, '2026-07-01'), 'already-published')

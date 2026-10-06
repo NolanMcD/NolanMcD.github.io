@@ -2,8 +2,9 @@ name: Morning Miami Weather Report
 
 on:
   schedule:
-    # Covers both EST and EDT, including the bounded late-run catch-up period.
-    - cron: '*/15 9-15 * * *'
+    # Off the busy hour/quarter-hour boundaries. Python gates the Eastern date.
+    # Continue all day so a delayed morning run can still publish a dated report.
+    - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
     inputs:
       update_today:
