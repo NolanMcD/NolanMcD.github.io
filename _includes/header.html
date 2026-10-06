@@ -14,9 +14,14 @@
         {% if nav_page %}<a href="{{ nav_page.url | relative_url }}"{% if active %} aria-current="{% if page.url == nav_page.url %}page{% else %}true{% endif %}"{% endif %}>{% if nav_page.url == '/reviews/' %}Movies{% else %}{{ nav_page.title | escape }}{% endif %}</a>{% endif %}
       {% endfor %}
     </nav>
-    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" hidden>
-      <svg class="theme-sun" viewBox="0 0 32 32" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 2v3M16 27v3M2 16h3M27 16h3M6.1 6.1l2.1 2.1M23.8 23.8l2.1 2.1M6.1 25.9l2.1-2.1M23.8 8.2l2.1-2.1"/><circle cx="16" cy="16" r="8" fill="currentColor" fill-opacity=".18"/></g><circle cx="13" cy="15" r="1" fill="currentColor"/><circle cx="19" cy="15" r="1" fill="currentColor"/><path d="M13 19q3 3 6 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      <svg class="theme-moon" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M21 4A12 12 0 1 0 28 23 13 13 0 0 1 21 4Z" fill="currentColor" fill-opacity=".18" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="11" cy="18" r="1" fill="currentColor"/><path d="M12 22q2 2 4 0M26 5v6M23 8h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-    </button>
+    <details class="theme-menu" id="theme-menu">
+      <summary class="theme-toggle" aria-label="Appearance and Storms" title="Appearance and Storms">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M9 21a6 6 0 1 1 1-12 8 8 0 0 1 15 3 4.5 4.5 0 0 1-1 9" fill="currentColor" fill-opacity=".18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="m17 15-6 9h6l-2 7 8-11h-6l3-5z" fill="#f4b942" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="theme-menu-links">
+        <button id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" hidden>Switch to dark mode</button>
+        <a href="{{ '/storms/' | relative_url }}">Storms</a>
+      </div>
+    </details>
   </div>
 </header>

@@ -12,7 +12,7 @@
     if (toggle) {
       const dark = theme === 'dark';
       toggle.hidden = false;
-      toggle.dataset.icon = dark ? 'sun' : 'moon';
+      toggle.textContent = `Switch to ${dark ? 'light' : 'dark'} mode`;
       toggle.title = `Switch to ${dark ? 'light' : 'dark'} mode`;
       toggle.setAttribute('aria-label', `Switch to ${dark ? 'light' : 'dark'} mode`);
       toggle.setAttribute('aria-pressed', String(dark));
@@ -25,6 +25,18 @@
       preference = root.dataset.theme === 'dark' ? 'light' : 'dark';
       try { localStorage.setItem(key, preference); } catch (_) { /* Keep the choice for this page. */ }
       apply(preference);
+      const menu = document.getElementById('theme-menu');
+      if (menu) menu.open = false;
+    });
+    const menu = document.getElementById('theme-menu');
+    document.addEventListener('click', e => {
+      if (menu && !menu.contains(e.target)) menu.open = false;
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && menu?.open) {
+        menu.open = false;
+        menu.querySelector('summary')?.focus();
+      }
     });
   });
   system.addEventListener('change', e => { if (!preference) apply(e.matches ? 'dark' : 'light'); });
