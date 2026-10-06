@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1525869403",
+        "syncId":  "letterboxd-review-1525869403",
+        "title":  "Barry Lyndon",
+        "year":  1975,
+        "rating":  5,
+        "review":  "All I can do is compare contemporary usage of narration to Barry Lyndon, and then be ashamed how we have bastardized one of storytelling\u0027s most effective tools into a recap voice for inattentive audiences. \n\nBring back intermissions!",
+        "wordCount":  37,
+        "publishedDate":  "2026-10-06",
+        "watchedDate":  "2026-10-05",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/barry-lyndon/",
+        "tmdbId":  "3175",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1520452269",
         "syncId":  "letterboxd-review-1520452269",
         "title":  "Possession",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/primetime-2026/",
         "tmdbId":  "1375441",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1510364191",
-        "syncId":  "letterboxd-review-1510364191",
-        "title":  "Cemetery Man",
-        "year":  1994,
-        "rating":  3,
-        "review":  "Very Italian and She is very pretty.",
-        "wordCount":  7,
-        "publishedDate":  "2026-09-26",
-        "watchedDate":  "2026-09-25",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/cemetery-man/",
-        "tmdbId":  "21588",
         "tags":  [
 
                  ],
