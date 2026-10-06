@@ -46,6 +46,7 @@ html[data-theme="dark"] {
   --site-soft: #282521;
   --site-line: #49423b;
   --site-surface: #211f1d;
+  .theme-menu > summary { color: #c9c1f2; }
   body { background: #171614; }
   a { color: #84d0d9; }
   a:hover, a:focus { color: #b6eaf0; }
