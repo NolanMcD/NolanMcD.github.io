@@ -316,6 +316,8 @@ def official_forecast(data, now, config):
     issued = properties.get('updateTime')
     if not fresh(issued, now, config['forecast_max_age_hours']):
         raise SourceError('Official forecast is missing, future-dated, or too old')
+    if not fresh(properties.get('generatedAt'), now, config['forecast_generated_max_age_hours']):
+        raise SourceError('Official forecast response was not recently generated')
     zone = ZoneInfo(config['timezone'])
     local = now.astimezone(zone)
     tomorrow = datetime.combine(local.date() + timedelta(days=1), clock_time(), tzinfo=zone)
@@ -331,6 +333,8 @@ def official_forecast(data, now, config):
 def hourly_today(data, now, config):
     if not fresh(data.get('properties', {}).get('updateTime'), now, config['forecast_max_age_hours']):
         raise SourceError('Hourly forecast is stale')
+    if not fresh(data.get('properties', {}).get('generatedAt'), now, config['forecast_generated_max_age_hours']):
+        raise SourceError('Hourly forecast response was not recently generated')
     zone = ZoneInfo(config['timezone'])
     today = now.astimezone(zone).date()
     return [period for period in data['properties']['periods'] if parse_time(period['endTime']) > now and parse_time(period['startTime']).astimezone(zone).date() == today][:18]

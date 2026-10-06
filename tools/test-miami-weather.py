@@ -27,7 +27,7 @@ class WeatherTests(unittest.TestCase):
         self.temp.cleanup()
 
     def forecast(self):
-        return {'properties': {'updateTime': w.stamp(self.now), 'periods': [{'name': 'Today', 'startTime': w.stamp(self.now - timedelta(hours=1)), 'endTime': w.stamp(self.now + timedelta(hours=12)), 'isDaytime': True, 'temperature': 88, 'temperatureUnit': 'F', 'shortForecast': 'Showers', 'detailedForecast': 'Chance of showers.', 'windSpeed': '5 mph', 'windDirection': 'E'}]}}
+        return {'properties': {'updateTime': w.stamp(self.now), 'generatedAt': w.stamp(self.now), 'periods': [{'name': 'Today', 'startTime': w.stamp(self.now - timedelta(hours=1)), 'endTime': w.stamp(self.now + timedelta(hours=12)), 'isDaytime': True, 'temperature': 88, 'temperatureUnit': 'F', 'shortForecast': 'Showers', 'detailedForecast': 'Chance of showers.', 'windSpeed': '5 mph', 'windDirection': 'E'}]}}
 
     def sources(self):
         record = w.source_record('forecast', 'https://api.weather.gov/test', self.now, issued=w.stamp(self.now))
@@ -55,7 +55,15 @@ class WeatherTests(unittest.TestCase):
         for value in [None, 'invalid', w.stamp(self.now - timedelta(hours=7)), w.stamp(self.now + timedelta(hours=1))]:
             self.assertFalse(w.fresh(value, self.now, 6))
         data = self.forecast()
-        data['properties']['updateTime'] = w.stamp(self.now - timedelta(hours=7))
+        data['properties']['updateTime'] = w.stamp(self.now - timedelta(hours=self.config['forecast_max_age_hours'] + 1))
+        with self.assertRaises(w.SourceError):
+            w.official_forecast(data, self.now, self.config)
+
+    def test_recent_generation_does_not_hide_old_forecast(self):
+        data = self.forecast()
+        data['properties']['updateTime'] = w.stamp(self.now - timedelta(hours=8))
+        self.assertEqual(w.official_forecast(data, self.now, self.config)['issued_at'], data['properties']['updateTime'])
+        data['properties']['generatedAt'] = w.stamp(self.now - timedelta(hours=3))
         with self.assertRaises(w.SourceError):
             w.official_forecast(data, self.now, self.config)
 
