@@ -1,7 +1,7 @@
 ﻿.weather-feature { display:grid; grid-template-columns:1.35fr 1fr; gap:2rem; margin:2rem 0 3rem; padding:1.6rem; border:1px solid var(--site-line); border-radius:16px; background:var(--site-soft); align-items:center; }
 .weather-feature h2 { font-size:1.7rem; margin:.2rem 0 .8rem; }
 .weather-feature h3 { font-size:1.15rem; }
-.weather-feature-image img { display:block; width:100%; height:280px; object-fit:cover; border-radius:10px; }
+.weather-feature-image img { display:block; width:100%; height:280px; object-fit:cover; object-position:center bottom; border-radius:10px; }
 .weather-meta { color:var(--site-muted); font-size:.85rem; }
 .weather-title { margin:1.5rem 0; }
 .weather-report { max-width:900px; margin:auto; }
