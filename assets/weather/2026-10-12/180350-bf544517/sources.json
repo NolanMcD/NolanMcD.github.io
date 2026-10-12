@@ -1,0 +1,775 @@
+{
+  "collected_at": "2026-10-12T18:03:50.484627+00:00",
+  "sources": {
+    "forecast": {
+      "id": "forecast",
+      "url": "https://api.weather.gov/gridpoints/MFL/110,50/forecast",
+      "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+      "issued_at": "2026-10-12T08:21:24+00:00",
+      "availability": "available",
+      "reason": "",
+      "data": {
+        "issued_at": "2026-10-12T08:21:24+00:00",
+        "generated_at": "2026-10-12T12:35:13+00:00",
+        "period": {
+          "number": 1,
+          "name": "Columbus Day",
+          "startTime": "2026-10-12T08:00:00-04:00",
+          "endTime": "2026-10-12T18:00:00-04:00",
+          "isDaytime": true,
+          "temperature": 89,
+          "temperatureUnit": "F",
+          "temperatureTrend": null,
+          "probabilityOfPrecipitation": {
+            "unitCode": "wmoUnit:percent",
+            "value": 25
+          },
+          "windSpeed": "6 to 12 mph",
+          "windDirection": "N",
+          "icon": "https://api.weather.gov/icons/land/day/rain_showers,20/tsra_hi,30?size=medium",
+          "shortForecast": "Slight Chance Rain Showers then Slight Chance Showers And Thunderstorms",
+          "detailedForecast": "A slight chance of rain showers between 10am and 2pm, then a slight chance of showers and thunderstorms between 2pm and 4pm, then a chance of showers and thunderstorms between 4pm and 5pm, then a slight chance of showers and thunderstorms. Mostly sunny, with a high near 89. Heat index values as high as 103. North wind 6 to 12 mph. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible."
+        },
+        "periods": [
+          {
+            "number": 1,
+            "name": "Columbus Day",
+            "startTime": "2026-10-12T08:00:00-04:00",
+            "endTime": "2026-10-12T18:00:00-04:00",
+            "isDaytime": true,
+            "temperature": 89,
+            "temperatureUnit": "F",
+            "temperatureTrend": null,
+            "probabilityOfPrecipitation": {
+              "unitCode": "wmoUnit:percent",
+              "value": 25
+            },
+            "windSpeed": "6 to 12 mph",
+            "windDirection": "N",
+            "icon": "https://api.weather.gov/icons/land/day/rain_showers,20/tsra_hi,30?size=medium",
+            "shortForecast": "Slight Chance Rain Showers then Slight Chance Showers And Thunderstorms",
+            "detailedForecast": "A slight chance of rain showers between 10am and 2pm, then a slight chance of showers and thunderstorms between 2pm and 4pm, then a chance of showers and thunderstorms between 4pm and 5pm, then a slight chance of showers and thunderstorms. Mostly sunny, with a high near 89. Heat index values as high as 103. North wind 6 to 12 mph. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible."
+          },
+          {
+            "number": 2,
+            "name": "Tonight",
+            "startTime": "2026-10-12T18:00:00-04:00",
+            "endTime": "2026-10-13T06:00:00-04:00",
+            "isDaytime": false,
+            "temperature": 78,
+            "temperatureUnit": "F",
+            "temperatureTrend": null,
+            "probabilityOfPrecipitation": {
+              "unitCode": "wmoUnit:percent",
+              "value": 23
+            },
+            "windSpeed": "12 mph",
+            "windDirection": "N",
+            "icon": "https://api.weather.gov/icons/land/night/tsra_hi,20/few?size=medium",
+            "shortForecast": "Slight Chance Showers And Thunderstorms then Mostly Clear",
+            "detailedForecast": "A slight chance of showers and thunderstorms before 8pm. Mostly clear, with a low around 78. North wind around 12 mph. Chance of precipitation is 20%. New rainfall amounts less than a tenth of an inch possible."
+          }
+        ]
+      },
+      "images": []
+    },
+    "observation": {
+      "id": "observation",
+      "url": "https://api.weather.gov/stations/KMIA/observations/latest",
+      "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+      "issued_at": "2026-10-12T17:45:00+00:00",
+      "availability": "available",
+      "reason": "",
+      "data": {
+        "station": "Miami, Miami International Airport",
+        "condition": "Partly Cloudy",
+        "temperature_f": 90,
+        "wind_mph": 5
+      },
+      "images": []
+    },
+    "alerts": {
+      "id": "alerts",
+      "url": "https://api.weather.gov/alerts/active?point=25.7617%2C-80.1918",
+      "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+      "issued_at": null,
+      "availability": "available",
+      "reason": "",
+      "data": [],
+      "images": [],
+      "timestamp_note": "Live active-alert query retrieved at the stated time; each retained alert has its own issuance and expiration."
+    },
+    "beach": {
+      "id": "beach",
+      "url": "https://api.weather.gov/products/49e19927-cc1d-44a9-bd31-ff9b0abc05d3",
+      "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+      "issued_at": "2026-10-12T08:21:00+00:00",
+      "availability": "available",
+      "reason": "",
+      "data": {
+        "text": "\n000\nFZUS52 KMFL 120821\nSRFMFL\n\nSurf Zone Forecast\nNational Weather Service Miami FL\n421 AM EDT Mon Oct 12 2026\n\nFLZ168-122200-\nCoastal Palm Beach-\nIncluding the beaches of Palm Beach\n421 AM EDT Mon Oct 12 2026\n\n.TODAY...\nRip Current Risk*...........Low. \nSurf Height.................1 to 2 feet. \nThunderstorm Potential**....Low. \nWaterspout Risk**...........None. \nUV Index**..................Very High. \nWater Temperature...........In the mid 80s. \nWeather.....................Mostly sunny. A slight chance of \n                            showers and thunderstorms. \nHigh Temperature............In the mid 80s. \nWinds.......................North winds 5 to 10 mph.\nTides...\n   Lake Worth Pier..........High at 09:47 AM EDT.\n                            Low at 03:57 PM EDT. \nSunrise.....................7:18 AM. \nSunset......................6:56 PM.\n\n.TUESDAY...\nRip Current Risk*...........Low. \nSurf Height.................1 to 2 feet. \nThunderstorm Potential**....None. \nWaterspout Risk**...........None. \nWeather.....................Sunny. \nHigh Temperature............In the mid 80s. \nWinds.......................North winds 5 to 10 mph.\nTides...\n   Lake Worth Pier..........High at 10:28 AM EDT.\n                            Low at 04:38 PM EDT. \nSunrise.....................7:18 AM. \nSunset......................6:55 PM.\n\n&&\n\nRip Current Risk Category\n* Low Risk - The risk for rip currents is low, however,\nlife-threatening rip currents often occur in the vicinity of groins,\njetties, reefs, and piers.\n* Moderate Risk - Life-threatening rip currents are possible in the\nsurf zone.\n* High Risk - Life-threatening rip currents are likely in the surf\nzone.\n\n** For thunderstorm, waterspout, and UV definitions see:\nhttps://www.weather.gov/beach/mfl\n\n$$\n\nFLZ172-122200-\nCoastal Broward-\nIncluding the beaches of Fort Lauderdale\n421 AM EDT Mon Oct 12 2026\n\n.TODAY...\nRip Current Risk*...........Low. \nSurf Height.................1 foot or less. \nThunderstorm Potential**....Low. \nWaterspout Risk**...........None. \nUV Index**..................Very High. \nWater Temperature...........In the upper 80s. \nWeather.....................Mostly sunny. A slight chance of \n                            showers and thunderstorms. \nHigh Temperature............In the upper 80s. \nMax Heat Index..............Up to 103. \nWinds.......................North winds 5 to 10 mph.\nTides...\n   Miami Harbor Entrance....High at 10:24 AM EDT.\n                            Low at 04:09 PM EDT. \nSunrise.....................7:18 AM. \nSunset......................6:57 PM.\n\n.TUESDAY...\nRip Current Risk*...........Low. \nSurf Height.................1 to 2 feet. \nThunderstorm Potential**....None. \nWaterspout Risk**...........None. \nWeather.....................Sunny. \nHigh Temperature............In the upper 80s. \nWinds.......................North winds around 10 mph.\nTides...\n   Miami Harbor Entrance....High at 11:03 AM EDT.\n                            Low at 04:48 PM EDT. \nSunrise.....................7:18 AM. \nSunset......................6:56 PM.\n\n&&\n\nRip Current Risk Category\n* Low Risk - The risk for rip currents is low, however,\nlife-threatening rip currents often occur in the vicinity of groins,\njetties, reefs, and piers.\n* Moderate Risk - Life-threatening rip currents are possible in the\nsurf zone.\n* High Risk - Life-threatening rip currents are likely in the surf\nzone.\n\n** For thunderstorm, waterspout, and UV definitions see:\nhttps://www.weather.gov/beach/mfl\n\n$$\n\nFLZ173-122200-\nCoastal Miami-Dade-\nIncluding the beaches of Miami\n421 AM EDT Mon Oct 12 2026\n\n.TODAY...\nRip Current Risk*...........Low. \nSurf Height.................1 foot or less. \nThunderstorm Potential**....Low. \nWaterspout Risk**...........None. \nUV Index**..................Very High. \nWater Temperature...........In the upper 80s. \nWeather.....................Mostly sunny. A slight chance of \n                            showers and thunderstorms. \nHigh Temperature............In the upper 80s. \nMax Heat Index..............Up to 103. \nWinds.......................North winds 5 to 10 mph.\nTides...\n   Miami Harbor Entrance....High at 10:24 AM EDT.\n                            Low at 04:09 PM EDT. \nSunrise.....................7:18 AM. \nSunset......................6:57 PM.\n\n.TUESDAY...\nRip Current Risk*...........Low. \nSurf Height.................1 to 2 feet. \nThunderstorm Potential**....None. \nWaterspout Risk**...........None. \nWeather.....................Sunny. \nHigh Temperature............In the upper 80s. \nWinds.......................North winds around 10 mph.\nTides...\n   Miami Harbor Entrance....High at 11:03 AM EDT.\n                            Low at 04:48 PM EDT. \nSunrise.....................7:18 AM. \nSunset......................6:56 PM.\n\n&&\n\nRip Current Risk Category\n* Low Risk - The risk for rip currents is low, however,\nlife-threatening rip currents often occur in the vicinity of groins,\njetties, reefs, and piers.\n* Moderate Risk - Life-threatening rip currents are possible in the\nsurf zone.\n* High Risk - Life-threatening rip currents are likely in the surf\nzone.\n\n** For thunderstorm, waterspout, and UV definitions see:\nhttps://www.weather.gov/beach/mfl\n\n$$\n\nFLZ069-122200-\nCoastal Collier-\nIncluding the beaches of Naples and Marco Island\n421 AM EDT Mon Oct 12 2026\n\n.TODAY...\nRip Current Risk*...........Low. \nSurf Height.................1 foot or less. \nThunderstorm Potential**....None. \nWaterspout Risk**...........None. \nUV Index**..................Very High. \nWeather.....................Mostly sunny. \nHigh Temperature............In the upper 80s. \nMax Heat Index..............Up to 100. \nWinds.......................North winds around 10 mph.\nTides...\n   North End of Naples Bay..Low at 08:48 AM EDT.\n                            High at 03:03 PM EDT. \nSunrise.....................7:24 AM. \nSunset......................7:03 PM.\n\n.TUESDAY...\nRip Current Risk*...........Low. \nSurf Height.................1 foot or less. \nThunderstorm Potential**....None. \nWaterspout Risk**...........None. \nWeather.....................Sunny. \nHigh Temperature............In the upper 80s. \nWinds.......................Northeast winds around 10 mph.\nTides...\n   North End of Naples Bay..Low at 09:29 AM EDT.\n                            High at 03:49 PM EDT. \nSunrise.....................7:25 AM. \nSunset......................7:02 PM.\n\n&&\n\nRip Current Risk Category\n* Low Risk - The risk for rip currents is low, however,\nlife-threatening rip currents often occur in the vicinity of groins,\njetties, reefs, and piers.\n* Moderate Risk - Life-threatening rip currents are possible in the\nsurf zone.\n* High Risk - Life-threatening rip currents are likely in the surf\nzone.\n\n** For thunderstorm, waterspout, and UV definitions see:\nhttps://www.weather.gov/beach/mfl\n\n\n$$\n\n"
+      },
+      "images": []
+    },
+    "discussion": {
+      "id": "discussion",
+      "url": "https://api.weather.gov/products/8ced7e45-62c6-4fca-adf0-950dc921a292",
+      "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+      "issued_at": "2026-10-12T16:43:00+00:00",
+      "availability": "available",
+      "reason": "",
+      "data": {
+        "text": "\n000\nFXUS62 KMFL 121643\nAFDMFL\n\nArea Forecast Discussion\nNational Weather Service Miami FL\n1243 PM EDT Mon Oct 12 2026\n\n...New AVIATION...\n\n.KEY MESSAGES...\nUpdated at 1240 PM EDT Mon Oct 12 2026\n\n - Minor coastal flooding will remain possible during periods of\n   high tide along the Gulf coast of South Florida today.\n\n - Northerly winds behind a weak frontal boundary will usher in\n   drier air into the region tonight into early Tuesday, resulting\n   in minimal rain chances on Tuesday.\n\n&&\n\n.SHORT TERM...\n(Today through Tuesday)\nIssued at 127 AM EDT Mon Oct 12 2026\n\nA reprieve from humidity, albeit brief, is indeed finally on the way \nfor South Florida today as a weak frontal boundary continues to \nslide southward across Central Florida early this morning. For \nthe time being however, 05z mesoanalysis reveals that South \nFlorida remains firmly in a plume of deep atmospheric moisture \nthat has pooled along and south of the boundary. Light winds, \nclearing skies, and the development of a nocturnal near surface \ninversion could set the stage for patches of dense fog across \ninland areas of South Florida early this morning (20-40% HREF \nprobabilities of 0.5 mile or less visibility primarily confined to\nthe south and west of Lake Okeechobee) before diurnal mixing \nshortly after sunrise disperses any near surface stratus cloud \ndeck and fog. \n\nAs a progressive mid-level trough pushes offshore of the eastern \nUnited States this morning, 500mb flow will veer from a southerly \ncomponent to a westerly component by this afternoon. At the same \ntime, the enhancement of a surface low offshore (right entrance \nregion of a southern stream jet-streak) of the northeastern United \nStates will provide enough forcing for the weak frontal boundary \ncurrently located across Central Florida to slide southward across \nour region during the day today. With all of the best dynamics now \nwell removed from the region, convective activity today is \nforecast to be much more sparse and shallow in nature. That being \nsaid, maximized ascent and residual moisture along the boundary \ncould still set the stage for some isolated to scattered shower \nactivity. Dry air advection aloft will keep any convection\nvertically capped and shallow in nature, which will limit any \nthreat of convective hazards. HREF and REFS LPMM guidance depict \nwidespread totals remaining less than a quarter of an inch, which \nis also in line with guidance from the Weather Prediction Center. \nHigh temperatures today will peak in the upper 80s to low 90s \nduring the afternoon hours as lower dewpoint values gradually push\nsouthward into the region.\n\nAs the boundary slides south of the region tonight into early \nTuesday, a dry continental airmass will make a long-awaited return\nto South Florida. While this will not be a \"cold\" or even \"cool\" \nfront by any metric, the change in the air will certainly be \nnoticeable as we drop from forecasted dewpoints in mid to upper \n70s today to dewpoints in the upper 60s to low 70s on Tuesday. \nEven more remarkable will be the drop in precipitable water \nvalues, deterministic and ensemble guidance continue to suggest a \npotential of seeing precipitable water values across South Florida\nbelow the 10% percentile for this time of year. While rain \nchances will remain minimal (<10%), overnight mesoscale model \nguidance (HRRR,RRFS,etc) hint at the potential of isolated \nshallow convection (sprinkles/light rain) pushing onshore along \nthe east coast on Tuesday afternoon. Even in a rather dry weather\nregime, breezy northeasterly flow above the warm Gulfstream \nwaters can still produce an isolated coastal sprinkle or two. No \nsignificant temperature change is expected behind this front \nduring the daytime hours (forecasted highs still reach the upper \n80s to low 90s on Tuesday) but a slight drop in overnight \ntemperatures is forecast with the potential of low temperatures in\nthe mid to upper 60s across inland southwestern Florida on \nTuesday morning. After the past week of rinse and repeat humidity\nand deja vu above average overnight temperatures in South \nFlorida, the brief overnight temperature dip on Tuesday morning \nmay feel \"crisp\" to some. For this forecaster however, I patiently\nawait a cold front with a real kick.\n\n&&\n\n.LONG TERM...\n(Tuesday night through Sunday)\nIssued at 127 AM EDT Mon Oct 12 2026\n\nThe advertised reprieve from moisture will be a short lived one as \nthe frontolytic boundary and envelope of associated moisture lift \nback across the region during the day on Wednesday into Thursday as \nan expansive area of surface high pressure becomes established \nacross the southeastern United States. Northeasterly surface flow \nwill gradually veer to an easterly direction by Thursday as the axis \nof surface ridging across the southeastern United States slides \neastward into the western Atlantic waters. This will focus the best \ndiurnal rain chances across the western half of the peninsula during \nthe second half of the work week, although overnight and morning \nactivity will still be a possibility along the east coast of South \nFlorida given the breezy easterly flow and continued moisture \nadvection. Mid-level ridging briefly established across the \nsoutheastern United States during the early to mid portion of the \nwork week will quickly flatten by Thursday as the next lobe of \ntroughing slides eastward across the northern United States. As the \npositively tilted trough amplifies and digs across the eastern \nUnited States, a strengthening surface low will strengthen and push \neast-northeastward in tandem. Model guidance remains in agreement \nthat a surface frontal boundary attached to the aforementioned \nsurface low will push southwards across the eastern United States in \nresponse and arrive in the vicinity of the Florida Peninsula during \nthe upcoming weekend. There has been a great amount of variability/ \nuncertainty in model solutions of exact frontal boundary placement \n(stall, full passage, etc) from run to run and model member to model \nmember (ensemble vs deterministic). While forecast details for the \nupcoming weekend will surely become clearer as we progress further \ninto the work week, let's briefly delve into what a stall of the \nboundary to the north could transpire for our area as opposed to a \nfull frontal passage. A stall of the boundary to the north of South \nFlorida would place the region in the envelope of deep tropical \nmoisture which could facilitate higher than normal rain chances and \na continuation of a humid and tropical airmass. The full passage of \nthe frontal boundary to the south of the region could usher in \nanother push of continental dry air into South Florida and daytime \nforecast temperature near or slightly below average. Cluster \nanalysis still depicts variations in model guidance on the \ntiming/amplitude of the lobe of troughing across the eastern United \nStates during this period, which could have implications on whether \nthe boundary will stall or make a full sweep across the region.\n\nForecast high temperatures will remain status quo through the end of \nthe work week with values in the upper 80s to low 90s possible each \nafternoon. The return of moisture advection across the region on \nWednesday will result in a gradual increase of nocturnal \ntemperatures across the region, with a possible return to minimum \ntemperatures in the low 80s along the immediate east coast late in\nthe week. \n\n&&\n\n.AVIATION...\n(18Z TAFS)\nIssued at 1240 PM EDT Mon Oct 12 2026\n\nVFR condition will prevail at all sites through the period. Winds\nare expected to shift more NE this afternoon and are beginning too\nat this hour. Not expecting a threat of SHRA today as any isolated\nactivity should develop inland and away from the terminals today.\nWinds may maintain a light breeze out of the NE overnight, and\nthen increase back to around 10 kts tomorrow afternoon.\n\n&&\n\n.MARINE...\nIssued at 127 AM EDT Mon Oct 12 2026\n\nSurface winds will veer northerly this morning in response to a \nfrontal boundary that will gradually push southwards our local \nwaters during the remainder of today. Small Craft Exercise Caution \n(SCEC) conditions could be realized at times across the Atlantic and \nGulf waters today as breezy northerly winds enhance behind the \nboundary. Waves will remain 2-3 feet across the region through this \nevening with the caveat that locally higher waves and winds are \npossible in and around any shower or thunderstorm activity. One or \ntwo waterspouts remain possible ahead and along the frontal boundary \nas it moves southwards across the local waters today. \n\n&&\n\n.PRELIMINARY POINT TEMPS/POPS...\nMiami            75  88  76  88 /  10  10  10  20 \nWest Kendall     74  89  74  88 /  10   0  10  30 \nOpa-Locka        75  89  76  88 /  10   0  10  20 \nHomestead        75  89  76  88 /  10  10  10  30 \nFort Lauderdale  75  87  76  87 /  10  10  10  20 \nN Ft Lauderdale  75  88  76  88 /  10  10  10  20 \nPembroke Pines   75  88  75  88 /  10   0  10  20 \nWest Palm Beach  73  87  75  88 /   0  10  10  20 \nBoca Raton       74  87  76  87 /   0  10  10  20 \nNaples           70  88  71  89 /   0   0   0  10 \n\n&&\n\n.MFL WATCHES/WARNINGS/ADVISORIES...\nFL...None.\nAM...None.\nGM...None.\n&&\n\n$$\n\nSHORT TERM...Hadi\nLONG TERM....Hadi\nAVIATION...Redman\n"
+      },
+      "images": []
+    },
+    "marine": {
+      "id": "marine",
+      "url": "https://api.weather.gov/zones/forecast/AMZ630/forecast",
+      "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+      "issued_at": "2026-10-12T04:01:00-04:00",
+      "availability": "available",
+      "reason": "",
+      "data": [
+        {
+          "number": 1,
+          "name": "Today",
+          "detailedForecast": "NE winds around 5 kt, increasing to 5 to 10 kt this afternoon. Light chop. A slight chance of showers and tstms this afternoon."
+        },
+        {
+          "number": 2,
+          "name": "Tonight",
+          "detailedForecast": "NE winds 5 to 10 kt. Light chop. A chance of showers early in the evening."
+        },
+        {
+          "number": 3,
+          "name": "Tue",
+          "detailedForecast": "NE winds 10 to 15 kt. A moderate chop."
+        }
+      ],
+      "images": []
+    },
+    "coastal_alerts": {
+      "id": "coastal_alerts",
+      "url": "https://api.weather.gov/alerts/active?zone=AMZ630,AMZ651,FLZ173",
+      "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+      "issued_at": null,
+      "availability": "available",
+      "reason": "",
+      "data": [],
+      "images": [],
+      "timestamp_note": "Live active-alert query retrieved at the stated time; each retained alert has its own issuance and expiration."
+    },
+    "hourly": {
+      "id": "hourly",
+      "url": "https://api.weather.gov/gridpoints/MFL/110,50/forecast/hourly",
+      "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+      "issued_at": "2026-10-12T08:21:24+00:00",
+      "availability": "available",
+      "reason": "",
+      "data": [
+        {
+          "number": 1,
+          "name": "",
+          "startTime": "2026-10-12T14:00:00-04:00",
+          "endTime": "2026-10-12T15:00:00-04:00",
+          "isDaytime": true,
+          "temperature": 87,
+          "temperatureUnit": "F",
+          "temperatureTrend": null,
+          "probabilityOfPrecipitation": {
+            "unitCode": "wmoUnit:percent",
+            "value": 17
+          },
+          "dewpoint": {
+            "unitCode": "wmoUnit:degC",
+            "value": 26.11111111111111
+          },
+          "relativeHumidity": {
+            "unitCode": "wmoUnit:percent",
+            "value": 77
+          },
+          "windSpeed": "9 mph",
+          "windDirection": "NE",
+          "icon": "https://api.weather.gov/icons/land/day/tsra_hi,20?size=small",
+          "shortForecast": "Slight Chance Showers And Thunderstorms",
+          "detailedForecast": ""
+        },
+        {
+          "number": 2,
+          "name": "",
+          "startTime": "2026-10-12T15:00:00-04:00",
+          "endTime": "2026-10-12T16:00:00-04:00",
+          "isDaytime": true,
+          "temperature": 87,
+          "temperatureUnit": "F",
+          "temperatureTrend": null,
+          "probabilityOfPrecipitation": {
+            "unitCode": "wmoUnit:percent",
+            "value": 22
+          },
+          "dewpoint": {
+            "unitCode": "wmoUnit:degC",
+            "value": 26.11111111111111
+          },
+          "relativeHumidity": {
+            "unitCode": "wmoUnit:percent",
+            "value": 77
+          },
+          "windSpeed": "10 mph",
+          "windDirection": "NE",
+          "icon": "https://api.weather.gov/icons/land/day/tsra_hi,20?size=small",
+          "shortForecast": "Slight Chance Showers And Thunderstorms",
+          "detailedForecast": ""
+        },
+        {
+          "number": 3,
+          "name": "",
+          "startTime": "2026-10-12T16:00:00-04:00",
+          "endTime": "2026-10-12T17:00:00-04:00",
+          "isDaytime": true,
+          "temperature": 88,
+          "temperatureUnit": "F",
+          "temperatureTrend": null,
+          "probabilityOfPrecipitation": {
+            "unitCode": "wmoUnit:percent",
+            "value": 25
+          },
+          "dewpoint": {
+            "unitCode": "wmoUnit:degC",
+            "value": 26.11111111111111
+          },
+          "relativeHumidity": {
+            "unitCode": "wmoUnit:percent",
+            "value": 75
+          },
+          "windSpeed": "12 mph",
+          "windDirection": "NE",
+          "icon": "https://api.weather.gov/icons/land/day/tsra_hi,30?size=small",
+          "shortForecast": "Chance Showers And Thunderstorms",
+          "detailedForecast": ""
+        },
+        {
+          "number": 4,
+          "name": "",
+          "startTime": "2026-10-12T17:00:00-04:00",
+          "endTime": "2026-10-12T18:00:00-04:00",
+          "isDaytime": true,
+          "temperature": 86,
+          "temperatureUnit": "F",
+          "temperatureTrend": null,
+          "probabilityOfPrecipitation": {
+            "unitCode": "wmoUnit:percent",
+            "value": 24
+          },
+          "dewpoint": {
+            "unitCode": "wmoUnit:degC",
+            "value": 26.11111111111111
+          },
+          "relativeHumidity": {
+            "unitCode": "wmoUnit:percent",
+            "value": 80
+          },
+          "windSpeed": "12 mph",
+          "windDirection": "NE",
+          "icon": "https://api.weather.gov/icons/land/day/tsra_hi,20?size=small",
+          "shortForecast": "Slight Chance Showers And Thunderstorms",
+          "detailedForecast": ""
+        },
+        {
+          "number": 5,
+          "name": "",
+          "startTime": "2026-10-12T18:00:00-04:00",
+          "endTime": "2026-10-12T19:00:00-04:00",
+          "isDaytime": false,
+          "temperature": 85,
+          "temperatureUnit": "F",
+          "temperatureTrend": null,
+          "probabilityOfPrecipitation": {
+            "unitCode": "wmoUnit:percent",
+            "value": 23
+          },
+          "dewpoint": {
+            "unitCode": "wmoUnit:degC",
+            "value": 25.555555555555557
+          },
+          "relativeHumidity": {
+            "unitCode": "wmoUnit:percent",
+            "value": 80
+          },
+          "windSpeed": "12 mph",
+          "windDirection": "NE",
+          "icon": "https://api.weather.gov/icons/land/night/tsra_hi,20?size=small",
+          "shortForecast": "Slight Chance Showers And Thunderstorms",
+          "detailedForecast": ""
+        },
+        {
+          "number": 6,
+          "name": "",
+          "startTime": "2026-10-12T19:00:00-04:00",
+          "endTime": "2026-10-12T20:00:00-04:00",
+          "isDaytime": false,
+          "temperature": 85,
+          "temperatureUnit": "F",
+          "temperatureTrend": null,
+          "probabilityOfPrecipitation": {
+            "unitCode": "wmoUnit:percent",
+            "value": 18
+          },
+          "dewpoint": {
+            "unitCode": "wmoUnit:degC",
+            "value": 25
+          },
+          "relativeHumidity": {
+            "unitCode": "wmoUnit:percent",
+            "value": 77
+          },
+          "windSpeed": "10 mph",
+          "windDirection": "NE",
+          "icon": "https://api.weather.gov/icons/land/night/tsra_hi,20?size=small",
+          "shortForecast": "Slight Chance Showers And Thunderstorms",
+          "detailedForecast": ""
+        },
+        {
+          "number": 7,
+          "name": "",
+          "startTime": "2026-10-12T20:00:00-04:00",
+          "endTime": "2026-10-12T21:00:00-04:00",
+          "isDaytime": false,
+          "temperature": 83,
+          "temperatureUnit": "F",
+          "temperatureTrend": null,
+          "probabilityOfPrecipitation": {
+            "unitCode": "wmoUnit:percent",
+            "value": 8
+          },
+          "dewpoint": {
+            "unitCode": "wmoUnit:degC",
+            "value": 25
+          },
+          "relativeHumidity": {
+            "unitCode": "wmoUnit:percent",
+            "value": 82
+          },
+          "windSpeed": "10 mph",
+          "windDirection": "NE",
+          "icon": "https://api.weather.gov/icons/land/night/sct?size=small",
+          "shortForecast": "Partly Cloudy",
+          "detailedForecast": ""
+        },
+        {
+          "number": 8,
+          "name": "",
+          "startTime": "2026-10-12T21:00:00-04:00",
+          "endTime": "2026-10-12T22:00:00-04:00",
+          "isDaytime": false,
+          "temperature": 83,
+          "temperatureUnit": "F",
+          "temperatureTrend": null,
+          "probabilityOfPrecipitation": {
+            "unitCode": "wmoUnit:percent",
+            "value": 8
+          },
+          "dewpoint": {
+            "unitCode": "wmoUnit:degC",
+            "value": 25
+          },
+          "relativeHumidity": {
+            "unitCode": "wmoUnit:percent",
+            "value": 82
+          },
+          "windSpeed": "10 mph",
+          "windDirection": "NE",
+          "icon": "https://api.weather.gov/icons/land/night/sct?size=small",
+          "shortForecast": "Partly Cloudy",
+          "detailedForecast": ""
+        },
+        {
+          "number": 9,
+          "name": "",
+          "startTime": "2026-10-12T22:00:00-04:00",
+          "endTime": "2026-10-12T23:00:00-04:00",
+          "isDaytime": false,
+          "temperature": 83,
+          "temperatureUnit": "F",
+          "temperatureTrend": null,
+          "probabilityOfPrecipitation": {
+            "unitCode": "wmoUnit:percent",
+            "value": 8
+          },
+          "dewpoint": {
+            "unitCode": "wmoUnit:degC",
+            "value": 24.444444444444443
+          },
+          "relativeHumidity": {
+            "unitCode": "wmoUnit:percent",
+            "value": 80
+          },
+          "windSpeed": "10 mph",
+          "windDirection": "NE",
+          "icon": "https://api.weather.gov/icons/land/night/sct?size=small",
+          "shortForecast": "Partly Cloudy",
+          "detailedForecast": ""
+        },
+        {
+          "number": 10,
+          "name": "",
+          "startTime": "2026-10-12T23:00:00-04:00",
+          "endTime": "2026-10-13T00:00:00-04:00",
+          "isDaytime": false,
+          "temperature": 82,
+          "temperatureUnit": "F",
+          "temperatureTrend": null,
+          "probabilityOfPrecipitation": {
+            "unitCode": "wmoUnit:percent",
+            "value": 7
+          },
+          "dewpoint": {
+            "unitCode": "wmoUnit:degC",
+            "value": 24.444444444444443
+          },
+          "relativeHumidity": {
+            "unitCode": "wmoUnit:percent",
+            "value": 82
+          },
+          "windSpeed": "10 mph",
+          "windDirection": "NE",
+          "icon": "https://api.weather.gov/icons/land/night/sct?size=small",
+          "shortForecast": "Partly Cloudy",
+          "detailedForecast": ""
+        }
+      ],
+      "images": []
+    },
+    "mcnoldy": {
+      "id": "mcnoldy",
+      "url": "https://bmcnoldy.earth.miami.edu/radar/kamx/",
+      "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+      "issued_at": null,
+      "availability": "unavailable",
+      "reason": "URLError: transport or certificate failure",
+      "data": null,
+      "images": []
+    },
+    "nhc": {
+      "id": "nhc",
+      "url": "https://www.nhc.noaa.gov/xml/TWOAT.xml",
+      "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+      "issued_at": "2026-10-12T17:03:28+00:00",
+      "availability": "available",
+      "reason": "",
+      "data": {
+        "text": "000\nABNT20 KNHC 121703\nTWOAT \n\nTropical Weather Outlook\nNWS National Hurricane Center Miami FL\n200 PM EDT Mon Oct 12 2026\n\nFor the North Atlantic...Caribbean Sea and the Gulf of America:\n\nEastern Tropical Atlantic:\nAn elongated area of low pressure centered a few hundred miles west \nof the Cabo Verde Islands continues to produce a large but \ndisorganized area of showers and thunderstorms occurring on its east \nside, extending toward the westernmost Cabo Verde Islands.  \nEnvironmental conditions appear, at best, only marginally conducive \nfor development of this system during the next day or so before \nupper-level winds become too strong for any further development on \nTuesday.  Regardless, heavy rainfall is expected to continue for the \nnext day or two across western portions of the Cabo Verde Islands, \nand some flooding is possible there as the system moves slowly \nnorthward to north-northwestward.\n* Formation chance through 48 hours...low...20 percent.\n* Formation chance through 7 days...low...20 percent.\n\n$$\nForecaster Hagen",
+        "tropical_activity": true
+      },
+      "images": [
+        {
+          "filename": "nhc-outlook-e48ed659a6.png",
+          "source_url": "https://www.nhc.noaa.gov/xgtwo/resize/xgtwo_atl_7d0_w1024.png",
+          "observed_at": "2026-10-12T17:03:28+00:00",
+          "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+          "credit": "NOAA/National Hurricane Center · Atlantic seven-day outlook",
+          "width": 1024,
+          "height": 773,
+          "sha256": "e48ed659a6490e4a4043473f6a3a0f4d1bb690c1494e75a93fd9b992540b5522",
+          "last_modified": "Mon, 12 Oct 2026 17:12:14 GMT",
+          "timestamp_note": "Outlook feed issuance; graphic’s own timestamp is embedded in the original image."
+        }
+      ]
+    },
+    "satellite": {
+      "id": "satellite",
+      "url": "https://www.star.nesdis.noaa.gov/GOES/sector_band.php?sat=G16&sector=se&band=GEOCOLOR&length=12",
+      "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+      "issued_at": "2026-10-12T17:56:00+00:00",
+      "availability": "available",
+      "reason": "",
+      "data": {
+        "satellite": "GOES-19"
+      },
+      "images": [
+        {
+          "filename": "satellite-1701-33f29e60a8.jpg",
+          "source_url": "https://cdn.star.nesdis.noaa.gov/GOES19/ABI/SECTOR/se/GEOCOLOR/20262851701_GOES19-ABI-se-GEOCOLOR-1200x1200.jpg",
+          "observed_at": "2026-10-12T17:01:00+00:00",
+          "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+          "credit": "CIRA/NOAA · GOES-19 Southeast GeoColor",
+          "width": 1200,
+          "height": 1200,
+          "sha256": "33f29e60a86769a7b4a46f70c424120c1b369903a16361059e85c1ba66786dc9",
+          "last_modified": "Mon, 12 Oct 2026 17:06:16 GMT"
+        },
+        {
+          "filename": "satellite-1731-0a2a3d3f2f.jpg",
+          "source_url": "https://cdn.star.nesdis.noaa.gov/GOES19/ABI/SECTOR/se/GEOCOLOR/20262851731_GOES19-ABI-se-GEOCOLOR-1200x1200.jpg",
+          "observed_at": "2026-10-12T17:31:00+00:00",
+          "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+          "credit": "CIRA/NOAA · GOES-19 Southeast GeoColor",
+          "width": 1200,
+          "height": 1200,
+          "sha256": "0a2a3d3f2f66f715edc8ac2b58ee6a8eb7678db2f7487f00a777a64537ede201",
+          "last_modified": "Mon, 12 Oct 2026 17:36:30 GMT"
+        },
+        {
+          "filename": "satellite-1756-8e8e334e74.jpg",
+          "source_url": "https://cdn.star.nesdis.noaa.gov/GOES19/ABI/SECTOR/se/GEOCOLOR/20262851756_GOES19-ABI-se-GEOCOLOR-1200x1200.jpg",
+          "observed_at": "2026-10-12T17:56:00+00:00",
+          "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+          "credit": "CIRA/NOAA · GOES-19 Southeast GeoColor",
+          "width": 1200,
+          "height": 1200,
+          "sha256": "8e8e334e7417806d6ad50e0e897253846beea210c0014a79037f77fd06c8e519",
+          "last_modified": "Mon, 12 Oct 2026 18:02:01 GMT"
+        }
+      ]
+    },
+    "regional_radar": {
+      "id": "regional_radar",
+      "url": "https://opengeo.ncep.noaa.gov/geoserver/conus/conus_bref_qcd/ows",
+      "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+      "issued_at": "2026-10-12T18:02:03+00:00",
+      "availability": "available",
+      "reason": "",
+      "data": {
+        "echo_regions": []
+      },
+      "images": [
+        {
+          "filename": "regional_radar-1733.png",
+          "source_url": "https://opengeo.ncep.noaa.gov/geoserver/conus/conus_bref_qcd/ows?service=WMS&version=1.1.1&request=GetMap&layers=conus_bref_qcd&srs=EPSG%3A3857&bbox=-9406171.793078564%2C2736401.414433824%2C-8453259.39284949%2C3355794.4745827215&width=1000&height=650&format=image%2Fpng&transparent=true&time=2026-10-12T17%3A33%3A55Z",
+          "observed_at": "2026-10-12T17:33:55+00:00",
+          "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+          "credit": "NOAA/NWS radar and map reference · Composed by Noland; timestamp and original legend retained",
+          "width": 1000,
+          "height": 800,
+          "sha256": "f9141a3c9d94f1d617293a1926c9632ac34ee46798f214bd477f88b993d99221",
+          "last_modified": null,
+          "original_image": {
+            "filename": "regional_radar-raw-1733-2b9d92ec06.png",
+            "source_url": "https://opengeo.ncep.noaa.gov/geoserver/conus/conus_bref_qcd/ows?service=WMS&version=1.1.1&request=GetMap&layers=conus_bref_qcd&srs=EPSG%3A3857&bbox=-9406171.793078564%2C2736401.414433824%2C-8453259.39284949%2C3355794.4745827215&width=1000&height=650&format=image%2Fpng&transparent=true&time=2026-10-12T17%3A33%3A55Z",
+            "observed_at": "2026-10-12T17:33:55+00:00",
+            "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+            "credit": "NOAA/NWS radar",
+            "width": 1000,
+            "height": 650,
+            "sha256": "2b9d92ec067e891a2a01d7a652c4d7d901da874137101adaf8b8b07239a4670b",
+            "last_modified": null
+          },
+          "basemap_url": "https://mapservices.weather.noaa.gov/static/rest/services/nws_reference_maps/nws_reference_map/MapServer/export?f=image&bbox=-9406171.793078564%2C2736401.414433824%2C-8453259.39284949%2C3355794.4745827215&bboxSR=3857&imageSR=3857&size=1000%2C650&format=png32&transparent=true&layers=show%3A3",
+          "legend_url": "https://opengeo.ncep.noaa.gov/geoserver/conus/conus_bref_qcd/ows?service=WMS&request=GetLegendGraphic&version=1.3.0&format=image%2Fpng&layer=conus_bref_qcd&width=500&height=30",
+          "bounds_epsg3857": [
+            -9406171.793078564,
+            2736401.414433824,
+            -8453259.39284949,
+            3355794.4745827215
+          ],
+          "center": [
+            -80.217,
+            26.379
+          ],
+          "zoom": 7.36
+        },
+        {
+          "filename": "regional_radar-1747.png",
+          "source_url": "https://opengeo.ncep.noaa.gov/geoserver/conus/conus_bref_qcd/ows?service=WMS&version=1.1.1&request=GetMap&layers=conus_bref_qcd&srs=EPSG%3A3857&bbox=-9406171.793078564%2C2736401.414433824%2C-8453259.39284949%2C3355794.4745827215&width=1000&height=650&format=image%2Fpng&transparent=true&time=2026-10-12T17%3A47%3A30Z",
+          "observed_at": "2026-10-12T17:47:30+00:00",
+          "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+          "credit": "NOAA/NWS radar and map reference · Composed by Noland; timestamp and original legend retained",
+          "width": 1000,
+          "height": 800,
+          "sha256": "a306e9acf1b336649a3fa2bc4bf00807a6d83ce7bbabb90997b16b12289f49f9",
+          "last_modified": null,
+          "original_image": {
+            "filename": "regional_radar-raw-1747-eced1ac318.png",
+            "source_url": "https://opengeo.ncep.noaa.gov/geoserver/conus/conus_bref_qcd/ows?service=WMS&version=1.1.1&request=GetMap&layers=conus_bref_qcd&srs=EPSG%3A3857&bbox=-9406171.793078564%2C2736401.414433824%2C-8453259.39284949%2C3355794.4745827215&width=1000&height=650&format=image%2Fpng&transparent=true&time=2026-10-12T17%3A47%3A30Z",
+            "observed_at": "2026-10-12T17:47:30+00:00",
+            "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+            "credit": "NOAA/NWS radar",
+            "width": 1000,
+            "height": 650,
+            "sha256": "eced1ac318ddabbae82014d6ced980a3d7b546c1ad498a35b0536cd5c02f24be",
+            "last_modified": null
+          },
+          "basemap_url": "https://mapservices.weather.noaa.gov/static/rest/services/nws_reference_maps/nws_reference_map/MapServer/export?f=image&bbox=-9406171.793078564%2C2736401.414433824%2C-8453259.39284949%2C3355794.4745827215&bboxSR=3857&imageSR=3857&size=1000%2C650&format=png32&transparent=true&layers=show%3A3",
+          "legend_url": "https://opengeo.ncep.noaa.gov/geoserver/conus/conus_bref_qcd/ows?service=WMS&request=GetLegendGraphic&version=1.3.0&format=image%2Fpng&layer=conus_bref_qcd&width=500&height=30",
+          "bounds_epsg3857": [
+            -9406171.793078564,
+            2736401.414433824,
+            -8453259.39284949,
+            3355794.4745827215
+          ],
+          "center": [
+            -80.217,
+            26.379
+          ],
+          "zoom": 7.36
+        },
+        {
+          "filename": "regional_radar-1802.png",
+          "source_url": "https://opengeo.ncep.noaa.gov/geoserver/conus/conus_bref_qcd/ows?service=WMS&version=1.1.1&request=GetMap&layers=conus_bref_qcd&srs=EPSG%3A3857&bbox=-9406171.793078564%2C2736401.414433824%2C-8453259.39284949%2C3355794.4745827215&width=1000&height=650&format=image%2Fpng&transparent=true&time=2026-10-12T18%3A02%3A03Z",
+          "observed_at": "2026-10-12T18:02:03+00:00",
+          "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+          "credit": "NOAA/NWS radar and map reference · Composed by Noland; timestamp and original legend retained",
+          "width": 1000,
+          "height": 800,
+          "sha256": "a1146caf168c3519594887291b7997b6d1d14d390a8f4867f8399ffc4eefacc9",
+          "last_modified": null,
+          "original_image": {
+            "filename": "regional_radar-raw-1802-8fd18ed42e.png",
+            "source_url": "https://opengeo.ncep.noaa.gov/geoserver/conus/conus_bref_qcd/ows?service=WMS&version=1.1.1&request=GetMap&layers=conus_bref_qcd&srs=EPSG%3A3857&bbox=-9406171.793078564%2C2736401.414433824%2C-8453259.39284949%2C3355794.4745827215&width=1000&height=650&format=image%2Fpng&transparent=true&time=2026-10-12T18%3A02%3A03Z",
+            "observed_at": "2026-10-12T18:02:03+00:00",
+            "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+            "credit": "NOAA/NWS radar",
+            "width": 1000,
+            "height": 650,
+            "sha256": "8fd18ed42e0fe3883cac531f9c48131f1f340577ca1a18d933fbdf3e2daa4192",
+            "last_modified": null
+          },
+          "basemap_url": "https://mapservices.weather.noaa.gov/static/rest/services/nws_reference_maps/nws_reference_map/MapServer/export?f=image&bbox=-9406171.793078564%2C2736401.414433824%2C-8453259.39284949%2C3355794.4745827215&bboxSR=3857&imageSR=3857&size=1000%2C650&format=png32&transparent=true&layers=show%3A3",
+          "legend_url": "https://opengeo.ncep.noaa.gov/geoserver/conus/conus_bref_qcd/ows?service=WMS&request=GetLegendGraphic&version=1.3.0&format=image%2Fpng&layer=conus_bref_qcd&width=500&height=30",
+          "bounds_epsg3857": [
+            -9406171.793078564,
+            2736401.414433824,
+            -8453259.39284949,
+            3355794.4745827215
+          ],
+          "center": [
+            -80.217,
+            26.379
+          ],
+          "zoom": 7.36
+        }
+      ]
+    },
+    "local_radar": {
+      "id": "local_radar",
+      "url": "https://opengeo.ncep.noaa.gov/geoserver/kamx/ows",
+      "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+      "issued_at": "2026-10-12T18:01:14+00:00",
+      "availability": "available",
+      "reason": "",
+      "data": {
+        "echo_regions": [
+          "southeast of Miami"
+        ]
+      },
+      "images": [
+        {
+          "filename": "local_radar-1734.png",
+          "source_url": "https://opengeo.ncep.noaa.gov/geoserver/kamx/ows?service=WMS&version=1.1.1&request=GetMap&layers=kamx_sr_bref&srs=EPSG%3A3857&bbox=-9079784.39836639%2C2870228.1417467548%2C-8774036.285225684%2C3068964.4152882127&width=1000&height=650&format=image%2Fpng&transparent=true&time=2026-10-12T17%3A34%3A59Z",
+          "observed_at": "2026-10-12T17:34:59+00:00",
+          "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+          "credit": "NOAA/NWS radar and map reference · Composed by Noland; timestamp and original legend retained",
+          "width": 1000,
+          "height": 800,
+          "sha256": "cb297f3c2663b44a0bf99083f33e230e46f1ce41117efbe8ecf233582b07847d",
+          "last_modified": null,
+          "original_image": {
+            "filename": "local_radar-raw-1734-308780c5d9.png",
+            "source_url": "https://opengeo.ncep.noaa.gov/geoserver/kamx/ows?service=WMS&version=1.1.1&request=GetMap&layers=kamx_sr_bref&srs=EPSG%3A3857&bbox=-9079784.39836639%2C2870228.1417467548%2C-8774036.285225684%2C3068964.4152882127&width=1000&height=650&format=image%2Fpng&transparent=true&time=2026-10-12T17%3A34%3A59Z",
+            "observed_at": "2026-10-12T17:34:59+00:00",
+            "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+            "credit": "NOAA/NWS radar",
+            "width": 1000,
+            "height": 650,
+            "sha256": "308780c5d9f21aed0e94731164ea272bcd7560ed89df2e4e483333515803ad88",
+            "last_modified": null
+          },
+          "basemap_url": "https://mapservices.weather.noaa.gov/static/rest/services/nws_reference_maps/nws_reference_map/MapServer/export?f=image&bbox=-9079784.39836639%2C2870228.1417467548%2C-8774036.285225684%2C3068964.4152882127&bboxSR=3857&imageSR=3857&size=1000%2C650&format=png32&transparent=true&layers=show%3A3",
+          "legend_url": "https://opengeo.ncep.noaa.gov/geoserver/kamx/ows?service=WMS&request=GetLegendGraphic&version=1.3.0&format=image%2Fpng&layer=kamx_sr_bref&width=500&height=30",
+          "bounds_epsg3857": [
+            -9079784.39836639,
+            2870228.1417467548,
+            -8774036.285225684,
+            3068964.4152882127
+          ],
+          "center": [
+            -80.1918,
+            25.7617
+          ],
+          "zoom": 9.0
+        },
+        {
+          "filename": "local_radar-1749.png",
+          "source_url": "https://opengeo.ncep.noaa.gov/geoserver/kamx/ows?service=WMS&version=1.1.1&request=GetMap&layers=kamx_sr_bref&srs=EPSG%3A3857&bbox=-9079784.39836639%2C2870228.1417467548%2C-8774036.285225684%2C3068964.4152882127&width=1000&height=650&format=image%2Fpng&transparent=true&time=2026-10-12T17%3A49%3A06Z",
+          "observed_at": "2026-10-12T17:49:06+00:00",
+          "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+          "credit": "NOAA/NWS radar and map reference · Composed by Noland; timestamp and original legend retained",
+          "width": 1000,
+          "height": 800,
+          "sha256": "3d8e4f742a077a4691b2b46d928c892a286ed2e44d36cc018acd1ca533458665",
+          "last_modified": null,
+          "original_image": {
+            "filename": "local_radar-raw-1749-4c342a83f2.png",
+            "source_url": "https://opengeo.ncep.noaa.gov/geoserver/kamx/ows?service=WMS&version=1.1.1&request=GetMap&layers=kamx_sr_bref&srs=EPSG%3A3857&bbox=-9079784.39836639%2C2870228.1417467548%2C-8774036.285225684%2C3068964.4152882127&width=1000&height=650&format=image%2Fpng&transparent=true&time=2026-10-12T17%3A49%3A06Z",
+            "observed_at": "2026-10-12T17:49:06+00:00",
+            "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+            "credit": "NOAA/NWS radar",
+            "width": 1000,
+            "height": 650,
+            "sha256": "4c342a83f2951f169479b54e0438748fae5ab22e373aa903c6fd6d7c43c8c1a3",
+            "last_modified": null
+          },
+          "basemap_url": "https://mapservices.weather.noaa.gov/static/rest/services/nws_reference_maps/nws_reference_map/MapServer/export?f=image&bbox=-9079784.39836639%2C2870228.1417467548%2C-8774036.285225684%2C3068964.4152882127&bboxSR=3857&imageSR=3857&size=1000%2C650&format=png32&transparent=true&layers=show%3A3",
+          "legend_url": "https://opengeo.ncep.noaa.gov/geoserver/kamx/ows?service=WMS&request=GetLegendGraphic&version=1.3.0&format=image%2Fpng&layer=kamx_sr_bref&width=500&height=30",
+          "bounds_epsg3857": [
+            -9079784.39836639,
+            2870228.1417467548,
+            -8774036.285225684,
+            3068964.4152882127
+          ],
+          "center": [
+            -80.1918,
+            25.7617
+          ],
+          "zoom": 9.0
+        },
+        {
+          "filename": "local_radar-1801.png",
+          "source_url": "https://opengeo.ncep.noaa.gov/geoserver/kamx/ows?service=WMS&version=1.1.1&request=GetMap&layers=kamx_sr_bref&srs=EPSG%3A3857&bbox=-9079784.39836639%2C2870228.1417467548%2C-8774036.285225684%2C3068964.4152882127&width=1000&height=650&format=image%2Fpng&transparent=true&time=2026-10-12T18%3A01%3A14Z",
+          "observed_at": "2026-10-12T18:01:14+00:00",
+          "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+          "credit": "NOAA/NWS radar and map reference · Composed by Noland; timestamp and original legend retained",
+          "width": 1000,
+          "height": 800,
+          "sha256": "7db6fed93c2e727f7ad5add9e89f91b653ad7194ff21be0208c5056b43c7c7f9",
+          "last_modified": null,
+          "original_image": {
+            "filename": "local_radar-raw-1801-f79884de62.png",
+            "source_url": "https://opengeo.ncep.noaa.gov/geoserver/kamx/ows?service=WMS&version=1.1.1&request=GetMap&layers=kamx_sr_bref&srs=EPSG%3A3857&bbox=-9079784.39836639%2C2870228.1417467548%2C-8774036.285225684%2C3068964.4152882127&width=1000&height=650&format=image%2Fpng&transparent=true&time=2026-10-12T18%3A01%3A14Z",
+            "observed_at": "2026-10-12T18:01:14+00:00",
+            "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+            "credit": "NOAA/NWS radar",
+            "width": 1000,
+            "height": 650,
+            "sha256": "f79884de62ca02cae83bf2c189d98f7e8b3b431c52909589c8b191a93ac8c890",
+            "last_modified": null
+          },
+          "basemap_url": "https://mapservices.weather.noaa.gov/static/rest/services/nws_reference_maps/nws_reference_map/MapServer/export?f=image&bbox=-9079784.39836639%2C2870228.1417467548%2C-8774036.285225684%2C3068964.4152882127&bboxSR=3857&imageSR=3857&size=1000%2C650&format=png32&transparent=true&layers=show%3A3",
+          "legend_url": "https://opengeo.ncep.noaa.gov/geoserver/kamx/ows?service=WMS&request=GetLegendGraphic&version=1.3.0&format=image%2Fpng&layer=kamx_sr_bref&width=500&height=30",
+          "bounds_epsg3857": [
+            -9079784.39836639,
+            2870228.1417467548,
+            -8774036.285225684,
+            3068964.4152882127
+          ],
+          "center": [
+            -80.1918,
+            25.7617
+          ],
+          "zoom": 9.0
+        }
+      ]
+    },
+    "tropical_tidbits": {
+      "id": "tropical_tidbits",
+      "url": "https://www.tropicaltidbits.com/",
+      "retrieved_at": "2026-10-12T18:03:50.484627+00:00",
+      "issued_at": null,
+      "availability": "link-only",
+      "reason": "Optional context only. Imagery is not copied: Tropical Tidbits reserves reuse rights.",
+      "data": null,
+      "images": []
+    }
+  }
+}
