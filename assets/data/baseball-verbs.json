@@ -1,8 +1,69 @@
 {
   "schema_version": 1,
   "entries": [
-    {"id": "lined", "verb": "lined", "url": "", "announcer": "", "notes": "", "revision": 1},
-    {"id": "roped", "verb": "roped", "url": "", "announcer": "", "notes": "", "revision": 1},
-    {"id": "struck", "verb": "struck", "url": "", "announcer": "", "notes": "", "revision": 1}
+    {
+      "id": "d74d4df39f237de0128e3e8b",
+      "verb": "drives",
+      "url": "https://baseballsavant.mlb.com/sporty-videos?playId=774f64dc-b343-3912-984d-f8a03d34f46d",
+      "announcer": "",
+      "notes": "",
+      "revision": 2
+    },
+    {
+      "id": "3e3fb7534731f74c17a1a624",
+      "verb": "hits",
+      "url": "",
+      "announcer": "",
+      "notes": "",
+      "revision": 1
+    },
+    {
+      "id": "14e91107691e61e843f2feab",
+      "verb": "launches",
+      "url": "https://baseballsavant.mlb.com/sporty-videos?playId=7626e7cd-1ce4-3e86-9816-f965017fee8d",
+      "announcer": "",
+      "notes": "",
+      "revision": 2
+    },
+    {
+      "id": "lined",
+      "verb": "lined",
+      "url": "",
+      "announcer": "",
+      "notes": "",
+      "revision": 1
+    },
+    {
+      "id": "roped",
+      "verb": "roped",
+      "url": "",
+      "announcer": "",
+      "notes": "",
+      "revision": 1
+    },
+    {
+      "id": "b89e39377a3be18812175e9e",
+      "verb": "smashed",
+      "url": "https://baseballsavant.mlb.com/sporty-videos?playId=7021c0d1-04d3-34d0-8fbe-9e5705a82248&videoType=AWAY",
+      "announcer": "",
+      "notes": "",
+      "revision": 1
+    },
+    {
+      "id": "3ef44bb1c5b473bb632c00d5",
+      "verb": "splattered",
+      "url": "https://baseballsavant.mlb.com/sporty-videos?playId=6c360412-c71b-36b9-baf3-7e91d041b7e0&videoType=AWAY",
+      "announcer": "",
+      "notes": "",
+      "revision": 1
+    },
+    {
+      "id": "struck",
+      "verb": "struck",
+      "url": "",
+      "announcer": "",
+      "notes": "",
+      "revision": 1
+    }
   ]
 }
