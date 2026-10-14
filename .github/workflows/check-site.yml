@@ -34,6 +34,12 @@ jobs:
         with:
           node-version: "24"
 
+      - name: Test Blanket definition and explorer
+        run: |
+          python3 -m pip install -r tools/blanket-requirements.txt
+          python3 tools/test-blanket.py
+          node tools/test-blanket-ui.cjs
+
       - name: Test Triple Atlas owner connection recovery
         run: node --test tools/test-triple-atlas-auth.cjs
 

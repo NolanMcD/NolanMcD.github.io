@@ -57,6 +57,10 @@ The 2026 triple catalog lives at `/triple-atlas/`. Explore interactive player/ba
 
 The broadcast vocabulary collection lives at `/baseball-verbs/`. Run `python tools/baseball-verbs.py serve`, open the private URL it prints, and add words and Baseball Savant links. Run `python tools/baseball-verbs.py publish` to prepare the public snapshot. See [the editing and publishing guide](docs/baseball-verbs.md).
 
+## NFL Big Data Bowl: Blanket
+
+The research page at `/projects/nfl-big-data-bowl/` introduces Blanket, a proposed man-coverage stat for average separation below one yard. Run `python tools/analyze-blanket.py` against a locally obtained competition ZIP to reproduce the analysis; `--publish` updates the aggregate website snapshot. Raw data and tracking examples stay under ignored local storage. See [definitions, reproducibility, and limitations](docs/blanket.md).
+
 ## Custom domain
 
 The canonical domain is `noland.blog`. The root `CNAME` file and `url` in

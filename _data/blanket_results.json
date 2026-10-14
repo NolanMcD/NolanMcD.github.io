@@ -1,0 +1,116 @@
+{
+  "status": "Exploratory inferred pairings; assignments not independently verified",
+  "definition": "Blanket: time-average separation strictly below 1 yard from snap through pass_forward.",
+  "candidate_reps": 1380,
+  "candidate_players": 11,
+  "screened_reps": 215,
+  "screened_players": 11,
+  "provisional_blankets": 2,
+  "blanket_rate": 0.009302325581395349,
+  "mean_separation": 2.360388175576428,
+  "median_separation": 1.8027164039641306,
+  "exclusions": {
+    "Nearest tracked route runner more than 5 yards at snap": 578,
+    "No tracked route runner at snap": 568,
+    "Less than one second before throw": 2,
+    "Ambiguous snap pairing: margin below 1 yard": 8,
+    "Missing or ambiguous defender snap/throw": 9
+  },
+  "single_observed_runner_reps": 135,
+  "correlation": 0.32808755370725634,
+  "correlation_players": 8,
+  "correlation_min_reps": 10,
+  "correlation_bootstrap_95": [
+    -0.9836481586502422,
+    0.9419888869866284
+  ],
+  "thresholds": [
+    {
+      "threshold": 0.5,
+      "count": 0,
+      "late_count": 0
+    },
+    {
+      "threshold": 0.75,
+      "count": 0,
+      "late_count": 2
+    },
+    {
+      "threshold": 1,
+      "count": 2,
+      "late_count": 12
+    },
+    {
+      "threshold": 1.25,
+      "count": 25,
+      "late_count": 53
+    },
+    {
+      "threshold": 1.5,
+      "count": 58,
+      "late_count": 90
+    },
+    {
+      "threshold": 2,
+      "count": 131,
+      "late_count": 145
+    },
+    {
+      "threshold": 3,
+      "count": 170,
+      "late_count": 176
+    }
+  ],
+  "histogram": [
+    {
+      "label": "0\u20130.5",
+      "count": 0
+    },
+    {
+      "label": "0.5\u20131",
+      "count": 2
+    },
+    {
+      "label": "1\u20131.5",
+      "count": 56
+    },
+    {
+      "label": "1.5\u20132",
+      "count": 73
+    },
+    {
+      "label": "2\u20133",
+      "count": 39
+    },
+    {
+      "label": "3\u20135",
+      "count": 33
+    },
+    {
+      "label": "5\u20138",
+      "count": 10
+    },
+    {
+      "label": "8\u201312",
+      "count": 2
+    },
+    {
+      "label": "12+",
+      "count": 0
+    }
+  ],
+  "window_sensitivity": {
+    "after_half_second_blankets": 12,
+    "throw_only_below_one": 71
+  },
+  "sensor": {
+    "players_with_feature": 7,
+    "comparison_players": 4,
+    "correlation_with_mean_separation": -0.27424718273816,
+    "definition": "Median speed during heading changes of at least 120 degrees/second; adjacent speeds >=1; median across eligible attempts."
+  },
+  "data_source": "NFL / Next Gen Stats, NFL Big Data Bowl 2027 on Kaggle",
+  "analysis_version": 3,
+  "season_scope": "Regular season only, 2023\u20132025",
+  "input_sha256": "27d52f594d6d31d4f617f9c94b0b37d11e280397ad8293c0987da5f91a8d0ced"
+}

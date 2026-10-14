@@ -20,6 +20,12 @@ description: Interactive tools, ongoing adventures, and creative projects by Nol
 <p class="archive-count" id="archive-count" aria-live="polite"></p>
 
 <div class="archive-stream" id="archive-stream">
+  <article class="archive-card archive-project" data-archive-tags="project sports code data football">
+    <div class="archive-card-top"><span>Research project</span><span>First findings</span></div>
+    <h2><a href="{{ '/projects/nfl-big-data-bowl/' | relative_url }}">Three Cones, Tight Coverage</a></h2>
+    <p>Introducing Blanket: a proposed stat for man-coverage assignments averaging less than one yard of separation. Explore the first tracking results and the connection to the three-cone drill.</p>
+    <div class="archive-tags"><span>Football</span><span>Player tracking</span><span>Big Data Bowl 2027</span></div>
+  </article>
   <article class="archive-card archive-project" data-archive-tags="project adventure code data weather">
     <div class="archive-card-top"><span>Project</span><time>Every morning</time></div>
     <h2><a href="{{ '/miami-weather/' | relative_url }}">Morning Miami Weather Report</a></h2>
