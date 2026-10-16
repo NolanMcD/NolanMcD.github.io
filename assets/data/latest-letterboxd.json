@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1539751725",
+        "syncId":  "letterboxd-review-1539751725",
+        "title":  "You Can See Everything",
+        "year":  2026,
+        "rating":  5,
+        "review":  "I never seen anything from Nathan Fielder before, but he’s such a good person for this because the way he asks questions, and thinks hard about what he says before he says it is such a perfect style for combatting absolute bullshit. The inclusion of Amanda Seyfried and reenactments is sometimes I’ve only ever seen before and my absolute favorite documentary “The Thin Blue Line.” The whose on 1st part was my favorite.",
+        "wordCount":  73,
+        "publishedDate":  "2026-10-16",
+        "watchedDate":  "2026-10-15",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/you-can-see-everything/",
+        "tmdbId":  "1765072",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1538711914",
         "syncId":  "letterboxd-review-1538711914",
         "title":  "Layer Cake",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/the-history-of-concrete/",
         "tmdbId":  "1596296",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1525869403",
-        "syncId":  "letterboxd-review-1525869403",
-        "title":  "Barry Lyndon",
-        "year":  1975,
-        "rating":  5,
-        "review":  "All I can do is compare contemporary usage of narration to Barry Lyndon, and then be ashamed how we have bastardized one of storytelling\u0027s most effective tools into a recap voice for inattentive audiences. \n\nBring back intermissions!",
-        "wordCount":  37,
-        "publishedDate":  "2026-10-06",
-        "watchedDate":  "2026-10-05",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/barry-lyndon/",
-        "tmdbId":  "3175",
         "tags":  [
 
                  ],
