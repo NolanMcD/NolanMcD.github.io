@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1541330366",
+        "syncId":  "letterboxd-review-1541330366",
+        "title":  "Fjord",
+        "year":  2026,
+        "rating":  4,
+        "review":  "Good year for movies. The way this movie makes such a progressive society like Norway look like oppressive regime with its perspective is a testament to its writing.",
+        "wordCount":  28,
+        "publishedDate":  "2026-10-17",
+        "watchedDate":  "2026-10-16",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/fjord-2026/",
+        "tmdbId":  "1401459",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1539751725",
         "syncId":  "letterboxd-review-1539751725",
         "title":  "You Can See Everything",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/the-island-2005/",
         "tmdbId":  "1635",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1529335562",
-        "syncId":  "letterboxd-review-1529335562",
-        "title":  "The History of Concrete",
-        "year":  2026,
-        "rating":  3,
-        "review":  "Its funny and John Wilson\u0027s style of just following what he finds strange is great but I didn\u0027t love it as much as I thought I would.",
-        "wordCount":  27,
-        "publishedDate":  "2026-10-09",
-        "watchedDate":  "2026-10-08",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/the-history-of-concrete/",
-        "tmdbId":  "1596296",
         "tags":  [
 
                  ],
