@@ -1,5 +1,55 @@
 [
     {
+        "id":  "rss:letterboxd-review-1542701273",
+        "syncId":  "letterboxd-review-1542701273",
+        "title":  "The Social Reckoning",
+        "year":  2026,
+        "rating":  2,
+        "review":  "absolute disaster. Not even Fincher could save this. This is really the best Sorkin\u0027s got now?",
+        "wordCount":  16,
+        "publishedDate":  "2026-10-18",
+        "watchedDate":  "2026-10-17",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-social-reckoning/",
+        "tmdbId":  "1281331",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1542697824",
+        "syncId":  "letterboxd-review-1542697824",
+        "title":  "Whalefall",
+        "year":  2026,
+        "rating":  3,
+        "review":  "Austin Abrams always getting himself in situations. The sequences are fun but its eerie similar to Resident Evil with how the character just talks to himself the whole time. I like the man vs nature aspect of it though.",
+        "wordCount":  39,
+        "publishedDate":  "2026-10-18",
+        "watchedDate":  "2026-10-17",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/whalefall/",
+        "tmdbId":  "1255833",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1541330366",
         "syncId":  "letterboxd-review-1541330366",
         "title":  "Fjord",
@@ -1000,18 +1050,18 @@
         "origin":  "rss"
     },
     {
-        "id":  "rss:letterboxd-review-1454671943",
-        "syncId":  "letterboxd-review-1454671943",
+        "id":  "rss:letterboxd-review-1454944495",
+        "syncId":  "letterboxd-review-1454944495",
         "title":  "Cape Fear",
-        "year":  1962,
-        "rating":  3,
-        "review":  "It’s a solid noir with good tension building but the climax it a little too long and drawn out for me",
-        "wordCount":  21,
+        "year":  1991,
+        "rating":  4,
+        "review":  "Oh yeah, way more effecting than the original. Dials it up in just about every way. The frantic pace of the 1st act, the devil like presence of Cady, an added touch of moral and ethical ambiguity. Everything down the the nature and storm sounds of the end credits just works wonders for me.",
+        "wordCount":  54,
         "publishedDate":  "2026-08-17",
-        "watchedDate":  "2026-08-16",
+        "watchedDate":  "2026-08-17",
         "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/cape-fear/",
-        "tmdbId":  "11349",
+        "url":  "https://letterboxd.com/nolanmcd/film/cape-fear-1991/",
+        "tmdbId":  "1598",
         "tags":  [
 
                  ],
@@ -1025,18 +1075,18 @@
         "origin":  "rss"
     },
     {
-        "id":  "rss:letterboxd-review-1454944495",
-        "syncId":  "letterboxd-review-1454944495",
+        "id":  "rss:letterboxd-review-1454671943",
+        "syncId":  "letterboxd-review-1454671943",
         "title":  "Cape Fear",
-        "year":  1991,
-        "rating":  4,
-        "review":  "Oh yeah, way more effecting than the original. Dials it up in just about every way. The frantic pace of the 1st act, the devil like presence of Cady, an added touch of moral and ethical ambiguity. Everything down the the nature and storm sounds of the end credits just works wonders for me.",
-        "wordCount":  54,
+        "year":  1962,
+        "rating":  3,
+        "review":  "It’s a solid noir with good tension building but the climax it a little too long and drawn out for me",
+        "wordCount":  21,
         "publishedDate":  "2026-08-17",
-        "watchedDate":  "2026-08-17",
+        "watchedDate":  "2026-08-16",
         "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/cape-fear-1991/",
-        "tmdbId":  "1598",
+        "url":  "https://letterboxd.com/nolanmcd/film/cape-fear/",
+        "tmdbId":  "11349",
         "tags":  [
 
                  ],

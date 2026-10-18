@@ -1,5 +1,55 @@
 [
     {
+        "id":  "rss:letterboxd-review-1542701273",
+        "syncId":  "letterboxd-review-1542701273",
+        "title":  "The Social Reckoning",
+        "year":  2026,
+        "rating":  2,
+        "review":  "absolute disaster. Not even Fincher could save this. This is really the best Sorkin\u0027s got now?",
+        "wordCount":  16,
+        "publishedDate":  "2026-10-18",
+        "watchedDate":  "2026-10-17",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-social-reckoning/",
+        "tmdbId":  "1281331",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1542697824",
+        "syncId":  "letterboxd-review-1542697824",
+        "title":  "Whalefall",
+        "year":  2026,
+        "rating":  3,
+        "review":  "Austin Abrams always getting himself in situations. The sequences are fun but its eerie similar to Resident Evil with how the character just talks to himself the whole time. I like the man vs nature aspect of it though.",
+        "wordCount":  39,
+        "publishedDate":  "2026-10-18",
+        "watchedDate":  "2026-10-17",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/whalefall/",
+        "tmdbId":  "1255833",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1541330366",
         "syncId":  "letterboxd-review-1541330366",
         "title":  "Fjord",
@@ -87,56 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/i-robot/",
         "tmdbId":  "2048",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1530579781",
-        "syncId":  "letterboxd-review-1530579781",
-        "title":  "Below",
-        "year":  2026,
-        "rating":  4,
-        "review":  "Just watched a 4 hour movie. I get that’s it’s technically a TV show but it really just feels like a well structured movie. Shoutout to the Somalian character who just became a ride or die.",
-        "wordCount":  36,
-        "publishedDate":  "2026-10-10",
-        "watchedDate":  "2026-10-09",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/below-2026/",
-        "tmdbId":  "",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1530946111",
-        "syncId":  "letterboxd-review-1530946111",
-        "title":  "The Island",
-        "year":  2005,
-        "rating":  3,
-        "review":  "The action and sci-fi are pretty good. Completely unrealistic tho, California would never built high speed rail",
-        "wordCount":  17,
-        "publishedDate":  "2026-10-10",
-        "watchedDate":  "2026-10-09",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/the-island-2005/",
-        "tmdbId":  "1635",
         "tags":  [
 
                  ],
