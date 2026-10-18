@@ -38,6 +38,7 @@ jobs:
         run: |
           python3 -m pip install -r tools/blanket-requirements.txt
           python3 tools/test-blanket.py
+          python3 tools/test-blanket-expanded.py
           node tools/test-blanket-ui.cjs
 
       - name: Test Triple Atlas owner connection recovery

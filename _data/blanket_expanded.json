@@ -1,0 +1,291 @@
+{
+  "status": "Expanded exploratory sample; assignments inferred, not film verified",
+  "candidate_reps": 4777,
+  "candidate_players": 49,
+  "screened_reps": 874,
+  "screened_players": 43,
+  "provisional_blankets": 13,
+  "blanket_rate": 0.014874141876430207,
+  "exclusions": {
+    "Nearest tracked route runner more than 5 yards at snap": 1966,
+    "No tracked route runner at snap": 1859,
+    "Less than one second before throw": 15,
+    "Missing or ambiguous snap/throw": 22,
+    "Ambiguous receiver at snap": 21,
+    "Receiver selected by multiple measured CBs": 20
+  },
+  "single_observed_runner_reps": 516,
+  "median_separation": 1.7571902093556178,
+  "thresholds": [
+    {
+      "threshold": 0.5,
+      "count": 0,
+      "late_count": 0
+    },
+    {
+      "threshold": 0.75,
+      "count": 0,
+      "late_count": 2
+    },
+    {
+      "threshold": 1,
+      "count": 13,
+      "late_count": 63
+    },
+    {
+      "threshold": 1.25,
+      "count": 91,
+      "late_count": 207
+    },
+    {
+      "threshold": 1.5,
+      "count": 248,
+      "late_count": 392
+    },
+    {
+      "threshold": 2,
+      "count": 541,
+      "late_count": 600
+    },
+    {
+      "threshold": 3,
+      "count": 697,
+      "late_count": 712
+    }
+  ],
+  "histogram": [
+    {
+      "label": "0\u20130.5",
+      "count": 0
+    },
+    {
+      "label": "0.5\u20131",
+      "count": 13
+    },
+    {
+      "label": "1\u20131.5",
+      "count": 235
+    },
+    {
+      "label": "1.5\u20132",
+      "count": 293
+    },
+    {
+      "label": "2\u20133",
+      "count": 156
+    },
+    {
+      "label": "3\u20135",
+      "count": 129
+    },
+    {
+      "label": "5\u20138",
+      "count": 37
+    },
+    {
+      "label": "8\u201312",
+      "count": 9
+    },
+    {
+      "label": "12+",
+      "count": 2
+    }
+  ],
+  "window_sensitivity": {
+    "after_half_second_blankets": 63,
+    "throw_only_below_one": 279
+  },
+  "strata": [
+    {
+      "label": "Starting cushion <2 yd",
+      "reps": 120,
+      "players": 25,
+      "blankets": 10,
+      "mean_separation": 1.5055516672727842
+    },
+    {
+      "label": "Starting cushion 2\u20133 yd",
+      "reps": 440,
+      "players": 41,
+      "blankets": 3,
+      "mean_separation": 1.7521892718624803
+    },
+    {
+      "label": "Starting cushion 3\u20135 yd",
+      "reps": 314,
+      "players": 41,
+      "blankets": 0,
+      "mean_separation": 3.4634946733892686
+    },
+    {
+      "label": "Observed reciprocal margin",
+      "reps": 331,
+      "players": 36,
+      "blankets": 7,
+      "mean_separation": 2.330411210159992
+    }
+  ],
+  "players_min_ten_reps": 26,
+  "data_source": "NFL / Next Gen Stats, Big Data Bowl 2027 on Kaggle",
+  "season_scope": "Regular season 2023\u20132025",
+  "definition": "Average separation strictly below 1 yard, snap through throw",
+  "analysis_version": 4,
+  "updated": "October 18, 2026",
+  "input_sha256": "27d52f594d6d31d4f617f9c94b0b37d11e280397ad8293c0987da5f91a8d0ced",
+  "features": [
+    {
+      "drill": "W drill",
+      "players_with_tracking": 60,
+      "players_with_coverage": 43
+    },
+    {
+      "drill": "90\u00b0 backpedal / break",
+      "players_with_tracking": 60,
+      "players_with_coverage": 43
+    },
+    {
+      "drill": "45\u00b0 backpedal / transition",
+      "players_with_tracking": 60,
+      "players_with_coverage": 43
+    }
+  ],
+  "models": [
+    {
+      "drill": "W drill",
+      "feature": "turn_speed",
+      "players": 26,
+      "status": "Exploratory leave-one-player-out comparison",
+      "baseline_mae": 0.2511924211440276,
+      "augmented_mae": 0.2583896120989415,
+      "mae_improvement": -0.007197190954913873,
+      "improvement_95": [
+        -0.02660733390016815,
+        0.010026214863147843
+      ],
+      "players_missing_forty": 2
+    },
+    {
+      "drill": "W drill",
+      "feature": "braking_loss",
+      "players": 26,
+      "status": "Exploratory leave-one-player-out comparison",
+      "baseline_mae": 0.2511924211440276,
+      "augmented_mae": 0.2618790235776099,
+      "mae_improvement": -0.010686602433582215,
+      "improvement_95": [
+        -0.022708304695097735,
+        -0.00033149943809155963
+      ],
+      "players_missing_forty": 2
+    },
+    {
+      "drill": "W drill",
+      "feature": "reacceleration",
+      "players": 26,
+      "status": "Exploratory leave-one-player-out comparison",
+      "baseline_mae": 0.2511924211440276,
+      "augmented_mae": 0.23230734202035136,
+      "mae_improvement": 0.018885079123676284,
+      "improvement_95": [
+        -0.02606088919972187,
+        0.06450424549884623
+      ],
+      "players_missing_forty": 2
+    },
+    {
+      "drill": "90\u00b0 backpedal / break",
+      "feature": "turn_speed",
+      "players": 26,
+      "status": "Exploratory leave-one-player-out comparison",
+      "baseline_mae": 0.2511924211440276,
+      "augmented_mae": 0.2528199997228615,
+      "mae_improvement": -0.0016275785788338539,
+      "improvement_95": [
+        -0.03317294743708209,
+        0.02990308663062293
+      ],
+      "players_missing_forty": 2
+    },
+    {
+      "drill": "90\u00b0 backpedal / break",
+      "feature": "braking_loss",
+      "players": 26,
+      "status": "Exploratory leave-one-player-out comparison",
+      "baseline_mae": 0.2511924211440276,
+      "augmented_mae": 0.2641207759588099,
+      "mae_improvement": -0.01292835481478229,
+      "improvement_95": [
+        -0.022090833336357838,
+        -0.0048182646007551445
+      ],
+      "players_missing_forty": 2
+    },
+    {
+      "drill": "90\u00b0 backpedal / break",
+      "feature": "reacceleration",
+      "players": 26,
+      "status": "Exploratory leave-one-player-out comparison",
+      "baseline_mae": 0.2511924211440276,
+      "augmented_mae": 0.27622804676560536,
+      "mae_improvement": -0.02503562562157772,
+      "improvement_95": [
+        -0.05535552883066984,
+        -0.0033073928903151486
+      ],
+      "players_missing_forty": 2
+    },
+    {
+      "drill": "45\u00b0 backpedal / transition",
+      "feature": "turn_speed",
+      "players": 26,
+      "status": "Exploratory leave-one-player-out comparison",
+      "baseline_mae": 0.2511924211440276,
+      "augmented_mae": 0.2561708975309246,
+      "mae_improvement": -0.004978476386896951,
+      "improvement_95": [
+        -0.04658865853310258,
+        0.029690846438336728
+      ],
+      "players_missing_forty": 2
+    },
+    {
+      "drill": "45\u00b0 backpedal / transition",
+      "feature": "braking_loss",
+      "players": 26,
+      "status": "Exploratory leave-one-player-out comparison",
+      "baseline_mae": 0.2511924211440276,
+      "augmented_mae": 0.2607645319544059,
+      "mae_improvement": -0.009572110810378325,
+      "improvement_95": [
+        -0.031133375657981542,
+        0.010079844063466006
+      ],
+      "players_missing_forty": 2
+    },
+    {
+      "drill": "45\u00b0 backpedal / transition",
+      "feature": "reacceleration",
+      "players": 26,
+      "status": "Exploratory leave-one-player-out comparison",
+      "baseline_mae": 0.2511924211440276,
+      "augmented_mae": 0.24900455646096348,
+      "mae_improvement": 0.002187864683064149,
+      "improvement_95": [
+        -0.034450772787617844,
+        0.037638157380850724
+      ],
+      "players_missing_forty": 2
+    }
+  ],
+  "drill_attempt_exclusions": {},
+  "review": {
+    "prepared": 30,
+    "tracking_reviewed": 30,
+    "flagged_for_film": 8,
+    "positive_reps_in_review": 13,
+    "film_verified": 0,
+    "status": "Tracking-only visual consistency review; no assignment truth labels",
+    "sampling": "Outcome-enriched: positives, near-threshold reps, large gaps, reciprocal pairs, and ordinary reps. Not an accuracy sample.",
+    "flag_policy": "Flagged reps remain in the primary analysis; excluding poor outcomes after review would bias the result."
+  }
+}

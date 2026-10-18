@@ -4,7 +4,8 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const path = require('node:path');
 const root = path.resolve(__dirname, '..');
-const data = JSON.parse(fs.readFileSync(path.join(root, '_data/blanket_results.json'), 'utf8'));
+for (const filename of ['blanket_results.json','blanket_expanded.json']) {
+const data = JSON.parse(fs.readFileSync(path.join(root, '_data',filename), 'utf8'));
 const nodes = new Map();
 const buttons = data.thresholds.map(row => ({
   dataset: {threshold: String(row.threshold)},
@@ -44,4 +45,5 @@ for (const windowName of ['full','late']) {
 assert.ok(nodes.get('blanket-lab-note').textContent.includes('not the proposed Blanket definition'));
 assert.equal(data.screened_reps + Object.values(data.exclusions).reduce((a,b)=>a+b,0),data.candidate_reps);
 assert.equal(data.histogram.reduce((a,b)=>a+b.count,0),data.screened_reps);
-console.log('Passed: 14 explorer settings, strict definition labels, selected-button accessibility, and result reconciliation.');
+}
+console.log('Passed: 28 explorer settings across both studies, definition labels, selected-button accessibility, and result reconciliation.');

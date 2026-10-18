@@ -21,9 +21,9 @@ description: Interactive tools, ongoing adventures, and creative projects by Nol
 
 <div class="archive-stream" id="archive-stream">
   <article class="archive-card archive-project" data-archive-tags="project sports code data football">
-    <div class="archive-card-top"><span>Research project</span><span>First findings</span></div>
-    <h2><a href="{{ '/projects/nfl-big-data-bowl/' | relative_url }}">Three Cones, Tight Coverage</a></h2>
-    <p>Introducing Blanket: a proposed stat for man-coverage assignments averaging less than one yard of separation. Explore the first tracking results and the connection to the three-cone drill.</p>
+    <div class="archive-card-top"><span>Research project</span><span>Expanded study</span></div>
+    <h2><a href="{{ '/projects/nfl-big-data-bowl/' | relative_url }}">Blanket: From Combine to Coverage</a></h2>
+    <p>A proposed stat for man-coverage assignments averaging less than one yard of separation. Explore the expanded 43-cornerback study, DB movement drills, and held-out-player comparisons.</p>
     <div class="archive-tags"><span>Football</span><span>Player tracking</span><span>Big Data Bowl 2027</span></div>
   </article>
   <article class="archive-card archive-project" data-archive-tags="project adventure code data weather">
