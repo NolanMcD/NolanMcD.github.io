@@ -27,6 +27,8 @@ import xml.etree.ElementTree as ET
 from zoneinfo import ZoneInfo
 
 from PIL import Image, ImageDraw, ImageFont, UnidentifiedImageError
+from astral import Observer
+from astral.sun import sunrise, sunset
 
 ROOT = Path(__file__).resolve().parents[1]
 UTC = timezone.utc
@@ -68,15 +70,27 @@ def eastern(value, config):
 def config_for(root=ROOT):
     config = json.loads((root / '_data/miami_weather_settings.json').read_text(encoding='utf-8'))
     ZoneInfo(config['timezone'])
-    for key in ['start', 'catch_up_until']:
-        clock_time.fromisoformat(config[key])
-    if not config['start'] < config['catch_up_until']:
-        raise ValueError('Require start < catch_up_until on the same local day')
+    clock_time.fromisoformat(config['catch_up_until'])
+    if not isinstance(config['sunrise_offset_minutes'], int) or not 0 <= config['sunrise_offset_minutes'] <= 240:
+        raise ValueError('sunrise_offset_minutes must be between 0 and 240')
+    if not -90 <= config['latitude'] <= 90 or not -180 <= config['longitude'] <= 180:
+        raise ValueError('Invalid sunrise coordinates')
     if not 1 <= config['interval_minutes'] <= 60:
         raise ValueError('interval_minutes must be between 1 and 60')
     if not 5 <= config['timeout_seconds'] <= 60 or not 1 <= config['retries'] <= 3:
         raise ValueError('Request bounds are invalid')
     return config
+
+
+def daylight_times(date, config):
+    observer = Observer(latitude=config['latitude'], longitude=config['longitude'])
+    zone = ZoneInfo(config['timezone'])
+    return sunrise(observer, date=date, tzinfo=zone), sunset(observer, date=date, tzinfo=zone)
+
+
+def publication_start(date, config):
+    rise, _ = daylight_times(date, config)
+    return rise + timedelta(minutes=config['sunrise_offset_minutes'])
 
 
 def schedule_action(now, config, published_date=None, manual=False):
@@ -85,11 +99,9 @@ def schedule_action(now, config, published_date=None, manual=False):
         return 'publish'
     if published_date == local.date().isoformat():
         return 'already-published'
-    minute = local.hour * 60 + local.minute
-    def minutes(key):
-        value = clock_time.fromisoformat(config[key])
-        return value.hour * 60 + value.minute
-    if minute < minutes('start') or minute > minutes('catch_up_until'):
+    start = publication_start(local.date(), config)
+    deadline = datetime.combine(local.date(), clock_time.fromisoformat(config['catch_up_until']), tzinfo=local.tzinfo) + timedelta(minutes=1)
+    if local < start or local >= deadline:
         return 'outside-window'
     return 'publish'
 
@@ -381,11 +393,11 @@ def collect_satellite(client, config, now, directory):
     record = source_record('satellite', url, now)
     text = client.get(url)[0].decode('utf-8')
     frames = [frame for frame in satellite_frames(text) if fresh(stamp(frame[0]), now, config['satellite_max_age_hours'])]
+    rise, setting = daylight_times(now.astimezone(ZoneInfo(config['timezone'])).date(), config)
+    frames = [frame for frame in frames if rise <= frame[0] <= setting]
     if not frames:
-        raise SourceError('No recent timestamped Southeast GeoColor frames on the source page')
-    selected = sorted({0, len(frames) // 2, len(frames) - 1})
-    for index in selected:
-        when, image_url, satellite = frames[index]
+        raise SourceError('No recent daylight Southeast GeoColor frames on the source page')
+    for when, image_url, satellite in frames[-3:]:
         record['images'].append(save_image(client, image_url, directory, 'satellite-' + when.strftime('%H%M'), stamp(when), 'CIRA/NOAA · GOES-' + satellite + ' Southeast GeoColor', now=now))
     record.update(issued_at=stamp(frames[-1][0]), data={'satellite': 'GOES-' + frames[-1][2]})
     return record
@@ -681,8 +693,7 @@ def run(root=ROOT, manual=False, preview_dir=None, now=None, client=None):
         destination = Path(preview_dir) if preview_dir else root
         if preview_dir:
             destination.mkdir(parents=True, exist_ok=True)
-        local_clock = now.astimezone(ZoneInfo(config['timezone'])).strftime('%H:%M')
-        outside_morning = not config['start'] <= local_clock <= config['catch_up_until']
+        outside_morning = schedule_action(now, config) == 'outside-window'
         metadata = publish(destination, staging, sources, config, now, preview=preview_dir is not None or (manual and outside_morning))
         LOG.info('Published %s at %s', metadata['report_date'], destination)
         return True

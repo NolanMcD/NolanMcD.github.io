@@ -43,12 +43,12 @@ description: Nolan McDermott's latest movie reviews, writing, adventures, and pe
 
 {% include miami-weather-feature.html %}
 
-<section class="home-blog" aria-labelledby="home-blog-heading">
-  <div class="section-heading split-heading"><h2 id="home-blog-heading">Latest on the blog</h2><a class="text-link" href="{{ '/blog/' | relative_url }}">All posts &rarr;</a></div>
+<section class="home-projects" aria-labelledby="home-projects-heading">
+  <div class="section-heading split-heading"><h2 id="home-projects-heading">Latest projects</h2><a class="text-link" href="{{ '/projects/' | relative_url }}">All projects &rarr;</a></div>
   <ul>
-    {% assign blog_posts = site.posts | where_exp: "post", "post.layout != 'review'" %}
-    {% for post in blog_posts limit: 3 %}
-    <li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d" }}</time></li>
+    {% assign latest_projects = site.pages | where_exp: "project", "project.project_date" | sort: "project_date" | reverse %}
+    {% for project in latest_projects limit: 3 %}
+    <li><a href="{{ project.url | relative_url }}">{{ project.title | escape }}</a><time datetime="{{ project.project_date | date_to_xmlschema }}">{{ project.project_date | date: "%b %-d" }}</time></li>
     {% endfor %}
   </ul>
 </section>

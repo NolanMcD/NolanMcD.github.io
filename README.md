@@ -11,6 +11,8 @@ Nolan McDermott's movie-review site and personal portfolio, built with Jekyll an
 
 Standalone pages live in `pages/`, while posts live in `_posts` and use the `YYYY-MM-DD-title.md` filename format. Site-wide settings and navigation are in `_config.yml`; visual styles are in `_sass/style.scss`.
 
+See the [repository guide](docs/repository-guide.md) for the directory map, project registration, public/private data boundaries, and publishing checks. The homepage automatically lists the three most recent pages with a `project_date`; update that date when a project has a substantial public update. The daily weather feature remains separate and targets one hour after Miami sunrise.
+
 The shared site header includes a light/dark mode toggle. It follows the system preference initially and saves a manual choice in `noland.theme` local storage. Palette overrides live in `_sass/theme.scss`, with early initialization in `assets/js/theme.js` to avoid a light-theme flash. The standalone airport kiosk retains the ANA screen colors.
 
 The homepage ratings curve uses a local Letterboxd `ratings.csv` export, with one current rating per film, rather than review/rewatch counts. The raw export is git-ignored; only aggregate counts are published. After replacing the export, run `powershell -File tools/sync-rating-distribution.ps1`; `python tools/test-rating-distribution.py` checks the published counts against it. The daily review sync also imports this export when present and preserves the profile snapshot when it is absent. A newer private export at `local-data/ratings.csv` takes precedence in the daily sync. To import that file directly, pass `-CsvPath local-data/ratings.csv`.

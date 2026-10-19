@@ -10,3 +10,6 @@ __pycache__/
 
 # Raw Kaggle competition download; never publish competition data.
 nfl-big-data-bowl-2027.zip
+
+# Separate local checkout, not part of this website.
+win-at-life/

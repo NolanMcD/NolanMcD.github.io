@@ -78,3 +78,6 @@ exclude:
   - local-data
   - tools
   - vendor
+  - docs
+  - win-at-life
+  - nfl-big-data-bowl-2027.zip

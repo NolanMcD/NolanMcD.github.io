@@ -35,14 +35,25 @@ class WeatherTests(unittest.TestCase):
         return {'forecast': record}
 
     def test_dst_windows_and_deadline(self):
-        for date, utc_start in [('2026-07-01', 9), ('2026-01-01', 10), ('2026-03-08', 9), ('2026-11-01', 10)]:
-            start = datetime.fromisoformat(date).replace(hour=utc_start, minute=30, tzinfo=UTC)
-            self.assertEqual(w.schedule_action(start - timedelta(minutes=1), self.config), 'outside-window')
+        for date, offset in [('2026-07-01', -4), ('2026-01-01', -5), ('2026-03-08', -4), ('2026-11-01', -5)]:
+            day = datetime.fromisoformat(date).date()
+            rise, _ = w.daylight_times(day, self.config)
+            start = w.publication_start(day, self.config)
+            self.assertEqual(start - rise, timedelta(hours=1))
+            self.assertEqual(start.utcoffset(), timedelta(hours=offset))
+            self.assertTrue(7 <= start.hour <= 9)
+            self.assertEqual(w.schedule_action(start - timedelta(microseconds=1), self.config), 'outside-window')
             self.assertEqual(w.schedule_action(start, self.config), 'publish')
             self.assertEqual(w.schedule_action(start + timedelta(hours=2), self.config), 'publish')
             self.assertEqual(w.schedule_action(start + timedelta(hours=6), self.config), 'publish')
-            self.assertEqual(w.schedule_action(start + timedelta(hours=18, minutes=29), self.config), 'publish')
-            self.assertEqual(w.schedule_action(start + timedelta(hours=18, minutes=30), self.config), 'outside-window')
+            self.assertEqual(w.schedule_action(start.replace(hour=23, minute=59, second=59), self.config), 'publish')
+            self.assertEqual(w.schedule_action(start.replace(hour=23, minute=59, second=59) + timedelta(seconds=1), self.config), 'outside-window')
+
+    def test_miami_sunrise_seasonal_reference(self):
+        # Broad independent sanity bounds, not just a test of the offset addition.
+        for date, expected_hour, expected_minute in [('2026-07-01', 6, 33), ('2026-01-01', 7, 7)]:
+            rise, _ = w.daylight_times(datetime.fromisoformat(date).date(), self.config)
+            self.assertLessEqual(abs(rise.hour * 60 + rise.minute - (expected_hour * 60 + expected_minute)), 3)
 
     def test_local_date_and_duplicate(self):
         self.assertEqual(w.schedule_action(self.now, self.config, '2026-07-01'), 'already-published')
@@ -50,6 +61,12 @@ class WeatherTests(unittest.TestCase):
         midnight = datetime(2026, 7, 2, 2, tzinfo=UTC)
         text, meta = w.render_report(self.sources(), self.config, midnight, '/example')
         self.assertEqual(meta['report_date'], '2026-07-01')
+
+    def test_no_collection_before_sunrise_target(self):
+        early = w.publication_start(self.now.date(), self.config) - timedelta(seconds=1)
+        with patch.object(w, 'collect_sources') as collect:
+            self.assertFalse(w.run(self.root, now=early))
+        collect.assert_not_called()
 
     def test_freshness_rejects_stale_future_and_missing(self):
         for value in [None, 'invalid', w.stamp(self.now - timedelta(hours=7)), w.stamp(self.now + timedelta(hours=1))]:
@@ -152,6 +169,27 @@ class WeatherTests(unittest.TestCase):
         frames = w.satellite_frames(url)
         self.assertEqual(frames[0][2], '19')
         self.assertEqual(frames[0][0].tzinfo, UTC)
+
+    def test_satellite_uses_newest_daylight_frames(self):
+        rise, _ = w.daylight_times(self.now.date(), self.config)
+        times = [rise + timedelta(minutes=n) for n in [-30, -10, 10, 20, 30, 40]]
+        urls = ['https://cdn.star.nesdis.noaa.gov/GOES19/ABI/SECTOR/se/GEOCOLOR/' + when.astimezone(UTC).strftime('%Y%j%H%M') + '_GOES19-ABI-se-GEOCOLOR-1200x1200.jpg' for when in times]
+        class Fake:
+            def get(_, url):
+                return '\n'.join(urls).encode(), {}, url
+        with patch.object(w, 'save_image', side_effect=lambda client, url, *args, **kwargs: {'url': url}):
+            result = w.collect_satellite(Fake(), self.config, rise + timedelta(hours=1), self.root)
+        self.assertEqual([image['url'] for image in result['images']], urls[-3:])
+
+    def test_satellite_does_not_substitute_night_frames(self):
+        _, setting = w.daylight_times(self.now.date(), self.config)
+        night = setting + timedelta(hours=1)
+        url = 'https://cdn.star.nesdis.noaa.gov/GOES19/ABI/SECTOR/se/GEOCOLOR/' + night.astimezone(UTC).strftime('%Y%j%H%M') + '_GOES19-ABI-se-GEOCOLOR-1200x1200.jpg'
+        class Fake:
+            def get(_, source):
+                return url.encode(), {}, source
+        with self.assertRaisesRegex(w.SourceError, 'daylight'):
+            w.collect_satellite(Fake(), self.config, night, self.root)
 
     def test_nhc_uses_item_issuance_not_feed_refresh(self):
         class Fake:

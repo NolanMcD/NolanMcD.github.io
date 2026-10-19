@@ -2,7 +2,8 @@ name: Morning Miami Weather Report
 
 on:
   schedule:
-    # Off the busy hour/quarter-hour boundaries. Python gates the Eastern date.
+    # Python waits until one hour after Miami sunrise (including DST).
+    # Off the busy hour/quarter-hour boundaries; first eligible poll publishes.
     # Continue all day so a delayed morning run can still publish a dated report.
     - cron: '7,22,37,52 * * * *'
   workflow_dispatch:

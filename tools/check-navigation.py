@@ -32,6 +32,11 @@ def check(root):
         print('FAIL: no built HTML found; build Jekyll first.')
         return 1
     failures = []
+    home = root / 'index.html'
+    if home in pages:
+        text = home.read_text(encoding='utf-8')
+        if 'home-projects-heading' not in pages[home].ids or 'Latest on the blog' in text:
+            failures.append((home, '/', 'homepage must feature latest projects'))
     checked = 0
     # These hashes select archive filters rather than document sections.
     archive_filters = {
