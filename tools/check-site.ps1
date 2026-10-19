@@ -18,13 +18,18 @@ function Get-RelativePath([string]$Path) {
     return $resolvedPath.Substring($resolvedRoot.Length).TrimStart('\', '/').Replace('\', '/')
 }
 
+# Include tracked and new non-ignored files without traversing private caches.
+$repositoryPaths = @(& git -C $root -c core.quotepath=false ls-files --cached --others --exclude-standard)
+if ($LASTEXITCODE -ne 0) { throw 'Unable to enumerate repository files with Git' }
+$repositoryFiles = @($repositoryPaths | Sort-Object -Unique | ForEach-Object {
+    $candidate = Join-Path $root $_
+    if (Test-Path -LiteralPath $candidate -PathType Leaf) { Get-Item -LiteralPath $candidate -Force }
+})
+
 Write-Host "Checking JSON..."
-$jsonFiles = @(
-    Get-ChildItem (Join-Path $root "assets/data") -Filter *.json -File
-    Get-ChildItem (Join-Path $root "assets/audio") -Filter *.json -File
-    Get-ChildItem (Join-Path $root "_data") -Filter *.json -File
-    Get-ChildItem (Join-Path $root "tools/fixtures") -Filter *.json -File
-)
+$jsonFiles = @($repositoryFiles | Where-Object {
+    $_.Extension -eq '.json' -and (Get-RelativePath $_.FullName) -match '^(assets/data|assets/audio|_data|tools/fixtures)/[^/]+\.json$'
+})
 foreach ($file in $jsonFiles) {
     try {
         $jsonText = [IO.File]::ReadAllText($file.FullName, [Text.UTF8Encoding]::new($false, $true))
@@ -39,11 +44,9 @@ foreach ($file in $jsonFiles) {
 }
 
 Write-Host "Checking posts and front matter..."
-$contentFiles = @(
-    Get-ChildItem (Join-Path $root "_posts") -Filter *.md -File
-    Get-ChildItem (Join-Path $root "_drafts") -Filter *.md -File
-    Get-ChildItem $root -Filter *.md -File | Where-Object Name -ne "README.md"
-)
+$contentFiles = @($repositoryFiles | Where-Object {
+    $_.Name -ne 'README.md' -and (Get-RelativePath $_.FullName) -match '^(_posts|_drafts)/[^/]+\.md$|^pages/[^/]+\.(md|html)$|^[^/]+\.md$'
+})
 foreach ($file in $contentFiles) {
     $relative = Get-RelativePath $file.FullName
     $content = Get-Content -Raw -LiteralPath $file.FullName
@@ -56,8 +59,7 @@ foreach ($file in $contentFiles) {
 }
 
 Write-Host "Checking local asset references..."
-$referenceFiles = Get-ChildItem $root -Recurse -File -Include *.md,*.html,*.scss,*.js |
-    Where-Object FullName -notmatch '[\\/]\.git[\\/]'
+$referenceFiles = $repositoryFiles | Where-Object { $_.Extension -in '.md', '.html', '.scss', '.js', '.css' }
 foreach ($file in $referenceFiles) {
     $content = Get-Content -Raw -LiteralPath $file.FullName
     foreach ($match in [regex]::Matches($content, '(?<![A-Za-z0-9.:])/assets/[A-Za-z0-9_.\-/]+')) {
@@ -84,16 +86,16 @@ if (Test-Path -LiteralPath $catalogPath) {
             Add-Failure "Storm catalog references missing file: assets/audio/$name"
         }
     }
-    $uncataloged = Get-ChildItem $audioRoot -Filter *.m4a -File |
-        Where-Object Name -notin $catalogFiles
+    $uncataloged = $repositoryFiles | Where-Object {
+        $_.Extension -eq '.m4a' -and $_.Directory.FullName -eq $audioRoot -and $_.Name -notin $catalogFiles
+    }
     foreach ($file in $uncataloged) {
         Add-Failure "Audio file is missing from storms.json: assets/audio/$($file.Name)"
     }
 }
 
 Write-Host "Checking file sizes..."
-Get-ChildItem $root -Recurse -File |
-    Where-Object { $_.FullName -notmatch '[\\/]\.git[\\/]' -and $_.Length -ge 100MB } |
+$repositoryFiles | Where-Object { $_.Length -ge 100MB } |
     ForEach-Object { Add-Failure "File exceeds GitHub's 100 MiB limit: $(Get-RelativePath $_.FullName)" }
 
 if ($failures.Count -gt 0) {

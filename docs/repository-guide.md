@@ -36,6 +36,6 @@ The competition ZIP at the repository root is explicitly ignored and excluded fr
 
 ## Checks
 
-Run `powershell -File tools/check-site.ps1`, `python tools/test-miami-weather.py`, and the relevant feature tests. Private local files can make a whole-working-directory scan noisy; run the repository check against a clean checkout of tracked publication files when needed. Build with `bundle exec jekyll build --strict_front_matter`, then run `python tools/check-navigation.py _site` and `python tools/check-miami-weather.py _site`. GitHub Actions runs the full build and checks.
+Run `powershell -File tools/check-site.ps1`, `python tools/test-miami-weather.py`, and the relevant feature tests. The repository checker enumerates tracked and new non-ignored files through Git, so private downloads, caches, generated builds, and separate checkouts do not interfere. It validates front matter for standalone pages as well as posts. Build with `bundle exec jekyll build --strict_front_matter`, then run `python tools/check-navigation.py _site` and `python tools/check-miami-weather.py _site`. GitHub Actions runs the full build and checks.
 
 The navigation check requires the homepage's Latest projects section. The weather tests cover sunrise/DST eligibility boundaries, daily duplicates, manual overrides, newest-daylight satellite selection, and nighttime fallback in addition to existing source/publication protections.
