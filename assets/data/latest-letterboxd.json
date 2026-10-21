@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1547760043",
+        "syncId":  "letterboxd-review-1547760043",
+        "title":  "Cinema Paradiso",
+        "year":  1988,
+        "rating":  4,
+        "review":  "Nice story. Movies about movies always have a little sometime extra magical to them. RIP the Jon of projectionist. fine",
+        "wordCount":  20,
+        "publishedDate":  "2026-10-21",
+        "watchedDate":  "2026-10-20",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/cinema-paradiso/",
+        "tmdbId":  "11216",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1546457635",
         "syncId":  "letterboxd-review-1546457635",
         "title":  "Code 46",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/fjord-2026/",
         "tmdbId":  "1401459",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1539751725",
-        "syncId":  "letterboxd-review-1539751725",
-        "title":  "You Can See Everything",
-        "year":  2026,
-        "rating":  5,
-        "review":  "I never seen anything from Nathan Fielder before, but he’s such a good person for this because the way he asks questions, and thinks hard about what he says before he says it is such a perfect style for combatting absolute bullshit. The inclusion of Amanda Seyfried and reenactments is sometimes I’ve only ever seen before and my absolute favorite documentary “The Thin Blue Line.” The whose on 1st part was my favorite.",
-        "wordCount":  73,
-        "publishedDate":  "2026-10-16",
-        "watchedDate":  "2026-10-15",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/you-can-see-everything/",
-        "tmdbId":  "1765072",
         "tags":  [
 
                  ],

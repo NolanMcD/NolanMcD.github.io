@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1547760043",
+        "syncId":  "letterboxd-review-1547760043",
+        "title":  "Cinema Paradiso",
+        "year":  1988,
+        "rating":  4,
+        "review":  "Nice story. Movies about movies always have a little sometime extra magical to them. RIP the Jon of projectionist. fine",
+        "wordCount":  20,
+        "publishedDate":  "2026-10-21",
+        "watchedDate":  "2026-10-20",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/cinema-paradiso/",
+        "tmdbId":  "11216",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1546457635",
         "syncId":  "letterboxd-review-1546457635",
         "title":  "Code 46",
