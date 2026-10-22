@@ -1,0 +1,497 @@
+{
+  "validation_version": 1,
+  "updated": "October 22, 2026",
+  "input_sha256": "27d52f594d6d31d4f617f9c94b0b37d11e280397ad8293c0987da5f91a8d0ced",
+  "coverage_source_sha256": "cd0fb8ecd13b075978f33a700e233c7fedf1752bb6b59db7f3aaf0cb0ed2e056",
+  "source_analysis_version": 4,
+  "audit_code_sha256": "5004a99cede73dd16d147825a32cfbb185b31d4daf89748eae06ab087d97bf77",
+  "detector_code_sha256": "1fc570c032093bb70839cf7bf0a56915a931ac460b8851f2711b6da5dd15be7c",
+  "screened_reps": 874,
+  "assignment": {
+    "sampled": 80,
+    "reviewed": 0,
+    "pending": 80,
+    "confirmed": 0,
+    "incorrect": 0,
+    "unresolved": 0,
+    "confirmed_share_of_sample": null,
+    "status": "Independent labels pending",
+    "sampling": "Simple random sample of accepted pairs, seed 20261022; no outcome-based selection",
+    "scope": "Accepted pairs only; does not measure missed assignments or excluded plays. Shared players and plays limit independence.",
+    "positive_review": {
+      "sampled": 13,
+      "reviewed": 0,
+      "pending": 13,
+      "confirmed": 0,
+      "incorrect": 0,
+      "unresolved": 0,
+      "confirmed_share_of_sample": null,
+      "status": "Independent labels pending",
+      "sampling": "Every provisional Blanket, reported separately from the random accuracy sample; samples may overlap",
+      "scope": "Accepted pairs only; does not measure missed assignments or excluded plays. Shared players and plays limit independence."
+    }
+  },
+  "phases": {
+    "status": "Detector sensitivity measured; independent annotation status reported separately",
+    "annotation_review": {
+      "independently_annotated_phases": 0,
+      "unresolved": 0,
+      "pending": 18,
+      "detected_annotated_phases": 0,
+      "detector_centers_inside_annotated_phase": 0,
+      "median_distance_to_phase_seconds": null,
+      "status": "Independent annotations pending"
+    },
+    "prepared_review_attempts": 18,
+    "drills": [
+      {
+        "drill": "W drill",
+        "attempts": 61,
+        "players": 60,
+        "players_with_repeated_attempts": 1,
+        "variants": [
+          {
+            "setting": "Elapsed-time reference",
+            "paired_attempts": 61,
+            "detected_attempts": 61,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 0,
+            "player_rank_correlations": {
+              "turn_speed": 1.0,
+              "braking_loss": 0.9999999999999998,
+              "reacceleration": 1.0
+            }
+          },
+          {
+            "setting": "No smoothing",
+            "paired_attempts": 61,
+            "detected_attempts": 61,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 2,
+            "player_rank_correlations": {
+              "turn_speed": 0.8944655196955511,
+              "braking_loss": 0.9217966352186503,
+              "reacceleration": 0.9482078355098639
+            }
+          },
+          {
+            "setting": "Five-frame smoothing",
+            "paired_attempts": 61,
+            "detected_attempts": 61,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 4,
+            "player_rank_correlations": {
+              "turn_speed": 0.8105381640290948,
+              "braking_loss": 0.9042637436791487,
+              "reacceleration": 0.8811892192275633
+            }
+          },
+          {
+            "setting": "0.2-second heading window",
+            "paired_attempts": 61,
+            "detected_attempts": 61,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 5,
+            "player_rank_correlations": {
+              "turn_speed": 0.748763270524151,
+              "braking_loss": 0.9095834838422849,
+              "reacceleration": 0.9818282856348988
+            }
+          },
+          {
+            "setting": "0.6-second heading window",
+            "paired_attempts": 61,
+            "detected_attempts": 61,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 4,
+            "player_rank_correlations": {
+              "turn_speed": 0.7197109706801977,
+              "braking_loss": 0.9684347995220759,
+              "reacceleration": 0.9804945818282859
+            }
+          },
+          {
+            "setting": "0.4-second flanks",
+            "paired_attempts": 61,
+            "detected_attempts": 61,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 0,
+            "player_rank_correlations": {
+              "turn_speed": 1.0,
+              "braking_loss": 0.9711443616436186,
+              "reacceleration": 0.8929146985273688
+            }
+          },
+          {
+            "setting": "0.8-second flanks",
+            "paired_attempts": 61,
+            "detected_attempts": 61,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 0,
+            "player_rank_correlations": {
+              "turn_speed": 1.0,
+              "braking_loss": 0.9750621710050603,
+              "reacceleration": 0.9825507085301474
+            }
+          },
+          {
+            "setting": "Coordinate-derived heading",
+            "paired_attempts": 61,
+            "detected_attempts": 61,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 16,
+            "player_rank_correlations": {
+              "turn_speed": 0.682118837196376,
+              "braking_loss": 0.9131401261496567,
+              "reacceleration": 0.6333425951653238
+            }
+          }
+        ]
+      },
+      {
+        "drill": "90\u00b0 backpedal / break",
+        "attempts": 61,
+        "players": 60,
+        "players_with_repeated_attempts": 1,
+        "variants": [
+          {
+            "setting": "Elapsed-time reference",
+            "paired_attempts": 61,
+            "detected_attempts": 61,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 0,
+            "player_rank_correlations": {
+              "turn_speed": 0.9999999999999998,
+              "braking_loss": 1.0,
+              "reacceleration": 1.0
+            }
+          },
+          {
+            "setting": "No smoothing",
+            "paired_attempts": 61,
+            "detected_attempts": 61,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 0,
+            "player_rank_correlations": {
+              "turn_speed": 0.9949842325984066,
+              "braking_loss": 0.9730465714549025,
+              "reacceleration": 0.8861906085023619
+            }
+          },
+          {
+            "setting": "Five-frame smoothing",
+            "paired_attempts": 61,
+            "detected_attempts": 61,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 0,
+            "player_rank_correlations": {
+              "turn_speed": 0.9930394432512927,
+              "braking_loss": 0.9724875906722124,
+              "reacceleration": 0.9131830117998777
+            }
+          },
+          {
+            "setting": "0.2-second heading window",
+            "paired_attempts": 61,
+            "detected_attempts": 61,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 0,
+            "player_rank_correlations": {
+              "turn_speed": 0.9962766400844701,
+              "braking_loss": 0.9986661850112539,
+              "reacceleration": 0.9715476521255908
+            }
+          },
+          {
+            "setting": "0.6-second heading window",
+            "paired_attempts": 61,
+            "detected_attempts": 61,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 0,
+            "player_rank_correlations": {
+              "turn_speed": 0.9998332823918418,
+              "braking_loss": 0.9995692830220229,
+              "reacceleration": 0.9761044734648516
+            }
+          },
+          {
+            "setting": "0.4-second flanks",
+            "paired_attempts": 61,
+            "detected_attempts": 61,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 0,
+            "player_rank_correlations": {
+              "turn_speed": 0.9999999999999998,
+              "braking_loss": 0.9959429794092312,
+              "reacceleration": 0.9582239265154596
+            }
+          },
+          {
+            "setting": "0.8-second flanks",
+            "paired_attempts": 61,
+            "detected_attempts": 61,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 1,
+            "player_rank_correlations": {
+              "turn_speed": 0.9924421350968349,
+              "braking_loss": 0.9677105621474421,
+              "reacceleration": 0.9737704918032789
+            }
+          },
+          {
+            "setting": "Coordinate-derived heading",
+            "paired_attempts": 61,
+            "detected_attempts": 61,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 3,
+            "player_rank_correlations": {
+              "turn_speed": 0.8948969810664038,
+              "braking_loss": 0.8504341786162951,
+              "reacceleration": 0.8018338427340929
+            }
+          }
+        ]
+      },
+      {
+        "drill": "45\u00b0 backpedal / transition",
+        "attempts": 119,
+        "players": 60,
+        "players_with_repeated_attempts": 59,
+        "variants": [
+          {
+            "setting": "Elapsed-time reference",
+            "paired_attempts": 119,
+            "detected_attempts": 119,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 0,
+            "player_rank_correlations": {
+              "turn_speed": 0.9999999999999998,
+              "braking_loss": 1.0,
+              "reacceleration": 1.0
+            }
+          },
+          {
+            "setting": "No smoothing",
+            "paired_attempts": 119,
+            "detected_attempts": 119,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 0,
+            "player_rank_correlations": {
+              "turn_speed": 0.9993192459876037,
+              "braking_loss": 0.9936649069185887,
+              "reacceleration": 0.9741594887468743
+            }
+          },
+          {
+            "setting": "Five-frame smoothing",
+            "paired_attempts": 119,
+            "detected_attempts": 119,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 0,
+            "player_rank_correlations": {
+              "turn_speed": 0.9991803165776237,
+              "braking_loss": 0.9964990275076412,
+              "reacceleration": 0.9618227285357046
+            }
+          },
+          {
+            "setting": "0.2-second heading window",
+            "paired_attempts": 119,
+            "detected_attempts": 119,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 0,
+            "player_rank_correlations": {
+              "turn_speed": 0.9991108394231568,
+              "braking_loss": 0.9976660183384275,
+              "reacceleration": 0.9934981939427622
+            }
+          },
+          {
+            "setting": "0.6-second heading window",
+            "paired_attempts": 119,
+            "detected_attempts": 119,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 0,
+            "player_rank_correlations": {
+              "turn_speed": 0.9996248906895604,
+              "braking_loss": 0.9978327313142541,
+              "reacceleration": 0.9914976382328426
+            }
+          },
+          {
+            "setting": "0.4-second flanks",
+            "paired_attempts": 119,
+            "detected_attempts": 119,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 2,
+            "player_rank_correlations": {
+              "turn_speed": 0.9620439578760176,
+              "braking_loss": 0.9889413726035011,
+              "reacceleration": 0.8863573214781886
+            }
+          },
+          {
+            "setting": "0.8-second flanks",
+            "paired_attempts": 119,
+            "detected_attempts": 119,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 4,
+            "player_rank_correlations": {
+              "turn_speed": 0.9181416543943981,
+              "braking_loss": 0.9652681300361213,
+              "reacceleration": 0.901028063350931
+            }
+          },
+          {
+            "setting": "Coordinate-derived heading",
+            "paired_attempts": 119,
+            "detected_attempts": 119,
+            "changed_eligibility": 0,
+            "median_center_shift": 0.0,
+            "centers_shifted_over_point_two": 8,
+            "player_rank_correlations": {
+              "turn_speed": 0.9244918657722664,
+              "braking_loss": 0.9784384551264241,
+              "reacceleration": 0.9211447624340094
+            }
+          }
+        ]
+      }
+    ],
+    "scope": "Rank correlation measures sensitivity, not accuracy or test-retest reliability. Entry speed and turn angle are not controlled.",
+    "settings": "Published detector versus elapsed-time reference, six one-setting perturbations, and coordinate-derived heading; no outcome-based tuning."
+  },
+  "application": {
+    "use": "Select contrasting clips for a coverage film meeting",
+    "cells": [
+      {
+        "average": "<1 yard",
+        "throw": "<1 yard",
+        "reps": 9,
+        "players": 5
+      },
+      {
+        "average": "<1 yard",
+        "throw": ">=1 yard",
+        "reps": 4,
+        "players": 3
+      },
+      {
+        "average": ">=1 yard",
+        "throw": "<1 yard",
+        "reps": 270,
+        "players": 40
+      },
+      {
+        "average": ">=1 yard",
+        "throw": ">=1 yard",
+        "reps": 591,
+        "players": 42
+      }
+    ],
+    "cushion_strata": [
+      {
+        "cushion": "Under 2 yards",
+        "reps": 120,
+        "average_tight": 10,
+        "throw_tight": 49
+      },
+      {
+        "cushion": "2 to under 3 yards",
+        "reps": 440,
+        "average_tight": 3,
+        "throw_tight": 166
+      },
+      {
+        "cushion": "3 to 5 yards",
+        "reps": 314,
+        "average_tight": 0,
+        "throw_tight": 64
+      }
+    ],
+    "late_gap_flags": 0,
+    "throw_tight_only_flags": 270,
+    "average_tight_only_flags": 4,
+    "queued_pairs": 274,
+    "meeting_shortlist": 12,
+    "shortlist_policy": "Up to four fixed-seed examples each: average-only tight; throw-only tight starting >=3 yards; both tight. Diagnostic examples, not an accuracy sample.",
+    "scope": "Descriptive disagreement between measurements, not proven coverage wins, target suppression, causal value, or scouting grades.",
+    "threshold_policy": "Keep Blanket <1 yard snap-to-throw; >=2 yards at throw is a separate review flag, not a replacement definition."
+  },
+  "archive_inventory": {
+    "csv_files": 9,
+    "video_files": 0,
+    "coverage_label_fields_present": true,
+    "explicit_receiver_id_field_present": false,
+    "interpretation": "The supplied archive contains CSV tracking and metadata, not film. MAN labels do not name the assigned receiver."
+  },
+  "baselines": {
+    "players": 26,
+    "comparisons": [
+      {
+        "name": "Training-player median",
+        "inputs": [],
+        "mae": 0.3576754942541625,
+        "scope": "No held-out-player measurements"
+      },
+      {
+        "name": "Conventional combine only",
+        "inputs": [
+          "forty",
+          "combine_height",
+          "combine_weight"
+        ],
+        "mae": 0.35579400657350946,
+        "scope": "Pre-draft inputs; retrospective evaluation"
+      },
+      {
+        "name": "Starting cushion only",
+        "inputs": [
+          "snap_cushion"
+        ],
+        "mae": 0.24539267710019447,
+        "scope": "Observed NFL context; not available pre-draft"
+      },
+      {
+        "name": "Existing context baseline",
+        "inputs": [
+          "snap_cushion",
+          "forty",
+          "combine_height",
+          "combine_weight"
+        ],
+        "mae": 0.2511924211440276,
+        "scope": "Observed NFL context plus conventional combine"
+      }
+    ],
+    "status": "Exploratory leave-one-player-out comparators on the same workload-eligible cohort",
+    "method": "Player-average separation; equal held-out-player weight; fold-local imputation/scaling; fixed ridge penalty 1 where applicable.",
+    "limits": "No untouched cohort, independent assignment truth, or full uncertainty interval. Comparing these baselines does not validate pre-draft prediction."
+  },
+  "player_source_sha256": "1d73754ce6e5ec6d2e0bf1814ba3baad44bc3b5038a7e11f1df1e19d3e6f011c",
+  "units": "Game distances assume yards; combine speed retains source units. Current-year field dictionary confirmation remains pending.",
+  "model_policy": "Version 4 sensor comparisons remain unchanged. Four fixed simple baselines were added; no sensor-feature model was tuned or selected."
+}

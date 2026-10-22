@@ -102,3 +102,177 @@ The sample is deliberately enriched for outcomes and is not suitable for estimat
 - Next: film or charted assignment truth, receiver/route context, validated drill phases, and an untouched test cohort. Keep the strict Blanket threshold and label alternative windows separately.
 
 The public page is a research progress artifact, not a completed Kaggle submission or a player ranking.
+
+## Measurement validation audit: October 22, 2026
+
+The version 4 model and all nine predictions remain frozen. A separate reproducible
+audit adds assignment-review preparation, movement-detector sensitivity, and one
+football application. It does **not** turn geometric consistency into assignment
+truth or turn a negative prediction result into a positive claim.
+
+```powershell
+python tools/validate-blanket.py --publish
+python tools/plot-blanket-validation.py
+python tools/test-blanket-validation.py
+```
+
+First run `expand-blanket.py --publish` when preparing a fresh checkout. The audit
+requires the identical archive, coverage CSV, cache, and published expanded sample.
+It hashes the archive and coverage table, checks the cache source, and freezes the
+random assignment sample. If the input sample changes, preserve the old private
+validation folder under a different name before starting a new study. Never reuse
+old annotations against a new sample. The nine historical sensor comparisons are
+not refit or tuned; the audit additionally fits four fixed simple comparators.
+
+### Assignment evidence
+
+The supplied ZIP contains nine CSVs, no video, and no explicit assigned-receiver
+identifier in player/play metadata. Coverage assignment labels such as MAN describe
+responsibility type; they do not name the receiver. The audit records this archive
+inventory so the need for independent evidence is explicit.
+
+Private outputs live in `local-data/big-data-bowl/expanded/validation/`:
+
+| Artifact | Use |
+| --- | --- |
+| `assignment-review.html` | 80 simple-random accepted pairs, seed 20261022, with all available tracked paths and calculated outcomes masked |
+| `assignment-review-template.csv` | Blank worksheet; copy it before editing because templates regenerate |
+| `assignment-sample-manifest.json` | Frozen coverage-table hash and ordered sample identities |
+| `positive-assignment-review.html` | All 13 provisional positives, separately labeled as outcome enriched |
+| `positive-review-template.csv` | Blank positive-review worksheet |
+| `phase-review.html` | Six randomly selected attempts per drill, including trajectory and speed plots |
+| `phase-review-template.csv` | Blank independent boundary-annotation worksheet |
+| `phase-sample-manifest.json` | Archive identity and frozen attempt sample |
+| `football-review.html` | 12 contrasting cases and meeting questions, followed by tracked paths |
+| `football-review-queue.csv` | All 274 disagreements between average and throw-time tightness |
+| `football-meeting-shortlist.csv` | Four cases per diagnostic category, where available |
+| `phase-sensitivity.csv` | Per-attempt detector outputs for private diagnostics |
+
+The random assignment sample is chosen without reading outcomes and is invariant
+to CSV row order. It estimates neither the quality of excluded plays nor recall of
+the pairing procedure. Players and plays can recur. Do not interpret it as 80
+independent player observations. The positive review overlaps the random sample
+when applicable and must never be pooled with it to estimate accuracy.
+
+Independent film/charting labels are optional input JSON, not generated facts.
+Create `assignment-labels.json` in the private validation folder. Keys are
+`game_id/play_id/nfl_id/receiver_id`, exactly as shown in the packet. Each value
+requires `verdict` (`confirmed`, `incorrect`, or `unresolved`), `reviewer`,
+`evidence_type` (`film` or `independent charting`), `source` (a video/chart locator,
+including timestamps where applicable), and `note`. Use the same schema in
+`positive-assignment-labels.json` for the positive review; copy an annotation to both
+sets if a case overlaps. Tracking plots cannot serve as independent assignment
+evidence. Review source film first, record ambiguous responsibilities as unresolved,
+and do not remove high-separation reps because they look bad.
+
+Missing annotation files produce pending counts, never a fabricated accuracy
+estimate. The confirmed fraction stays null until every sampled pair has a verdict;
+unresolved cases remain a separate category. Annotation provenance is checked for
+required fields, not independently authenticated. A second blinded reviewer and
+adjudication are still needed before claiming a dependable validation result.
+
+### Movement-phase evidence
+
+The audit compares the unchanged published detector with an elapsed-time reference
+and six one-at-a-time perturbations: smoothing of one/five frames, heading windows
+of 0.2/0.6 seconds, and flanks of 0.4/0.8 seconds. An eighth configuration derives
+heading from centered x/y coordinate gradients. Interpolation uses actual elapsed
+time; duplicate times, nonfinite geometry, and gaps over 0.2 seconds are rejected.
+The comparison reports changed eligibility, detector-center shifts, and Spearman
+correlations between player-median features from identical paired attempts.
+
+The elapsed-time reference reproduces the published results on this sample. The
+audit breaks numerical ties at the earliest eligible timestamp, making tied-turn
+selection invariant to heading rotation; the historical detector remains unchanged.
+The coordinate-heading cross-check moves 16/61 W-drill centers by more than 0.2 seconds;
+the W-drill reacceleration ranking has correlation 0.633 with the published ranking.
+The same sensor system supplies coordinates and reported heading, so this is a
+geometric cross-check, not independent truth. It is a reason to validate the feature
+before interpreting the earlier 0.019-yard MAE improvement. No setting was selected
+using NFL outcomes, and no historical sensor prediction was recomputed.
+
+W-drill and 90-degree drills have only one CB each with repeated attempts. The
+45-degree drill has 59. Repetitions may have different directions or tasks, so
+these counts do not establish test–retest reliability. Entry speed, turn angle,
+detector ambiguity, and phase identity remain unresolved. Speed/time panels in the
+local packet provide a shape view; raw numeric observations are in the panel JSON.
+
+Create `phase-labels.json` for independent boundary annotations, keyed by
+`nfl_id/drill/event_id/attempt`. Values require `verdict` (`annotated` or
+`unresolved`), `reviewer`, `evidence_type`, `source`, and `note`. Annotated cases also
+require `phase_start_seconds` and `phase_end_seconds`, measured from the first
+observed tracking timestamp, within the attempt. Align source video to tracking
+before annotating. The audit reports detector-center agreement with those intervals;
+it does not pretend that the supplied labels were independently authenticated.
+Zero independent annotations are available as of this update.
+
+### Football application and limits
+
+The application is a **coverage film-meeting clip selector**. It distinguishes
+sustained proximity from throw-time tightness, starting with confirmed assignment
+responsibility and starting cushion. Of 874 inferred pairs, nine are under one yard
+by both measurements, four only by average, 270 only at throw, and 591 by neither.
+There are zero average-tight pairs with separation at throw at least two yards.
+The latter failure mode remains theoretical in this sample.
+
+The 12-case shortlist contains up to four fixed-seed examples from each of three
+categories: average-only tight, throw-only tight starting at least three yards
+away, and both tight. This is an intentionally enriched teaching/review sample,
+not an accuracy sample. Ask whether responsibility was identified correctly,
+whether cushion explains the disagreement, and whether separation opened or
+closed late. Descriptive temporal context is the added information; incremental
+prediction, target suppression, coaching improvement, or causal defensive value
+have not been established.
+
+Public outputs are aggregate `_data/blanket_validation.json` and the two
+PNG/SVG figures under `assets/images/blanket/`. No review identities, trajectories,
+annotations, or individual drill values are exported. The current-year Kaggle data
+dictionary could not be read in this environment; game units remain assumed yards,
+and combine speed retains source units. Source to verify:
+<https://www.kaggle.com/competitions/nfl-big-data-bowl-2027/data>.
+
+## Research brief, simple comparators, and portable notebook
+
+The [research brief](https://noland.blog/projects/nfl-big-data-bowl/brief/) is the
+short first read; the full page and this runbook are its supporting methods. The
+[comparative review](blanket-review.md) records the public projects examined,
+the judging fit, implemented improvements, and unresolved evidence requirements.
+
+Four fixed comparator configurations use the same 26 workload-eligible CBs:
+training-player median (MAE 0.358 yards), conventional combine only (0.356),
+starting cushion only (0.245), and the existing context baseline (0.251). These
+are equal-player leave-one-out errors for player-average separation. The median
+excludes the held-out player. Numeric imputation/scaling for the fixed-penalty
+ridge fits is training-only. Conventional inputs are forty, height, and weight;
+context adds observed NFL starting cushion. These are retrospective comparisons
+with no untouched cohort, independent assignment truth, or full uncertainty
+interval. All four are reported; no winner or sensor feature is selected.
+
+Build and verify the output-free public notebook:
+
+```powershell
+python tools/build-blanket-notebook.py
+python tools/build-blanket-notebook.py --check
+python tools/run-blanket-notebook.py --reuse-verified-cache
+```
+
+`notebooks/blanket-reproduction.ipynb` bundles exact source copies and hashes. It
+uses no runtime network requests. Set `DATA_PATH` to the official ZIP or extracted
+CSV folder, or attach one matching dataset on Kaggle for auto-discovery. The
+folder route builds a working uncompressed ZIP, so allow disk space equal to the
+CSV size plus generated caches. Kaggle hosting/execution is not claimed. Uploading
+and attaching a public Kaggle notebook is a separate, still-pending submission step.
+
+The local executor runs every ordinary Python cell sequentially in a fresh process,
+checks historical model and aggregate results against the published snapshot, and
+writes a private execution record to `local-data/big-data-bowl/notebook-run/`.
+`--reuse-verified-cache` requests the identical-archive tracking cache; it is not a
+cold raw-data audit. Run without it in a fresh work directory for cold reproduction.
+Notebook outputs are not saved into the public source notebook. The regenerated
+independent-review counts correctly remain pending when annotation files are absent.
+
+On October 22, 2026, the local executor completed all nine code cells in a fresh
+Python process using the archive-verified tracking cache. The historical aggregate
+counts and all nine model results matched the published snapshot exactly; all
+three figures regenerated. This validates cached local cell execution, not a
+Kaggle-hosted run or a new cold-data audit.
