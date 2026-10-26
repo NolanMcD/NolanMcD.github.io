@@ -3,6 +3,9 @@ layout: blood-manatees
 title: Blood Manatees
 permalink: /blood-manatees/
 description: An interactive screenplay by Nolan McDermott.
+project_date: 2026-10-25
+project_label: Interactive screenplay
+project_summary: A screenplay experienced through scenes, surveillance feeds, and Ewen Walker’s airport ticket terminal.
 sitemap: false
 ---
 

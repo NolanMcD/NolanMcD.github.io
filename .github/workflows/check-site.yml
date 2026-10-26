@@ -43,6 +43,9 @@ jobs:
           python3 tools/build-blanket-notebook.py --check
           node tools/test-blanket-ui.cjs
 
+      - name: Test Blood Manatees airport scene
+        run: node tools/test-blood-manatees-airport.cjs
+
       - name: Test Triple Atlas owner connection recovery
         run: node --test tools/test-triple-atlas-auth.cjs
 

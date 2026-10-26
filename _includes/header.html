@@ -8,6 +8,7 @@
         {% if page.url == nav_page.url %}{% assign active = true %}{% endif %}
         {% if nav_page.url == '/blog/' and page.collection == 'posts' and page.layout != 'review' %}{% assign active = true %}{% endif %}
         {% if nav_page.url == '/reviews/' %}{% if page.layout == 'review' or page.url == '/reviews/diary/' %}{% assign active = true %}{% endif %}{% endif %}
+        {% if nav_page.url == '/projects/' and page.project_date and page.collection != 'posts' and page.layout != 'review' %}{% assign active = true %}{% endif %}
         {% if nav_page.url == '/projects/' and page.collection != 'posts' and page.layout != 'review' %}
           {% if page.url contains '/projects/' or page.url == '/crossword-creator/' or page.url == '/elevator-game/' or page.url == '/storms/' or page.url == '/triple-atlas/' or page.url contains '/miami-weather/' or page.url contains '/resumes/' %}{% assign active = true %}{% endif %}
         {% endif %}

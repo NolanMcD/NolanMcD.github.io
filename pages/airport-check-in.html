@@ -2,6 +2,7 @@
 layout: null
 title: Airport check-in simulator
 permalink: /airport-check-in/
+sitemap: false
 ---
 <!doctype html>
 <html lang="en">
@@ -16,8 +17,9 @@ permalink: /airport-check-in/
 <div class="screen-label"><span>International check-in</span><span id="screen-label">Welcome</span></div>
 <main id="screen" aria-live="polite"></main>
 <footer><button id="cancel" class="gray"><span>×</span> Cancel</button><button id="help" class="gray"><span>?</span> Help</button><div class="footer-spacer"></div><button id="back" class="blue"><span>❮</span> Back</button><button id="continue" class="orange">Continue <span>❯</span></button></footer>
-<div class="simulator-note">TRAINING SIMULATOR · Fictional itinerary · No real check-in or printing <a href="https://www.ana.co.jp/en/jp/guide/boarding-procedures/checkin/international/auto_howto-1/" target="_blank" rel="noopener">ANA screen reference ↗</a></div>
+<div class="simulator-note">TRAINING SIMULATOR · Fictional itinerary · No real check-in or printing <a href="{{ '/blood-manatees/scene/6/' | relative_url }}" target="_top">Blood Manatees: airport scene</a> · <a href="https://www.ana.co.jp/en/jp/guide/boarding-procedures/checkin/international/auto_howto-1/" target="_blank" rel="noopener">ANA screen reference ↗</a></div>
 </div>
 <dialog id="dialog"><h2 id="dialog-title"></h2><p id="dialog-text"></p><div id="dialog-actions"></div></dialog>
 <script src="{{ '/assets/js/airport-check-in.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/blood-manatees-airport.js' | relative_url }}" defer></script>
 </body></html>

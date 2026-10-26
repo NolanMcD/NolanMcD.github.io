@@ -19,6 +19,18 @@ audio: /assets/blood-manatees/audio/<filename>
 
 Put images, audio, music, and storyboard art in the matching folders under `assets/blood-manatees/`. Omit any optional field when it is not needed. `layout_type` becomes a CSS class such as `bm-layout-screenplay`, providing a hook for future presentation variants without changing the shared layout.
 
+## Airport ticket scene
+
+Scene 6 continues directly from Scene 5's Shannon parking barrier. It replaces the intended clerk transaction with a self-service ticket purchase: Ewen Walker, Shannon (SNN) to Miami (MIA). The reader identifies Ewen, confirms Miami, chooses a seat and checked baggage, authorizes fictional payment, and collects his ticket. No real flight number, airline, departure time, fare, or direct service is asserted.
+
+The scene embeds `/airport-check-in/?story=blood-manatees`. The query selects `assets/js/blood-manatees-airport.js`; the original ANA training flow remains available at the existing bare URL. Shared terminal CSS keeps the visual language of the original simulator, while the story mode uses Shannon passenger-service branding. This is a Blood Manatees component, deliberately excluded from the sitemap and standalone Projects listings.
+
+Recognition before identification, the vehicle-record match, and the saved payment method continue Scene 5's fictional surveillance motif. They are authored story responses, not actual tracking. Nothing is persisted or transmitted. The iframe tells its parent when the ticket is collected; the scene accepts only same-origin messages from that iframe, then reveals and focuses the closing action. The terminal can return directly to the scene when opened outside its frame. A native details element provides the complete scene without operating the terminal or requiring JavaScript.
+
+The project date on the Blood Manatees entry marks this substantial update, so the homepage discovers the parent screenplay rather than treating its terminal as a separate project.
+
+Run `node tools/test-blood-manatees-airport.cjs` to check purchase flow, seat/baggage retention, cancellation, standalone return, and iframe message boundaries. CI runs this check. Local verification also exercised the purchase in headless Edge and inspected terminal previews. The full Jekyll build still requires Ruby/Bundler; terminal preview checks do not replace the built-site navigation check.
+
 ## Controls and presentation
 
 `_layouts/blood-manatees-scene.html` renders every scene and computes Previous/Next destinations. `assets/js/blood-manatees.js` handles arrow keys, fades, and optional single-track audio. Browsers require the visitor to press the audio control when autoplay is unavailable; the track stops when the page is left.

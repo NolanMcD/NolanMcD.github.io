@@ -1,5 +1,6 @@
 (() => {
   'use strict';
+  if (new URLSearchParams(window.location.search).get('story') === 'blood-manatees') return;
   const $ = id => document.getElementById(id);
   const screen = $('screen');
   const state = { step: 'welcome', language: 'English', method: '', reference: '', seat: '31A', bags: 0, declared: false, error: '', busy: false, seatStart: 30 };

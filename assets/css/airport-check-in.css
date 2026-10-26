@@ -11,3 +11,21 @@
 .completion>p{font-size:17px;margin:8px 0}.completion>.success{font-size:44px;line-height:48px}.completion .boarding-pass{margin:14px auto}.completion .boarding-pass .passenger{padding:12px}.completion .boarding-pass .details{margin:14px 0}
 @media(max-height:650px){.completion>p{font-size:14px;margin:5px 0}.completion h1{font-size:22px;margin-bottom:5px}.completion>.success{font-size:30px;line-height:34px}.completion .boarding-pass{padding:10px;margin:8px auto}.completion .boarding-pass h2{font-size:18px;margin-bottom:8px}.completion .boarding-pass .passenger{padding:8px;font-size:18px}.completion .boarding-pass .details{margin:8px 0;gap:6px}.completion .boarding-pass .details small{font-size:12px;margin-bottom:4px}.completion .boarding-pass .details b{font-size:18px}}
 
+.story-airport-brand { color: white; font-size: clamp(24px, 5vw, 46px); font-weight: bold; letter-spacing: .05em; }
+.story-airport-brand small { display: block; font-size: 11px; letter-spacing: .2em; }
+.story-terminal-id { color: white; font: 12px/1.6 monospace; }
+.story-record { color: #4b5964; font: 12px/1.6 monospace; letter-spacing: .08em; }
+.story-destination { display: block; width: min(650px, 100%); margin: 25px auto; text-align: left; }
+.story-seats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; max-width: 500px; margin: 30px auto; }
+.story-terminal .boarding-pass { max-width: 100%; box-sizing: border-box; }
+.story-terminal h1:focus { outline: none; }
+.story-terminal main { overflow-y: auto; overflow-x: hidden; }
+.story-terminal .simulator-note a { display: inline; }
+@media (max-width: 560px) {
+  .story-terminal footer { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .story-terminal footer .footer-spacer { display: none; }
+  .story-terminal footer button { min-width: 0; padding: 8px 4px; font-size: 13px; }
+  .story-terminal .simulator-note { font-size: 9px; line-height: 1.5; }
+  .story-terminal-id { font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) { .story-terminal .spinner { animation: none; } }

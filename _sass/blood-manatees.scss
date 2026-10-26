@@ -68,3 +68,13 @@
 .bm-site-exit { position: relative; z-index: 2; display: flex; justify-content: space-between; gap: 1rem; padding: .5rem 1rem; background: #101313; }
 .bm-site-exit a { display: inline-flex; align-items: center; min-height: 44px; color: #c4c6c2; font: .75rem "Courier New", monospace; }
 .bm-site-exit a:focus-visible { outline: 2px solid #e7d9ad; outline-offset: 3px; }
+.bm-layout-terminal .bm-scene-content { width: 100%; padding-inline: clamp(1rem, 3vw, 2.5rem); }
+.bm-layout-terminal .bm-screenplay-copy { max-width: none; }
+.bm-airport { margin: 2rem 0; }
+.bm-terminal-caption { color: #969d98; font-size: .7rem; letter-spacing: .12em; }
+.bm-airport iframe { display: block; width: 100%; height: min(850px, 90vh); min-height: 620px; border: 1px solid #626866; background: #f0f2f5; }
+.bm-terminal-transcript { margin-top: 1rem; padding: 1rem; border: 1px solid var(--bm-line); font-size: .9rem; }
+.bm-terminal-transcript summary { cursor: pointer; text-decoration: underline; text-underline-offset: .2em; }
+.bm-terminal-transcript p { margin-top: 1rem; }
+[data-bm-airport-ending] { margin-top: 2rem; }
+[data-bm-airport-ending]:focus { outline: 2px solid #969d98; outline-offset: .5rem; }

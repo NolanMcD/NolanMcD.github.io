@@ -39,7 +39,7 @@ description: Original screenplays and screenplay transcriptions by Nolan McDermo
   <div>
     <p class="eyebrow">Work in progress</p>
     <h2 id="blood-manatees-title">Blood Manatees</h2>
-    <p>An interactive, scene-by-scene screenplay experience.</p>
+    <p>An interactive screenplay about surveillance and spying. Read the scenes and operate the airport terminal as Ewen Walker.</p>
   </div>
   <a href="{{ '/blood-manatees/' | relative_url }}">Enter the current draft <span aria-hidden="true">→</span></a>
 </aside>

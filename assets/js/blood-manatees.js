@@ -34,6 +34,24 @@
 
   if (!scene) return;
 
+  const airport = scene.querySelector('[data-bm-airport]');
+  const airportEnding = scene.querySelector('[data-bm-airport-ending]');
+  const revealAirportEnding = (focus) => {
+    if (!airportEnding) return;
+    airportEnding.hidden = false;
+    if (focus) {
+      airportEnding.focus({ preventScroll: true });
+      airportEnding.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+    }
+  };
+  if (airport) {
+    if (window.location.hash === '#airport-ending') revealAirportEnding(false);
+    window.addEventListener('message', event => {
+      if (event.origin !== window.location.origin || event.source !== airport.contentWindow) return;
+      if (event.data?.type === 'blood-manatees:ticket-collected') revealAirportEnding(true);
+    });
+  }
+
   const audioSource = scene.dataset.audioSrc;
   if (audioSource) {
     const audio = new Audio(audioSource);

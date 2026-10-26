@@ -131,7 +131,7 @@ description: Interactive tools, ongoing adventures, and creative projects by Nol
   <article class="archive-card archive-project" data-archive-tags="project writing movies">
     <div class="archive-card-top"><span>Screenplay</span><span>In progress</span></div>
     <h2><a href="{{ '/blood-manatees/' | relative_url }}">Blood Manatees</a></h2>
-    <p>An original screenplay told through an interactive, scene-by-scene experience.</p>
+    <p>An original screenplay experienced through scenes, surveillance feeds, and an airport terminal you operate as Ewen Walker.</p>
     <div class="archive-tags"><span>Writing</span><span>Interactive</span></div>
   </article>
   <article class="archive-card archive-project" data-archive-tags="project writing movies">
