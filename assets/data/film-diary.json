@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1558288567",
+        "syncId":  "letterboxd-review-1558288567",
+        "title":  "Eyes Wide Shut",
+        "year":  1999,
+        "rating":  4,
+        "review":  "It’s impressive that for how repetitive and slithery most of the movie is that Kubrick manages to keep it enthralling.",
+        "wordCount":  20,
+        "publishedDate":  "2026-10-28",
+        "watchedDate":  "2026-10-27",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/eyes-wide-shut/",
+        "tmdbId":  "345",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1547760043",
         "syncId":  "letterboxd-review-1547760043",
         "title":  "Cinema Paradiso",
