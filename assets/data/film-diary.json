@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1559070943",
+        "syncId":  "letterboxd-review-1559070943",
+        "title":  "Clayface",
+        "year":  2026,
+        "rating":  4,
+        "review":  "I’m pleased. Paced exactly how it needs to be for proper suspension of disbelief. Just a solid comic book villain origin story. Wish we got just a little bit for of his background and psyche but leaving things open is a better alternative then over explaining them.",
+        "wordCount":  47,
+        "publishedDate":  "2026-10-28",
+        "watchedDate":  "2026-10-27",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/clayface/",
+        "tmdbId":  "1400940",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1558288567",
         "syncId":  "letterboxd-review-1558288567",
         "title":  "Eyes Wide Shut",
