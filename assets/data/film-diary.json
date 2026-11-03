@@ -1,10 +1,60 @@
 [
     {
+        "id":  "rss:letterboxd-review-1570163743",
+        "syncId":  "letterboxd-review-1570163743",
+        "title":  "Alligator",
+        "year":  1980,
+        "rating":  4,
+        "review":  "Secret best Godzilla movie? Loved the 70s police procedural mixed with 80s action.",
+        "wordCount":  13,
+        "publishedDate":  "2026-11-03",
+        "watchedDate":  "2026-11-02",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/alligator/",
+        "tmdbId":  "33518",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1569487858",
+        "syncId":  "letterboxd-review-1569487858",
+        "title":  "Lolita",
+        "year":  1962,
+        "rating":  3,
+        "review":  "Usually I wait until I have seen 10 movies from a director before ranking their films. This marks 9 Kubricks for me now. I’m gonna try and track down Paths of Glory next and then I’ll make my rankings. This was good I thought the cast and performances were excellent and Kubrick elevates the material.",
+        "wordCount":  55,
+        "publishedDate":  "2026-11-03",
+        "watchedDate":  "2026-11-02",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/lolita/",
+        "tmdbId":  "802",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1559070943",
         "syncId":  "letterboxd-review-1559070943",
         "title":  "Clayface",
         "year":  2026,
-        "rating":  4,
+        "rating":  3,
         "review":  "I’m pleased. Paced exactly how it needs to be for proper suspension of disbelief. Just a solid comic book villain origin story. Wish we got just a little bit for of his background and psyche but leaving things open is a better alternative then over explaining them.",
         "wordCount":  47,
         "publishedDate":  "2026-10-28",
