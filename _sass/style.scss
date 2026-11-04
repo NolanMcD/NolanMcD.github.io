@@ -50,8 +50,8 @@ $line: var(--site-line, #ddd4c8);
 :root { color-scheme: light; }
 html { scroll-behavior: smooth; }
 body { color: $ink; background: #fdfdfb; }
-a { color: #086c78; text-underline-offset: 3px; }
-a:hover, a:focus { color: #064c55; }
+a { color: var(--site-link, #086c78); text-underline-offset: 3px; }
+a:hover, a:focus { color: var(--site-link-hover, #064c55); }
 a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius: 2px; }
 .wrapper { max-width: 1080px; }
 .site-header { z-index: 100; border-top: 4px solid $teal; border-bottom-color: $line; background: rgba(253,253,251,.96); }
@@ -580,7 +580,7 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
 .diary-filters input:focus, .diary-filters select:focus { outline: 3px solid rgba(212,154,24,.35); border-color: #a46b00; }
 .diary-filters .diary-checkbox { display: flex; align-items: center; gap: .45rem; }
 .diary-filters .diary-checkbox > span { display: inline; margin: 0; }
-.diary-reset { justify-self: start; padding: .4rem 0; border: 0; color: #086c78; background: transparent; font: inherit; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.diary-reset { justify-self: start; padding: .4rem 0; border: 0; color: var(--site-link, #086c78); background: transparent; font: inherit; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 .diary-results-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin: 1.5rem 0 .75rem; }
 .diary-results-heading p { margin: 0; color: $muted; font-weight: 700; }
 .diary-results-heading a { font-weight: 700; text-decoration: none; }
@@ -592,9 +592,9 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
 .diary-entry-header h2 a:hover { color: $teal; }
 .diary-film-year { color: $muted; font-family: inherit; font-size: .65em; font-weight: 500; }
 .diary-stars { flex: 0 0 auto; color: #d49a18; letter-spacing: .02em; white-space: nowrap; }
-.diary-review { margin: .9rem 0; color: #423d39; line-height: 1.62; white-space: pre-line; }
+.diary-review { margin: .9rem 0; color: $ink; line-height: 1.62; white-space: pre-line; }
 .diary-preview { margin-bottom: .25rem; }
-.diary-full-review summary { color: #086c78; font-size: .82rem; font-weight: 700; cursor: pointer; }
+.diary-full-review summary { color: var(--site-link, #086c78); font-size: .82rem; font-weight: 700; cursor: pointer; }
 .diary-full-review[open] summary { margin-bottom: .25rem; }
 .diary-full-review .diary-review { padding-top: .75rem; border-top: 1px dashed $line; }
 .diary-chips { display: flex; flex-wrap: wrap; gap: .35rem; margin: .85rem 0; }

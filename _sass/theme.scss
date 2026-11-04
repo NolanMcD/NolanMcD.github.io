@@ -6,6 +6,8 @@
   --site-soft: #f5efe4;
   --site-line: #ddd4c8;
   --site-surface: #fff;
+  --site-link: #086c78;
+  --site-link-hover: #064c55;
 }
 .theme-toggle {
   box-sizing: border-box;
@@ -41,11 +43,13 @@
 html[data-theme="dark"] {
   color-scheme: dark;
   --site-ink: #eee8df;
-  --site-muted: #b9b1a7;
+  --site-muted: #c9c1b7;
   --site-heading: #f6eee3;
   --site-soft: #282521;
   --site-line: #49423b;
   --site-surface: #211f1d;
+  --site-link: #84d0d9;
+  --site-link-hover: #b6eaf0;
   .theme-menu > summary { color: #c9c1f2; }
   body { background: #171614; }
   a { color: #84d0d9; }
@@ -88,6 +92,50 @@ html[data-theme="dark"] {
   .vocab-table th, .vocab-result-count, .vocab-tools label,
   .quiz-options label, .vocab-pagination, .quiz-meta,
   .quiz-prompt-label, .quiz-feedback { color: var(--site-muted); }
+
+  /* Diary text and controls must follow the same palette as the entry cards. */
+  .diary-filters, .diary-no-results, .diary-error { background: var(--site-soft); }
+  .diary-entry-header, .diary-entry-footer { border-color: var(--site-line); }
+  .diary-sync-note { color: var(--site-muted); }
+  .diary-filters input::placeholder { color: var(--site-muted); opacity: 1; }
+  .diary-entry-header h2 a:hover, .diary-entry-header h2 a:focus-visible { color: var(--site-link-hover); }
+  .diary-source-chip { color: #b6eaf0; background: #243b3f; }
+  .diary-award-chip { color: #f2d38c; background: #42351f; }
+  .diary-more { color: var(--site-ink); background: var(--site-soft); border-color: var(--site-line); }
+  .diary-more:hover, .diary-more:focus-visible { color: #171614; background: #84d0d9; border-color: #84d0d9; }
+
+  /* Pale panels otherwise inherit light text from the shared dark palette. */
+  .watch-overview, .five-hit-overview, .data-note, .job-data-note,
+  .closet-lab, .lru-demo, .lru-node, .never-grid span { background: var(--site-soft); }
+  .watch-donut::before, .five-hit-donut::before,
+  .application-event-lab .ael-panel { background: var(--site-surface); }
+  .sports-cal-hero, .shirt-sorter, .double-staircase { background: var(--site-soft); }
+  .sports-cal-today, .hanger-stage { background: var(--site-surface); }
+  .job-data-note { color: var(--site-ink); }
+  .watch-head-to-head, .swap-formula { background: #241f1c; }
+  .sort-controls .solve-button, .lru-controls button { color: white; background: #241f1c; }
+  .lru-controls #lru-reset { color: var(--site-heading); background: var(--site-surface); }
+  .war-feature-grid span, .never-grid b, .double-staircase .missing,
+  .job-funnel-plan b, .lru-architecture span, .lru-architecture > b { color: #ffaaa0; }
+  .watch-legend .paid, .five-hit-legend .tb-rare { color: #ffaaa0; }
+  .watch-legend .pirated, .weather-pattern-stack b { color: #84d0d9; }
+  .watch-legend .theaters, .five-hit-legend .tb-mid { color: #edbe67; }
+  .watch-legend .free, .five-hit-legend .tb-low, .five-hit-legend .tb-midlow,
+  .five-hit-stats strong, .closet-summary strong, .sort-status, .closet-status { color: #92d7b4; }
+  .watch-legend .other { color: #c9c1f2; }
+  .five-hit-legend .tb-high { color: #ffab83; }
+
+  /* Vocabulary answer states need dark surfaces as well as readable labels. */
+  .vocab-app { --vocab-ink: #eee8df; --vocab-green: #92d7b4; --vocab-cream: #282521; }
+  .vocab-tabs button, .vocab-table td:first-child, .vocab-empty, .vocab-note p { color: var(--site-muted); }
+  .vocab-table tr.is-learned td:nth-child(2) { color: #92d7b4; }
+  .quiz-answers button span { color: var(--site-muted); background: var(--site-soft); }
+  .quiz-answers button:hover:not(:disabled) { background: #243b30; }
+  .quiz-answers button.is-correct { background: #243b30; }
+  .quiz-answers button.is-wrong { background: #452a29; }
+  .learn-button[aria-pressed="true"], .vocab-primary { color: #171614; }
+  .application-event-lab select,
+  .application-event-lab button:not(.ael-primary) { background: var(--site-surface); }
 }
 @media print {
   .theme-menu { display: none; }
