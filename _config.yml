@@ -75,6 +75,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - reviews.csv
+  - "nolans-*-rankings.csv"
   - local-data
   - tools
   - vendor

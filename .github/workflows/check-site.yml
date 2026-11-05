@@ -21,6 +21,9 @@ jobs:
       - name: Verify Letterboxd rating counts and importer
         run: python3 tools/test-rating-distribution.py
 
+      - name: Verify director ranking snapshot
+        run: python3 tools/test-director-rankings.py
+
       - name: Test Triple Atlas import and owner storage
         run: python3 tools/test-triple-atlas.py
 
@@ -45,6 +48,9 @@ jobs:
 
       - name: Test Blood Manatees airport scene
         run: node tools/test-blood-manatees-airport.cjs
+
+      - name: Test director ranking controls
+        run: node tools/test-director-rankings-ui.cjs
 
       - name: Test Triple Atlas owner connection recovery
         run: node --test tools/test-triple-atlas-auth.cjs

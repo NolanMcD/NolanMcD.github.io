@@ -1,0 +1,1987 @@
+{
+  "asOf": "2026-11-05",
+  "directors": [
+    {
+      "id": "spielberg",
+      "name": "Steven Spielberg",
+      "listUrl": "https://boxd.it/nMyoK",
+      "filmArticle": "Jaws (film)",
+      "count": 21,
+      "total": 74.0,
+      "average": 3.5238095238095237,
+      "fiveStars": 3,
+      "films": [
+        {
+          "position": 1,
+          "title": "Jaws",
+          "year": 1975,
+          "url": "https://boxd.it/2a5e",
+          "rating": 5.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 2,
+          "title": "Jurassic Park",
+          "year": 1993,
+          "url": "https://boxd.it/2aA2",
+          "rating": 5.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 3,
+          "title": "Saving Private Ryan",
+          "year": 1998,
+          "url": "https://boxd.it/29ro",
+          "rating": 5.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 4,
+          "title": "Raiders of the Lost Ark",
+          "year": 1981,
+          "url": "https://boxd.it/2bbs",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 5,
+          "title": "Schindler's List",
+          "year": 1993,
+          "url": "https://boxd.it/2aq2",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 6,
+          "title": "Minority Report",
+          "year": 2002,
+          "url": "https://boxd.it/2aWi",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 7,
+          "title": "Catch Me If You Can",
+          "year": 2002,
+          "url": "https://boxd.it/29VS",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 8,
+          "title": "The Fabelmans",
+          "year": 2022,
+          "url": "https://boxd.it/ugoM",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 9,
+          "title": "Indiana Jones and the Last Crusade",
+          "year": 1989,
+          "url": "https://boxd.it/2baO",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 10,
+          "title": "E.T. the Extra-Terrestrial",
+          "year": 1982,
+          "url": "https://boxd.it/2a1G",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 11,
+          "title": "Disclosure Day",
+          "year": 2026,
+          "url": "https://boxd.it/MDJY",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 12,
+          "title": "Indiana Jones and the Temple of Doom",
+          "year": 1984,
+          "url": "https://boxd.it/2bb8",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 13,
+          "title": "The Adventures of Tintin",
+          "year": 2011,
+          "url": "https://boxd.it/1Irc",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 14,
+          "title": "Duel",
+          "year": 1971,
+          "url": "https://boxd.it/29ui",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 15,
+          "title": "Close Encounters of the Third Kind",
+          "year": 1977,
+          "url": "https://boxd.it/29u8",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 16,
+          "title": "Ready Player One",
+          "year": 2018,
+          "url": "https://boxd.it/aZes",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 17,
+          "title": "A.I. Artificial Intelligence",
+          "year": 2001,
+          "url": "https://boxd.it/29Ve",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 18,
+          "title": "West Side Story",
+          "year": 2021,
+          "url": "https://boxd.it/iwt0",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 19,
+          "title": "The Post",
+          "year": 2017,
+          "url": "https://boxd.it/fTeG",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 20,
+          "title": "Indiana Jones and the Kingdom of the Crystal Skull",
+          "year": 2008,
+          "url": "https://boxd.it/2aR8",
+          "rating": 2.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 21,
+          "title": "The Lost World: Jurassic Park",
+          "year": 1997,
+          "url": "https://boxd.it/2azS",
+          "rating": 2.0,
+          "ratingSource": "ratings-export"
+        }
+      ],
+      "totalRank": 1,
+      "averageRank": 9
+    },
+    {
+      "id": "hitchcock",
+      "name": "Alfred Hitchcock",
+      "listUrl": "https://boxd.it/fUj5M",
+      "filmArticle": "Rear Window",
+      "count": 20,
+      "total": 73.0,
+      "average": 3.65,
+      "fiveStars": 0,
+      "films": [
+        {
+          "position": 1,
+          "title": "Rear Window",
+          "year": 1954,
+          "url": "https://boxd.it/2a6Q",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 2,
+          "title": "Vertigo",
+          "year": 1958,
+          "url": "https://boxd.it/2apI",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 3,
+          "title": "Psycho",
+          "year": 1960,
+          "url": "https://boxd.it/2ab2",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 4,
+          "title": "Frenzy",
+          "year": 1972,
+          "url": "https://boxd.it/2a62",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 5,
+          "title": "The Lady Vanishes",
+          "year": 1938,
+          "url": "https://boxd.it/29ea",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 6,
+          "title": "Dial M for Murder",
+          "year": 1954,
+          "url": "https://boxd.it/2adW",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 7,
+          "title": "Strangers on a Train",
+          "year": 1951,
+          "url": "https://boxd.it/29tk",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 8,
+          "title": "Torn Curtain",
+          "year": 1966,
+          "url": "https://boxd.it/22zq",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 9,
+          "title": "Rope",
+          "year": 1948,
+          "url": "https://boxd.it/28yo",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 10,
+          "title": "North by Northwest",
+          "year": 1959,
+          "url": "https://boxd.it/2aRM",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 11,
+          "title": "Foreign Correspondent",
+          "year": 1940,
+          "url": "https://boxd.it/1vlA",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 12,
+          "title": "Shadow of a Doubt",
+          "year": 1943,
+          "url": "https://boxd.it/1BtA",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 13,
+          "title": "The 39 Steps",
+          "year": 1935,
+          "url": "https://boxd.it/2aKc",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 14,
+          "title": "The Birds",
+          "year": 1963,
+          "url": "https://boxd.it/2a6m",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 15,
+          "title": "Notorious",
+          "year": 1946,
+          "url": "https://boxd.it/2aDK",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 16,
+          "title": "To Catch a Thief",
+          "year": 1955,
+          "url": "https://boxd.it/2avm",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 17,
+          "title": "Murder!",
+          "year": 1930,
+          "url": "https://boxd.it/1i5O",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 18,
+          "title": "The Man Who Knew Too Much",
+          "year": 1956,
+          "url": "https://boxd.it/2a5S",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 19,
+          "title": "The Man Who Knew Too Much",
+          "year": 1934,
+          "url": "https://boxd.it/20uI",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 20,
+          "title": "The Lodger: A Story of the London Fog",
+          "year": 1927,
+          "url": "https://boxd.it/26m6",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        }
+      ],
+      "totalRank": 2,
+      "averageRank": 5
+    },
+    {
+      "id": "nolan",
+      "name": "Christopher Nolan",
+      "listUrl": "https://boxd.it/91Gee",
+      "filmArticle": "Oppenheimer (film)",
+      "count": 13,
+      "total": 54.0,
+      "average": 4.153846153846154,
+      "fiveStars": 5,
+      "films": [
+        {
+          "position": 1,
+          "title": "Oppenheimer",
+          "year": 2023,
+          "url": "https://boxd.it/wUow",
+          "rating": 5.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 2,
+          "title": "Interstellar",
+          "year": 2014,
+          "url": "https://boxd.it/4VZ8",
+          "rating": 5.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 3,
+          "title": "The Dark Knight",
+          "year": 2008,
+          "url": "https://boxd.it/2b0k",
+          "rating": 5.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 4,
+          "title": "The Prestige",
+          "year": 2006,
+          "url": "https://boxd.it/293w",
+          "rating": 5.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 5,
+          "title": "The Odyssey",
+          "year": 2026,
+          "url": "https://boxd.it/QFQU",
+          "rating": 5.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 6,
+          "title": "Inception",
+          "year": 2010,
+          "url": "https://boxd.it/1skk",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 7,
+          "title": "Dunkirk",
+          "year": 2017,
+          "url": "https://boxd.it/d0Y6",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 8,
+          "title": "Tenet",
+          "year": 2020,
+          "url": "https://boxd.it/leq4",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 9,
+          "title": "Insomnia",
+          "year": 2002,
+          "url": "https://boxd.it/2aB0",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 10,
+          "title": "The Dark Knight Rises",
+          "year": 2012,
+          "url": "https://boxd.it/H3m",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 11,
+          "title": "Memento",
+          "year": 2000,
+          "url": "https://boxd.it/2bcK",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 12,
+          "title": "Batman Begins",
+          "year": 2005,
+          "url": "https://boxd.it/2aIg",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 13,
+          "title": "Following",
+          "year": 1998,
+          "url": "https://boxd.it/1Tj4",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        }
+      ],
+      "totalRank": 3,
+      "averageRank": 1
+    },
+    {
+      "id": "coen-brothers",
+      "name": "Coen brothers",
+      "listUrl": "https://boxd.it/7B9Hm",
+      "filmArticle": "No Country for Old Men",
+      "count": 15,
+      "total": 50.0,
+      "average": 3.3333333333333335,
+      "fiveStars": 1,
+      "films": [
+        {
+          "position": 1,
+          "title": "No Country for Old Men",
+          "year": 2007,
+          "url": "https://boxd.it/21ew",
+          "rating": 5.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 2,
+          "title": "A Serious Man",
+          "year": 2009,
+          "url": "https://boxd.it/1RFW",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 3,
+          "title": "Blood Simple",
+          "year": 1984,
+          "url": "https://boxd.it/1U16",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 4,
+          "title": "The Big Lebowski",
+          "year": 1998,
+          "url": "https://boxd.it/2b6C",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 5,
+          "title": "Fargo",
+          "year": 1996,
+          "url": "https://boxd.it/2aHM",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 6,
+          "title": "True Grit",
+          "year": 2010,
+          "url": "https://boxd.it/Sog",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 7,
+          "title": "Burn After Reading",
+          "year": 2008,
+          "url": "https://boxd.it/23BW",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 8,
+          "title": "The Tragedy of Macbeth",
+          "year": 2021,
+          "url": "https://boxd.it/lMi4",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 9,
+          "title": "The Hudsucker Proxy",
+          "year": 1994,
+          "url": "https://boxd.it/1SJA",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 10,
+          "title": "The Ballad of Buster Scruggs",
+          "year": 2018,
+          "url": "https://boxd.it/jB2q",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 11,
+          "title": "O Brother, Where Art Thou?",
+          "year": 2000,
+          "url": "https://boxd.it/2b3I",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 12,
+          "title": "Inside Llewyn Davis",
+          "year": 2013,
+          "url": "https://boxd.it/34Ro",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 13,
+          "title": "The Man Who Wasn't There",
+          "year": 2001,
+          "url": "https://boxd.it/1Vqc",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 14,
+          "title": "Honey Don't!",
+          "year": 2025,
+          "url": "https://boxd.it/Hurc",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 15,
+          "title": "Drive-Away Dolls",
+          "year": 2024,
+          "url": "https://boxd.it/A8vi",
+          "rating": 2.0,
+          "ratingSource": "ratings-export"
+        }
+      ],
+      "totalRank": 4,
+      "averageRank": 14
+    },
+    {
+      "id": "scorsese",
+      "name": "Martin Scorsese",
+      "listUrl": "https://boxd.it/pB68g",
+      "filmArticle": "The King of Comedy (film)",
+      "count": 14,
+      "total": 48.0,
+      "average": 3.4285714285714284,
+      "fiveStars": 1,
+      "films": [
+        {
+          "position": 1,
+          "title": "The King of Comedy",
+          "year": 1982,
+          "url": "https://boxd.it/2aJS",
+          "rating": 5.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 2,
+          "title": "Cape Fear",
+          "year": 1991,
+          "url": "https://boxd.it/28vu",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 3,
+          "title": "Shutter Island",
+          "year": 2010,
+          "url": "https://boxd.it/1U82",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 4,
+          "title": "Killers of the Flower Moon",
+          "year": 2023,
+          "url": "https://boxd.it/gHp0",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 5,
+          "title": "The Color of Money",
+          "year": 1986,
+          "url": "https://boxd.it/1SSM",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 6,
+          "title": "After Hours",
+          "year": 1985,
+          "url": "https://boxd.it/1VfS",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 7,
+          "title": "The Departed",
+          "year": 2006,
+          "url": "https://boxd.it/28MA",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 8,
+          "title": "GoodFellas",
+          "year": 1990,
+          "url": "https://boxd.it/29FA",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 9,
+          "title": "Taxi Driver",
+          "year": 1976,
+          "url": "https://boxd.it/2b8y",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 10,
+          "title": "The Wolf of Wall Street",
+          "year": 2013,
+          "url": "https://boxd.it/3C1m",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 11,
+          "title": "Silence",
+          "year": 2016,
+          "url": "https://boxd.it/2cAo",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 12,
+          "title": "The Irishman",
+          "year": 2019,
+          "url": "https://boxd.it/dYOq",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 13,
+          "title": "The Big Shave",
+          "year": 1967,
+          "url": "https://boxd.it/HO8",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 14,
+          "title": "Raging Bull",
+          "year": 1980,
+          "url": "https://boxd.it/28yI",
+          "rating": 2.0,
+          "ratingSource": "ratings-export"
+        }
+      ],
+      "totalRank": 5,
+      "averageRank": 11
+    },
+    {
+      "id": "soderbergh",
+      "name": "Steven Soderbergh",
+      "listUrl": "https://boxd.it/DV0x6",
+      "filmArticle": "Solaris (2002 film)",
+      "count": 13,
+      "total": 46.0,
+      "average": 3.5384615384615383,
+      "fiveStars": 0,
+      "films": [
+        {
+          "position": 1,
+          "title": "Solaris",
+          "year": 2002,
+          "url": "https://boxd.it/27qS",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 2,
+          "title": "Out of Sight",
+          "year": 1998,
+          "url": "https://boxd.it/28R6",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 3,
+          "title": "Erin Brockovich",
+          "year": 2000,
+          "url": "https://boxd.it/2al2",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 4,
+          "title": "Ocean's Eleven",
+          "year": 2001,
+          "url": "https://boxd.it/2aZm",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 5,
+          "title": "Logan Lucky",
+          "year": 2017,
+          "url": "https://boxd.it/dZrs",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 6,
+          "title": "Contagion",
+          "year": 2011,
+          "url": "https://boxd.it/13rq",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 7,
+          "title": "Presence",
+          "year": 2024,
+          "url": "https://boxd.it/H88i",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 8,
+          "title": "The Informant!",
+          "year": 2009,
+          "url": "https://boxd.it/1U8c",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 9,
+          "title": "No Sudden Move",
+          "year": 2021,
+          "url": "https://boxd.it/o7WS",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 10,
+          "title": "Black Bag",
+          "year": 2025,
+          "url": "https://boxd.it/KRbM",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 11,
+          "title": "Kimi",
+          "year": 2022,
+          "url": "https://boxd.it/u7LW",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 12,
+          "title": "The Limey",
+          "year": 1999,
+          "url": "https://boxd.it/1Woc",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 13,
+          "title": "Ocean's Twelve",
+          "year": 2004,
+          "url": "https://boxd.it/2aZ2",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        }
+      ],
+      "totalRank": 6,
+      "averageRank": 8
+    },
+    {
+      "id": "wes-anderson",
+      "name": "Wes Anderson",
+      "listUrl": "https://boxd.it/e07xS",
+      "filmArticle": "The Life Aquatic with Steve Zissou",
+      "count": 13,
+      "total": 44.0,
+      "average": 3.3846153846153846,
+      "fiveStars": 0,
+      "films": [
+        {
+          "position": 1,
+          "title": "The Life Aquatic with Steve Zissou",
+          "year": 2004,
+          "url": "https://boxd.it/2aqw",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 2,
+          "title": "The Phoenician Scheme",
+          "year": 2025,
+          "url": "https://boxd.it/H0Ca",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 3,
+          "title": "The Wonderful Story of Henry Sugar",
+          "year": 2023,
+          "url": "https://boxd.it/yNyo",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 4,
+          "title": "Asteroid City",
+          "year": 2023,
+          "url": "https://boxd.it/s3ds",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 5,
+          "title": "The French Dispatch of the Liberty, Kansas Evening Sun",
+          "year": 2021,
+          "url": "https://boxd.it/jLP8",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 6,
+          "title": "Moonrise Kingdom",
+          "year": 2012,
+          "url": "https://boxd.it/2Wng",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 7,
+          "title": "The Grand Budapest Hotel",
+          "year": 2014,
+          "url": "https://boxd.it/3ZqO",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 8,
+          "title": "The Royal Tenenbaums",
+          "year": 2001,
+          "url": "https://boxd.it/1YHU",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 9,
+          "title": "Isle of Dogs",
+          "year": 2018,
+          "url": "https://boxd.it/dZrW",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 10,
+          "title": "Fantastic Mr. Fox",
+          "year": 2009,
+          "url": "https://boxd.it/1WyQ",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 11,
+          "title": "Bottle Rocket",
+          "year": 1996,
+          "url": "https://boxd.it/1PDa",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 12,
+          "title": "Rushmore",
+          "year": 1998,
+          "url": "https://boxd.it/1TAO",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 13,
+          "title": "The Darjeeling Limited",
+          "year": 2007,
+          "url": "https://boxd.it/24as",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        }
+      ],
+      "totalRank": 7,
+      "averageRank": 12
+    },
+    {
+      "id": "kubrick",
+      "name": "Stanley Kubrick",
+      "listUrl": "https://boxd.it/YsgAG",
+      "filmArticle": "Barry Lyndon",
+      "count": 10,
+      "total": 39.0,
+      "average": 3.9,
+      "fiveStars": 1,
+      "films": [
+        {
+          "position": 1,
+          "title": "Barry Lyndon",
+          "year": 1975,
+          "url": "https://boxd.it/25A2",
+          "rating": 5.0,
+          "ratingSource": "diary"
+        },
+        {
+          "position": 2,
+          "title": "2001: A Space Odyssey",
+          "year": 1968,
+          "url": "https://boxd.it/2bf0",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 3,
+          "title": "The Shining",
+          "year": 1980,
+          "url": "https://boxd.it/29Nu",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 4,
+          "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+          "year": 1964,
+          "url": "https://boxd.it/29eY",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 5,
+          "title": "Paths of Glory",
+          "year": 1957,
+          "url": "https://boxd.it/29b6",
+          "rating": 4,
+          "ratingSource": "owner-confirmed"
+        },
+        {
+          "position": 6,
+          "title": "Full Metal Jacket",
+          "year": 1987,
+          "url": "https://boxd.it/2a1Q",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 7,
+          "title": "The Killing",
+          "year": 1956,
+          "url": "https://boxd.it/2aMi",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 8,
+          "title": "Eyes Wide Shut",
+          "year": 1999,
+          "url": "https://boxd.it/2axs",
+          "rating": 4.0,
+          "ratingSource": "diary"
+        },
+        {
+          "position": 9,
+          "title": "A Clockwork Orange",
+          "year": 1971,
+          "url": "https://boxd.it/2aVE",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 10,
+          "title": "Lolita",
+          "year": 1962,
+          "url": "https://boxd.it/29Ag",
+          "rating": 3.0,
+          "ratingSource": "diary"
+        }
+      ],
+      "totalRank": 8,
+      "averageRank": 2
+    },
+    {
+      "id": "fincher",
+      "name": "David Fincher",
+      "listUrl": "https://boxd.it/qdtGG",
+      "filmArticle": "The Social Network",
+      "count": 11,
+      "total": 39.0,
+      "average": 3.5454545454545454,
+      "fiveStars": 1,
+      "films": [
+        {
+          "position": 1,
+          "title": "The Social Network",
+          "year": 2010,
+          "url": "https://boxd.it/17ue",
+          "rating": 5.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 2,
+          "title": "Se7en",
+          "year": 1995,
+          "url": "https://boxd.it/29zs",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 3,
+          "title": "The Girl with the Dragon Tattoo",
+          "year": 2011,
+          "url": "https://boxd.it/2Pa",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 4,
+          "title": "Fight Club",
+          "year": 1999,
+          "url": "https://boxd.it/2a9q",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 5,
+          "title": "The Killer",
+          "year": 2023,
+          "url": "https://boxd.it/u6WE",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 6,
+          "title": "Zodiac",
+          "year": 2007,
+          "url": "https://boxd.it/27MO",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 7,
+          "title": "Gone Girl",
+          "year": 2014,
+          "url": "https://boxd.it/6hQu",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 8,
+          "title": "The Curious Case of Benjamin Button",
+          "year": 2008,
+          "url": "https://boxd.it/23Fk",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 9,
+          "title": "Panic Room",
+          "year": 2002,
+          "url": "https://boxd.it/2490",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 10,
+          "title": "The Game",
+          "year": 1997,
+          "url": "https://boxd.it/26vC",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 11,
+          "title": "Mank",
+          "year": 2020,
+          "url": "https://boxd.it/mIuC",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        }
+      ],
+      "totalRank": 8,
+      "averageRank": 7
+    },
+    {
+      "id": "weir",
+      "name": "Peter Weir",
+      "listUrl": "https://boxd.it/WLBKs",
+      "filmArticle": "Master and Commander: The Far Side of the World",
+      "count": 10,
+      "total": 38.0,
+      "average": 3.8,
+      "fiveStars": 2,
+      "films": [
+        {
+          "position": 1,
+          "title": "Master and Commander: The Far Side of the World",
+          "year": 2003,
+          "url": "https://boxd.it/200S",
+          "rating": 5.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 2,
+          "title": "The Truman Show",
+          "year": 1998,
+          "url": "https://boxd.it/18U8",
+          "rating": 5.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 3,
+          "title": "Gallipoli",
+          "year": 1981,
+          "url": "https://boxd.it/1Tlk",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 4,
+          "title": "Dead Poets Society",
+          "year": 1989,
+          "url": "https://boxd.it/2aSg",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 5,
+          "title": "Witness",
+          "year": 1985,
+          "url": "https://boxd.it/1Z4O",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 6,
+          "title": "Picnic at Hanging Rock",
+          "year": 1975,
+          "url": "https://boxd.it/1UQe",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 7,
+          "title": "The Way Back",
+          "year": 2010,
+          "url": "https://boxd.it/H5C",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 8,
+          "title": "Fearless",
+          "year": 1993,
+          "url": "https://boxd.it/1WfE",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 9,
+          "title": "The Last Wave",
+          "year": 1977,
+          "url": "https://boxd.it/2oOM",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 10,
+          "title": "The Year of Living Dangerously",
+          "year": 1982,
+          "url": "https://boxd.it/1TBs",
+          "rating": 2.0,
+          "ratingSource": "ratings-export"
+        }
+      ],
+      "totalRank": 10,
+      "averageRank": 3
+    },
+    {
+      "id": "tarantino",
+      "name": "Quentin Tarantino",
+      "listUrl": "https://boxd.it/cKOGi",
+      "filmArticle": "Inglourious Basterds",
+      "count": 10,
+      "total": 38.0,
+      "average": 3.8,
+      "fiveStars": 1,
+      "films": [
+        {
+          "position": 1,
+          "title": "Inglourious Basterds",
+          "year": 2009,
+          "url": "https://boxd.it/1JzG",
+          "rating": 5.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 2,
+          "title": "Pulp Fiction",
+          "year": 1994,
+          "url": "https://boxd.it/29Pq",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 3,
+          "title": "Once Upon a Time... in Hollywood",
+          "year": 2019,
+          "url": "https://boxd.it/gH0O",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 4,
+          "title": "Django Unchained",
+          "year": 2012,
+          "url": "https://boxd.it/2cCk",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 5,
+          "title": "The Hateful Eight",
+          "year": 2015,
+          "url": "https://boxd.it/8gw8",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 6,
+          "title": "Death Proof",
+          "year": 2007,
+          "url": "https://boxd.it/27GG",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 7,
+          "title": "Kill Bill: Vol. 2",
+          "year": 2004,
+          "url": "https://boxd.it/2au4",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 8,
+          "title": "Jackie Brown",
+          "year": 1997,
+          "url": "https://boxd.it/2aVO",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 9,
+          "title": "Reservoir Dogs",
+          "year": 1992,
+          "url": "https://boxd.it/2agc",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 10,
+          "title": "Kill Bill: Vol. 1",
+          "year": 2003,
+          "url": "https://boxd.it/70w",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        }
+      ],
+      "totalRank": 10,
+      "averageRank": 3
+    },
+    {
+      "id": "scott",
+      "name": "Ridley Scott",
+      "listUrl": "https://boxd.it/Axbe0",
+      "filmArticle": "Alien (film)",
+      "count": 11,
+      "total": 37.0,
+      "average": 3.3636363636363638,
+      "fiveStars": 2,
+      "films": [
+        {
+          "position": 1,
+          "title": "Alien",
+          "year": 1979,
+          "url": "https://boxd.it/2awY",
+          "rating": 5.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 2,
+          "title": "The Martian",
+          "year": 2015,
+          "url": "https://boxd.it/8SeG",
+          "rating": 5.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 3,
+          "title": "Gladiator",
+          "year": 2000,
+          "url": "https://boxd.it/2b9m",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 4,
+          "title": "The Last Duel",
+          "year": 2021,
+          "url": "https://boxd.it/mQbe",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 5,
+          "title": "Blade Runner",
+          "year": 1982,
+          "url": "https://boxd.it/2bcA",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 6,
+          "title": "Matchstick Men",
+          "year": 2003,
+          "url": "https://boxd.it/215a",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 7,
+          "title": "Thelma & Louise",
+          "year": 1991,
+          "url": "https://boxd.it/28Ew",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 8,
+          "title": "Gladiator II",
+          "year": 2024,
+          "url": "https://boxd.it/kqQQ",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 9,
+          "title": "House of Gucci",
+          "year": 2021,
+          "url": "https://boxd.it/nVkC",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 10,
+          "title": "Black Hawk Down",
+          "year": 2001,
+          "url": "https://boxd.it/29rI",
+          "rating": 2.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 11,
+          "title": "Napoleon",
+          "year": 2023,
+          "url": "https://boxd.it/shJM",
+          "rating": 2.0,
+          "ratingSource": "ratings-export"
+        }
+      ],
+      "totalRank": 12,
+      "averageRank": 13
+    },
+    {
+      "id": "zemeckis",
+      "name": "Robert Zemeckis",
+      "listUrl": "https://boxd.it/WHFrw",
+      "filmArticle": "Back to the Future",
+      "count": 10,
+      "total": 36.0,
+      "average": 3.6,
+      "fiveStars": 0,
+      "films": [
+        {
+          "position": 1,
+          "title": "Back to the Future",
+          "year": 1985,
+          "url": "https://boxd.it/2b8e",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 2,
+          "title": "Contact",
+          "year": 1997,
+          "url": "https://boxd.it/29OM",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 3,
+          "title": "Cast Away",
+          "year": 2000,
+          "url": "https://boxd.it/20i8",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 4,
+          "title": "Who Framed Roger Rabbit",
+          "year": 1988,
+          "url": "https://boxd.it/29ry",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 5,
+          "title": "Romancing the Stone",
+          "year": 1984,
+          "url": "https://boxd.it/1YXS",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 6,
+          "title": "Forrest Gump",
+          "year": 1994,
+          "url": "https://boxd.it/728",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 7,
+          "title": "Back to the Future Part II",
+          "year": 1989,
+          "url": "https://boxd.it/2aYI",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 8,
+          "title": "Back to the Future Part III",
+          "year": 1990,
+          "url": "https://boxd.it/2aTS",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 9,
+          "title": "The Polar Express",
+          "year": 2004,
+          "url": "https://boxd.it/23am",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 10,
+          "title": "Flight",
+          "year": 2012,
+          "url": "https://boxd.it/35Ca",
+          "rating": 2.0,
+          "ratingSource": "ratings-export"
+        }
+      ],
+      "totalRank": 13,
+      "averageRank": 6
+    },
+    {
+      "id": "carpenter",
+      "name": "John Carpenter",
+      "listUrl": "https://boxd.it/A0t3e",
+      "filmArticle": "The Thing (1982 film)",
+      "count": 10,
+      "total": 35.0,
+      "average": 3.5,
+      "fiveStars": 1,
+      "films": [
+        {
+          "position": 1,
+          "title": "The Thing",
+          "year": 1982,
+          "url": "https://boxd.it/294O",
+          "rating": 5.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 2,
+          "title": "In the Mouth of Madness",
+          "year": 1994,
+          "url": "https://boxd.it/26vi",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 3,
+          "title": "They Live",
+          "year": 1988,
+          "url": "https://boxd.it/20lm",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 4,
+          "title": "Halloween",
+          "year": 1978,
+          "url": "https://boxd.it/2wRu",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 5,
+          "title": "Prince of Darkness",
+          "year": 1987,
+          "url": "https://boxd.it/1ZKq",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 6,
+          "title": "Assault on Precinct 13",
+          "year": 1976,
+          "url": "https://boxd.it/1I2c",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 7,
+          "title": "Big Trouble in Little China",
+          "year": 1986,
+          "url": "https://boxd.it/21em",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 8,
+          "title": "Escape from New York",
+          "year": 1981,
+          "url": "https://boxd.it/294k",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 9,
+          "title": "The Fog",
+          "year": 1980,
+          "url": "https://boxd.it/29Cc",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 10,
+          "title": "Dark Star",
+          "year": 1974,
+          "url": "https://boxd.it/28Ow",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        }
+      ],
+      "totalRank": 14,
+      "averageRank": 10
+    },
+    {
+      "id": "richie",
+      "name": "Guy Ritchie",
+      "listUrl": "https://boxd.it/Po60a",
+      "filmArticle": "Lock, Stock and Two Smoking Barrels",
+      "count": 10,
+      "total": 29.0,
+      "average": 2.9,
+      "fiveStars": 0,
+      "films": [
+        {
+          "position": 1,
+          "title": "Lock, Stock and Two Smoking Barrels",
+          "year": 1998,
+          "url": "https://boxd.it/2b92",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 2,
+          "title": "Snatch",
+          "year": 2000,
+          "url": "https://boxd.it/2b7U",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 3,
+          "title": "The Man from U.N.C.L.E.",
+          "year": 2015,
+          "url": "https://boxd.it/67lG",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 4,
+          "title": "The Gentlemen",
+          "year": 2019,
+          "url": "https://boxd.it/iYBQ",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 5,
+          "title": "The Ministry of Ungentlemanly Warfare",
+          "year": 2024,
+          "url": "https://boxd.it/u5zu",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 6,
+          "title": "Wrath of Man",
+          "year": 2021,
+          "url": "https://boxd.it/nEia",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 7,
+          "title": "Sherlock Holmes",
+          "year": 2009,
+          "url": "https://boxd.it/1W2A",
+          "rating": 2.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 8,
+          "title": "Sherlock Holmes: A Game of Shadows",
+          "year": 2011,
+          "url": "https://boxd.it/k3S",
+          "rating": 2.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 9,
+          "title": "Operation Fortune: Ruse de Guerre",
+          "year": 2023,
+          "url": "https://boxd.it/rJXA",
+          "rating": 2.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 10,
+          "title": "Fountain of Youth",
+          "year": 2025,
+          "url": "https://boxd.it/Fwx8",
+          "rating": 1.0,
+          "ratingSource": "ratings-export"
+        }
+      ],
+      "totalRank": 15,
+      "averageRank": 18
+    },
+    {
+      "id": "pta",
+      "name": "Paul Thomas Anderson",
+      "listUrl": "https://boxd.it/OZRCA",
+      "filmArticle": "There Will Be Blood",
+      "count": 9,
+      "total": 27.0,
+      "average": 3.0,
+      "fiveStars": 0,
+      "films": [
+        {
+          "position": 1,
+          "title": "There Will Be Blood",
+          "year": 2007,
+          "url": "https://boxd.it/20Z2",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 2,
+          "title": "One Battle After Another",
+          "year": 2025,
+          "url": "https://boxd.it/DUHM",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 3,
+          "title": "Magnolia",
+          "year": 1999,
+          "url": "https://boxd.it/2aze",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 4,
+          "title": "Boogie Nights",
+          "year": 1997,
+          "url": "https://boxd.it/23um",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 5,
+          "title": "Licorice Pizza",
+          "year": 2021,
+          "url": "https://boxd.it/qTKY",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 6,
+          "title": "The Master",
+          "year": 2012,
+          "url": "https://boxd.it/2cBG",
+          "rating": 2.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 7,
+          "title": "Inherent Vice",
+          "year": 2014,
+          "url": "https://boxd.it/5hla",
+          "rating": 2.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 8,
+          "title": "Punch-Drunk Love",
+          "year": 2002,
+          "url": "https://boxd.it/20E4",
+          "rating": 2.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 9,
+          "title": "Phantom Thread",
+          "year": 2017,
+          "url": "https://boxd.it/e4uc",
+          "rating": 1.0,
+          "ratingSource": "ratings-export"
+        }
+      ],
+      "totalRank": 16,
+      "averageRank": 17
+    },
+    {
+      "id": "payne",
+      "name": "Alexander Payne",
+      "listUrl": "https://boxd.it/qNyAK",
+      "filmArticle": "The Descendants",
+      "count": 8,
+      "total": 26.0,
+      "average": 3.25,
+      "fiveStars": 0,
+      "films": [
+        {
+          "position": 1,
+          "title": "The Descendants",
+          "year": 2011,
+          "url": "https://boxd.it/4Ba",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 2,
+          "title": "Election",
+          "year": 1999,
+          "url": "https://boxd.it/1YEc",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 3,
+          "title": "The Holdovers",
+          "year": 2023,
+          "url": "https://boxd.it/vHza",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 4,
+          "title": "Sideways",
+          "year": 2004,
+          "url": "https://boxd.it/1Y5c",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 5,
+          "title": "Citizen Ruth",
+          "year": 1996,
+          "url": "https://boxd.it/1Pco",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 6,
+          "title": "About Schmidt",
+          "year": 2002,
+          "url": "https://boxd.it/26mU",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 7,
+          "title": "Nebraska",
+          "year": 2013,
+          "url": "https://boxd.it/4exq",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 8,
+          "title": "Downsizing",
+          "year": 2017,
+          "url": "https://boxd.it/9Ajq",
+          "rating": 2.0,
+          "ratingSource": "ratings-export"
+        }
+      ],
+      "totalRank": 17,
+      "averageRank": 15
+    },
+    {
+      "id": "yorgos",
+      "name": "Yorgos Lanthimos",
+      "listUrl": "https://boxd.it/PXdmC",
+      "filmArticle": "Bugonia (film)",
+      "count": 8,
+      "total": 26.0,
+      "average": 3.25,
+      "fiveStars": 1,
+      "films": [
+        {
+          "position": 1,
+          "title": "Bugonia",
+          "year": 2025,
+          "url": "https://boxd.it/qeWY",
+          "rating": 5.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 2,
+          "title": "Poor Things",
+          "year": 2023,
+          "url": "https://boxd.it/tNWU",
+          "rating": 4.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 3,
+          "title": "The Lobster",
+          "year": 2015,
+          "url": "https://boxd.it/7tnw",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 4,
+          "title": "Dogtooth",
+          "year": 2009,
+          "url": "https://boxd.it/158K",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 5,
+          "title": "The Favourite",
+          "year": 2018,
+          "url": "https://boxd.it/d2hI",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 6,
+          "title": "The Killing of a Sacred Deer",
+          "year": 2017,
+          "url": "https://boxd.it/dZ5G",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 7,
+          "title": "Kinds of Kindness",
+          "year": 2024,
+          "url": "https://boxd.it/CWPw",
+          "rating": 3.0,
+          "ratingSource": "ratings-export"
+        },
+        {
+          "position": 8,
+          "title": "Nimic",
+          "year": 2019,
+          "url": "https://boxd.it/n10Q",
+          "rating": 2.0,
+          "ratingSource": "ratings-export"
+        }
+      ],
+      "totalRank": 17,
+      "averageRank": 15
+    }
+  ],
+  "filmCount": 216,
+  "totalStars": 759.0
+}

@@ -6,6 +6,7 @@ vendor/
 # Private/local source data. Generated public artifacts belong in assets/data/.
 local-data/
 ratings.csv
+nolans-*-rankings.csv
 __pycache__/
 
 # Raw Kaggle competition download; never publish competition data.

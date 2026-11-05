@@ -1,0 +1,326 @@
+{
+  "spielberg": {
+    "portrait": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/MKr25402_Steven_Spielberg_%28Berlinale_2023%29_%283x4_cropped%29.jpg/500px-MKr25402_Steven_Spielberg_%28Berlinale_2023%29_%283x4_cropped%29.jpg",
+      "file": "MKr25402_Steven_Spielberg_(Berlinale_2023)_(3x4_cropped).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:MKr25402_Steven_Spielberg_(Berlinale_2023)_(3x4_cropped).jpg",
+      "artist": "Martin Kraft",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    "poster": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Jaws_movie_poster.jpg/500px-Jaws_movie_poster.jpg",
+      "file": "Jaws_movie_poster.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Jaws_movie_poster.jpg",
+      "artist": "Roger Kastel",
+      "license": "Public domain",
+      "licenseUrl": ""
+    }
+  },
+  "hitchcock": {
+    "portrait": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Hitchcock%2C_Alfred_02.jpg/500px-Hitchcock%2C_Alfred_02.jpg",
+      "file": "Hitchcock,_Alfred_02.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Hitchcock,_Alfred_02.jpg",
+      "artist": "Ante Brkan",
+      "license": "Public domain",
+      "licenseUrl": ""
+    },
+    "poster": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Rear_Window_film_poster.jpg/500px-Rear_Window_film_poster.jpg",
+      "file": "Rear_Window_film_poster.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Rear_Window_film_poster.jpg",
+      "artist": "Copyrighted by Paramount International. Artists(s) not known.",
+      "license": "Public domain",
+      "licenseUrl": ""
+    }
+  },
+  "nolan": {
+    "portrait": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/ChristopherNolan-byPhilipRomano_%28cropped%29.jpg/500px-ChristopherNolan-byPhilipRomano_%28cropped%29.jpg",
+      "file": "ChristopherNolan-byPhilipRomano_(cropped).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:ChristopherNolan-byPhilipRomano_(cropped).jpg",
+      "artist": "PhilipRomano",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    "poster": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/4/4a/Oppenheimer_%28film%29.jpg",
+      "file": "Oppenheimer_(film).jpg",
+      "source": "https://en.wikipedia.org/wiki/File:Oppenheimer_(film).jpg",
+      "artist": "",
+      "license": "Fair use",
+      "licenseUrl": ""
+    }
+  },
+  "coen-brothers": {
+    "portrait": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Coen_brothers_Cannes_2015_2_%28CROPPED%29.jpg",
+      "file": "Coen_brothers_Cannes_2015_2_(CROPPED).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Coen_brothers_Cannes_2015_2_(CROPPED).jpg",
+      "artist": "Georges Biard",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    },
+    "poster": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/8/8b/No_Country_for_Old_Men_poster.jpg",
+      "file": "No_Country_for_Old_Men_poster.jpg",
+      "source": "https://en.wikipedia.org/wiki/File:No_Country_for_Old_Men_poster.jpg",
+      "artist": "",
+      "license": "Fair use",
+      "licenseUrl": ""
+    }
+  },
+  "scorsese": {
+    "portrait": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Martin_Scorsese-68749.jpg/500px-Martin_Scorsese-68749.jpg",
+      "file": "Martin_Scorsese-68749.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Martin_Scorsese-68749.jpg",
+      "artist": "Harald Krichel",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    "poster": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/8/84/Kingofcomedy.jpg",
+      "file": "Kingofcomedy.jpg",
+      "source": "https://en.wikipedia.org/wiki/File:Kingofcomedy.jpg",
+      "artist": "",
+      "license": "Fair use",
+      "licenseUrl": ""
+    }
+  },
+  "soderbergh": {
+    "portrait": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/58th_Karlovy_Vary_International_Film_Festival%2C_Steven_Soderbergh_07_%28cropped%29.jpg/500px-58th_Karlovy_Vary_International_Film_Festival%2C_Steven_Soderbergh_07_%28cropped%29.jpg",
+      "file": "58th_Karlovy_Vary_International_Film_Festival,_Steven_Soderbergh_07_(cropped).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:58th_Karlovy_Vary_International_Film_Festival,_Steven_Soderbergh_07_(cropped).jpg",
+      "artist": "Jan Beránek",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    "poster": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/b/bf/Solaris2002poster.jpg",
+      "file": "Solaris2002poster.jpg",
+      "source": "https://en.wikipedia.org/wiki/File:Solaris2002poster.jpg",
+      "artist": "",
+      "license": "Fair use",
+      "licenseUrl": ""
+    }
+  },
+  "wes-anderson": {
+    "portrait": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Wes_Anderson-7541_%28cropped%29.jpg/500px-Wes_Anderson-7541_%28cropped%29.jpg",
+      "file": "Wes_Anderson-7541_(cropped).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Wes_Anderson-7541_(cropped).jpg",
+      "artist": "Harald Krichel",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    "poster": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/7/7c/Lifeaquaticposter.jpg",
+      "file": "Lifeaquaticposter.jpg",
+      "source": "https://en.wikipedia.org/wiki/File:Lifeaquaticposter.jpg",
+      "artist": "",
+      "license": "Fair use",
+      "licenseUrl": ""
+    }
+  },
+  "kubrick": {
+    "portrait": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Stanley_Kubrick_in_Dr._Strangelove_Trailer_%284%29_Cropped.jpg/500px-Stanley_Kubrick_in_Dr._Strangelove_Trailer_%284%29_Cropped.jpg",
+      "file": "Stanley_Kubrick_in_Dr._Strangelove_Trailer_(4)_Cropped.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Stanley_Kubrick_in_Dr._Strangelove_Trailer_(4)_Cropped.jpg",
+      "artist": "Columbia Pictures",
+      "license": "Public domain",
+      "licenseUrl": ""
+    },
+    "poster": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/e/ee/Barry_Lyndon_A.jpg",
+      "file": "Barry_Lyndon_A.jpg",
+      "source": "https://en.wikipedia.org/wiki/File:Barry_Lyndon_A.jpg",
+      "artist": "",
+      "license": "Fair use",
+      "licenseUrl": ""
+    }
+  },
+  "fincher": {
+    "portrait": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/TheKillerBFILFF051023_%288_of_22%29_%2853255176376%29_%28cropped2%29.jpg/500px-TheKillerBFILFF051023_%288_of_22%29_%2853255176376%29_%28cropped2%29.jpg",
+      "file": "TheKillerBFILFF051023_(8_of_22)_(53255176376)_(cropped2).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:TheKillerBFILFF051023_(8_of_22)_(53255176376)_(cropped2).jpg",
+      "artist": "Raph_PH",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "poster": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/8/8c/The_Social_Network_film_poster.png",
+      "file": "The_Social_Network_film_poster.png",
+      "source": "https://en.wikipedia.org/wiki/File:The_Social_Network_film_poster.png",
+      "artist": "",
+      "license": "Fair use",
+      "licenseUrl": ""
+    }
+  },
+  "weir": {
+    "portrait": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/PeterWeirApr2011.jpg/500px-PeterWeirApr2011.jpg",
+      "file": "PeterWeirApr2011.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:PeterWeirApr2011.jpg",
+      "artist": "Piotr Drabik",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "poster": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/b/bf/Master_and_Commander-The_Far_Side_of_the_World_poster.png",
+      "file": "Master_and_Commander-The_Far_Side_of_the_World_poster.png",
+      "source": "https://en.wikipedia.org/wiki/File:Master_and_Commander-The_Far_Side_of_the_World_poster.png",
+      "artist": "",
+      "license": "Fair use",
+      "licenseUrl": ""
+    }
+  },
+  "tarantino": {
+    "portrait": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Quentin_Tarantino_by_Gage_Skidmore.jpg/500px-Quentin_Tarantino_by_Gage_Skidmore.jpg",
+      "file": "Quentin_Tarantino_by_Gage_Skidmore.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Quentin_Tarantino_by_Gage_Skidmore.jpg",
+      "artist": "Gage Skidmore",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    },
+    "poster": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/c/c3/Inglourious_Basterds_poster.jpg",
+      "file": "Inglourious_Basterds_poster.jpg",
+      "source": "https://en.wikipedia.org/wiki/File:Inglourious_Basterds_poster.jpg",
+      "artist": "",
+      "license": "Fair use",
+      "licenseUrl": ""
+    }
+  },
+  "scott": {
+    "portrait": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Ridley_Scott_At_BFI_-_BFI_Southbank_-_Saturday_4th_October_2025.jpg/500px-Ridley_Scott_At_BFI_-_BFI_Southbank_-_Saturday_4th_October_2025.jpg",
+      "file": "Ridley_Scott_At_BFI_-_BFI_Southbank_-_Saturday_4th_October_2025.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ridley_Scott_At_BFI_-_BFI_Southbank_-_Saturday_4th_October_2025.jpg",
+      "artist": "Raph_PH",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "poster": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/c/c3/Alien_movie_poster.jpg",
+      "file": "Alien_movie_poster.jpg",
+      "source": "https://en.wikipedia.org/wiki/File:Alien_movie_poster.jpg",
+      "artist": "",
+      "license": "Fair use",
+      "licenseUrl": ""
+    }
+  },
+  "zemeckis": {
+    "portrait": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Robert_Zemeckis_%22The_Walk%22_at_Opening_Ceremony_of_the_28th_Tokyo_International_Film_Festival_%2821835891403%29_%28cropped%29.jpg/500px-Robert_Zemeckis_%22The_Walk%22_at_Opening_Ceremony_of_the_28th_Tokyo_International_Film_Festival_%2821835891403%29_%28cropped%29.jpg",
+      "file": "Robert_Zemeckis_\"The_Walk\"_at_Opening_Ceremony_of_the_28th_Tokyo_International_Film_Festival_(21835891403)_(cropped).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Robert_Zemeckis_%22The_Walk%22_at_Opening_Ceremony_of_the_28th_Tokyo_International_Film_Festival_(21835891403)_(cropped).jpg",
+      "artist": "Dick Thomas Johnson from Tokyo, Japan",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "poster": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg",
+      "file": "Back_to_the_Future.jpg",
+      "source": "https://en.wikipedia.org/wiki/File:Back_to_the_Future.jpg",
+      "artist": "",
+      "license": "Fair use",
+      "licenseUrl": ""
+    }
+  },
+  "carpenter": {
+    "portrait": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/John_Carpenter_Photo_Op_GalaxyCon_Richmond_2025.jpg/500px-John_Carpenter_Photo_Op_GalaxyCon_Richmond_2025.jpg",
+      "file": "John_Carpenter_Photo_Op_GalaxyCon_Richmond_2025.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:John_Carpenter_Photo_Op_GalaxyCon_Richmond_2025.jpg",
+      "artist": "",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+    },
+    "poster": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/e/e3/The_Thing_%281982_film%29.png",
+      "file": "The_Thing_(1982_film).png",
+      "source": "https://en.wikipedia.org/wiki/File:The_Thing_(1982_film).png",
+      "artist": "",
+      "license": "Fair use",
+      "licenseUrl": ""
+    }
+  },
+  "richie": {
+    "portrait": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/GuyRitchiebyKathyHutchins.jpg/500px-GuyRitchiebyKathyHutchins.jpg",
+      "file": "GuyRitchiebyKathyHutchins.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:GuyRitchiebyKathyHutchins.jpg",
+      "artist": "Kathy Hutchins",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    "poster": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/e/e9/Lock%2C_Stock_and_Two_Smoking_Barrels_2.jpg",
+      "file": "Lock,_Stock_and_Two_Smoking_Barrels_2.jpg",
+      "source": "https://en.wikipedia.org/wiki/File:Lock,_Stock_and_Two_Smoking_Barrels_2.jpg",
+      "artist": "",
+      "license": "Fair use",
+      "licenseUrl": ""
+    }
+  },
+  "pta": {
+    "portrait": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Paul_Thomas_Anderson_in_2025.jpg/500px-Paul_Thomas_Anderson_in_2025.jpg",
+      "file": "Paul_Thomas_Anderson_in_2025.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Paul_Thomas_Anderson_in_2025.jpg",
+      "artist": "Raph_PH",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "poster": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/d/da/There_Will_Be_Blood_Poster.jpg",
+      "file": "There_Will_Be_Blood_Poster.jpg",
+      "source": "https://en.wikipedia.org/wiki/File:There_Will_Be_Blood_Poster.jpg",
+      "artist": "",
+      "license": "Fair use",
+      "licenseUrl": ""
+    }
+  },
+  "payne": {
+    "portrait": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Alexander_Payne_2017.jpg/500px-Alexander_Payne_2017.jpg",
+      "file": "Alexander_Payne_2017.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Alexander_Payne_2017.jpg",
+      "artist": "Paul Katzenberger",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    "poster": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/7/7d/Descendants_film_poster.jpg",
+      "file": "Descendants_film_poster.jpg",
+      "source": "https://en.wikipedia.org/wiki/File:Descendants_film_poster.jpg",
+      "artist": "",
+      "license": "Fair use",
+      "licenseUrl": ""
+    }
+  },
+  "yorgos": {
+    "portrait": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Yorgos_Lanthimos_at_82nd_Venice_International_Film_Festival-1_%28cropped%29.jpg/500px-Yorgos_Lanthimos_at_82nd_Venice_International_Film_Festival-1_%28cropped%29.jpg",
+      "file": "Yorgos_Lanthimos_at_82nd_Venice_International_Film_Festival-1_(cropped).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Yorgos_Lanthimos_at_82nd_Venice_International_Film_Festival-1_(cropped).jpg",
+      "artist": "LucaFazPhoto",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    "poster": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/2/27/Bugonia_film_poster.jpg",
+      "file": "Bugonia_film_poster.jpg",
+      "source": "https://en.wikipedia.org/wiki/File:Bugonia_film_poster.jpg",
+      "artist": "Focus Features",
+      "license": "Fair use",
+      "licenseUrl": ""
+    }
+  }
+}
