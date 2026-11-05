@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1572379059",
+        "syncId":  "letterboxd-review-1572379059",
+        "title":  "Inherit the Wind",
+        "year":  1960,
+        "rating":  3,
+        "review":  "Best play we read and high school and that monkey was enjoying the hell outta that cigarette",
+        "wordCount":  17,
+        "publishedDate":  "2026-11-05",
+        "watchedDate":  "2026-11-04",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/inherit-the-wind/",
+        "tmdbId":  "1908",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1571219333",
         "syncId":  "letterboxd-review-1571219333",
         "title":  "Godzilla Minus Zero",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/eyes-wide-shut/",
         "tmdbId":  "345",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1547760043",
-        "syncId":  "letterboxd-review-1547760043",
-        "title":  "Cinema Paradiso",
-        "year":  1988,
-        "rating":  4,
-        "review":  "Nice story. Movies about movies always have a little sometime extra magical to them. RIP the Jon of projectionist. fine",
-        "wordCount":  20,
-        "publishedDate":  "2026-10-21",
-        "watchedDate":  "2026-10-20",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/cinema-paradiso/",
-        "tmdbId":  "11216",
         "tags":  [
 
                  ],
