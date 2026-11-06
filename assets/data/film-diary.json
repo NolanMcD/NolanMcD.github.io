@@ -1,5 +1,80 @@
 [
     {
+        "id":  "rss:letterboxd-review-1573341916",
+        "syncId":  "letterboxd-review-1573341916",
+        "title":  "Paths of Glory",
+        "year":  1957,
+        "rating":  4,
+        "review":  "So good. 1st its a war movie then a courtroom drama then a moral dilemma with a crushing ending.",
+        "wordCount":  19,
+        "publishedDate":  "2026-11-06",
+        "watchedDate":  "2026-11-05",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/paths-of-glory/",
+        "tmdbId":  "975",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-watch-1574086535",
+        "syncId":  "letterboxd-watch-1574086535",
+        "title":  "The Hunger Games: Mockingjay – Part 1",
+        "year":  2014,
+        "rating":  2,
+        "review":  "Watched on Thursday November 5, 2026.",
+        "wordCount":  6,
+        "publishedDate":  "2026-11-06",
+        "watchedDate":  "2026-11-05",
+        "rewatch":  true,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-hunger-games-mockingjay-part-1/",
+        "tmdbId":  "131631",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-watch-1574086725",
+        "syncId":  "letterboxd-watch-1574086725",
+        "title":  "The Hunger Games: Mockingjay – Part 2",
+        "year":  2015,
+        "rating":  2,
+        "review":  "Watched on Thursday November 5, 2026.",
+        "wordCount":  6,
+        "publishedDate":  "2026-11-06",
+        "watchedDate":  "2026-11-05",
+        "rewatch":  true,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-hunger-games-mockingjay-part-2/1/",
+        "tmdbId":  "131634",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1572379059",
         "syncId":  "letterboxd-review-1572379059",
         "title":  "Inherit the Wind",
