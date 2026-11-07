@@ -1,5 +1,55 @@
 [
     {
+        "id":  "rss:letterboxd-review-1575043087",
+        "syncId":  "letterboxd-review-1575043087",
+        "title":  "The Only Living Pickpocket in New York",
+        "year":  2026,
+        "rating":  2,
+        "review":  "Usually I like a simple crime story but there was just not enough there for me to call this good. The whole analog vs digital comes off as tired.",
+        "wordCount":  29,
+        "publishedDate":  "2026-11-07",
+        "watchedDate":  "2026-11-06",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-only-living-pickpocket-in-new-york/",
+        "tmdbId":  "1458099",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1574875037",
+        "syncId":  "letterboxd-review-1574875037",
+        "title":  "Wild Horse Nine",
+        "year":  2026,
+        "rating":  4,
+        "review":  "This review may contain spoilers.\n\nIts got the fun stuff like democracy leads to gay leads to cheese and the thoughtful McDonagh touch like when Malkovich’s character finds it in himself to express sympathy to the cancer that is killing him somehow. The use of Easter Island as a setting is great.",
+        "wordCount":  52,
+        "publishedDate":  "2026-11-07",
+        "watchedDate":  "2026-11-06",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/wild-horse-nine/",
+        "tmdbId":  "891621",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1573341916",
         "syncId":  "letterboxd-review-1573341916",
         "title":  "Paths of Glory",
@@ -87,56 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/inherit-the-wind/",
         "tmdbId":  "1908",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1571219333",
-        "syncId":  "letterboxd-review-1571219333",
-        "title":  "Godzilla Minus Zero",
-        "year":  2026,
-        "rating":  3,
-        "review":  "The score is awesome, and the action is so brutal. I used to love the original X-BOX game Godzilla vs Monsters because you could destroy all the cities. But that’s pretty much all the enjoyment I get out of the movies. I just can’t bring myself to care for the human characters though.",
-        "wordCount":  53,
-        "publishedDate":  "2026-11-04",
-        "watchedDate":  "2026-11-03",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/godzilla-minus-zero/",
-        "tmdbId":  "1381071",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1570163743",
-        "syncId":  "letterboxd-review-1570163743",
-        "title":  "Alligator",
-        "year":  1980,
-        "rating":  4,
-        "review":  "Secret best Godzilla movie? Loved the 70s police procedural mixed with 80s action.",
-        "wordCount":  13,
-        "publishedDate":  "2026-11-03",
-        "watchedDate":  "2026-11-02",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/alligator/",
-        "tmdbId":  "33518",
         "tags":  [
 
                  ],
