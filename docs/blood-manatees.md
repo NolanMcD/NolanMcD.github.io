@@ -33,6 +33,16 @@ Run `node tools/test-blood-manatees-airport.cjs` to check purchase flow, seat/ba
 
 ## Controls and presentation
 
+The shared screenplay shell uses one 680px reading measure, consistent scene headings and dialogue spacing, and the same readable labels, captions, transcript controls, and Previous/Next navigation across scene types. Terminal scenes widen only their interactive displays; their surrounding action and revealed endings retain the reading measure. Hidden endings stay hidden until their interactions complete. Display transcripts and controls retain keyboard focus indicators, and scene-navigation labels remain visible on mobile. The screenplay palette is independent of the regular site's theme; the Screenplays entry card follows the regular site's light/dark palette.
+
+### Miami arrival scene
+
+Scene 7 follows the ticket scene with Ewen's arrival at Miami International Airport. An inline fictional customs workstation opens his passenger record, reviews the journey and linked employment update, inspects the equipment description, and closes the arrival. The employment update recalls the matching approvals in Scene 3. The bag contents come from Scene 4, so this scene adds no new packing declarations. No particular airline, flight number, travel date, citizenship, passport number, immigration classification, or actual admission procedure is asserted.
+
+`assets/js/blood-manatees-arrival.js` synchronizes the workstation with four inline SVG camera storyboards: arrivals corridor, primary desk, baggage-record image, and public exit. These are stylized animated storyboards, not real airport footage. Replace the visual treatment with supplied or licensed footage later while retaining the `data-arrival-view` hooks. The story's cross-linked records and automated tracking are fictional; no information is collected, requested, transmitted, or persisted. This workstation is embedded directly in the scene and does not extend the separate Scene 6 iframe protocol.
+
+The workstation is hidden until JavaScript initializes. A native details transcript contains the complete scene without interaction, including the ending. The final action reveals and focuses the closing prose; replay resets the workstation, feed, and ending. Reduced-motion mode stops the camera-subject animations. The collection layout automatically links Scenes 6 and 7 in both directions. Run `node tools/test-blood-manatees-arrival.cjs` alongside the existing airport and packing checks; CI includes the new test.
+
 `_layouts/blood-manatees-scene.html` renders every scene and computes Previous/Next destinations. `assets/js/blood-manatees.js` handles arrow keys, fades, and optional single-track audio. Browsers require the visitor to press the audio control when autoplay is unavailable; the track stops when the page is left.
 
 The opening quote is in `pages/blood-manatees.md`. Its shell is `_layouts/blood-manatees.html`. Blood Manatees-specific styling is in `_sass/blood-manatees.scss`.

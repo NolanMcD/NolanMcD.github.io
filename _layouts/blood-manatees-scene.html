@@ -32,7 +32,7 @@ layout: blood-manatees
     <div class="bm-scene-content">
       <div class="bm-scene-header">
         <p class="bm-title">Blood Manatees</p>
-        <p class="bm-scene-number">Record {{ page.scene_number }} / Scene {{ page.scene_number }}</p>
+        <p class="bm-scene-number">Scene {{ page.scene_number }}</p>
       </div>
       {% if page.scene_heading %}<h1>{{ page.scene_heading }}</h1>{% endif %}
       {% if page.image %}<img class="bm-scene-image" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: '' | escape }}">{% endif %}

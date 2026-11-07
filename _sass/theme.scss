@@ -51,7 +51,7 @@ html[data-theme="dark"] {
   --site-link: #84d0d9;
   --site-link-hover: #b6eaf0;
   .theme-menu > summary { color: #c9c1f2; }
-  body { background: #171614; }
+  body:not(.blood-manatees-page) { background: #171614; }
   a { color: #84d0d9; }
   a:hover, a:focus { color: #b6eaf0; }
   .site-header { background: #1c1a18; }
