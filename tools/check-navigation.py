@@ -35,8 +35,8 @@ def check(root):
     home = root / 'index.html'
     if home in pages:
         text = home.read_text(encoding='utf-8')
-        if 'home-projects-heading' not in pages[home].ids or 'Latest on the blog' in text:
-            failures.append((home, '/', 'homepage must feature latest projects'))
+        if 'home-projects-heading' not in pages[home].ids or 'Latest writing &amp; projects' not in text:
+            failures.append((home, '/', 'homepage must feature latest writing and projects'))
     checked = 0
     # These hashes select archive filters rather than document sections.
     archive_filters = {

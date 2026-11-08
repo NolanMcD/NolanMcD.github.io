@@ -38,4 +38,12 @@ The competition ZIP at the repository root is explicitly ignored and excluded fr
 
 Run `powershell -File tools/check-site.ps1`, `python tools/test-miami-weather.py`, and the relevant feature tests. The repository checker enumerates tracked and new non-ignored files through Git, so private downloads, caches, generated builds, and separate checkouts do not interfere. It validates front matter for standalone pages as well as posts. Build with `bundle exec jekyll build --strict_front_matter`, then run `python tools/check-navigation.py _site` and `python tools/check-miami-weather.py _site`. GitHub Actions runs the full build and checks.
 
-The navigation check requires the homepage's Latest projects section. The weather tests cover sunrise/DST eligibility boundaries, daily duplicates, manual overrides, newest-daylight satellite selection, and nighttime fallback in addition to existing source/publication protections.
+The navigation check requires the homepage's Latest writing & projects section. The weather tests cover sunrise/DST eligibility boundaries, daily duplicates, manual overrides, newest-daylight satellite selection, and nighttime fallback in addition to existing source/publication protections.
+
+## Writing & Projects
+
+The combined archive is `/projects/`; `/blog/` renders the same archive with a canonical link to `/projects/`. Existing post and project URLs remain unchanged. Main navigation, breadcrumbs, and post return links point to the combined archive. Movies and Screenplays retain their own navigation entries.
+
+`_data/work_projects.json` preserves the curated project catalog, including external and ongoing entries. When adding a project, add its URL, tags, labels, and summary there. The matching page's `project_date` and `project_summary` override catalog defaults. `_includes/work-feed.html` merges those project updates with every non-review post, normalizes date sort keys, and renders the same feed for the archive and the homepage's newest three entries. Undated projects appear after dated entries; do not invent update dates to promote them. Daily weather collection entries are not separate feed cards.
+
+`assets/js/work-filters.js` combines format and topic filters, retains selected state in shareable URL fragments, and supports Back/Forward and legacy archive filter fragments. Without JavaScript, all entries remain visible and filter controls remain hidden. Run `node tools/test-work-filters.cjs`; CI runs this alongside the full Jekyll build and navigation check.

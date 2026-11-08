@@ -6,7 +6,8 @@
         {% assign nav_page = site.pages | where: "path", path | first %}
         {% assign active = false %}
         {% if page.url == nav_page.url %}{% assign active = true %}{% endif %}
-        {% if nav_page.url == '/blog/' and page.collection == 'posts' and page.layout != 'review' %}{% assign active = true %}{% endif %}
+        {% if nav_page.url == '/projects/' and page.url == '/blog/' %}{% assign active = true %}{% endif %}
+        {% if nav_page.url == '/projects/' and page.collection == 'posts' and page.layout != 'review' %}{% assign active = true %}{% endif %}
         {% if nav_page.url == '/reviews/' %}{% if page.layout == 'review' or page.url == '/reviews/diary/' %}{% assign active = true %}{% endif %}{% endif %}
         {% if nav_page.url == '/projects/' and page.project_date and page.collection != 'posts' and page.layout != 'review' %}{% assign active = true %}{% endif %}
         {% if nav_page.url == '/projects/' and page.collection != 'posts' and page.layout != 'review' %}

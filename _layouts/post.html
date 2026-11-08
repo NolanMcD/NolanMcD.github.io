@@ -20,7 +20,7 @@ layout: default
   {% endif %}
 {% endfor %}
 <nav class="post-pagination" aria-label="More blog posts">
-  <a href="{{ '/blog/' | relative_url }}">All blog posts</a>
+  <a href="{{ '/projects/' | relative_url }}">All writing &amp; projects</a>
   {% if previous_post %}<a href="{{ previous_post.url | relative_url }}"><small>Older post</small>{{ previous_post.title | escape }}</a>{% endif %}
   {% if next_post %}<a href="{{ next_post.url | relative_url }}"><small>Newer post</small>{{ next_post.title | escape }}</a>{% endif %}
 </nav>

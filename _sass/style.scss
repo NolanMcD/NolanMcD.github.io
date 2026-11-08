@@ -311,6 +311,20 @@ a:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; border-radius
 .archive-tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: auto; }
 .archive-tags span { padding: .2rem .45rem; border-radius: 999px; color: #5d554e; background: #f0ebe4; font-size: .62rem; font-weight: 800; text-transform: capitalize; }
 .archive-empty { padding: 2rem; border: 1px dashed $line; color: $muted; text-align: center; }
+.work-filters { margin: 1.5rem 0; padding: 1rem; border: 1px solid $line; border-radius: 10px; background: $cream; }
+.work-filters[hidden] { display: none; }
+.work-filters .archive-filters { margin: 0 0 .75rem; }
+.work-topic-filters { padding-top: .75rem; border-top: 1px solid $line; }
+.work-reset { padding: .5rem 0; min-height: 44px; border: 0; color: var(--site-link); background: transparent; font: inherit; font-size: .8rem; text-decoration: underline; cursor: pointer; }
+.work-reset:focus-visible, .work-filters button:focus-visible { outline: 3px solid var(--site-link); outline-offset: 3px; }
+.archive-card-top > .archive-status { color: $muted; }
+.home-work-feed { grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 1rem 0 0; }
+.home-work-feed .archive-card { min-height: 0; padding: 1rem; }
+.home-work-feed h3 { margin: .6rem 0; font: bold 1.25rem/1.25 Georgia, serif; }
+.home-work-feed h3 a { color: $navy; text-decoration: none; }
+@media (max-width: 760px) { .home-work-feed { grid-template-columns: 1fr; } }
+html[data-theme="dark"] .archive-post { --archive-accent: #ffaaa0; }
+html[data-theme="dark"] .archive-project { --archive-accent: #84d0d9; }
 
 @media (max-width: 680px) {
   .archive-stream { grid-template-columns: 1fr; }

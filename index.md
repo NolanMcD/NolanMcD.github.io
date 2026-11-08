@@ -44,13 +44,8 @@ description: Nolan McDermott's latest movie reviews, writing, adventures, and pe
 {% include miami-weather-feature.html %}
 
 <section class="home-projects" aria-labelledby="home-projects-heading">
-  <div class="section-heading split-heading"><h2 id="home-projects-heading">Latest projects</h2><a class="text-link" href="{{ '/projects/' | relative_url }}">All projects &rarr;</a></div>
-  <ul>
-    {% assign latest_projects = site.pages | where_exp: "project", "project.project_date" | sort: "project_date" | reverse %}
-    {% for project in latest_projects limit: 3 %}
-    <li><a href="{{ project.url | relative_url }}">{{ project.title | escape }}</a><time datetime="{{ project.project_date | date_to_xmlschema }}">{{ project.project_date | date: "%b %-d" }}</time></li>
-    {% endfor %}
-  </ul>
+  <div class="section-heading split-heading"><h2 id="home-projects-heading">Latest writing &amp; projects</h2><a class="text-link" href="{{ '/projects/' | relative_url }}">All writing &amp; projects &rarr;</a></div>
+  <div class="archive-stream home-work-feed">{% include work-feed.html compact=true limit=3 %}</div>
 </section>
 
 <section class="section review-section" id="latest-reviews" aria-labelledby="reviews-heading">
@@ -108,5 +103,5 @@ description: Nolan McDermott's latest movie reviews, writing, adventures, and pe
 
 <section class="connect-strip" aria-labelledby="elsewhere-heading">
   <div><p class="eyebrow">Beyond the credits</p><h2 id="elsewhere-heading">There's more to explore.</h2></div>
-  <div class="connect-links"><a href="{{ '/projects/' | relative_url }}">Projects</a><a href="{{ '/about/' | relative_url }}">About Nolan</a><a href="mailto:boltjets24@gmail.com">Email</a></div>
+  <div class="connect-links"><a href="{{ '/projects/' | relative_url }}">Writing &amp; Projects</a><a href="{{ '/about/' | relative_url }}">About Nolan</a><a href="mailto:boltjets24@gmail.com">Email</a></div>
 </section>

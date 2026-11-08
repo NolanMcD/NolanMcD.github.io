@@ -1,0 +1,17 @@
+{%- comment -%}Use normalized date prefixes to merge Jekyll posts and project updates without comparing Time objects to strings. Undated ongoing projects follow dated entries.{%- endcomment -%}
+{%- capture work_entries -%}
+  {%- for post in site.posts -%}{%- unless post.layout == 'review' -%}
+    {{- post.date | date: '%Y-%m-%d' -}}|||{% include work-card.html kind='writing' title=post.title url=post.url summary=post.excerpt tags=post.categories labels=post.categories date=post.date compact=include.compact %}^^^
+  {%- endunless -%}{%- endfor -%}
+  {%- for project in site.data.work_projects -%}
+    {%- assign project_page = site.pages | where: 'url', project.url | first -%}
+    {%- assign updated = project_page.project_date -%}
+    {%- assign summary = project_page.project_summary | default: project.summary -%}
+    {%- if updated -%}{{- updated | date: '%Y-%m-%d' -}}{%- else -%}0000-00-00{%- endif -%}|||{% include work-card.html kind='project' title=project.title url=project.url summary=summary tags=project.tags labels=project.labels date=updated status=project.status compact=include.compact %}^^^
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign sorted_work = work_entries | split: '^^^' | sort | reverse -%}
+{%- assign feed_limit = include.limit | default: 9999 -%}
+{%- for entry in sorted_work limit: feed_limit -%}
+  {{- entry | split: '|||' | last -}}
+{%- endfor -%}

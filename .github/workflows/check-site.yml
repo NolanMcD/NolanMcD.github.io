@@ -55,6 +55,9 @@ jobs:
       - name: Test director ranking controls
         run: node tools/test-director-rankings-ui.cjs
 
+      - name: Test Writing and Projects filters
+        run: node tools/test-work-filters.cjs
+
       - name: Test Triple Atlas owner connection recovery
         run: node --test tools/test-triple-atlas-auth.cjs
 

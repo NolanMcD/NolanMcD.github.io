@@ -1,0 +1,22 @@
+<p class="page-lede">Essays, interactive tools, research, and work in progress.</p>
+<p>Browse everything together or narrow it down by format and topic. Individual movie reviews are in <a href="{{ '/reviews/' | relative_url }}">Movies</a>; scripts are in <a href="{{ '/screenplays/' | relative_url }}">Screenplays</a>.</p>
+<section class="work-filters" aria-label="Filter writing and projects" hidden>
+  <div class="archive-filters" role="group" aria-label="Format">
+    <button type="button" data-work-type="all" aria-pressed="true" class="is-active">All</button>
+    <button type="button" data-work-type="writing" aria-pressed="false">Writing</button>
+    <button type="button" data-work-type="project" aria-pressed="false">Projects &amp; tools</button>
+  </div>
+  <div class="archive-filters work-topic-filters" role="group" aria-label="Topic">
+    <button type="button" data-work-topic="all" aria-pressed="true" class="is-active">All topics</button>
+    <button type="button" data-work-topic="film" aria-pressed="false">Film</button>
+    <button type="button" data-work-topic="sports" aria-pressed="false">Sports</button>
+    <button type="button" data-work-topic="weather" aria-pressed="false">Weather</button>
+    <button type="button" data-work-topic="code" aria-pressed="false">Code &amp; Data</button>
+    <button type="button" data-work-topic="life" aria-pressed="false">Life &amp; Career</button>
+  </div>
+  <button class="work-reset" type="button" data-work-reset>Clear filters</button>
+</section>
+<p class="archive-count" id="archive-count" aria-live="polite" aria-atomic="true"></p>
+<div class="archive-stream" id="archive-stream">{% include work-feed.html %}</div>
+<p class="archive-empty" id="archive-empty" hidden>No entries match these filters. Choose All and All topics, or clear filters.</p>
+<script src="{{ '/assets/js/work-filters.js' | relative_url }}" defer></script>

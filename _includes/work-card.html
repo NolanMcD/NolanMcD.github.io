@@ -1,0 +1,6 @@
+<article class="archive-card {% if include.kind == 'writing' %}archive-post{% else %}archive-project{% endif %}" data-archive-type="{{ include.kind }}" data-archive-tags="{{ include.tags | join: ' ' | escape }}">
+  <div class="archive-card-top"><span>{% if include.kind == 'writing' %}Writing{% else %}Project{% endif %}</span>{% if include.date %}<time datetime="{{ include.date | date_to_xmlschema }}">{{ include.date | date: '%b %-d, %Y' }}</time>{% else %}<span class="archive-status">{{ include.status | default: 'Ongoing' | escape }}</span>{% endif %}</div>
+  {% if include.compact %}<h3>{% else %}<h2>{% endif %}{% if include.url != '' %}<a href="{% if include.url contains '://' %}{{ include.url | escape }}{% else %}{{ include.url | relative_url }}{% endif %}">{{ include.title | escape }}</a>{% else %}{{ include.title | escape }}{% endif %}{% if include.compact %}</h3>{% else %}</h2>{% endif %}
+  <p>{{ include.summary | strip_html | truncatewords: 42 | escape }}</p>
+  <div class="archive-tags">{% for label in include.labels %}<span>{{ label | escape }}</span>{% endfor %}</div>
+</article>
