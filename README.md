@@ -41,6 +41,8 @@ The `Sync Letterboxd reviews` GitHub Action runs every day and can also be start
 
 ## Repository checks
 
+The site also runs real-browser journeys against the built `_site` in desktop and phone Chromium profiles. Run `bundle exec jekyll build --strict_front_matter`, `pnpm install --frozen-lockfile`, `pnpm exec playwright install chromium`, then `pnpm test:browser`. See [browser testing](docs/browser-testing.md) for diagnostics, scope, and the deliberate failure probe. The Check site workflow gates GitHub Pages deployment on validation and browser tests, then publishes the tested artifact.
+
 Run `powershell -File tools/check-site.ps1` before publishing. It validates JSON files, post naming and front matter, local asset references, the storm audio catalog, and GitHub's per-file size limit. GitHub Actions runs the same checks on every push and pull request.
 
 ## Elevator Game

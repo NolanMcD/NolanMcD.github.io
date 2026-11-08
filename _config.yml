@@ -66,6 +66,13 @@ defaults:
       sitemap: false
 
 exclude:
+  - node_modules
+  - tests
+  - playwright.config.cjs
+  - playwright-report
+  - test-results
+  - package.json
+  - pnpm-lock.yaml
   - assets/screenplays/Gambit.docx
   - assets/screenplays/The Kid Detective.docx
   - assets/screenplays/The Broken Sword.docx

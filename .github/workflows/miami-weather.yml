@@ -15,7 +15,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
 
 concurrency:
   group: morning-miami-weather
@@ -69,8 +68,4 @@ jobs:
           git commit -m 'Publish Miami weather briefing'
           # Do not force or rebase an unverified merge. A racing edit fails safely.
           git push origin HEAD:main
-      - name: Request the existing GitHub Pages build
-        if: steps.weather.outputs.changed == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
+      # Successful completion triggers Check site, which tests and deploys the latest main branch.

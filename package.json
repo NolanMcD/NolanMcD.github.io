@@ -1,0 +1,10 @@
+{
+  "name": "noland-site-checks",
+  "private": true,
+  "packageManager": "pnpm@11.25.0",
+  "scripts": {
+    "test:browser": "playwright test",
+    "test:browser:report": "playwright show-report"
+  },
+  "devDependencies": { "@playwright/test": "1.62.1" }
+}

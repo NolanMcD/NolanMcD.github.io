@@ -2,6 +2,9 @@ _site/
 .jekyll-cache/
 .sass-cache/
 vendor/
+node_modules/
+playwright-report/
+test-results/
 
 # Private/local source data. Generated public artifacts belong in assets/data/.
 local-data/
