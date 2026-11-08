@@ -41,7 +41,7 @@ The `Sync Letterboxd reviews` GitHub Action runs every day and can also be start
 
 ## Repository checks
 
-The site also runs real-browser journeys against the built `_site` in desktop and phone Chromium profiles. Run `bundle exec jekyll build --strict_front_matter`, `pnpm install --frozen-lockfile`, `pnpm exec playwright install chromium`, then `pnpm test:browser`. See [browser testing](docs/browser-testing.md) for diagnostics, scope, and the deliberate failure probe. The Check site workflow gates GitHub Pages deployment on validation and browser tests, then publishes the tested artifact.
+The site also runs real-browser journeys against the built `_site` in desktop and phone Chromium profiles. Run `bundle exec jekyll build --strict_front_matter`, `bundle exec ruby tools/build-running-previews.rb`, `pnpm install --frozen-lockfile`, `pnpm exec playwright install chromium`, then `pnpm test:browser`. Remove temporary sample pages afterward with `bundle exec ruby tools/build-running-previews.rb --clean`. See [browser testing](docs/browser-testing.md) for diagnostics, scope, and the deliberate failure probe. The Check site workflow gates GitHub Pages deployment on validation and browser tests, removes sample pages, then publishes the tested artifact.
 
 Run `powershell -File tools/check-site.ps1` before publishing. It validates JSON files, post naming and front matter, local asset references, the storm audio catalog, and GitHub's per-file size limit. GitHub Actions runs the same checks on every push and pull request.
 
@@ -50,6 +50,8 @@ Run `powershell -File tools/check-site.ps1` before publishing. It validates JSON
 The browser game at `/elevator-game/` is implemented by `pages/elevator-game.md` and `assets/js/elevator-game.js`, with scoped styles in `_sass/style.scss`. Gameplay and computer-dispatch tuning live in the `C` constants near the top of the script. High scores, sound preference, and achievements use the `nolandElevatorGame.*` local-storage namespace; the arrival ding is generated with the Web Audio API.
 
 ## Strava sync
+
+The homepage medal-rack display is currently **manual**: enter the year, miles, and optional verification date in `_data/running.yml`. It does not use the recent Strava feed to estimate a yearly total. See [running mileage](docs/running-mileage.md) for preview commands, image alignment, and a future automation design.
 
 The homepage Strava lane reads `assets/data/strava-feed.json`, generated daily by the `Sync public Strava activities` GitHub Action. It publishes only activities marked **Everyone**, and its OAuth refresh token is rotated back into GitHub Actions secrets before feed generation continues. Follow [the one-time secure OAuth setup](docs/strava-oauth-setup.md) to activate it.
 

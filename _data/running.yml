@@ -1,0 +1,8 @@
+# Manual yearly mileage. This file is the only source for the homepage display.
+year: 2026
+# Enter a non-negative number of MILES without commas, e.g. 1250.5.
+# Leave blank for the em dash and "Mileage coming soon." Zero is a valid total.
+total_miles:
+# Optional date you verified the total, in YYYY-MM-DD format, e.g. "2026-11-08".
+# Leave blank to omit the last-updated line. This is not an automatic sync date.
+last_updated:

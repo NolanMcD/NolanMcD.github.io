@@ -10,6 +10,7 @@ test-results/
 local-data/
 ratings.csv
 nolans-*-rankings.csv
+Wooden medal rack with blank purple bib.png
 __pycache__/
 
 # Raw Kaggle competition download; never publish competition data.

@@ -66,6 +66,7 @@ defaults:
       sitemap: false
 
 exclude:
+  - Wooden medal rack with blank purple bib.png
   - node_modules
   - tests
   - playwright.config.cjs

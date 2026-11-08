@@ -113,7 +113,12 @@ jobs:
         run: pnpm exec playwright install --with-deps chromium
 
       - name: Test the built site in desktop and phone browsers
-        run: pnpm test:browser
+        run: |
+          bundle exec ruby tools/build-running-previews.rb
+          pnpm test:browser
+
+      - name: Remove temporary mileage samples before publishing
+        run: bundle exec ruby tools/build-running-previews.rb --clean
 
       - name: Keep browser reports and failure evidence
         if: ${{ !cancelled() }}

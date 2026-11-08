@@ -1,6 +1,6 @@
 # Browser testing
 
-The browser suite runs five visitor journeys in desktop Chromium and an emulated iPhone 13 viewport using Chromium. It serves the already-built `_site` from `127.0.0.1:4173`. It never uses the production site as its test target. Build output is excluded from Git.
+The browser suite runs visitor journeys in desktop Chromium and an emulated iPhone 13 viewport using Chromium. It serves the already-built `_site` from `127.0.0.1:4173`. It never uses the production site as its test target. Build output is excluded from Git. The running-mileage checks additionally exercise 1280px, 390px, and 320px layouts, temporary sample-number fixtures, and a no-JavaScript homepage; see [running mileage](running-mileage.md).
 
 ## Local setup
 
@@ -9,9 +9,11 @@ Install Node 24, Python 3, Ruby and Bundler, and pnpm 11.25.0. Then:
 ```text
 bundle install
 bundle exec jekyll build --strict_front_matter
+bundle exec ruby tools/build-running-previews.rb
 pnpm install --frozen-lockfile
 pnpm exec playwright install chromium
 pnpm test:browser
+bundle exec ruby tools/build-running-previews.rb --clean
 ```
 
 Playwright starts and stops `tools/serve-browser-site.py`. Keep port 4173 free. It deliberately refuses to reuse an unrelated existing server. To inspect a report, run `pnpm test:browser:report`. Screenshots and traces for failing tests are under `test-results/`.

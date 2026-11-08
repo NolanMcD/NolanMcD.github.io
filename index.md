@@ -8,14 +8,11 @@ description: Nolan McDermott's latest movie reviews, writing, adventures, and pe
   <header class="feed-heading">
     <div><p class="eyebrow">My digital life</p><h1 id="feed-heading">Noland.</h1></div>
   </header>
+  <div class="running-home">
   <nav class="home-shortcuts" aria-label="My digital life">
     <a class="home-shortcut home-shortcut-movies" href="https://letterboxd.com/NolanMcD/">
       <span class="home-shortcut-icon" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><rect x="9" y="12" width="46" height="40" rx="4"/><path d="M19 12v40M45 12v40M9 22h10M9 32h10M9 42h10M45 22h10M45 32h10M45 42h10"/><path d="m27 24 12 8-12 8z"/></svg></span>
       <span class="home-shortcut-label">Letterboxd</span>
-    </a>
-    <a class="home-shortcut home-shortcut-paddle" href="https://www.strava.com/athletes/57377386">
-      <span class="home-shortcut-icon" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><circle cx="39" cy="10" r="5"/><path d="m34 19-9 13 13 8-7 15M34 19l9 11 11-3M29 26l-12-3-7 10M25 32l-8 13H6"/></svg></span>
-      <span class="home-shortcut-label">Strava</span>
     </a>
     <a class="home-shortcut home-shortcut-crossword" href="https://www.instagram.com/nolan_mcdermott/">
       <span class="home-shortcut-icon" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M9 19h12l5-7h12l5 7h12v34H9z"/><circle cx="32" cy="36" r="11"/><path d="M46 25h3"/></svg></span>
@@ -37,6 +34,8 @@ description: Nolan McDermott's latest movie reviews, writing, adventures, and pe
       <span class="home-shortcut-label">GitHub</span>
     </a>
   </nav>
+  {% include running-mileage.html %}
+  </div>
 </section>
 
 <script src="{{ '/assets/js/home-feed.js' | relative_url }}" defer></script>

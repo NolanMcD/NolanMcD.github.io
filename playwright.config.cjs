@@ -2,7 +2,7 @@ const { defineConfig, devices } = require('@playwright/test');
 
 module.exports = defineConfig({
   testDir: './tests/browser',
-  testMatch: process.env.PW_OVERFLOW_PROBE ? 'overflow-probe.spec.cjs' : 'site.spec.cjs',
+  testMatch: process.env.PW_OVERFLOW_PROBE ? 'overflow-probe.spec.cjs' : ['site.spec.cjs', 'running.spec.cjs'],
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: 0,

@@ -1,0 +1,33 @@
+{%- assign running = site.data.running -%}
+{%- assign has_mileage = false -%}
+{%- if running.total_miles != nil and running.total_miles != '' -%}
+  {%- assign has_mileage = true -%}
+  {%- assign number_parts = running.total_miles | round: 1 | append: '' | split: '.' -%}
+  {%- assign reversed_digits = number_parts[0] | split: '' | reverse -%}
+  {%- capture reversed_grouped -%}
+    {%- for digit in reversed_digits -%}
+      {{- digit -}}
+      {%- assign remainder = forloop.index | modulo: 3 -%}
+      {%- if remainder == 0 and forloop.last == false -%},{%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+  {%- assign mileage_label = reversed_grouped | split: '' | reverse | join: '' -%}
+  {%- if number_parts.size > 1 and number_parts[1] != '0' -%}
+    {%- assign mileage_label = mileage_label | append: '.' | append: number_parts[1] -%}
+  {%- endif -%}
+{%- else -%}
+  {%- assign mileage_label = '—' -%}
+{%- endif -%}
+<figure class="running-mileage">
+  <div class="running-mileage__photo">
+    <img src="{{ '/assets/images/running/medal-rack.webp' | relative_url }}" alt="Nolan's race medals hanging from a wooden Just Keep Running rack, with a purple race bib in the upper right." width="1086" height="1448" decoding="async">
+    <svg class="running-mileage__overlay" viewBox="0 0 1086 1448" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+      <text class="running-mileage__number" x="858" y="210" text-anchor="middle" dominant-baseline="middle" transform="rotate(-1 858 210)"{% if mileage_label.size > 7 %} textLength="270" lengthAdjust="spacingAndGlyphs"{% endif %}>{{ mileage_label | escape }}</text>
+    </svg>
+  </div>
+  <figcaption class="running-mileage__caption">
+    <span>{{ running.year | escape }} running total · <strong>{{ mileage_label | escape }}</strong> miles</span>
+    {% unless has_mileage %}<span class="running-mileage__status">Mileage coming soon.</span>{% endunless %}
+    {% if running.last_updated %}<span class="running-mileage__updated">Last updated <time datetime="{{ running.last_updated | date: '%Y-%m-%d' }}">{{ running.last_updated | date: '%B %-d, %Y' }}</time></span>{% endif %}
+  </figcaption>
+</figure>
