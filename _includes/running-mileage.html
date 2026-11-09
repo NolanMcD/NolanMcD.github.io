@@ -19,12 +19,12 @@
   {%- assign mileage_label = '—' -%}
 {%- endif -%}
 <figure class="running-mileage">
-  <div class="running-mileage__photo">
+  <a class="running-mileage__photo" href="https://www.strava.com/athletes/57377386" aria-label="View Nolan's Strava profile">
     <img src="{{ '/assets/images/running/medal-rack.webp' | relative_url }}" alt="Nolan's race medals hanging from a wooden Just Keep Running rack, with a purple race bib in the upper right." width="1086" height="1448" decoding="async">
     <svg class="running-mileage__overlay" viewBox="0 0 1086 1448" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
       <text class="running-mileage__number" x="858" y="210" text-anchor="middle" dominant-baseline="middle" transform="rotate(-1 858 210)"{% if mileage_label.size > 7 %} textLength="270" lengthAdjust="spacingAndGlyphs"{% endif %}>{{ mileage_label | escape }}</text>
     </svg>
-  </div>
+  </a>
   <figcaption class="running-mileage__caption">
     <span>{{ running.year | escape }} running total · <strong>{{ mileage_label | escape }}</strong> miles</span>
     {% unless has_mileage %}<span class="running-mileage__status">Mileage coming soon.</span>{% endunless %}
