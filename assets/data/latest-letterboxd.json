@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1581598974",
+        "syncId":  "letterboxd-review-1581598974",
+        "title":  "Club Kid",
+        "year":  2026,
+        "rating":  4,
+        "review":  "At the beginning I was like wow it’s gonna take a pretty good movie to make me feel empathy for this character and by the end of it I felt empathy for him so. A little predictable but most family dramas are, and it has enough laughs and moments of levity to keep it grounded. Yeah I went into this thinking I wasn’t gonna like it and ended up liking it quite a bit.",
+        "wordCount":  74,
+        "publishedDate":  "2026-11-11",
+        "watchedDate":  "2026-11-10",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/club-kid/",
+        "tmdbId":  "1585239",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1575043087",
         "syncId":  "letterboxd-review-1575043087",
         "title":  "The Only Living Pickpocket in New York",
@@ -112,31 +137,6 @@
         "rewatch":  true,
         "url":  "https://letterboxd.com/nolanmcd/film/the-hunger-games-mockingjay-part-2/1/",
         "tmdbId":  "131634",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1572379059",
-        "syncId":  "letterboxd-review-1572379059",
-        "title":  "Inherit the Wind",
-        "year":  1960,
-        "rating":  3,
-        "review":  "Best play we read and high school and that monkey was enjoying the hell outta that cigarette",
-        "wordCount":  17,
-        "publishedDate":  "2026-11-05",
-        "watchedDate":  "2026-11-04",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/inherit-the-wind/",
-        "tmdbId":  "1908",
         "tags":  [
 
                  ],
