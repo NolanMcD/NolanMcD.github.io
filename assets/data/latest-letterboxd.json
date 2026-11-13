@@ -1,5 +1,55 @@
 [
     {
+        "id":  "rss:letterboxd-review-1584270125",
+        "syncId":  "letterboxd-review-1584270125",
+        "title":  "How to Rob a Bank",
+        "year":  2026,
+        "rating":  3,
+        "review":  "It’s fun but a lot of that fun goes away when it tries to take its bank robbers way too seriously. The tone for the cops is way better, John C Reilly and Zoe Kravitz are far and way the best part of this movie. Also I’m sick of seeing TikTok social media reaction montages in movies. It’s at least in services of the YouTube videos which are their own kind of fun. Wish it was more like Point Break.",
+        "wordCount":  80,
+        "publishedDate":  "2026-11-13",
+        "watchedDate":  "2026-11-12",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/how-to-rob-a-bank-2026/",
+        "tmdbId":  "1437511",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1584425533",
+        "syncId":  "letterboxd-review-1584425533",
+        "title":  "Wildwood",
+        "year":  2026,
+        "rating":  4,
+        "review":  "The stop motion is so good it’s hard to fathom wow. Original unique fantasy story. It can be a little unfocused at times and there are a couple voice acting performances that stick out but it’s pretty immersive.",
+        "wordCount":  38,
+        "publishedDate":  "2026-11-13",
+        "watchedDate":  "2026-11-12",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/wildwood-2026/",
+        "tmdbId":  "791523",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1581598974",
         "syncId":  "letterboxd-review-1581598974",
         "title":  "Club Kid",
@@ -87,56 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/paths-of-glory/",
         "tmdbId":  "975",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-watch-1574086535",
-        "syncId":  "letterboxd-watch-1574086535",
-        "title":  "The Hunger Games: Mockingjay – Part 1",
-        "year":  2014,
-        "rating":  2,
-        "review":  "Watched on Thursday November 5, 2026.",
-        "wordCount":  6,
-        "publishedDate":  "2026-11-06",
-        "watchedDate":  "2026-11-05",
-        "rewatch":  true,
-        "url":  "https://letterboxd.com/nolanmcd/film/the-hunger-games-mockingjay-part-1/",
-        "tmdbId":  "131631",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-watch-1574086725",
-        "syncId":  "letterboxd-watch-1574086725",
-        "title":  "The Hunger Games: Mockingjay – Part 2",
-        "year":  2015,
-        "rating":  2,
-        "review":  "Watched on Thursday November 5, 2026.",
-        "wordCount":  6,
-        "publishedDate":  "2026-11-06",
-        "watchedDate":  "2026-11-05",
-        "rewatch":  true,
-        "url":  "https://letterboxd.com/nolanmcd/film/the-hunger-games-mockingjay-part-2/1/",
-        "tmdbId":  "131634",
         "tags":  [
 
                  ],
