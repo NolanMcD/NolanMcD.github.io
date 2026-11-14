@@ -1,5 +1,55 @@
 [
     {
+        "id":  "rss:letterboxd-review-1585640074",
+        "syncId":  "letterboxd-review-1585640074",
+        "title":  "Some Kind of Heaven",
+        "year":  2020,
+        "rating":  3,
+        "review":  "It’s nice, beautifully shot and everything but I can’t help but feel the way Oppenheimer chose to shoot and edit this was very manipulative. It’s like he set out to tell a fictional story and edited these people’s lives to adhere to it. That’s probably not what he really did but that’s how it comes off to me.",
+        "wordCount":  58,
+        "publishedDate":  "2026-11-14",
+        "watchedDate":  "2026-11-13",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/some-kind-of-heaven/",
+        "tmdbId":  "638741",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1585264545",
+        "syncId":  "letterboxd-review-1585264545",
+        "title":  "White House Down",
+        "year":  2013,
+        "rating":  2,
+        "review":  "Extremely predictable die hard rip off",
+        "wordCount":  6,
+        "publishedDate":  "2026-11-14",
+        "watchedDate":  "2026-11-13",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/white-house-down/",
+        "tmdbId":  "117251",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1584270125",
         "syncId":  "letterboxd-review-1584270125",
         "title":  "How to Rob a Bank",
