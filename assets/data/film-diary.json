@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1591177967",
+        "syncId":  "letterboxd-review-1591177967",
+        "title":  "Serpico",
+        "year":  1973,
+        "rating":  3,
+        "review":  "I bought Lumet’s book so I figured I’d brush up on some of his movies before I dive in",
+        "wordCount":  19,
+        "publishedDate":  "2026-11-18",
+        "watchedDate":  "2026-11-17",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/serpico/",
+        "tmdbId":  "9040",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1585640074",
         "syncId":  "letterboxd-review-1585640074",
         "title":  "Some Kind of Heaven",
