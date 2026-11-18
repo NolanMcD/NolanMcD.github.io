@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1591845808",
+        "syncId":  "letterboxd-review-1591845808",
+        "title":  "Deathtrap",
+        "year":  1982,
+        "rating":  3,
+        "review":  "Extremely meta play movie. Shoutout Long Island",
+        "wordCount":  7,
+        "publishedDate":  "2026-11-18",
+        "watchedDate":  "2026-11-17",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/deathtrap/",
+        "tmdbId":  "17590",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1591177967",
         "syncId":  "letterboxd-review-1591177967",
         "title":  "Serpico",
@@ -12,6 +37,31 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/serpico/",
         "tmdbId":  "9040",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1591713238",
+        "syncId":  "letterboxd-review-1591713238",
+        "title":  "The Debut",
+        "year":  2026,
+        "rating":  4,
+        "review":  "Sneak preview at Cosford. Love the way it uses the color yellow. The movie hits such a high point in the 1st act, but I’m afraid it never quite gets back there for me. Still it has a fun style to it and the cast are all killing it.",
+        "wordCount":  49,
+        "publishedDate":  "2026-11-18",
+        "watchedDate":  "2026-11-17",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-debut-2026/",
+        "tmdbId":  "1391239",
         "tags":  [
 
                  ],

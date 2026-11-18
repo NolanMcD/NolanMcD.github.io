@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1591845808",
+        "syncId":  "letterboxd-review-1591845808",
+        "title":  "Deathtrap",
+        "year":  1982,
+        "rating":  3,
+        "review":  "Extremely meta play movie. Shoutout Long Island",
+        "wordCount":  7,
+        "publishedDate":  "2026-11-18",
+        "watchedDate":  "2026-11-17",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/deathtrap/",
+        "tmdbId":  "17590",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1591177967",
         "syncId":  "letterboxd-review-1591177967",
         "title":  "Serpico",
@@ -12,6 +37,31 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/serpico/",
         "tmdbId":  "9040",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
+        "id":  "rss:letterboxd-review-1591713238",
+        "syncId":  "letterboxd-review-1591713238",
+        "title":  "The Debut",
+        "year":  2026,
+        "rating":  4,
+        "review":  "Sneak preview at Cosford. Love the way it uses the color yellow. The movie hits such a high point in the 1st act, but I’m afraid it never quite gets back there for me. Still it has a fun style to it and the cast are all killing it.",
+        "wordCount":  49,
+        "publishedDate":  "2026-11-18",
+        "watchedDate":  "2026-11-17",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-debut-2026/",
+        "tmdbId":  "1391239",
         "tags":  [
 
                  ],
@@ -87,56 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/how-to-rob-a-bank-2026/",
         "tmdbId":  "1437511",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1584425533",
-        "syncId":  "letterboxd-review-1584425533",
-        "title":  "Wildwood",
-        "year":  2026,
-        "rating":  4,
-        "review":  "The stop motion is so good it’s hard to fathom wow. Original unique fantasy story. It can be a little unfocused at times and there are a couple voice acting performances that stick out but it’s pretty immersive.",
-        "wordCount":  38,
-        "publishedDate":  "2026-11-13",
-        "watchedDate":  "2026-11-12",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/wildwood-2026/",
-        "tmdbId":  "791523",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1581598974",
-        "syncId":  "letterboxd-review-1581598974",
-        "title":  "Club Kid",
-        "year":  2026,
-        "rating":  4,
-        "review":  "At the beginning I was like wow it’s gonna take a pretty good movie to make me feel empathy for this character and by the end of it I felt empathy for him so. A little predictable but most family dramas are, and it has enough laughs and moments of levity to keep it grounded. Yeah I went into this thinking I wasn’t gonna like it and ended up liking it quite a bit.",
-        "wordCount":  74,
-        "publishedDate":  "2026-11-11",
-        "watchedDate":  "2026-11-10",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/club-kid/",
-        "tmdbId":  "1585239",
         "tags":  [
 
                  ],
