@@ -35,10 +35,20 @@ description: Nolan McDermott's latest movie reviews, writing, adventures, and pe
     </a>
   </nav>
   {% include running-mileage.html %}
+  <figure class="home-expedition" data-home-expedition>
+    <a class="home-expedition__link" href="{{ '/projects/florida-keys/' | relative_url }}" aria-label="Explore Circumnavigating the Florida Keys">
+      <span class="home-expedition__photos">
+        <img src="{{ '/assets/images/circumnavigation/miami-paddle.webp' | relative_url }}" alt="" width="1024" height="768">
+        <img src="{{ '/assets/images/circumnavigation/keys-paddle.webp' | relative_url }}" alt="" width="1024" height="768" class="home-expedition__second">
+      </span>
+      <span class="home-expedition__caption"><span>From the water</span><strong>Circumnavigating the Florida Keys <span aria-hidden="true">&rarr;</span></strong></span>
+    </a>
+  </figure>
   </div>
 </section>
 
 <script src="{{ '/assets/js/home-feed.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/home-expedition.js' | relative_url }}" defer></script>
 
 {% include miami-weather-feature.html %}
 

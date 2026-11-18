@@ -19,10 +19,24 @@
 .running-mileage__status, .running-mileage__updated { margin-top: .25rem; color: var(--site-muted); font-size: .75rem; }
 
 /* The photo replaces the Strava shortcut; the other destinations stay together. */
-.running-home { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 280px); align-items: center; gap: 1.5rem; }
+.running-home { display: grid; grid-template-columns: minmax(0, 1fr) minmax(160px, 230px) minmax(160px, 230px); align-items: center; gap: 1.25rem; }
 .running-home .home-shortcuts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.home-expedition { margin: 0; min-width: 0; border: 1px solid var(--site-line); border-radius: 7px; overflow: hidden; background: var(--site-surface); }
+.home-expedition__link { display: block; color: var(--site-ink); text-decoration: none; }
+.home-expedition__link:focus-visible { outline: 3px solid var(--site-ink); outline-offset: -3px; }
+.home-expedition__photos { display: block; position: relative; aspect-ratio: 1086 / 1448; overflow: hidden; }
+.home-expedition__photos img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.home-expedition__second { opacity: 0; }
+.home-expedition.is-second .home-expedition__second { opacity: 1; }
+.home-expedition__caption { display: block; padding: .75rem; font-size: .8rem; line-height: 1.5; }
+.home-expedition__caption > span { display: block; color: var(--site-muted); font-size: .75rem; }
+.home-expedition__caption strong { display: block; }
+@media (max-width: 850px) {
+  .running-home { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .running-home .home-shortcuts { grid-column: 1 / -1; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .running-home .running-mileage, .home-expedition { max-width: 360px; width: 100%; justify-self: center; }
+}
 @media (max-width: 600px) {
-  .running-home { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
-  .running-home .home-shortcuts { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .running-home .running-mileage { max-width: 360px; justify-self: center; }
+  .running-home { gap: .75rem; align-items: start; }
+  .home-expedition__caption, .running-mileage__caption { padding: .6rem; }
 }
