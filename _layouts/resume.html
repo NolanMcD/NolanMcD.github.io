@@ -26,6 +26,11 @@ layout: default
     <section class="resume-summary"><h2>Profile</h2><p>{{ resume.summary }}</p></section>
 
     <section><h2>Professional Experience</h2>
+      {% assign current_experience = site.data.resumes.current_experience %}
+      <div class="resume-entry">
+        <div class="resume-entry-heading"><div><h3>{{ current_experience.title | escape }}</h3><p>{{ current_experience.company | escape }}</p></div><time>{{ current_experience.period | escape }}</time></div>
+        <ul><li>{{ current_experience.description | escape }}</li></ul>
+      </div>
       <div class="resume-entry">
         <div class="resume-entry-heading"><div><h3>Software Engineer</h3><p>Millennium Management · Miami, FL</p></div><time>Aug 2022 – May 2025</time></div>
         <ul>{% for bullet in resume.millennium %}<li>{{ bullet }}</li>{% endfor %}</ul>

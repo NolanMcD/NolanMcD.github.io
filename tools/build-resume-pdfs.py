@@ -28,12 +28,15 @@ def esc(value: object) -> str:
 
 
 def document(resume: dict) -> str:
+    current = DATA["current_experience"]
     skills = "".join(f"<div><dt>{esc(x['label'])}</dt><dd>{esc(x['value'])}</dd></div>" for x in resume["skills"])
     bullets = "".join(f"<li>{esc(x)}</li>" for x in resume["millennium"])
     return f"""<!doctype html><html><head><meta charset="utf-8"><title>Nolan McDermott — {esc(resume['label'])}</title><style>{CSS}</style></head><body>
 <header class="header"><div><p class="kicker">{esc(resume['label'])}</p><h1>Nolan McDermott</h1><p class="role">{esc(resume['title'])}</p></div><address>Miami, Florida<br>(516) 554-7741<br>boltjets24@gmail.com<br>linkedin.com/in/nolan-mcdermott-b9a20220b<br>github.com/NolanMcD</address></header>
 <section class="summary"><h2>Profile</h2><p>{esc(resume['summary'])}</p></section>
-<section><h2>Professional Experience</h2><div class="entry"><div class="heading"><div><h3>Software Engineer</h3><p>Millennium Management · Miami, FL</p></div><time>Aug 2022 – May 2025</time></div><ul>{bullets}</ul></div>
+<section><h2>Professional Experience</h2>
+<div class="entry"><div class="heading"><div><h3>{esc(current['title'])}</h3><p>{esc(current['company'])}</p></div><time>{esc(current['period'])}</time></div><ul><li>{esc(current['description'])}</li></ul></div>
+<div class="entry"><div class="heading"><div><h3>Software Engineer</h3><p>Millennium Management · Miami, FL</p></div><time>Aug 2022 – May 2025</time></div><ul>{bullets}</ul></div>
 <div class="entry"><div class="heading"><div><h3>Federation of Club Sports Council Member</h3><p>Herbert Wellness Center · University of Miami</p></div><time>Aug 2021 – May 2022</time></div><ul><li>Managed and allocated a $75,000+ annual budget across multiple club sport organizations.</li><li>Coordinated with club presidents to plan events, approve funding, resolve operational issues, and support online member services.</li></ul></div></section>
 <div class="columns"><section><h2>Education</h2><div class="heading"><div><h3>University of Miami</h3><p>B.S. Computer Science & Mathematics</p></div><time>Jun 2022</time></div><p class="detail">GPA: 3.83 · Miami, FL</p></section><section><h2>Technical Skills</h2><dl>{skills}</dl></section></div>
 <section class="final"><h2>Leadership & Communication</h2><p><strong>President, University of Miami Club Running.</strong> Led team operations, practices, events, and member communication; represented club interests at the university council level.</p><p>Experienced translating technical work for non-technical stakeholders and helping coworkers learn computer science concepts, new systems, and remote development environments.</p></section></body></html>"""
@@ -46,10 +49,10 @@ def main() -> None:
     with tempfile.TemporaryDirectory(prefix="noland-resumes-") as temp:
         temp_dir = Path(temp)
         browser_profile = temp_dir / "browser-profile"
-        for lane, resume in DATA.items():
+        for lane, filename in FILENAMES.items():
             source = temp_dir / f"{lane}.html"
-            target = OUTPUT / FILENAMES[lane]
-            source.write_text(document(resume), encoding="utf-8")
+            target = OUTPUT / filename
+            source.write_text(document(DATA[lane]), encoding="utf-8")
             subprocess.run([
                 str(EDGE), "--headless", "--disable-gpu", "--no-pdf-header-footer",
                 "--no-first-run", f"--user-data-dir={browser_profile}",
