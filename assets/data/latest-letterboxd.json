@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1594018491",
+        "syncId":  "letterboxd-review-1594018491",
+        "title":  "The Hunger Games: Sunrise on the Reaping",
+        "year":  2026,
+        "rating":  4,
+        "review":  "I think Suzanne Collins should be commended for coming up with an idea that translates so perfectly to the big screen. Both aesthetically and structurally. The tribute launch and bloodbath is something that just begs to be seen on the biggest screen possible. Doesn’t live up to Catching Fire’s but still worth the price of admission for me!",
+        "wordCount":  58,
+        "publishedDate":  "2026-11-20",
+        "watchedDate":  "2026-11-19",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/the-hunger-games-sunrise-on-the-reaping/",
+        "tmdbId":  "1300968",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1591845808",
         "syncId":  "letterboxd-review-1591845808",
         "title":  "Deathtrap",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/white-house-down/",
         "tmdbId":  "117251",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1584270125",
-        "syncId":  "letterboxd-review-1584270125",
-        "title":  "How to Rob a Bank",
-        "year":  2026,
-        "rating":  3,
-        "review":  "It’s fun but a lot of that fun goes away when it tries to take its bank robbers way too seriously. The tone for the cops is way better, John C Reilly and Zoe Kravitz are far and way the best part of this movie. Also I’m sick of seeing TikTok social media reaction montages in movies. It’s at least in services of the YouTube videos which are their own kind of fun. Wish it was more like Point Break.",
-        "wordCount":  80,
-        "publishedDate":  "2026-11-13",
-        "watchedDate":  "2026-11-12",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/how-to-rob-a-bank-2026/",
-        "tmdbId":  "1437511",
         "tags":  [
 
                  ],
