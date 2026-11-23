@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1599238618",
+        "syncId":  "letterboxd-review-1599238618",
+        "title":  "East of Eden",
+        "year":  2026,
+        "rating":  4,
+        "review":  "The cure for book to movie syndrome is just a heaping spoonful of limited series.",
+        "wordCount":  15,
+        "publishedDate":  "2026-11-23",
+        "watchedDate":  "2026-11-22",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/east-of-eden-2026/",
+        "tmdbId":  "",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1594018491",
         "syncId":  "letterboxd-review-1594018491",
         "title":  "The Hunger Games: Sunrise on the Reaping",
@@ -79,7 +104,7 @@
         "syncId":  "letterboxd-review-1591713238",
         "title":  "The Debut",
         "year":  2026,
-        "rating":  4,
+        "rating":  3,
         "review":  "Sneak preview at Cosford. Love the way it uses the color yellow. The movie hits such a high point in the 1st act, but I’m afraid it never quite gets back there for me. Still it has a fun style to it and the cast are all killing it.",
         "wordCount":  49,
         "publishedDate":  "2026-11-18",
@@ -112,31 +137,6 @@
         "rewatch":  false,
         "url":  "https://letterboxd.com/nolanmcd/film/some-kind-of-heaven/",
         "tmdbId":  "638741",
-        "tags":  [
-
-                 ],
-        "viewingSources":  [
-
-                           ],
-        "awardTags":  [
-
-                      ],
-        "awardTagsReliable":  false,
-        "origin":  "rss"
-    },
-    {
-        "id":  "rss:letterboxd-review-1585264545",
-        "syncId":  "letterboxd-review-1585264545",
-        "title":  "White House Down",
-        "year":  2013,
-        "rating":  2,
-        "review":  "Extremely predictable die hard rip off",
-        "wordCount":  6,
-        "publishedDate":  "2026-11-14",
-        "watchedDate":  "2026-11-13",
-        "rewatch":  false,
-        "url":  "https://letterboxd.com/nolanmcd/film/white-house-down/",
-        "tmdbId":  "117251",
         "tags":  [
 
                  ],
