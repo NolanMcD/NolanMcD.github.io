@@ -1,5 +1,21 @@
 [
   {
+    "title": "Seattle Search",
+    "url": "/projects/seattle-search/",
+    "summary": "A working plan for finding a full-time role and preparing for life in the Seattle area.",
+    "tags": [
+      "project",
+      "life",
+      "career"
+    ],
+    "labels": [
+      "Career",
+      "Seattle",
+      "Relocation"
+    ],
+    "status": "In progress"
+  },
+  {
     "title": "Blanket: From Combine to Coverage",
     "url": "/projects/nfl-big-data-bowl/",
     "summary": "A proposed stat for man-coverage assignments averaging less than one yard of separation. Explore the 43-cornerback study, movement-detector sensitivity, and a coverage film-review application.",
