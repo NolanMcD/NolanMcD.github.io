@@ -1,4 +1,4 @@
-﻿(() => {
+(() => {
   const key = 'noland-seattle-search-v1';
   const form = document.getElementById('sea-form'), list = document.getElementById('sea-list'), notice = document.getElementById('sea-storage');
   let entries = [];
