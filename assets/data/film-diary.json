@@ -1,5 +1,30 @@
 [
     {
+        "id":  "rss:letterboxd-review-1600450955",
+        "syncId":  "letterboxd-review-1600450955",
+        "title":  "I Play Rocky",
+        "year":  2026,
+        "rating":  3,
+        "review":  "It’s funny and the guy absolutely nails Stallone but I was a little bored. It was very similar to “The Offer”",
+        "wordCount":  21,
+        "publishedDate":  "2026-11-24",
+        "watchedDate":  "2026-11-23",
+        "rewatch":  false,
+        "url":  "https://letterboxd.com/nolanmcd/film/i-play-rocky/",
+        "tmdbId":  "1286656",
+        "tags":  [
+
+                 ],
+        "viewingSources":  [
+
+                           ],
+        "awardTags":  [
+
+                      ],
+        "awardTagsReliable":  false,
+        "origin":  "rss"
+    },
+    {
         "id":  "rss:letterboxd-review-1599238618",
         "syncId":  "letterboxd-review-1599238618",
         "title":  "East of Eden",
