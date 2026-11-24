@@ -1,12 +1,12 @@
 {
-  "report_date": "2026-11-23",
-  "generated_at": "2026-11-24T00:04:26.867952+00:00",
-  "publication_time": "Nov 23, 2026 · 7:04 PM EST",
-  "title": "Miami, November 23 — Mostly Cloudy",
-  "summary": "Tonight: 70°F. Mostly Cloudy. Wind 8 mph N. Rain chance: 3%.",
-  "url": "/miami-weather/2026-11-23/",
-  "image": "/assets/weather/2026-11-23/000426-7b5684a6/regional_radar-0002.png",
-  "image_alt": "Timestamped NOAA South Florida radar",
+  "report_date": "2026-11-24",
+  "generated_at": "2026-11-24T20:24:07.037620+00:00",
+  "publication_time": "Nov 24, 2026 · 3:24 PM EST",
+  "title": "Miami, November 24 — Mostly Cloudy",
+  "summary": "This Afternoon: 80°F. Mostly Cloudy. Wind 10 mph NE. Rain chance: 11%.",
+  "url": "/miami-weather/2026-11-24/",
+  "image": "/assets/weather/2026-11-24/202407-f5f5f811/satellite-2016-c2f507f991.jpg",
+  "image_alt": "Latest archived NOAA satellite frame",
   "manual_preview": false,
-  "partial": true
+  "partial": false
 }
